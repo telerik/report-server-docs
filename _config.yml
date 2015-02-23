@@ -1,21 +1,26 @@
 # The public documentation URL, used for sitemap.xml
-url: "http://docs.telerik.com/product"
+url: "http://docs.telerik.com/devtools/report-server"
 
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock]
 navigation:
 ## List your directory names and order here, like this:
-    getting-started:
-        position: 2
-        title: Getting Started
+
+## Overview topics are generated with position 10
+## Other topics are generated with position 100, 200, 300, etc.
+
+## Main Menu
     "*foo":
         title: Foo
 
+## Upgrading
+
+
 ## The application virtual path
-baseurl: /kendo-ui
+baseurl: /devtools/report-server
 
 ## The product name
-productName: "AppBuilder"
+productName: "Report Server"
 
 ## Assign layout and category per different paths
 defaults:
