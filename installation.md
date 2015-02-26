@@ -8,7 +8,7 @@ published: True
 position: 300
 ---
 
-# System Requirements
+# Installation
 
 
 
