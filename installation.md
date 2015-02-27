@@ -21,9 +21,12 @@ The Report Server is a web application which is hosted on IIS. To setup the Repo
 3. In the __Connections__ pane expand the __Sites__ node.
 4. Right-click the site in which you want to add the application and click __Add Application__.
 5. In the __Alias__ text box type a name for the Report Server application, e.g. _telerikreportserver_. This name is used to access the application in a URL (e.g. _http://localhost/telerikreportserver_)
-6. Click __Select… __to check the application pool settings. The application pool properties should read:  
+6. Click __Select…__ to check the application pool settings. The application pool properties should read:  
 _.Net Framework Version: 4.0._  
 _Pipilene mode: Integrated_  
-If the properties are different, choose an application pool from the dropdown list which has properties as the required ones.
+If the properties are different, choose an application pool from the dropdown list which has properties as the required ones.  
+It is also recommended to change the application pool's __Identity__ to __LocalSystem__ if you experience database connectivity issues when running the application for the first time.
 7. In the __Physical path__ text box, type the full path to the __Telerik.ReportServer.Web__ folder. (e.g. _C:\inetpub\wwwroot\telerik.reportserver.web_) or click the browse (…) button to navigate to that folder.
 8. Click __OK__.
+
+By default the application is configured to use the __File__ storage type with a path relative to the application folder: _~/Data_. You can change the storage type and/or location from the _Configuration_ page.
