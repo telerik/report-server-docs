@@ -12,21 +12,28 @@ position: 300
 
 
 
-The .zip archive contains the Report Server web application and the Standalone Report Designer executable.
+The Report Server web application is installed by a Windows installer which automatically creates a separate web site with its own application pool on the IIS. The application pool runs under the *LocalSystem* identity.
 
-The Report Server is a web application which is hosted on IIS. To setup the Report Server application follow these steps:
+## Downloading and installing the licensed product version
 
-1. Unzip the contents of the .zip archive and copy the __Telerik.ReportServer.Web__ folder to a convenient for you location.
-2. Open __Internet Information Services (IIS) Manager__. For more information see: [How to: Open IIS Manager](https://msdn.microsoft.com/en-us/library/bb763170%28v=vs.140%29.aspx)
-3. In the __Connections__ pane expand the __Sites__ node.
-4. Right-click the site in which you want to add the application and click __Add Application__.
-5. In the __Alias__ text box type a name for the Report Server application, e.g. _telerikreportserver_. This name is used to access the application in a URL (e.g. _http://localhost/telerikreportserver_)
-6. Click __Select…__ to check the application pool settings. The application pool properties should read:  
-_.Net Framework Version: 4.0._  
-_Pipilene mode: Integrated_  
-If the properties are different, choose an application pool from the dropdown list which has properties as the required ones.  
-It is also recommended to change the application pool's __Identity__ to __LocalSystem__ if you experience database connectivity issues when running the application for the first time.
-7. In the __Physical path__ text box, type the full path to the __Telerik.ReportServer.Web__ folder. (e.g. _C:\inetpub\wwwroot\telerik.reportserver.web_) or click the browse (…) button to navigate to that folder.
-8. Click __OK__.
+You can download the licensed product version from the **Telerik Control Panel** which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility which will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
 
-By default the application is configured to use the __File__ storage type with a path relative to the application folder: _~/Data_. You can change the storage type and/or location from the _Configuration_ page.
+## Installing new versions of the product
+
+The best way is to download the Control Panel from [Your Account](http://www.telerik.com/account/):
+
+![control panel](images/report-server-images/control-panel.png)
+
+It automatically detects the latest version and lets you install it for the products you have access to.
+
+## Downloading any other product files or latest internal builds
+
+From [Your Account page](http://www.telerik.com/account/), go to “Products & Subscriptions”, select the product and hit “Download”:
+
+![latest internal build step 1](images/report-server-images/latest-internal-build.png)
+
+![latest internal build step 2](images/report-server-images/latest-internal-build-2.png)
+
+From there select the product file you want to download:
+
+![latest internal build step 3](images/report-server-images/latest-internal-build-3.png)
