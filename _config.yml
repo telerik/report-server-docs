@@ -13,8 +13,11 @@ navigation:
     administration:
         position: 1000
         title: "Administration"
-    configuration:
+    user-management:
         position: 2000
+        title: "User Management"
+    configuration:
+        position: 3000
         title: "Configuration"        
     "*foo":
         title: Foo
