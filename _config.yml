@@ -11,7 +11,7 @@ navigation:
 
 ## Main Menu
     setup:
-        position: 1000
+        position: 200
         title: "Setup"    
     "*foo":
         title: Foo

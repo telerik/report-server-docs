@@ -5,7 +5,7 @@ description: Data Connections Management
 slug: data-connections-management
 tags: data,connections,management
 published: True
-position: 300
+position: 600
 ---
 
 # Data Connections Management

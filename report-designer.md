@@ -4,8 +4,8 @@ page_title: Report Designer
 description: Report Designer
 slug: report-designer
 tags: report,designer
-published: false
-position: 200
+published: true
+position: 300
 ---
 
 # Report Designer
