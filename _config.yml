@@ -10,15 +10,9 @@ navigation:
 ## Other topics are generated with position 100, 200, 300, etc.
 
 ## Main Menu
-    administration:
+    setup:
         position: 1000
-        title: "Administration"
-    user-management:
-        position: 2000
-        title: "User Management"
-    configuration:
-        position: 3000
-        title: "Configuration"        
+        title: "Setup"    
     "*foo":
         title: Foo
 
