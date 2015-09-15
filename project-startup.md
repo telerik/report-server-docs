@@ -1,14 +1,14 @@
 ---
-title: Project Startup
-page_title: Project Startup
-description: Project Startup
-slug: project-startup
+title: Application Startup
+page_title: Application Startup
+description: Application Startup
+slug: application-startup
 tags: project,startup
 published: True
 position: 400
 ---
 
-# Project Startup
+# Application Startup
 
 
 
