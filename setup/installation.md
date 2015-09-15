@@ -5,7 +5,7 @@ description: Installation
 slug: installation
 tags: installation
 published: True
-position: 300
+position: 200
 ---
 
 # Installation
@@ -22,7 +22,7 @@ You can download the licensed product version from the **Telerik Control Panel**
 
 The best way is to download the Control Panel from [Your Account](http://www.telerik.com/account/):
 
-![control panel](images/report-server-images/control-panel.png)
+![control panel](../images/report-server-images/control-panel.png)
 
 It automatically detects the latest version and lets you install it for the products you have access to.
 
@@ -30,10 +30,10 @@ It automatically detects the latest version and lets you install it for the prod
 
 From [Your Account page](http://www.telerik.com/account/), go to “Products & Subscriptions”, select the product and hit “Download”:
 
-![latest internal build step 1](images/report-server-images/latest-internal-build.png)
+![latest internal build step 1](../images/report-server-images/latest-internal-build.png)
 
-![latest internal build step 2](images/report-server-images/latest-internal-build-2.png)
+![latest internal build step 2](../images/report-server-images/latest-internal-build-2.png)
 
 From there select the product file you want to download:
 
-![latest internal build step 3](images/report-server-images/latest-internal-build-3.png)
+![latest internal build step 3](../images/report-server-images/latest-internal-build-3.png)

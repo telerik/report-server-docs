@@ -5,7 +5,7 @@ description: Storage Settings
 slug: storage-settings
 tags: storage,settings
 published: True
-position: 100
+position: 400
 ---
 
 # Storage Settings

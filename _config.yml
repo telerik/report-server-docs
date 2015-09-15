@@ -13,6 +13,9 @@ navigation:
     setup:
         position: 200
         title: "Setup"    
+    setup/user-management:
+        position: 1000
+        title: "User Management"    
     "*foo":
         title: Foo
 

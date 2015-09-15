@@ -5,7 +5,7 @@ description: Application Startup
 slug: application-startup
 tags: project,startup
 published: True
-position: 400
+position: 300
 ---
 
 # Application Startup
