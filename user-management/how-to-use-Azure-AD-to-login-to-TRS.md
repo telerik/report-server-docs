@@ -54,7 +54,7 @@ The active directory you have created should have one user, sourced from your Mi
 
 There are a few more things to do in Azure AD, but so far we have created a directory entry, an application and a user, which allows us to test if we can login to Telerik Report Server using Azure AD authentication.
 
-**3.  Setup an External Authentication Provider in Telerik Report Server **
+**3.  Setup an External Authentication Provider in Telerik Report Server**
 
 -   First, we need to set the *federation metadata URI* in the Report Server configuration settings. When still on the same Azure AD application page, click on the VIEW ENDPOINTS button at the bottom and a popup should appear:
 
