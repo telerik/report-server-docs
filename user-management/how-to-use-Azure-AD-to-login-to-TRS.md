@@ -123,7 +123,7 @@ After saving the settings you can start the Standalone Designer and login with y
 
 ![](../images/report-server-images/HowToLoginUsingADFS/14. Login in SRD.png)
 
-If you now click the Federation button, the Azure login page will appear and you can login with your credentials. When you successfully log in, you will see that the report server entry is added to the list of available servers and you can use it the same way you do with the local accounts.
+If you now click the **Federation** button, the Azure login page will appear and you can login with your credentials. When you successfully log in, you will see that the report server entry is added to the list of available servers and you can use it the same way you do with the local accounts.
 
 **Conclusion:**
 
