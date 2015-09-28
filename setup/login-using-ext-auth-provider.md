@@ -5,7 +5,7 @@ description: Authenticate to Telerik Report Server using an External WS-Federati
 slug: login,authentication,federation
 tags: login,authentication,federation
 published: True
-position: 400
+position: 500
 ---
 
 # Login to Telerik Report Server using an external authentication provider
