@@ -21,8 +21,8 @@ The Reports view provides the following functions:
 
   >To upload a report you need to create at least one category.
   - _Preview report_ – Preview the report in a new web page allowing you to export the report to various formats.
-  - _Edit report_ – Invoke the desktop [Report Designer]({%slug report-designer%}) to modify the report definition.
-  - _Report properties_ – Change the __title__, __description__ and the __category__ of the uploaded report.
+  - _Design report_ – Invoke the desktop [Report Designer]({%slug report-designer%}) to modify the report definition.
+  - _Edit_ – Change the __title__, __description__ and the __category__ of the uploaded report.
   - _Download report_ - Download the report definition (a .trdx file) to the file system.
   - _Copy report_ – Create a copy of the original report.
   - _Delete report_ – Delete a report definition from the server.
