@@ -1,14 +1,14 @@
 ---
-title: Login using an external authentication provider
-page_title: Login Using an External Authentication Provider
-description: Authenticate to Telerik Report Server using an External WS-Federation Provider 
+title: Configuring Report Server to be used with external authentication provider
+page_title: External authentication provider configuration
+description: Configuring Report Server to be used with external authentication provider
 slug: login-using-ext-auth-provider
 tags: login,authentication,federation
 published: True
 position: 500
 ---
 
-# Login to Telerik Report Server using an external authentication provider
+# Configuring Report Server to be used with external authentication provider
 
 
 
