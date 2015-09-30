@@ -18,7 +18,10 @@ The data connections view provides the following functions:
 
   - _Add a data connection_
 
-A new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_. Data connections with duplicate names are not allowed.
+A new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_.
+>Make sure the connection string is referencing SQL server with a non local address, so the users can edit reports in the report designer.
+
+Data connections with duplicate names are not allowed.
 
   - _Edit a data connection_  
 The properties of an existing data connection can be modified at any time.
