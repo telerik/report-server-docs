@@ -78,6 +78,10 @@ You can grant permissions to a user in two ways:
 
     -   *Specific Data Connection* - the permission applies to a specific data connection
 
+    -   *All Tasks* - the permission applies to all tasks
+
+    -   *Specific Task* - the permission applies to a specific task
+
 -   **Target**
 
 The scope target depends on the selected scope:
@@ -89,3 +93,5 @@ The scope target depends on the selected scope:
 -   For *Specific Category* scope you have to choose a specific *Category*.
 
 -   For *Specific Data Connection* scope you have to choose a specific *Data Connection*.
+
+-   For *Specific Task* scope you have to choose a specific *Task*.

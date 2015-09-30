@@ -24,6 +24,8 @@ A *user role* represents a list of same permissions which can be granted to diff
 
     -   All Data Connections - **Read** access
 
+    -   All Tasks - **unrestricted** access
+
 -   *Report Reader*
 
     -   All Reports - **Read** access
@@ -32,6 +34,8 @@ A *user role* represents a list of same permissions which can be granted to diff
 
     -   All Data Connections - **Read** access
 
+    -   All Tasks - **Read** access
+
 -   *Data Administrator*
 
     -   All Reports - **unrestricted** access
@@ -39,6 +43,8 @@ A *user role* represents a list of same permissions which can be granted to diff
     -   All Categories - **unrestricted** access
 
     -   All Data Connections - **unrestricted** access
+
+    -   All Tasks - **unrestricted** access
 
 You can perform the following actions from the *User roles* view:
 
