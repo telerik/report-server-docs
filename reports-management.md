@@ -5,7 +5,7 @@ description: Reports Management
 slug: reports-management
 tags: reports,management
 published: True
-position: 500
+position: 400
 ---
 
 # Reports Management
