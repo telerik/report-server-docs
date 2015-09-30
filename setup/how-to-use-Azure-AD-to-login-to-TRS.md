@@ -63,7 +63,7 @@ There are a few more things to do in Azure AD, but so far we have created a dire
 -   Copy the text in the first textbox named FEDERATION METADATA DOCUMENT. 
 -   Start Telerik Report Server web application (in our scenario by browsing to <http://localhost:86>) and login using the local administrator account, which is created upon first start. 
 -   When logged in, click on the **Configuration** button in the top right corner and the configuration page should appear. 
--   Under **External authentication providers settings** section, check **Enabled** checkbox, paste the federation metadata URI into the **Metadata URI** textbox and write <http://localhost:86> into **WtRealm** textbox. Now the settings page should look like this:
+-   Under **External authentication providers settings** section, check **Enabled** checkbox, paste the federation metadata URI into the **Metadata Uri** textbox and write <http://localhost:86> into **Relying Party ID** textbox. These settings are enough to check if we can login into Telerik Report Server, but to satisfy the validation of the remaining fields, paste the URI from **Metadata Uri** into **Authority** field and enter some number into **ClientID** field. We'll explain the meaning of these fields later in this article. Now the settings page should look like this:
 
 ![](../images/report-server-images/HowToLoginUsingADFS/07. Setup TRS ExternalProvider.png)
 
@@ -71,7 +71,8 @@ After clicking on **Save Changes** button, a notification about restarting the a
 
 **4.  Add Federation Users in Telerik Report Server**
 
--   While still logged in, click on USER MANAGEMENT on the side toolbar and then click on NEW USER button above. In the popup window select **Federation** as authentication provider and set the username and email according to the entries you just did in Azure AD:
+-   While still logged in, click on USER MANAGEMENT on the side toolbar and then click on NEW USER button above. In the popup window select **Federation** as authentication provider and set the username and email according to the entries you just did in Azure AD. Note that the username should contain the domain (i.e. to be exactly the same with the one you setup in Active Directory). To make things simpler, there is no need to enter the user's first and last name - they will be obtained from the claims, provided by Azure AD upon first login with this user.
+-   Assign some roles to the user you are creating.
 
 > ![](../images/report-server-images/HowToLoginUsingADFS/08. Add a User in TRS.png)
 
@@ -83,7 +84,7 @@ Once you sign in with the username and password that you have obtained from Azur
 
 ![](../images/report-server-images/HowToLoginUsingADFS/10. TRS with Logged User from Azure.png)
 
-So far we have demonstrated how to authenticate against the Telerik Report Server using credentials provided by the Azure AD federation service. Although it’s useful, it will be better if we are able to log in from the Standalone Report Designer, which will be a client for the WebAPI, provided by the Telerik Report Server. This requires registering the client as another application in Azure AD and adding a few more settings in Telerik Report Server.
+So far we have demonstrated how to authenticate against the Telerik Report Server using credentials provided by the Azure AD federation service. Although it’s useful, it will be better if we are able to log in from the Standalone Report Designer, which will be a client for the WebAPI, provided by the Telerik Report Server. This requires registering the client as another application in Azure AD and adding two more settings in Telerik Report Server.
 
 **5.  Registering the Standalone Report Designer in Azure AD**
 
