@@ -5,7 +5,7 @@ description: Categories Management
 slug: categories-management
 tags: categories,management
 published: True
-position: 400
+position: 500
 ---
 
 # Categories Management
