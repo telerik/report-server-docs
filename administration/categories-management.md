@@ -20,5 +20,5 @@ The categories grid provides the following functions:
   - _Edit category_ – changes the category name
   - _Delete category_ – deletes the category
 
-Next to the category name in the grid you can see the number of the reports in that category.
+Next to the category name in the grid you can see the number of the reports in that category. This number include reports that are still not published.
 >Categories which contain reports cannot be deleted.
