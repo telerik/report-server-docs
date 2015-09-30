@@ -1,6 +1,6 @@
 ---
-title: How-to: Authenticate using Azure AD
-page_title: How-to: Authenticate using Azure AD
+title: How to authenticate using Azure AD
+page_title: How to authenticate using Azure AD
 description: Use Azure Active Directory to authenticate against Telerik Report Server
 slug: how-to-use-azure-ad-to-login-to-trs
 tags: login,authentication,federation,azure
