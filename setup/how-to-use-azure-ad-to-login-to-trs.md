@@ -120,11 +120,11 @@ All the settings that are used to allow the Standalone Report Designer to connec
 After saving the settings you can start the Standalone Designer and login with your Azure AD credentials.
 
 -   From **File** menu click **Open** and then select **Report Servers** option. 
--   If the Telerik Report Server is not added in the list of available servers, click on **Add Server** icon. Set the Server URI to <http://localhost:86> and as soon as you move to the next field, you will see that the **Federation** button becomes enabled.
+-   If the Telerik Report Server is not added in the list of available servers, click on **Add Server** icon. Set the Server URI to <http://localhost:86> and as soon as you move to the next field, you will see that the **Log in with ADFS credentials** button becomes enabled.
 
 ![](../images/report-server-images/HowToLoginUsingADFS/14. Login in SRD.png)
 
-If you now click the **Federation** button, the Azure login page will appear and you can login with your credentials. When you successfully log in, you will see that the report server entry is added to the list of available servers and you can use it the same way you do with the local accounts.
+If you now click the **Log in with ADFS credentials** button, the Azure login page will appear and you can login with your credentials. When you successfully log in, you will see that the report server entry is added to the list of available servers and you can use it the same way you do with the local accounts.
 
 **Conclusion:**
 
