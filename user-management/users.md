@@ -16,17 +16,19 @@ You can perform the following actions from the *Users* view:
 
 -   **Register new user** - each user is registered with the following information:
 
+    -   *Authentication provider* - in case you have set up an external authentication provider (AD FS), a **Federation** entry will be added in the drop-down list. Otherwise only **Local** is available.
+
     -   *Username*
 
-    -   *Password* - by default the password must conform to the following rules:
+    -   *Password* - available only for local accounts. By default the password must conform to the following rules:
 
         -   at least 6 characters long
 
     -   *Email*
 
-    -   *First name*
+    -   *First name* - available only for local accounts. When creating a Federation user, its names will be populated upon first login using AD FS.
 
-    -   *Last Name*
+    -   *Last Name* - available only for local accounts
 
     -   *Roles* - optional. You can assign the user to one or more existing user roles.
 
