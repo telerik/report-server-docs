@@ -19,7 +19,7 @@ Scheduling
 
 The **Scheduling** view allows you to create, modify and delete scheduled tasks. A scheduled task specifies when a specific report should be rendered and in what document format. The created documents are stored in the Report Server's storage and can be sent as email attachments to different subscribers. A scheduled task can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a report execution is to occur.
 
-A task consists of the following elements:
+A task has the following settings:
 
 -   Name - the name of the task. It should be unique among the tasks
 
