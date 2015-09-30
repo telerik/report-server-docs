@@ -51,7 +51,7 @@ A task consists of the following elements:
 
 -   Repeat - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
 
-A new task can be also created directly from the **Reports** | **Scheduling** view**.**
+A new task can be also created directly from the **Reports** | **Scheduling** view.
 
 Activity view
 -------------
