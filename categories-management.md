@@ -22,3 +22,5 @@ The categories grid provides the following functions:
 
 Next to the category name in the grid you can see the number of the reports in that category. This number include reports that are still not published.
 >Categories which contain reports cannot be deleted.
+
+You can search for categories by their name. For more information on the search see [Search]({%slug search%}).
