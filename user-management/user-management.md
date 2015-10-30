@@ -14,4 +14,4 @@ position: 100
 
 Only users that belong to the built-in *System Administrator* user role have access to the *User Management* view and can manage **users**, **roles** and their **permissions**.
 
-You can search for users by their firstname, lastname, username or e-mail. For more information on the search see [Search]({%slug search%}).
+You can search for users by their first name, last name, username or e-mail. For more information on the search see [Search]({%slug search%}).
