@@ -29,3 +29,5 @@ The Reports view provides the following functions:
   - _Favorite report_ – Mark a report as favorite. The Reports view can be sorted by the favorite flag.
 
 When a report has been selected you can see a details view on the right side of the grid. The details view shows additional information about the report as well as the report's history.
+
+You can search for reports by their name, description, or category. For more information on the search see [Search]({%slug search%}).
