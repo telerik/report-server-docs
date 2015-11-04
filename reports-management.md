@@ -16,6 +16,8 @@ In the **Reports** view you can manage the reports which reside on the server.
 
 The Reports view provides the following functions:
 
+  - _Search by Name, Description or Category. For more information, see [Search]({%slug search%})_
+
   - _New report_ – Invoke the desktop [Report Designer]({%slug report-designer%}) in order to create a new report on the server.
   - _Upload report_ – Upload an existing report definition from the file system. When uploading a report you should select the XML report file definition (a .trdx file), specify the report's __title__ and select the report's __category__. All the fields are mandatory except the __description__.
 
@@ -29,5 +31,3 @@ The Reports view provides the following functions:
   - _Favorite report_ – Mark a report as favorite. The Reports view can be sorted by the favorite flag.
 
 When a report has been selected you can see a details view on the right side of the grid. The details view shows additional information about the report as well as the report's history.
-
-You can search for reports by their name, description, or category. For more information, see [Search]({%slug search%}).
