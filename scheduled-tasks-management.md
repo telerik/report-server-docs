@@ -53,6 +53,8 @@ A task has the following settings:
 
 A new task can be also created directly from the **Reports** | **Scheduling** view.
 
+You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
+
 Activity view
 -------------
 
