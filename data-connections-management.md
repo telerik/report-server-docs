@@ -16,6 +16,8 @@ The data connections view is a centralized place from which you can manage the c
 
 The data connections view provides the following functions:
 
+  - _Search by Name, Data Provider or Connection String. For more information, see [Search]({%slug search%})_
+
   - _Add a data connection_
 
 A new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_.
