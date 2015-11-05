@@ -16,7 +16,7 @@ In the **Reports** view you can manage the reports which reside on the server.
 
 The Reports view provides the following functions:
 
-  - _Search by Name, Description or Category. For more information, see [Search]({%slug search%})_
+  - _Search by Name, Description, Category or Date. For more information, see [Search]({%slug search%})_
 
   - _New report_ – Invoke the desktop [Report Designer]({%slug report-designer%}) in order to create a new report on the server.
   - _Upload report_ – Upload an existing report definition from the file system. When uploading a report you should select the XML report file definition (a .trdx file), specify the report's __title__ and select the report's __category__. All the fields are mandatory except the __description__.
