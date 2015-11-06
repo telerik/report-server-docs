@@ -12,7 +12,7 @@ position: 700
 
 
 
-The Scheduling view is a centralized place from which you can manage scheduled tasks, review the created by the tasks documents and manage subscribers.
+The **Scheduling** view is a centralized place from which you can manage scheduled tasks, review the created by the tasks documents and manage subscribers.
 
 Scheduling
 ----------
@@ -21,7 +21,7 @@ The **Scheduling** view allows you to create, modify and delete scheduled tasks.
 
 A task has the following settings:
 
--   Name - the name of the task. It should be unique among the tasks
+-   **Name** - the name of the task. It should be unique among the tasks
 
 -   A report represented by its Category and Name
 
@@ -45,13 +45,18 @@ A task has the following settings:
 
     -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
 
--   Enabled - the task can be temporary disabled without the need to delete it
+-   **Enabled** - the task can be temporary disabled without the need to delete it
 
--   Start - the actual start date of the task
+-   **Start** - the actual start date of the task
 
--   Repeat - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
+-   **Repeat** - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
+
+-   Parameters - the task parameters allow you to define the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
+The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
 
 A new task can be also created directly from the **Reports** | **Scheduling** view.
+
+You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
 Activity view
 -------------
