@@ -44,7 +44,7 @@ The *username* and *password* cannot be changed from the *Users* view. The passw
 
 -   **Delete user** - You can delete all the users except the current user.
 
--   **Manage permissions -** You can add/remove permissions by clicking on the MANAGE PERMISSIONS button from the PERMISSIONS tab.
+-   **Manage permissions** - You can add/remove permissions by clicking on the MANAGE PERMISSIONS button from the PERMISSIONS tab.
 
 You can grant permissions to a user in two ways:
 
@@ -54,13 +54,13 @@ You can grant permissions to a user in two ways:
 
     -   **Access mode**:
 
-        -   *Read -* gives a **read** permission for the selected scope
+        -   *Read* - gives a **read** permission for the selected scope
 
         -   *Modify* - gives an **edit** permission for the selected scope
 
         -   *Delete* - gives **delete** permission for the selected scope
 
-        -   *Create -* gives **create** permission for the selected scope
+        -   *Create* - gives **create** permission for the selected scope
 
 *Modify* and *Delete* access modes require *Read* access. *Create* access mode **cannot** have a specific scope (e.g. *Specific Report*, *Specific Category*, *Specific Data Connection*).
 
