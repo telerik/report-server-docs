@@ -5,7 +5,7 @@ description: Configuring Report Server to be used with external authentication p
 slug: login-using-ext-auth-provider
 tags: login,authentication,federation
 published: True
-position: 500
+position: 600
 ---
 
 # Configuring Report Server to be used with external authentication provider
