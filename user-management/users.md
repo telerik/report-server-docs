@@ -23,6 +23,8 @@ You can perform the following actions from the *Users* view:
     -   *Password* - available only for local accounts. By default the password must conform to the following rules:
 
         -   at least 6 characters long
+        
+        If a mail (SMTP) server is configured there is no need to specify a password for the new local user. After saving the new user a mail with a special activation link will be send to the user's e-mail address. When clicking on the link the user will be taken to a page to set his/her password and after doing so he/she will be redirected to the login page.
 
     -   *Email*
 
@@ -32,17 +34,17 @@ You can perform the following actions from the *Users* view:
 
     -   *Roles* - optional. You can assign the user to one or more existing user roles.
 
--   **Modify user** - you can edit the following user information:
+-   **Modify user** - you can change the following user settings:
 
     -   *Email*
 
     -   *First name*
 
     -   *Last name*
-
-The *username* and *password* cannot be changed from the *Users* view. The password can only be changed from the logged user by clicking on the Account menu at the top right corner of the window.
-
--   **Delete user** - You can delete all the users except the current user.
+    
+    -   *Password*
+    
+    -   *Enabled*
 
 -   **Manage permissions** - You can add/remove permissions by clicking on the MANAGE PERMISSIONS button from the PERMISSIONS tab.
 
