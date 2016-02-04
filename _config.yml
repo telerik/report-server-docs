@@ -10,6 +10,9 @@ navigation:
 ## Other topics are generated with position 100, 200, 300, etc.
 
 ## Main Menu
+    licensing-and-distribution:
+        position: 130
+        title: "Licensing and Distribution"    
     setup:
         position: 200
         title: "Setup"    
