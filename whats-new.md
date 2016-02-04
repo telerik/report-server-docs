@@ -5,7 +5,7 @@ description: What's New in This Version
 slug: whats-new
 tags: report,server,release,new
 published: true
-position: 210
+position: 120
 ---
 
 # What's New in This Version

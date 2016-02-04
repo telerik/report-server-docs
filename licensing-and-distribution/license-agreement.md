@@ -5,7 +5,7 @@ description: License Agreement
 slug: license-agreement
 tags: report,server,license,agreement
 published: true
-position: 240
+position: 140
 ---
 
 # License Agreement
