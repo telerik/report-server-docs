@@ -5,7 +5,7 @@ description: Release History
 slug: release-history
 tags: report,server,release,history
 published: true
-position: 200
+position: 110
 ---
 
 # Release History
