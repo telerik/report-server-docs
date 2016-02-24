@@ -18,5 +18,7 @@ Related articles:
 
 - [Report Designer Overview](http://www.telerik.com/help/reporting/standalone-report-designer.html "Standalone Report Designer Overview")  
 - [Create, Open, Edit, Save and Publish Reports](http://www.telerik.com/help/reporting/standalone-report-designer-working-with-server-reports.html "Working with server reports")  
+- [SqlDataSource Component](http://docs.telerik.com/reporting/sqldatasource "SqlDataSource Component")
 - [SqlDataSource Wizard](http://www.telerik.com/help/reporting/sqldatasource-wizard.html "SqlDataSource Wizard Overview")
+- [CsvDataSource Component](http://docs.telerik.com/reporting/csvdatasource-component "CsvDataSource Component")
 - [CsvDataDource Wizard](http://docs.telerik.com/reporting/csvdatasource-wizard "CsvDataDource Wizard Overview")
