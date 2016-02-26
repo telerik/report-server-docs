@@ -19,6 +19,9 @@ navigation:
     user-management:
         position: 210
         title: "User Management"    
+    reports-management:
+        position: 400
+        title: "Reports Management"   
     "*foo":
         title: Foo
 
