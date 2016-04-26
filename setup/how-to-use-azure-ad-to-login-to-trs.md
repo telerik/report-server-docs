@@ -5,7 +5,7 @@ description: How to setup Azure AD for Report Server authentication
 slug: how-to-use-azure-ad-to-login-to-trs
 tags: login,authentication,federation,azure
 published: True
-position: 600
+position: 700
 ---
 
 # How to setup Azure AD for Report Server authentication
