@@ -52,14 +52,14 @@ A data alert has the following settings:
 
 -   **Recurrence** - defines the recurrence rule if the data alert should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
 
--   **Parameters** - the parameters allow you to define the parameter values that will be used for the report when the data alert is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values  specified in the parameters. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
-The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
+-   **Parameters** - the parameters allow you to define the parameter values that will be used for the report when the data alert is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values  specified in the parameters. If you want to override the invisible parameters' values with the alert's parameters you have to uncheck the "*Use Default Value*" checkbox.
+The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the alert's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the alert parameters value will be used.
 
 -   **Mail template** - specifies the mail template which is sent when the data conditions are met and a report is generated. When there 
 is an error during the report processing or a general error in the data alert execution then the **Configuration** | **Mail Templates** 
 | **Data Alert Error** mail template is used.
     If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used**.**
-    In the template you can use the following mail variables which will be replaced automatically when the task is executed:
+    In the template you can use the following mail variables which will be replaced automatically when the alert is executed:
 
     -   {FirstName} - the first name of the user
 
