@@ -111,7 +111,7 @@ is an error during the report processing or a general error in the data alert ex
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
 
--   **Rules** - the data alert rules specify the conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the rules grid you can define the actual rules. The Expression part of the rule defines the name of the TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
+-   **Rules** - the data alert rules specify the conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the Rules grid you can define the actual rules. The Expression part of the rule specifies the name of the TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
 
 You can search alerts by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
@@ -123,4 +123,4 @@ The **Activity** view for a data alert shows the created by the data alert docum
 Subscribers view
 ----------------
 
-From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
+From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing Report Server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
