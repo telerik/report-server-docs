@@ -73,35 +73,13 @@ is an error during the report processing or a general error in the data alert ex
 
     -   {StartTime} - start time of the report document generation
 
-    -   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system
-
-    -   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system
-
     -   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system
-
-    -   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system
 
     -   {EndTime} - end time of the report document generation
 
-    -   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system
-
-    -   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system
-
     -   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
 
-    -   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system
-
     -   {ExecutionTime} - elapsed time for the report document generation
-
-    -   {ExecutionTimeDays} - elapsed time for the report document generation in **days**
-
-    -   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**
-
-    -   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**
-
-    -   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**
-
-    -   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**
 
     -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
