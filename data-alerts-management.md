@@ -12,7 +12,7 @@ position: 710
 
 
 
-The **Data Alerts** view is the place from which you can manage data alerts, review the alerts' execution and manage subscribers.
+The **Data Alerts** view is the place from where you can manage data alerts, review the alerts' execution and manage subscribers.
 
 Data Alerts
 ----------
@@ -69,7 +69,7 @@ is an error during the report processing or a general error in the data alert ex
 
     -   {AlertName} - the name of the data alert
 
-    -   {DocumentFormat} - the specified in the task rendering format
+    -   {DocumentFormat} - the specified in the alert rendering format
 
     -   {StartTime} - start time of the report document generation
 
@@ -81,7 +81,7 @@ is an error during the report processing or a general error in the data alert ex
 
     -   {ExecutionTime} - elapsed time for the report document generation
 
-    -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
+    -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the data alert.
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
 
