@@ -64,7 +64,7 @@ The "*Use Default Value*" checkbox for all parameters determines whether the val
 -   **Mail template** - specifies the mail template which is sent when the data conditions are met and a report is generated. When there 
 is an error during the report processing or a general error in the data alert execution then the **Configuration** | **Mail Templates** 
 | **Data Alert Error** mail template is used.
-    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used**.**
+    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used**.**
     In the template you can use the following mail variables which will be replaced automatically when the task is executed:
 
     -   {FirstName} - the first name of the user
@@ -73,7 +73,7 @@ is an error during the report processing or a general error in the data alert ex
 
     -   {ReportName} - the name of the report document
 
-    -   {TaskName} - the name of the scheduled task
+    -   {AlertName} - the name of the data alert
 
     -   {DocumentFormat} - the specified in the task rendering format
 
@@ -114,12 +114,12 @@ is an error during the report processing or a general error in the data alert ex
 
 **NOTE:** A new task can be also created directly from the **Reports** | **Scheduling** view**.**
 
-You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
+You can search alerts by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
 Activity view
 -------------
 
-The **Activity** view for a scheduled task shows the created by the task documents. A created document can be downloaded for preview in the target format or deleted. The list items also display whether the task has successfully created a document or there was an error while generating it.
+The **Activity** view for a data alert shows the created by the data alert documents. A created document can be downloaded for preview in the target format or deleted. The list items also display whether the alert has successfully created a document or there was an error while generating it.
 
 Subscribers view
 ----------------
