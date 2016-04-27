@@ -18,7 +18,7 @@ Data Alerts
 ----------
 
 The **Data Alerts** view allows you to create, modify and delete data alerts.
-A Data Alert is a task which runs at a scheduled time and checks whether a specific data conditions are met. If the data conditions are met a report document is generated and sent to the alert's subscribers. A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a data alert is to be run.
+Data Alert runs at a scheduled time and checks whether specific data conditions are satisfied. If the data conditions are satisfied a report document is generated and sent to the alert's subscribers. A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a data alert is to be run.
 
 A data alert has the following settings:
 
@@ -28,7 +28,7 @@ A data alert has the following settings:
 
 -   Target document format - can be any single document format provided by the Telerik Reporting engine:
 
-    -   PDF - Renders a report in the Adobe Acrobat Reader. The format is shown as Acrobat (PDF) File in the Export drop-down of the report toolbar.
+    -   PDF - Renders a report in the Adobe Acrobat Reader format. The format is shown as Acrobat (PDF) File in the Export drop-down of the report toolbar.
 
     -   XLS - Renders a report in Microsoft Excel. The report opens in Microsoft Excel 97 or later.
 
@@ -46,17 +46,13 @@ A data alert has the following settings:
 
     -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
 
--   **Enabled** - the data alert can be temporary disabled without the need to delete it
+-   **Enabled** - specifies whether the data alert is enabled or not
 
 -   **Start** - the actual start date of the data alert
 
--   **Repeat** - defines the recurrence rule if the data alert should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
+-   **Recurrence** - defines the recurrence rule if the data alert should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
 
--   **Parameters** - the parameters allow you to define the parameter values that will be used for the report when the data alert is executed. 
-The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the 
-invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values 
-specified in the parameters. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the 
-"*Use Default Value*" checkbox.
+-   **Parameters** - the parameters allow you to define the parameter values that will be used for the report when the data alert is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values  specified in the parameters. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
 The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
 
 -   **Mail template** - specifies the mail template which is sent when the data conditions are met and a report is generated. When there 
@@ -111,9 +107,7 @@ is an error during the report processing or a general error in the data alert ex
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
 
--   **Rules** - the data alert rules specify the conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the Rules grid you can define the actual rules. The Expression part of the rule specifies the name of the TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
-
-You can search alerts by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
+-   **Rules** - the rules represent conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the Rules grid you can define the actual rules. The Expression part of the rule specifies the name of a TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
 
 Activity view
 -------------
