@@ -55,9 +55,7 @@ A data alert has the following settings:
 -   **Parameters** - the parameters allow you to define the parameter values that will be used for the report when the data alert is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values  specified in the parameters. If you want to override the invisible parameters' values with the alert's parameters you have to uncheck the "*Use Default Value*" checkbox.
 The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the alert's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the alert parameters value will be used.
 
--   **Mail template** - specifies the mail template which is sent when the data conditions are met and a report is generated. When there 
-is an error during the report processing or a general error in the data alert execution then the **Configuration** | **Mail Templates** 
-| **Data Alert Error** mail template is used.
+-   **Mail template** - specifies the mail template which is sent when the data conditions are met and a report document is generated. When there is an error during the report processing or a general error during the data alert execution then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used.
     If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used**.**
     In the template you can use the following mail variables which will be replaced automatically when the alert is executed:
 
@@ -85,7 +83,7 @@ is an error during the report processing or a general error in the data alert ex
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
 
--   **Rules** - the rules represent conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the Rules grid you can define the actual rules. The Expression part of the rule specifies the name of a TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
+-   **Rules** - The rules are used to define conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, first a data item from the report should be selected. In the Rules grid you can define the actual rules for that data item. The Expression part of the rule should specify the name of a TextBox item which contains a dynamic expression which value is compared to the value in the Value part of the rule. The supported operators are: "equal", "not equal", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like".
 
 Activity view
 -------------
