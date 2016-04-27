@@ -12,15 +12,13 @@ position: 710
 
 
 
-The **Data Alerts** view is a centralized place from which you can manage data alerts, review the created documents and manage subscribers.
+The **Data Alerts** view is the place from which you can manage data alerts, review the alerts' execution and manage subscribers.
 
 Data Alerts
 ----------
 
 The **Data Alerts** view allows you to create, modify and delete data alerts.
-The data alert is run at the scheduled time, the alert rule is checked and if it succeeds a document is generated.
-The created documents are stored in the Report Server's storage and can be sent as email attachments to different subscribers. 
-A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a report execution is to occur.
+A Data Alert is a task which runs at a scheduled time and checks whether a specific data conditions are met. If the data conditions are met a report document is generated and sent to the alert's subscribers. A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a data alert is to be run.
 
 A data alert has the following settings:
 
@@ -112,7 +110,8 @@ is an error during the report processing or a general error in the data alert ex
     -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
-**NOTE:** A new task can be also created directly from the **Reports** | **Scheduling** view**.**
+
+-   **Rules** - the data alert rules specify the conditions which the data from the report should meet in order the alert to be triggered. In order to specify a rule a data item from the report should be chosen. 
 
 You can search alerts by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
