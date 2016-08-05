@@ -56,17 +56,14 @@ a img {
 #logo-bar-report-server a {
 	display: inline-block;
 	background: url('../images/telerik_logo_report-server.png') 0 center no-repeat;
-	height: 33px;
+	background-size: 315px 34px;
+	height: 34px;
 	color: #fff;
-	width: 236px;
+	width: 315px;
 }
 
 #logo-bar span {
 	display: none;
-}
-
-#logo-bar-report-server a{
-	background: url('../images/telerik_logo_report-server.png') 0 center no-repeat;
 }
 
 #logo-bar-report-server span {
@@ -166,7 +163,7 @@ a img {
     padding: 0;
     right: 514px;
     text-align: right;
-    left: 20%;
+    left: 415px;
 }
 
 #page-search.search-visibility {
@@ -775,7 +772,7 @@ header, nav, section, article, aside, footer {
     min-width: 24px;
 } 
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     #page-nav {
        width: 30%; 
     }
@@ -796,10 +793,10 @@ header, nav, section, article, aside, footer {
     #page-search {
         right: 390px;
     }
-}
+} */
 
 /* Responsive styles */
-@media (max-width:800px) {
+@media (max-width:1200px) {
     body {
         min-width: initial;
     }
@@ -901,3 +898,27 @@ header, nav, section, article, aside, footer {
         display: none;
     }
 }
+
+@media (max-width: 600px) {
+	#page-header {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		align-items: center;
+	}
+	#logo-bar {
+		-webkit-flex: 1;
+		flex: 1;
+	}
+	#logo-bar a {
+		display: block;
+	}
+	#logo-bar img {
+		max-width: 100%;
+	}
+	#page-header .show-search {
+		margin: 0 1em;
+		position: static;
+	}
+} 
