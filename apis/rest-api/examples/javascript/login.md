@@ -1,7 +1,7 @@
 ---
 title: Login
 page_title: Login
-description: Report Server REST API Login
+description: Report Server Login
 slug: rest-api-login
 tags: rest, api, rest api, login
 published: True
@@ -10,7 +10,9 @@ position: 100
 
 # Report Server REST API Login
 
-In order to perform operations with the Report Server you have to authenticate first. This can be done by sending a request to the *Token* endpoint with your credentials and as result get an access token. Here is a sample code snippet which demonstrates how to get the token:
+In order to perform operations with the Report Server you have to authenticate first. This can be done by sending a request to the *Token* endpoint with your credentials and as result get an access token. 
+
+Here is a sample code snippet which demonstrates how to login and get the token:
 
 ```javascript
   var serverHost = "http://reportserver:83/";
@@ -56,4 +58,4 @@ For example:
 ``` 
 
 To use the “anonymous” user you have to first enable it from the Report Server management application. 
-In order to log in as an anonymous user you have to pass for the username and the password empty strings.
+In order to log in as an anonymous user you have to pass empty strings both for the username and the password.
