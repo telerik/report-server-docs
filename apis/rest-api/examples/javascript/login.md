@@ -39,13 +39,13 @@ In order to perform operations with the Report Server you have to authenticate f
     
     return accessToken;
   }
-'''
+```
 
 Once you get the access token, you can store it in [window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) and later use it in subsequent requests.
 
 For example:
 
-'''javascript
+```javascript
   var serverTokenKey = "TelerikReportServerToken";
 
   $(document).ready(function () {
@@ -53,7 +53,7 @@ For example:
       login("telerik", "telerik");
     window.sessionStorage.setItem(serverTokenKey, accessToken);
   }
-'''  
+``` 
 
 To use the “anonymous” user you have to first enable it from the Report Server management application. 
 In order to log in as an anonymous user you have to pass for the username and the password empty strings.
