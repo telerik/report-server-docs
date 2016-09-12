@@ -21,7 +21,13 @@ navigation:
         title: "User Management"    
     reports-management:
         position: 400
-        title: "Reports Management"   
+        title: "Reports Management" 
+    apis:
+        position: 10000
+        title: "APIs"      
+    apis/rest-api:
+        position: 10100
+        title: "REST API"           
     "*foo":
         title: Foo
 

@@ -1,8 +1,8 @@
 ---
 title: Overview
 page_title: Overview
-description: Overview
-slug: alerts-management
+description: REST API Overview
+slug: rest-api-overview
 tags: rest, api, rest api, overview
 published: True
 position: 100
