@@ -10,9 +10,7 @@ position: 100
 
 # REST API Export
 
-To export a report, you need the ID of the report and know the document format in which it would be exported. 
-The actual report export is achieved with two requests. The first request creates a document with the specified 
-parameters and when the document is ready you can get it via a second, GET request. 
+To export a report, you need the ID of the report and know the document format in which it would be exported. The actual report export is achieved with two requests. The first request creates a document with the specified parameters and when the document is ready you can get it via a second, GET request. 
 
 Here is a sample function to illustrate the approach:
 
@@ -68,8 +66,7 @@ Here is a sample function to illustrate the approach:
 The described function can be used in the following way:
 
 ```javascript
-&lt;input type="button" value="Download in XLSX format" onclick="exportDocument('160945-e651', 'XLSX', { 'OrderNumber' : 'SO51115' }, true);" /&gt;
+<input type="button" value="Download in XLSX format" onclick="exportDocument('160945-e651', 'XLSX', { 'OrderNumber' : 'SO51115' }, true);" />
 ```
 
-> With the *content-disposition* query parameter you can control whether to download the document as a file or
-open it directly into the browser window.
+> With the *content-disposition* query parameter you can control whether to download the document as a file or open it directly into the browser window.

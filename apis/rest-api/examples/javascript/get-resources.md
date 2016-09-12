@@ -42,7 +42,6 @@ Here is a sample code snippet which illustrates how to read the report catalog i
   });
 ```
 
-You can get the report categories and the other report server resources such as scheduled tasks, data alerts, 
-data connections, etc. in the same way just by changing the request url. 
+You can get the report categories and the other report server resources such as scheduled tasks, data alerts, data connections, etc. in the same way just by changing the request url. 
 
 For example: *serverApi + "categories“* to get report categories, *serverApi + "dataconnections“* to get data connections, e*tc.*
