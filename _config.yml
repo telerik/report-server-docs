@@ -28,6 +28,12 @@ navigation:
     apis/rest-api:
         position: 10100
         title: "REST API"           
+    apis/rest-api/examples:
+        position: 10110
+        title: "Examples"    
+    apis/rest-api/examples/javascript:
+        position: 10111
+        title: "JavaScript"    
     "*foo":
         title: Foo
 
