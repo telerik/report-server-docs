@@ -54,7 +54,7 @@ For example:
     var accessToken =
       login("telerik", "telerik");
     window.sessionStorage.setItem(serverTokenKey, accessToken);
-  }
+  })
 ``` 
 
 To use the “anonymous” user you have to first enable it from the Report Server management application. 
