@@ -5,10 +5,10 @@ description: REST API Export
 slug: rest-api-export
 tags: rest, api, rest api, overview
 published: True
-position: 100
+position: 300
 ---
 
-# REST API Export
+# Export Document
 
 To export a report, you need the ID of the report and know the document format in which it would be exported. The actual report export is achieved with two requests. The first request creates a document with the specified parameters and when the document is ready you can get it via a second, GET request. 
 
