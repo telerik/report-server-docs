@@ -8,7 +8,7 @@ published: True
 position: 100
 ---
 
-# Report Server REST API Login
+# Login
 
 In order to perform operations with the Report Server you have to authenticate first. This can be done by sending a request to the *Token* endpoint with your credentials and as result get an access token. 
 
