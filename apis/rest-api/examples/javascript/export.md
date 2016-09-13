@@ -8,9 +8,11 @@ published: True
 position: 100
 ---
 
-# REST API Export
+# Export Document
 
 To export a report, you need the ID of the report and know the document format in which it would be exported. The actual report export is achieved with two requests. The first request creates a document with the specified parameters and when the document is ready you can get it via a second, GET request. 
+
+> In order to perform report server operations, you have to login first and get an access token.
 
 Here is a sample function to illustrate the approach:
 
