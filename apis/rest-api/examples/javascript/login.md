@@ -27,13 +27,13 @@ Here is a sample code snippet which demonstrates how to login and get the token:
       url: serverHost + "Token",
       async: false,
       data: {
-        grant\_type: "password",
+        grant_type: "password",
         username: username,
         password: password
       }
     })
     .done(function (data, textStatus, jqXHR) {
-      accessToken = data.access\_token;
+      accessToken = data.access_token;
     })
     .fail(function (xhr, status, error) {
       window.alert(xhr.status + ": " + error);
@@ -57,5 +57,5 @@ For example:
   })
 ``` 
 
-To use the “anonymous” user you have to first enable it from the Report Server management application. 
+To use the "anonymous" user you have to first enable it from the Report Server management application. 
 In order to log in as an anonymous user you have to pass empty strings both for the username and the password.
