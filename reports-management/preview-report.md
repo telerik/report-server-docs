@@ -37,3 +37,13 @@ The document format can be any [single document format provided by the Telerik R
 -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
 
 The preview window uses the [HTML5 Report Viewer](http://docs.telerik.com/reporting/html5-report-viewer "HTML5 Report Viewer") to display the report.
+
+## Query String Report Parameters
+
+When previewing a report with parameters, their values can be supplied in the URI. Report Server will automatically try to convert the [QueryString](https://msdn.microsoft.com/en-us/library/system.web.httprequest.querystring(v=vs.110).aspx) part of the request to a key-value dictionary and assign it to the report source parameters collection. The following list specifies the query parameter features:
+
+-   **Case insensitive names** – the engine will match the parameter names regardless the casing.
+-   **Cannot have spaces in names** – this restriction is imposed by the report designers so it should be impossible to name a report parameter using spaces in the first place.
+-   **URL-encoded values** – all the special characters and spaces in the parameters must be encoded for using in a URL. For example, the spaces for a string value must be replaced with *%20*.
+
+The feature is useful when sharing a report and need to preview it with certain parameter values instead of using the default ones. When the report is previewed in the HTML5 report viewer, every parameter change will also change the current report URL. Once all the report parameters are set, the URL in the address bar can be copy/pasted where needed.
