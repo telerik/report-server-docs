@@ -12,7 +12,7 @@ position: 700
 
 
 
-The Scheduling view is a centralized place from which you can manage scheduled tasks, review the created by the tasks documents and manage subscribers.
+The **Scheduling** view is a centralized place from which you can manage scheduled tasks, review the created by the tasks documents and manage subscribers.
 
 Scheduling
 ----------
@@ -21,7 +21,7 @@ The **Scheduling** view allows you to create, modify and delete scheduled tasks.
 
 A task has the following settings:
 
--   Name - the name of the task. It should be unique among the tasks
+-   **Name** - the name of the task. It should be unique among the tasks
 
 -   A report represented by its Category and Name
 
@@ -45,13 +45,67 @@ A task has the following settings:
 
     -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
 
--   Enabled - the task can be temporary disabled without the need to delete it
+-   **Enabled** - the task can be temporary disabled without the need to delete it
 
--   Start - the actual start date of the task
+-   **Start** - the actual start date of the task
 
--   Repeat - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
+-   **Repeat** - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
 
-A new task can be also created directly from the **Reports** | **Scheduling** view.
+-   **Parameters** - the task parameters allow you to define the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
+The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
+
+-   **Mail template** - specifies the mail template which is sent by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used.
+    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used**.**
+    In the template you can use the following mail variables which will be replaced automatically when the task is executed:
+
+    -   {FirstName} - the first name of the user
+
+    -   {LastName} - the last name of the user
+
+    -   {ReportName} - the name of the report document
+
+    -   {TaskName} - the name of the scheduled task
+
+    -   {DocumentFormat} - the specified in the task rendering format
+
+    -   {StartTime} - start time of the report document generation
+
+    -   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system
+
+    -   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system
+
+    -   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system
+
+    -   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system
+
+    -   {EndTime} - end time of the report document generation
+
+    -   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system
+
+    -   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system
+
+    -   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
+
+    -   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system
+
+    -   {ExecutionTime} - elapsed time for the report document generation
+
+    -   {ExecutionTimeDays} - elapsed time for the report document generation in **days**
+
+    -   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**
+
+    -   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**
+
+    -   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**
+
+    -   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**
+
+    -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
+        Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
+
+**NOTE:** A new task can be also created directly from the **Reports** | **Scheduling** view**.**
+
+You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
 Activity view
 -------------
