@@ -57,5 +57,4 @@ For example:
   })
 ``` 
 
-To use the "anonymous" user you have to first enable it from the Report Server management application. 
-In order to log in as an anonymous user you have to pass empty strings both for the username and the password.
+The Guest user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case a 1.1.400 Bad Request will be returned from the server.
