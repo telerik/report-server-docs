@@ -1,6 +1,6 @@
 ---
 title: Introduction
-page_title: Telerik Report Server by Progress Documentation
+page_title: Progress® Telerik® Report Server Documentation
 description: Introduction
 slug: introduction
 tags: introduction
