@@ -42,7 +42,7 @@ The migration tool uses *StackExchange.Redis.StrongName v.1.0.479* library as a 
 MSSQL Storage Connection Parameters
 -----------------------------------
 
-Similar to the **redis** option, when **mssql** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples for constructing the connection string can be found here. Note that if you do not specify a table name the data will be stored using the *master* schema.
+Similar to the **redis** option, when  **mssql** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples for constructing the connection string can be found here. Note that if you do not specify a table name the data will be stored using the *master* schema.
 
 Graphical User Interface
 ------------------------
