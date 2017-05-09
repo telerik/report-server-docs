@@ -12,7 +12,7 @@ position: 720
 
 
 
-The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation and its purpose is to provide easy out-of-the box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. 
+The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation and its purpose is to provide easy out-of-the box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in *Tools\\* subfolder of the installation directory.
 
 Command-Line Interface
 ----------------------
