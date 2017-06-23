@@ -19,4 +19,4 @@ On configuring the Report Server you can select to re-use the same Data Storage 
 
 To remove Telerik Report Server entirely, you can manually clear the content of the folder.
 
-> The Report Server installer will not run if it detects an already installed Report Server of the same or earlier version.
+> The Report Server installer will not run if it detects an already installed Report Server of the same or greater version.
