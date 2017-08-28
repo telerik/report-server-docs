@@ -11,7 +11,7 @@ position: 100
 # Introduction
 
 
-Telerik Report Server is a server-based reporting platform that provides comprehensive reports management. It provides a centralized storage for the reports and various ways to organize and preview them.
+Progress® Telerik® Report Server is a server-based reporting platform that provides comprehensive reports management. It provides a centralized storage for the reports and various ways to organize and preview them.
 
 Telerik Report Server provides a full range of ready-to-use tools and services to help you create, deploy, deliver and manage reports for your organization. Report scheduling enables you to configure the automatic delivery of specified reports by e-mail at scheduled intervals. You can use your organization AD FS or the Report Server's own authentication feature.
 
