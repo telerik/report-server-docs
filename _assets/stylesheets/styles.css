@@ -87,7 +87,7 @@ a img {
 #page-header {
     background-color: #2a2d33;
     font-size: 12px;
-	padding: 20px 0 20px 15px;
+	padding: 16px 0 16px 15px;
     width: 100%;
     box-sizing: border-box;
     position: fixed;
@@ -218,7 +218,7 @@ a img {
 #page-search {
     margin: 0;
     position: absolute;
-    top: 9px;
+    top: 5px;
     background-color: transparent;
     padding: 0;
     right: 514px;
