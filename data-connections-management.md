@@ -22,7 +22,7 @@ The data connections view provides the following functions:
 
 A new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_.
 
-In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permissions for the Data Connections View or they must be assigned the corresponding role - see [User Roles](/user-management/user-roles). Without write permissions for the Data Connections View, the user will only be able to publish a report with connection strings that are hard-coded whole in the report definition.
+In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permissions for the Data Connections View or they must be assigned the corresponding role - see [User Roles](/user-management/user-roles).
 
 Data connections with duplicate names are not allowed.
 
