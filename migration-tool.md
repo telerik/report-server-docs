@@ -1,6 +1,6 @@
 ---
-title: Telerik Report Server Storage Migration Tool
-page_title: Telerik Report Server Storage Migration Tool
+title: Storage Migration Tool
+page_title: Storage Migration Tool
 description: Telerik Report Server Storage Migration Tool
 slug: migration-tool
 tags: migration,export
@@ -8,7 +8,7 @@ published: True
 position: 720
 ---
 
-# Telerik Report Server Storage Migration Tool
+# Storage Migration Tool
 
 
 

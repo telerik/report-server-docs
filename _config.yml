@@ -21,7 +21,19 @@ navigation:
         title: "User Management"    
     reports-management:
         position: 400
-        title: "Reports Management"   
+        title: "Reports Management" 
+    apis:
+        position: 10000
+        title: "APIs"      
+    apis/rest-api:
+        position: 10100
+        title: "REST API"           
+    apis/rest-api/examples:
+        position: 10110
+        title: "Examples"    
+    apis/rest-api/examples/javascript:
+        position: 10111
+        title: "JavaScript"    
     "*foo":
         title: Foo
 
@@ -45,6 +57,9 @@ defaults:
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
+
+# Feedback Form Google Sheet ID
+ff-sheet-id: '1BT1fdkj4RPEdq5_lrEN5-x3ln8OVoaUjkYIT3RDdrUU'
 
 # The google services configuration
 google_tag_manager: GTM-6X92
