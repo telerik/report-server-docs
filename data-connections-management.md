@@ -21,7 +21,8 @@ The data connections view provides the following functions:
   - _Add a data connection_
 
 A new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_.
->Make sure the connection string is referencing SQL server with a non local address, so the users can edit reports in the report designer. To have access to read/write/modify connection strings, including from the Standalone Report Designer, the user must have permissions for the Data Connections View or the user must be in the corresponding role - see [User Roles](/user-management/user-roles). Without write permissions for the Data Connections View, the user will be able to publish a report with connection strings hard-coded in the definition.
+
+In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permissions for the Data Connections View or they must be assigned the corresponding role - see [User Roles](/user-management/user-roles).
 
 Data connections with duplicate names are not allowed.
 
