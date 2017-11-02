@@ -12,7 +12,7 @@ position: 200
 
 
 
-The Report Server web application is installed by a Windows installer which automatically creates a separate web site with its own application pool on the IIS. The application pool runs under the *LocalSystem* identity.
+The Report Server web application is installed by a Windows installer which automatically creates a separate web site with its own application pool on the IIS. The application pool runs under the *LocalSystem* identity and has *Enable 32-Bit Applications* set to *true* by default. Note that this setting might cause external entities like ODBC drivers to fail to work with Report Server due to architecture mismatch between the driver and the application.
 
 The installer registers the new web site under port 83 by default. The installation process includes registering and starting of a Scheduler windows service.
 
