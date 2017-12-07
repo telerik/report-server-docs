@@ -54,8 +54,8 @@ A task has the following settings:
 -   **Parameters** - the task parameters allow you to define the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
 The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
 
--   **Mail template** - specifies the mail template which is sent by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used.
-    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used**.**
+-   **Mail template** - specifies the mail template which is sent by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
     In the template you can use the following mail variables which will be replaced automatically when the task is executed:
 
     -   {FirstName} - the first name of the user
@@ -103,7 +103,7 @@ The "*Use Default Value*" checkbox for all parameters determines whether the val
     -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
         Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
-**NOTE:** A new task can be also created directly from the **Reports** | **Scheduling** view**.**
+>A new task can be also created directly from the **Reports** | **Scheduling** view.
 
 You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
@@ -116,3 +116,4 @@ Subscribers view
 ----------------
 
 From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
+>When there is an error during the report processing or a general error in the task execution, mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
