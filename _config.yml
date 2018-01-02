@@ -22,6 +22,9 @@ navigation:
     reports-management:
         position: 400
         title: "Reports Management" 
+    connecting-to-data:
+        position: 600
+        title: "Connecting to Data" 
     apis:
         position: 10000
         title: "APIs"      
