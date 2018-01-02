@@ -26,8 +26,8 @@ A common application design practice is to separate the presentation layer from 
 
 5. Create [New Report]({%slug new-report%}).
 
-6. Create new [ObjectDataSource Component](https://docs.telerik.com/reporting/objectdatasource).
+6. Create new [ObjectDataSource Component](https://docs.telerik.com/reporting/objectdatasource) and follow the [ObjectDataSource Wizard](https://docs.telerik.com/reporting/objectdatasource-wizard) to select a .NET class and data-retrieval method from that class, and configure any data source parameters.
 
-7. The custom .NET class will show in the [ObjectDataSource Wizard](https://docs.telerik.com/reporting/objectdatasource-wizard) only when the currently logged-in user has Create/Edit permissions.
+>The custom .NET class will show in the [ObjectDataSource Wizard](https://docs.telerik.com/reporting/objectdatasource-wizard) only when the currently logged-in user has Create/Edit permissions.
 
 >Only data-retrieval methods with simple type parameters are supported (Boolean, DateTime, Integer, Float, String, and arrays of them).
