@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <title>UserRole</title>    
+
+    <link href="/report-server/favicon.ico?Version=2014" rel="shortcut icon" />
+
+    <meta name="description" content="###TITLE###">
+    <link href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.common.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/report-server/assets/styles.css?cb=a8b131b5af24cfc7568c2a00f1f62178">
+    <link rel="stylesheet" href="/report-server/assets/theme.css?cb=a2bba66c3ced3e5c6e50af4ef8b80b01">
+    <link rel="stylesheet" href="/report-server/assets/branding.css?cb=2baf3125cfb667714a445d0d2dda38d7">
+    <link rel="stylesheet" href="/report-server/assets/highlight.css?cb=15130acbb1e55535d2eb61e9be077ec3">
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.1.112/js/kendo.web.min.js"></script>
+    <script src="/report-server/assets/prettify.js?cb=bc364940245f3bc004655b1dc80a9346"></script>
+    <script src="/report-server/assets/app.js?cb=2d5f64be71ec0ca25480aab2538651dc"></script>
+    <script src="/report-server/assets/prettify.js?cb=bc364940245f3bc004655b1dc80a9346"></script>
+    <script src="/report-server/assets/branding.js?cb=c24a79e7fe5298dd12d8b0bacdf6f3c0"></script>
+
+    <!--[if lt IE 9]>
+    <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('article');
+    document.createElement('aside');
+    document.createElement('footer');
+    document.createElement('hgroup');
+    </script>
+    <![endif]-->
+
+    <style type="text/css">
+		.help-page h1,
+.help-page .h1,
+.help-page h2,
+.help-page .h2,
+.help-page h3,
+.help-page .h3,
+#body.help-page,
+.help-page-table th,
+.help-page-table pre,
+.help-page-table p {
+    font-family: "Segoe UI Light", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.help-page pre.wrapped {
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+}
+
+.help-page .warning-message-container {
+    margin-top: 20px;
+    padding: 0 10px;
+    color: #525252;
+    background: #EFDCA9; 
+    border: 1px solid #CCCCCC;
+}
+
+.help-page-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0px 0px 20px 0px;
+    border-top: 1px solid #D4D4D4;
+}
+
+.help-page-table th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #D4D4D4;
+    padding: 5px 6px 5px 6px;
+}
+
+.help-page-table td {
+    border-bottom: 1px solid #D4D4D4;
+    padding: 10px 8px 10px 8px;
+    vertical-align: top;
+}
+
+.help-page-table pre,
+.help-page-table p {
+    margin: 0px;
+    padding: 0px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.help-page-table tbody tr:hover td {
+    background-color: #F3F3F3;
+}
+
+.help-page a:hover {
+    background-color: transparent;
+}
+
+.help-page .sample-header {
+    border: 2px solid #D4D4D4;
+    background: #00497E;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-bottom: none;
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+}
+
+.help-page .sample-content {
+    display: block;
+    border-width: 0;
+    padding: 15px 20px;
+    background: #FFFFFF;
+    border: 2px solid #D4D4D4;
+    margin: 0px 0px 10px 0px;
+}
+
+.help-page .api-name {
+    width: 40%;
+}
+
+.help-page .api-documentation {
+    width: 60%;
+}
+
+.help-page .parameter-name {
+    width: 20%;
+}
+
+.help-page .parameter-documentation {
+    width: 40%;
+}
+
+.help-page .parameter-type {
+    width: 20%;
+}
+
+.help-page .parameter-annotations {
+    width: 20%;
+}
+
+.help-page h1,
+.help-page .h1 {
+    font-size: 36px;
+    line-height: normal;
+}
+
+.help-page h2,
+.help-page .h2 {
+    font-size: 24px;
+}
+
+.help-page h3,
+.help-page .h3 {
+    font-size: 20px;
+}
+
+#body.help-page {
+    font-size: 14px;
+    line-height: 143%;
+    color: #333;
+}
+
+.help-page a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+	</style>
+</head>
+<body class="faux-columns">
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-6X92" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script>(function(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-6X92');</script>
+        <!-- End Google Tag Manager --><aside class="TK-Hat"><figure class="TK-Hat-Brand"><a href="https://www.progress.com" class="TK-PRGS-Logo"><svg xmlns="http://www.w3.org/2000/svg" width="94" height="40" viewBox="0 0 512 120"><path fill="#5ce500" d="M95.52 29.33v51a3.93 3.93 0 0 1-1.78 3.08l-1.67 1-12.72 7.35-8.59 5-1.78 1V42.6L21.23 15 43.91 1.93 46 .74a3.94 3.94 0 0 1 3.56 0L81 18.9l14.51 8.38v2.05zM58.36 48.72l-9.79-5.66-22.91-13.23a4 4 0 0 0-3.56 0L1.77 41.57 0 42.6l34.49 19.91v39.83l20.3-11.73 1.79-1a3.94 3.94 0 0 0 1.78-3.08V48.72zM0 82.43l23.86 13.78V68.63z"></path><path fill="#4b4e52" d="M148.09 27.28h-26v70.48h11.55V70.1h14.57c15.77 0 24.45-7.7 24.45-21.69 0-6.35-2.4-21.12-24.55-21.12m12.78 21.31c0 7.95-4.12 11.19-14.24 11.19h-13v-22.1h14.57c8.56 0 12.71 3.57 12.71 10.91M207 46.41l.87.42-2 10.42-1.35-.42a11.32 11.32 0 0 0-3.34-.51c-10.79 0-11.67 8.59-11.67 19v22.44h-10.64V46h10v6.24c2.73-4.2 6-6.37 10.37-6.9a14.55 14.55 0 0 1 7.76 1.07M233.29 45c-8.42 0-15.16 3.2-19.5 9.27-4.56 6.37-5.23 13.85-5.23 17.74 0 16.36 9.7 26.92 24.73 26.92 18.26 0 24.73-14.71 24.73-27.3 0-7.25-2.15-13.82-6-18.51-4.41-5.31-10.87-8.12-18.7-8.12m0 44.38c-8.37 0-13.57-6.66-13.57-17.37s5.2-17.55 13.57-17.55S247 61.23 247 71.78c0 10.83-5.24 17.56-13.66 17.56m114.55-42.93l.87.42-2 10.42-1.35-.42a11.26 11.26 0 0 0-3.33-.51c-10.78 0-11.66 8.59-11.66 19v22.44h-10.66V46h10v6.24c2.73-4.2 6-6.37 10.37-6.9a14.54 14.54 0 0 1 7.73 1.06m38.4 34.76l-.2.57c-2.23 6.36-7.57 7.7-11.65 7.7-8.09 0-13.3-5.37-13.81-14.09h36.59l.13-1a31.26 31.26 0 0 0 .12-4.12v-.93C396.93 54.78 387.48 45 374 45c-7.9 0-14.37 3.1-18.73 9a30.85 30.85 0 0 0-5.54 18c0 16 9.95 26.74 24.74 26.74 11.45 0 19.33-5.82 22.2-16.38l.33-1.2h-10.7zM361 66.05c.9-7.17 5.81-11.73 12.79-11.73 5.33 0 11.64 3.1 12.52 11.73H361zm-60.7-15.71c-3.45-3.58-8.06-5.39-13.76-5.39-15.69 0-22.83 13.81-22.83 26.63 0 13.16 7.06 26.44 22.83 26.44a18.33 18.33 0 0 0 13.35-5.42c0 2.28-.1 4.45-.16 5.38-.58 8.54-4.68 12.51-12.91 12.51-4.47 0-9.61-1.59-10.6-6l-.22-1h-10.54l.17 1.41c1.1 9.12 9.11 14.79 20.9 14.79 10.34 0 17.7-3.9 21.28-11.26 1.73-3.55 2.6-8.72 2.6-15.37V46h-10.13v4.34zm-13.11 38.15c-3.74 0-12.43-1.69-12.43-17.37 0-10.3 4.87-16.7 12.71-16.7 6.06 0 12.52 4.39 12.52 16.7 0 10.87-4.79 17.37-12.81 17.37m159.67-6.31c0 8.23-6.83 16.53-22.09 16.53-13.5 0-21.53-5.85-22.61-16.45l-.15-1.1h10.52l.21.84c1.29 6.38 7.37 7.72 12.24 7.72 5.34 0 11-1.72 11-6.54 0-2.44-1.59-4.18-4.73-5.16-1.86-.55-4.15-1.2-6.56-1.87-4.16-1.16-8.47-2.38-11.12-3.29-6.56-2.35-10.33-6.93-10.33-12.56 0-10.43 10.16-15.11 20.22-15.11 13.46 0 20.42 5.07 21.3 15.49l.09 1.07H434.5l-.14-.82c-1-6-7-6.9-10.48-6.9-3 0-10 .53-10 5.5 0 2.25 1.93 3.91 5.89 5.06 1.18.33 2.94.78 5 1.31 4.22 1.09 9.48 2.46 12.13 3.37 6.59 2.32 9.93 6.67 9.93 13m49.39 0c0 8.23-6.83 16.53-22.09 16.53-13.5 0-21.53-5.85-22.61-16.45l-.11-1.09H462l.12.74c1.29 6.38 7.37 7.72 12.24 7.72 5.34 0 11-1.72 11-6.54 0-2.44-1.59-4.18-4.72-5.16-1.86-.55-4.15-1.2-6.57-1.87-4.16-1.16-8.46-2.38-11.11-3.29-6.57-2.35-10.33-6.93-10.33-12.56 0-10.43 10.16-15.11 20.22-15.11 13.46 0 20.42 5.07 21.29 15.49l.09 1.07H483.9l-.14-.82c-1-6-7-6.9-10.48-6.9-3 0-9.95.53-9.95 5.5 0 2.25 1.93 3.91 5.89 5.06 1.18.33 2.94.78 5 1.31 4.22 1.09 9.48 2.46 12.13 3.37 6.58 2.32 9.93 6.67 9.93 13m8.43-30.78a7.37 7.37 0 1 1 7.29-7.37 7.23 7.23 0 0 1-7.29 7.37m0-13.49a6.12 6.12 0 1 0 6 6.12 5.91 5.91 0 0 0-6-6.12m-.85 7.49v2.46h-2.17v-7.74h3.62a2.58 2.58 0 0 1 2.86 2.7 2.26 2.26 0 0 1-1.49 2.34l1.77 2.7H506l-1.49-2.46h-.68zm1.21-3.49h-1.21v1.73h1.21a.86.86 0 0 0 1-.85.88.88 0 0 0-1-.89"></path></svg></a></figure></aside><header id="page-header">
+			<span class="toggle-nav"><span></span></span>
+            <div id="logo-bar-report-server">
+	<a href="/report-server/" title="Report Server">
+		<span>Report Server</span>
+	</a>
+</div> 
+
+<div id="page-search">
+	<script>
+  (function() {
+    var cx = '001595215763381649090:dikfyfm1qqw';
+    var gcse = document.createElement('script');
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+</div>
+
+<span class="show-search">
+	<span class="k-icon k-i-search"></span>
+</span>
+
+<div class="nav-buttons">
+    <!-- <a href="http://demos.telerik.com/report-server/" title="Report Server Demos" target="_blank" class="btn demos-btn">Demos</a> -->
+	<a href="http://www.telerik.com/report-server/" title="About Report Server" target="_blank" class="btn about-btn">About</a>
+    <a href="http://www.telerik.com/purchase/report-server" title="Pricing" target="_blank" class="btn pricing-btn">Pricing</a>
+	<a href="http://www.telerik.com/download/report-server" title="Try now" target="_blank" class="btn btn-primary">Try now</a>
+</div>
+
+
+
+
+
+        </header>
+
+        <div id="page-inner-content">
+    <div id="page-nav">
+        <div id="page-tree"></div>
+        <script>
+			$("#page-tree").kendoTreeView({
+				dataSource: {
+					transport: {
+						read: {
+							url: "/report-server/default.json",
+							dataType: "json"
+						}
+					},
+					schema: {
+						model: {
+							id: "path",
+							children: "items",
+							hasChildren: "items"
+						}
+					}
+				},
+				select: preventParentSelection,
+				template: navigationTemplate("/report-server/"),
+				dataBound: expandNavigation("implementer-guide/apis/rest-api/api-reference.html")
+			});
+        </script>
+<!-- 		<script type="text/javascript">		
+			window.onload = function(){
+				var tree = $("#page-tree").data("kendoTreeView");
+				var selected = tree.select()
+				$("#page-nav").animate({scrollTop:selected.offset().top - $("#page-header").height() - $("#page-nav").height() / 2}, 300);				
+			}
+		</script> -->		
+    </div>
+    <div id="page-article">       
+        <article>
+    <div id="body" class="help-page">
+        <section class="featured">
+            <div class="content-wrapper">
+                <p>
+                    <a href="api-reference">Help Page Home</a>
+                </p>
+            </div>
+        </section>
+        <h1>UserRole</h1>
+        <p>Provides information about a user role.</p>
+        <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+    <thead>
+    <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+    </thead>
+    <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Specifies the role identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                                                                        string
+
+                    </td>
+                    <td class="parameter-annotations">
+                                                    <p>None.</p>
+                                           </td>
+                </tr>
+                    <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Specifies the user role name.</p>
+                    </td>
+                    <td class="parameter-type">
+                                                                        string
+
+                    </td>
+                    <td class="parameter-annotations">
+                                                    <p>None.</p>
+                                           </td>
+                </tr>
+                    <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p>Specifies the desription of the user role.</p>
+                    </td>
+                    <td class="parameter-type">
+                                                                        string
+
+                    </td>
+                    <td class="parameter-annotations">
+                                                    <p>None.</p>
+                                           </td>
+                </tr>
+                    <tr>
+                    <td class="parameter-name">IsSystemRole</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether the user role is a system role or not.</p>
+                    </td>
+                    <td class="parameter-type">
+                                                                        boolean
+
+                    </td>
+                    <td class="parameter-annotations">
+                                                    <p>None.</p>
+                                           </td>
+                </tr>
+                    <tr>
+                    <td class="parameter-name">UserIds</td>
+                    <td class="parameter-documentation">
+                        <p>Returns a lsit of IDs of users that are assigned to the role.</p>
+                    </td>
+                    <td class="parameter-type">
+                                                                        Collection of string
+
+                    </td>
+                    <td class="parameter-annotations">
+                                                    <p>None.</p>
+                                           </td>
+                </tr>
+            </tbody>
+</table>
+            
+        </section>
+    </div>
+</article>
+<div id="feedback-container">
+  <div id="feedback-section">
+    <script src="/report-server/assets/feedback.js?cb=94edf24eecbcf0589c554094d27e6be7"></script>
+    <span id="popupNotification"></span>
+    <div id="feedback-menu-container">
+      <div id="helpful-buttons-container">
+        <span class="side-title">Was this article helpful?</span>
+        <a class="button" id="yesButton">Yes</a>
+        <a class="button" id="noButton">No</a>
+      </div>
+      <div id="feedback-submitted-container" class="feedback-ext__left">		
+        <span class="feedback-ext__label-submit">Thank you for your feedback!</span>		
+      </div>
+      <div id="additional-feedback-button" class="feedback-ext__right">		
+        <span class="feedback-ext__addition">Give additional feedback</span>		
+      </div>
+    </div>
+    <div id="feedback-window-container">
+      <div id="feedback-form-window" style="background-color: white;">
+        <h1 class="feedback-extw__title">Give article feedback</h1>
+        <p>Tell us how we can improve this article</p>
+        <form id="feedback-form">
+          <div id="feedback-checkbox-area">
+            <input id="hidden-sheet-id" type="hidden" value="1BT1fdkj4RPEdq5_lrEN5-x3ln8OVoaUjkYIT3RDdrUU">
+            <label>
+              <input type="checkbox" data-bind="checked: outdatedSample" />Code samples are inaccurate/outdated.
+            </label>
+            <span class="required-field" data-bind="visible: outdatedSample"></span>
+            <textarea id="feedback-code-sample-text-input" placeholder="Specify more details ..." class="feedback-extw__textarea"
+              data-bind="visible: outdatedSample, value: inaccurateOutdatedCodeSamplesText">
+          </textarea>
+            <label>
+              <input type="checkbox" data-bind="checked: otherMoreInformation" />I expected to find other/more information.
+            </label>
+            <span class="required-field" data-bind="visible: otherMoreInformation"></span>
+            <textarea id="feedback-more-information-text-input" class="feedback-extw__textarea" placeholder="Specify what information can be added ..."
+              data-bind="visible: otherMoreInformation, value: otherMoreInformationText">
+          </textarea>
+            <label>
+              <input type="checkbox" data-bind="checked: textErrors" />There are typos/broken links/broken page elements.
+            </label>
+            <span class="required-field" data-bind="visible: textErrors"></span>
+            <textarea id="feedback-text-errors-text-input" class="feedback-extw__textarea" placeholder="Specify what needs to be fixed ..."
+              data-bind="visible: textErrors, value: typosLinksElementsText">
+          </textarea>
+            <label>
+              <input type="checkbox" data-bind="checked: inaccurateContent" />Content is inaccurate/outdated.
+            </label>
+            <span class="required-field" data-bind="visible: inaccurateContent"></span>
+            <textarea id="feedback-inaccurate-content-text-input" class="feedback-extw__textarea" placeholder="Specify which content ..."
+              data-bind="visible: inaccurateContent, value: inaccurateOutdatedContentText"></textarea>
+            <label>
+              <input type="checkbox" data-bind="checked: otherFeedback" />Other
+            </label>
+            <span class="required-field" data-bind="visible: otherFeedback"></span>
+            <textarea id="feedback-other-text-input" placeholder="Enter more details or not listed feedback ..." class="feedback-extw__textarea"
+              data-bind="visible: otherFeedback, value: textFeedback">
+          </textarea>
+            <input id="feedback-email-input" type="email" placeholder="email (optional)" data-email-msg="Email format is not valid."
+              class="feedback-extw__input input" data-bind="value: email" />
+          </div>
+        </form>
+        <div class="feedback-extw__foot">
+          <button id="form-submit-button" class="feedback-extw__button button button--action">Send feedback</button>
+          <button id="form-close-button" class="feedback-extw__button button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feedback-section-dummy">Dummy</div>
+</div>  
+
+
+    </div>	
+</div>
+
+<footer>
+<p>Copyright &copy; 2017 Progress Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

@@ -8,6 +8,10 @@ published: True
 position: 100
 ---
 
+# Documentation
+
+The **User Guide** provides instructions and explanations of how to create and manage reports and other topics related to the usage of the Progress® Telerik® Report Server. The **Implementer Guide** is targeted at implementers and administrators and covers subjects such as installation, configuration, user management, deployment, integration with other systems, and APIs.
+
 # Introduction
 
 
@@ -17,7 +21,7 @@ Telerik Report Server provides a full range of ready-to-use tools and services t
 
 Telerik Report Server enables you to access reports from any device and has built-in caching capabilities for better performance and fast loading of the reports. Built-in user and user roles management gives you the ability to determine the permission for each user, so you rest assured that the data viewed in reports is protected.
 
-Report Server uses the advanced Telerik Reporting engine and the royalty free Report Designer to easily create a complex and visually appealing report definitions in our XML proprietary format (trdx). With Telerik Reporting, you can create interactive, tabular, graphical, or free-form reports from relational or multidimensional data sources. Reports can include rich data visualization, including charts, maps, and choropleths. 
+Report Server uses the advanced Telerik Reporting engine and the royalty free Report Designer to easily create complex and visually appealing report definitions in our XML proprietary format (trdx). With Telerik Reporting, you can create interactive, tabular, graphical, or free-form reports from relational or multidimensional data sources. Reports can include rich data visualization, including charts, maps, and choropleths. 
 
 You can publish reports, and access reports on-demand. Existing reports in XML format saved as TRDX files can be published directly. Reports created in Visual Studio will have to be serialized or imported in the Standalone Designer tool. You can select from a variety of viewing formats, export reports to other applications such as Microsoft Excel. The reports that you create can be viewed over a Web-based connection.
 

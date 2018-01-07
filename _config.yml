@@ -10,31 +10,37 @@ navigation:
 ## Other topics are generated with position 100, 200, 300, etc.
 
 ## Main Menu
-    licensing-and-distribution:
+    user-guide:
+        position: 110
+        title: "User Guide"
+    implementer-guide:
+        position: 120
+        title: "Implementer Guide"
+    implementer-guide/licensing-and-distribution:
         position: 130
         title: "Licensing and Distribution"    
-    setup:
+    implementer-guide/setup:
         position: 200
         title: "Setup"    
-    user-management:
+    implementer-guide/user-management:
         position: 210
         title: "User Management"    
-    reports-management:
+    user-guide/reports-management:
         position: 400
         title: "Reports Management" 
-    connecting-to-data:
+    implementer-guide/connecting-to-data:
         position: 600
         title: "Connecting to Data" 
-    apis:
+    implementer-guide/apis:
         position: 10000
         title: "APIs"      
-    apis/rest-api:
+    implementer-guide/apis/rest-api:
         position: 10100
         title: "REST API"           
-    apis/rest-api/examples:
+    implementer-guide/apis/rest-api/examples:
         position: 10110
         title: "Examples"    
-    apis/rest-api/examples/javascript:
+    implementer-guide/apis/rest-api/examples/javascript:
         position: 10111
         title: "JavaScript"    
     "*foo":
