@@ -12,7 +12,7 @@ position: 600
 
 
 
-The Report Server supports [SQL]({%slug data-connections-management%}), [Object]({%slug business-objects-management%}), and [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
+The Report Server supports [SQL]({%slug data-connections-management%}), [Object]({%slug business-objects-management%}), and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
 SQL data connections can be managed from the [Data Connections View]({%slug data-connections-management%}).
 
