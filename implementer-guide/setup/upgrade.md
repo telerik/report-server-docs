@@ -14,7 +14,9 @@ To upgrade an existing Report Server installation, you can run [Telerik Report S
 
 
 Telerik Report Server installer replaces existing files in the selected installation folder. 
-The installer will preserve existing Data storage and configuration files. 
+The installer will preserve existing Data storage and configuration files - _ReportServerAdmin.config_ and _ServiceAgent.config_.
+The installer will not preserve any other config files such as _Web.config_ and _Telerik.ReportServer.ServiceAgent.exe.config_. It is recommended to perform a file backup before upgrading.
+
 On configuring the Report Server you can select to re-use the same Data Storage folder.
 
 To remove Telerik Report Server entirely, you can manually clear the content of the folder.
