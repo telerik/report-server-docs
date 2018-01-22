@@ -43,6 +43,9 @@ navigation:
     implementer-guide/apis/rest-api/examples/javascript:
         position: 10111
         title: "JavaScript"    
+    knowledge-base:
+        position: 1100
+        title: "Knowledge Base"
     "*foo":
         title: Foo
 

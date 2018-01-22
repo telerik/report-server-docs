@@ -20,41 +20,8 @@ res_type: kb
   <td>Operating System</td>
   <td>Windows</td>
  </tr>
- <tr>
-  <td>Browser</td>
-  <td></td>
- </tr>
- <tr>
-  <td>Browser Version</td>
-  <td></td>
- </tr>
- <tr>
   <td>.Net framework</td>
   <td>Version 4.6</td>
- </tr>
- <tr>
-  <td>Visual Studio version</td>
-  <td></td>
- </tr>
- <tr>
-  <td>Preferred Language</td>
-  <td></td>
- </tr>
- <tr>
-  <td>Project Type</td>
-  <td></td>
- </tr>
- <tr>
-  <td>Viewer</td>
-  <td></td>
- </tr>
- <tr>
-  <td>OS Language</td>
-  <td></td>
- </tr>
- <tr>
-  <td>Rendering Format</td>
-  <td></td>
  </tr>
 </table>
 
