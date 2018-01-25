@@ -26,11 +26,11 @@ res_type: kb
 
 Telerik Report Server has its REST API exposed allowing you to consume resources from third-party applications as an administrator after logging in. You can find examples with JavaScript client in the REST API section of the online documentation:
 
-- [Login](http://docs.telerik.com/report-server/apis/rest-api/examples/javascript/login) and saving the access token for further usage;
+- [Login](https://docs.telerik.com/report-server/implementer-guide/apis/rest-api/examples/javascript/login) and saving the access token for further usage;
 
-- [Resources](http://docs.telerik.com/report-server/apis/rest-api/examples/javascript/get-resources) - listing resources like reports available on the Report Server;
+- [Resources](https://docs.telerik.com/report-server/implementer-guide/apis/rest-api/examples/javascript/get-resources) - listing resources like reports available on the Report Server;
 
-- [Export](http://docs.telerik.com/report-server/apis/rest-api/examples/javascript/export) a report by getting its ID first.
+- [Export](https://docs.telerik.com/report-server/implementer-guide/apis/rest-api/examples/javascript/export) a report by getting its ID first.
 
 More details about the available REST API Reference.
 
