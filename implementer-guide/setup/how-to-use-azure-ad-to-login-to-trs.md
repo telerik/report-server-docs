@@ -46,7 +46,7 @@ In this directory we have to register two applications. The first one is the Tel
 
 When you click the checkmark button, the application will be added to your directory and you can preview its details using the CONFIGURE menu entry on the top.
 
-### 2.  Setup the Azure AD users
+### 2.  Setup the Azure AD Users
 
 The active directory you have created should have one user, sourced from your Microsoft Account. You can use this user to connect to Telerik Report Server, or you can create another one just for the directory. Creating a user for Azure AD is fairly straightforward process. Note that the user name (in this case *TestUser@ActiveDirTrialDemo.onmicrosoft.com*) you provide for the new user will be the one used for its registration in Telerik Report Server, which we will describe later in this article. When you are done adding the new user in Azure AD, the USERS tab should look like this:
 
@@ -120,7 +120,7 @@ So far we have demonstrated how to authenticate against the Telerik Report Serve
 
 -   In the Properties section locate the CLIENT ID textbox and copy its content. This ID should be provided from the Standalone Report Designer when it tries to authenticate itself before accessing the Telerik Report Server API. However, Azure generates this ID and doesn’t allow it to be changed, so we need to set it in our Telerik Report Server where it will be transferred to the client application.
 
-### 6.  Setup Standalone Report Designer to use Azure AD authentication
+### 6.  Setup Standalone Report Designer to Use Azure AD Authentication
 
 All the settings that are used to allow the Standalone Report Designer to connect to Telerik Report Server using a federated authentication, are located in Server’s Configuration page.
 
