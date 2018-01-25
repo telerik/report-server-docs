@@ -1,7 +1,7 @@
 ---
-title: Upload Report
-page_title: Upload Report
-description: Upload Report
+title: Upload Reports
+page_title: Upload Reports
+description: Upload Reports
 slug: upload-report
 tags: upload,report
 published: True
@@ -10,17 +10,13 @@ position: 120
 
 # Upload Report
 
-Upload a New Report
--------------------
-
 Upload an existing report definition from the file system. When uploading a report you should select the report definition in the zip-based TRDP format or the legacy TRDX format, specify the report's __title__ and select the report's __category__. All the fields are mandatory except the __description__ field.
 
 ![upload report](../../images/report-server-images/reports-management/upload-report.png)
 
->To upload a report you need to create at least one category.
+> To upload a report you need to create at least one category.
 
-Upload a New Revision
----------------------
+## Upload Revision
 
 Upload a new revision to an existing report in TRDP or TRDX format. When uploading a report revision, it will appear as the latest available revision of the selected report. The validation rules for the revision upload are same as the rules for the report definition upload described above.
 

@@ -10,110 +10,113 @@ position: 700
 
 # Scheduled Tasks Management
 
-
-
 The **Scheduling** view is a centralized place from which you can manage scheduled tasks, review the created by the tasks documents and manage subscribers.
 
-Scheduling
-----------
+## Scheduling Grid
 
-The **Scheduling** view allows you to create, modify and delete scheduled tasks. A scheduled task specifies when a specific report should be rendered and in what document format. The created documents are stored in the Report Server's storage and can be sent as email attachments to different subscribers. A scheduled task can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a report execution is to occur.
+The **Scheduling** grid allows you to create, modify and delete scheduled tasks. A scheduled task specifies when a specific report should be rendered and in what document format. The created documents are stored in the Report Server's storage and can be sent as email attachments to different subscribers. A scheduled task can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a report execution is to occur.
 
-A task has the following settings:
+A Scheduled Task has various settings which are grouped into different tabs. 
 
--   **Name** - the name of the task. It should be unique among the tasks
+### General Tab
 
--   A report represented by its Category and Name
+-   **Name** - the name of the task. It should be unique among the tasks.
 
--   Target document format - can be any single document format provided by the Telerik Reporting engine:
+-   A **Report** from a selected **Category**.
 
-    -   PDF - Renders a report in the Adobe Acrobat Reader. The format is shown as Acrobat (PDF) File in the Export drop-down of the report toolbar.
+-   Target **Document format** - can be any single document format provided by the Telerik Reporting engine:
 
-    -   XLS - Renders a report in Microsoft Excel. The report opens in Microsoft Excel 97 or later.
+    -   PDF - renders a report in the Adobe Acrobat Reader. The format is shown as Acrobat (PDF) File in the Export drop-down of the report toolbar.
 
-    -   CSV - Renders a report in comma-delimited format. The report opens in a viewing tool associated with CSV file formats.
+    -   XLS - renders a report in Microsoft Excel. The report opens in Microsoft Excel 97 or later.
 
-    -   RTF - Renders a report in Rich Text Format. The report opens in Microsoft Word 97 or later.
+    -   CSV - renders a report in comma-delimited format. The report opens in a viewing tool associated with CSV file formats.
 
-    -   XPS - Renders a report in XML Paper Specification (XPS) format - electronic representation of digital documents based on XML. The report opens in Microsoft XPS Viewer.
+    -   RTF - renders a report in Rich Text Format. The report opens in Microsoft Word 97 or later.
 
-    -   DOCX - Renders a report in Microsoft Word 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for representing word processing documents.
+    -   XPS - renders a report in XML Paper Specification (XPS) format - electronic representation of digital documents based on XML. The report opens in Microsoft XPS Viewer.
 
-    -   XLSX - Renders a report in Microsoft Excel 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for representing spreadsheets.
+    -   DOCX - renders a report in Microsoft Word 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for representing word processing documents.
 
-    -   PPTX - Renders a report in Microsoft PowerPoint 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for presentations.
+    -   XLSX - renders a report in Microsoft Excel 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for representing spreadsheets.
 
-    -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
+    -   PPTX - renders a report in Microsoft PowerPoint 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for presentations.
 
--   **Enabled** - the task can be temporary disabled without the need to delete it
+    -   MHTML - renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
 
--   **Start** - the actual start date of the task
+-   **Start** - the actual start date of the task.
+
+-   **Enabled** - the task can be temporary disabled without the need to delete it.
+
+### Recurrence Tab
 
 -   **Repeat** - defines the recurrence rule if the task should be executed on regular intervals. The repeat pattern can be daily, weekly, monthly and yearly. Currently, hourly repetition is not supported.
 
--   **Parameters** - the task parameters allow you to define the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
+### Parameters Tab
+
+The task parameters allow you to define the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
 The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
 
--   **Mail template** - specifies the mail template which is sent by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
-    If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
-    In the template you can use the following mail variables which will be replaced automatically when the task is executed:
+### Mail Template Tab
 
-    -   {FirstName} - the first name of the user
+Specifies the mail template which is sent by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
+In the template you can use the following mail variables which will be replaced automatically when the task is executed:
 
-    -   {LastName} - the last name of the user
+-   {FirstName} - the first name of the user.
 
-    -   {ReportName} - the name of the report document
+-   {LastName} - the last name of the user.
 
-    -   {TaskName} - the name of the scheduled task
+-   {ReportName} - the name of the report document.
 
-    -   {DocumentFormat} - the specified in the task rendering format
+-   {TaskName} - the name of the scheduled task.
 
-    -   {StartTime} - start time of the report document generation
+-   {DocumentFormat} - the specified in the task rendering format.
 
-    -   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system
+-   {StartTime} - start time of the report document generation.
 
-    -   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system
+-   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
 
-    -   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system
+-   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system.
 
-    -   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system
+-   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system.
 
-    -   {EndTime} - end time of the report document generation
+-   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system.
 
-    -   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system
+-   {EndTime} - end time of the report document generation.
 
-    -   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system
+-   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system.
 
-    -   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
+-   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system.
 
-    -   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system
+-   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
 
-    -   {ExecutionTime} - elapsed time for the report document generation
+-   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system.
 
-    -   {ExecutionTimeDays} - elapsed time for the report document generation in **days**
+-   {ExecutionTime} - elapsed time for the report document generation.
 
-    -   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**
+-   {ExecutionTimeDays} - elapsed time for the report document generation in **days**.
 
-    -   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**
+-   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**.
 
-    -   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**
+-   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**.
 
-    -   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**
+-   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**.
 
-    -   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task.
-        Note: The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
+-   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**.
 
->A new task can be also created directly from the **Reports** | **Scheduling** view.
+-   {@\[ReportParameter.Name\]} - the value of the specified by the \[ReportParameter.Name\] report parameter used when running the scheduling task. The \[ReportParameter.Name\] placeholder stands for the actual name of the report parameter. The list of all possible report parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
+
+> A new task can be also created directly from the **Reports** | **Scheduling** view.
 
 You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({%slug search%}).
 
-Activity view
--------------
+## Activity View
 
 The **Activity** view for a scheduled task shows the created by the task documents. A created document can be downloaded for preview in the target format or deleted. The list items also display whether the task has successfully created a document or there was an error while generating it.
 
-Subscribers view
-----------------
+## Subscribers View
 
 From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
->When there is an error during the report processing or a general error in the task execution, mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+
+> When there is an error during the report processing or a general error in the task execution, mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.

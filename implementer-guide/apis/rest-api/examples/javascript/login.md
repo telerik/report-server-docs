@@ -14,47 +14,45 @@ In order to perform operations with the Report Server you have to authenticate f
 
 Here is a sample code snippet which demonstrates how to login and get the token:
 
-```javascript
-  var serverHost = "http://reportserver:83/";
-  var serverApi = serverHost + "api/reportserver/";
+###### Example
 
-  function login(username, password) {
-  
-    var accessToken = "";
-  
-    $.ajax({
-      type: "POST",
-      url: serverHost + "Token",
-      async: false,
-      data: {
-        grant_type: "password",
-        username: username,
-        password: password
-      }
-    })
-    .done(function (data, textStatus, jqXHR) {
-      accessToken = data.access_token;
-    })
-    .fail(function (xhr, status, error) {
-      window.alert(xhr.status + ": " + error);
-    });
-    
-    return accessToken;
-  }
-```
+	  var serverHost = "http://reportserver:83/";
+	  var serverApi = serverHost + "api/reportserver/";
+
+	  function login(username, password) {
+	  
+		var accessToken = "";
+	  
+		$.ajax({
+		  type: "POST",
+		  url: serverHost + "Token",
+		  async: false,
+		  data: {
+			grant_type: "password",
+			username: username,
+			password: password
+		  }
+		})
+		.done(function (data, textStatus, jqXHR) {
+		  accessToken = data.access_token;
+		})
+		.fail(function (xhr, status, error) {
+		  window.alert(xhr.status + ": " + error);
+		});
+		
+		return accessToken;
+	  }
 
 Once you get the access token, you can store it in [window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) and later use it in subsequent requests.
 
-For example:
+###### Example
 
-```javascript
-  var serverTokenKey = "TelerikReportServerToken";
+	  var serverTokenKey = "TelerikReportServerToken";
 
-  $(document).ready(function () {
-    var accessToken =
-      login("telerik", "telerik");
-    window.sessionStorage.setItem(serverTokenKey, accessToken);
-  })
-``` 
+	  $(document).ready(function () {
+		var accessToken =
+		  login("telerik", "telerik");
+		window.sessionStorage.setItem(serverTokenKey, accessToken);
+	  })
 
 The Guest user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case a 1.1.400 Bad Request will be returned from the server.

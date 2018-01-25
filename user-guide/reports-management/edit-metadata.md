@@ -10,8 +10,6 @@ position: 150
 
 # Edit
 
-
-
 Change the __title__, __description__ and the __category__ of the uploaded report.
 
 ![edit metadata](../../images/report-server-images/reports-management/edit-metadata.png)

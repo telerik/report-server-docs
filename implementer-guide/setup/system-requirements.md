@@ -10,8 +10,8 @@ position: 100
 
 # System Requirements
 
-
-
 - Internet Information Services (IIS 7+)
+
 - Microsoft .NET Framework 4.5.1
+
 - HTML5 compatible web browser

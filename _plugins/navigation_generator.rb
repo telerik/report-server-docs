@@ -22,6 +22,8 @@ module Jekyll
 
                 url = page.url.sub('/', '')
 
+                next if url.include? "knowledge-base/"
+
                 segments = url.split('/')
 
                 segments.each_with_index do |segment, index|
@@ -35,6 +37,7 @@ module Jekyll
                             item['position'] = page.data['position'] if page.data['position']
                             item['text'] = page.data['title']
                             item['spriteCssClass'] = 'article'
+                            item['isNew'] = page.data['isNew'] if page.data['isNew']
                         else
                             path = segments[0..index].join('/')
                             navigation_entry =  @navigation.find { |key, value| path =~ key }

@@ -8,68 +8,81 @@ published: True
 position: 500
 ---
 
-Mail Templates
-==============================
+# Mail Templates
+
 Mail templates define the text which is sent via e-mail to the Report Server users for various reasons.
 
-Available for configuration are the following mail templates:
+## Template Types
 
--   **Reset Password** - specifies the mail template used by the Report Server when sending a 'reset password' link in case a local user has forgotten his password. The mail template must contain the {link} variable as it will provide the link for the user to the 'reset password' page.
+### Reset Password
 
--   **Activate Account** - specifies the mail template sent to a new local user so that he/she can activate his/her account. The mail template must contain the {link} variable as it will provide a link for the user to the account activation page.
+Specifies the mail template used by the Report Server when sending a 'reset password' link in case a local user has forgotten his password. The mail template must contain the {link} variable as it will provide the link for the user to the 'reset password' page.
 
--   **Scheduled Task Attachment** - specifies the default mail template used by the scheduling service when sending an e-mail with the generated report document. You can configure a more specific template for this action in the New/Edit Scheduled Task dialog.
-    The variables which can be used only in this template type are:
+### Activate Account
 
-    -   {FirstName} - the first name of the user
+Specifies the mail template sent to a new local user so that he/she can activate his/her account. The mail template must contain the {link} variable as it will provide a link for the user to the account activation page.
 
-    -   {LastName} - the last name of the user
+### Scheduled Task Attachment
 
--   **Scheduled Task Attachment External -** specifies the mail template used by the scheduling service when sending an e-mail with the generated report document to an external user.
+Specifies the default mail template used by the scheduling service when sending an e-mail with the generated report document. You can configure a more specific template for this action in the New/Edit Scheduled Task dialog.
+The variables which can be used only in this template type are:
 
--   **Scheduled Task Error -** specifies the mail template sent by the scheduling service when there are errors during the report document generation. It might be a report processing error or general task scheduler error while trying to executed the scheduled task. If despite the errors a document has been generated then it will be sent as an attachment.
-    The variables which can be used only in this template are:
+-   {FirstName} - the first name of the user.
 
-    -   {Errors} - the errors that have occurred during the scheduled task execution.
+-   {LastName} - the last name of the user.
 
-The variables that are common for all **Scheduled Task** templates with a generated report document (i.e. templates with an attachment):
+### Scheduled Task Attachment External
 
--   {DocumentFormat} - the specified in the scheduled task rendering format
+Specifies the mail template used by the scheduling service when sending an e-mail with the generated report document to an external user.
 
--   {StartTime} - start time of the report document generation
+### Scheduled Task Error
 
--   {StartTmeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system
+Specifies the mail template sent by the scheduling service when there are errors during the report document generation. It might be a report processing error or general task scheduler error while trying to executed the scheduled task. If despite the errors a document has been generated then it will be sent as an attachment.
+The variables which can be used only in this template are:
 
--   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system
+-   {Errors} - the errors that have occurred during the scheduled task execution.
 
--   {StartDate} - start date of the report document generation formatted with the **short date** pattern of the operating system
+## Common Variables
 
--   {StartDateLong} - start date of the report document generation formatted with the **long date** pattern of the operating system
+Mail variables common for all **Scheduled Task** templates:
 
--   {EndTime} - end time of the report document generation
+-   {ReportName} - the name of the report document.
 
--   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system
+-   {TaskName} - the name of the scheduled task.
 
--   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system
+Mail variables common for all **Scheduled Task** templates with a generated report document (i.e. templates with an attachment):
 
--   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system
+-   {DocumentFormat} - the specified in the scheduled task rendering format.
 
--   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system
+-   {StartTime} - start time of the report document generation.
 
--   {ExecutionTime} - elapsed time of the report document generation
+-   {StartTmeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
 
--   {ExecutionTimeDays} - elapsed time of the report document generation in **days**
+-   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system.
 
--   {ExecutionTimeHours} - elapsed time of the report document generation in **hours **
+-   {StartDate} - start date of the report document generation formatted with the **short date** pattern of the operating system.
 
--   {ExecutionTimeMinutes} - elapsed time of the report document generation in **minutes **
+-   {StartDateLong} - start date of the report document generation formatted with the **long date** pattern of the operating system.
 
--   {ExecutionTimeSeconds} - elapsed time of the report document generation in **seconds **
+-   {EndTime} - end time of the report document generation.
 
--   {ExecutionTimeMilliseconds} - elapsed time of the report document generation in **milliseconds **
+-   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system.
 
-Mail variables that are common for all **Scheduled Task** templates:
+-   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system.
 
--   {ReportName} - the name of the report document
+-   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
 
--   {TaskName} - the name of the scheduled task
+-   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system.
+
+-   {ExecutionTime} - elapsed time of the report document generation.
+
+-   {ExecutionTimeDays} - elapsed time of the report document generation in **days**.
+
+-   {ExecutionTimeHours} - elapsed time of the report document generation in **hours **.
+
+-   {ExecutionTimeMinutes} - elapsed time of the report document generation in **minutes **.
+
+-   {ExecutionTimeSeconds} - elapsed time of the report document generation in **seconds **.
+
+-   {ExecutionTimeMilliseconds} - elapsed time of the report document generation in **milliseconds **.
+

@@ -14,7 +14,7 @@ The Report Designer is a report authoring tool. When you design a report, you sp
 
 Report Server supports [SQL]({%slug data-connections-management%}), [Object]({%slug business-objects-management%}), and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
-Related articles:  
+### Related Articles
 
 - [Report Designer Overview](https://docs.telerik.com/reporting/standalone-report-designer.html "Standalone Report Designer Overview")  
 - [Create, Open, Edit, Save and Publish Reports](https://docs.telerik.com/reporting/standalone-report-designer-working-with-server-reports.html "Working with server reports")  

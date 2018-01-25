@@ -8,31 +8,28 @@
         </a>
     </figure>
 </aside>
-
 <header id="page-header">
-<span class="toggle-nav"><span></span></span>
- 
-<div id="logo-bar-report-server">
-	<a href="/report-server/" title="Report Server">
-		<span>Report Server</span>
-	</a>
-</div> 
+    <div class="toggle-nav"><span class="k-icon k-i-menu"></span></div>
 
-<div id="page-search">
-	{% include search.html %}
-</div>
+    {% if page.slug != 'knowledge_base' %}
+    {% include search.html %}
+    {% endif %}
 
-<span class="show-search">
-	<span class="k-icon k-i-search"></span>
-</span>
+    <div id="logo-bar">
+        <a href="{{site.baseurl}}/introduction">
+            <img alt="Report Server logo" class="logo" src="{{site.baseurl}}/images/{{page.product}}.png">
+        </a>
+    </div>
 
-<div class="nav-buttons">
-    <!-- <a href="http://demos.telerik.com/report-server/" title="Report Server Demos" target="_blank" class="btn demos-btn">Demos</a> -->
-	<a href="http://www.telerik.com/report-server/" title="About Report Server" target="_blank" class="btn about-btn">About</a>
-    <a href="http://www.telerik.com/purchase/report-server" title="Pricing" target="_blank" class="btn pricing-btn">Pricing</a>
-	<a href="http://www.telerik.com/download/report-server" title="Try now" target="_blank" class="btn btn-primary">Try now</a>
-</div>
+    {% if page.slug != 'knowledge_base' %}
+    <span class="show-search">
+        <span class="k-icon k-i-search"></span>
+    </span>
+    {% endif %}
+    <div class="nav-buttons">
+        <a href="http://demos.telerik.com/{{page.product}}/" class="btn demos-btn">Demos</a>
+        <a href="http://www.telerik.com/{{page.product}}" class="btn about-btn">About</a>
+        <a href="http://www.telerik.com/purchase/{{page.product}}" class="btn pricing-btn">Pricing</a>
+        <a href="http://www.telerik.com/download/{{page.product}}" class="btn btn-primary">Try now</a>
+    </div>
 </header>
-
-
-

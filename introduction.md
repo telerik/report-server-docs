@@ -8,11 +8,13 @@ published: True
 position: 100
 ---
 
-# Documentation
+# Welcome to Telerik® Report Server!
+
+### Documentation
 
 The **User Guide** provides instructions and explanations of how to create and manage reports and other topics related to the usage of the Progress® Telerik® Report Server. The **Implementer Guide** is targeted at implementers and administrators and covers subjects such as installation, configuration, user management, deployment, integration with other systems, and APIs.
 
-# Introduction
+### Introduction
 
 
 Progress® Telerik® Report Server is a server-based reporting platform that provides comprehensive reports management. It provides a centralized storage for the reports and various ways to organize and preview them.

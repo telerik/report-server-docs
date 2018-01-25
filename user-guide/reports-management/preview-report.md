@@ -10,8 +10,6 @@ position: 130
 
 # Preview Report
 
-
-
 Preview the report in a new web page allowing you to export the report to various formats.
 
 ![preview report](../../images/report-server-images/reports-management/preview-report.png)

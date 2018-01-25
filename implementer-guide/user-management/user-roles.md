@@ -10,61 +10,57 @@ position: 300
 
 # User Roles
 
+A user role represents a list of predefined permissions which can be granted to different users. By default there are four built-in user roles after installing the report server.
+You can switch to the User Roles view from the Users Management view dropdown which is located next to the view title.
 
+## Built-in Roles
 
-A *user role* represents a list of same permissions which can be granted to different users. By default there are four built-in user roles after installing the report server:
+### System Administrator
 
--   *System Administrator -* the most powerful user role which gives you unrestricted access to all of the report server functionality. The *User Management* view is available only if the user belongs to this user role and this role cannot be deleted.
+The most powerful user role which gives you unrestricted access to all of the report server functionality. The *User Management* view is available only if the user belongs to this user role and this role cannot be deleted.
 
--   *Report Creator*
+### Report Creator
 
-    -   All Reports - **unrestricted** access
+-   All Reports - **Unrestricted** access
 
-    -   All Categories - **unrestricted** access
+-   All Categories - **Unrestricted** access
 
-    -   All Data Connections - **Read** access
+-   All Data Connections - **Read** access
 
-    -   All Tasks - **unrestricted** access
+-   All Tasks - **Unrestricted** access
 
--   *Report Reader*
+### Report Reader
 
-    -   All Reports - **Read** access
+-   All Reports - **Read** access
 
-    -   All Categories - **Read** access
+-   All Categories - **Read** access
 
-    -   All Data Connections - **Read** access
+-   All Data Connections - **Read** access
 
-    -   All Tasks - **Read** access
+-   All Tasks - **Read** access
 
--   *Data Administrator*
+### Data Administrator
 
-    -   All Reports - **unrestricted** access
+-   All Reports - **Unrestricted** access
 
-    -   All Categories - **unrestricted** access
+-   All Categories - **Unrestricted** access
 
-    -   All Data Connections - **unrestricted** access
+-   All Data Connections - **Unrestricted** access
 
-    -   All Tasks - **unrestricted** access
+-   All Tasks - **Unrestricted** access
 
-You can perform the following actions from the *User roles* view:
+## User Roles Actions
+	
+You can perform the following actions from the *User Roles* view:
 
--   **Add** new user role
+-   **Add** new user role.
 
-    -   Name
-
-    -   Description
-
--   **Edit** user role
-
-    -   Name
-
-    -   Description
+-   **Edit** user role.
 
 -   **Delete** user role - you can delete any use role except *System
-    Administrator* role
+    Administrator* role.
 
--   **Manage permissions** - permissions management is the same as for
-    the user's individual permissions ([Users]({%slug users%}))
+-   **Manage permissions** - for permissions management refer to ([Users and Permissions]({%slug users%})).
 
 -   **Assign users** - you can select/deselect which users belong or not
     to this user role.

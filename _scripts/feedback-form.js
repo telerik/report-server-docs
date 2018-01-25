@@ -23,7 +23,7 @@ $(document).ready(function () {
 	};
 
 	var getCookieByName = function(name) {
-		//This is very crude, but necessary because currently there is some kind of url rewriting going on
+		//This is a very crude, but necessary because currently there is somekind of url rewriting going on
 		//so the cookies are set for a base path but then additional navigation is done with url rewriting
 		//so we set the cookie name as complete path to avoid a problem where the cookie is set for multiple pages.
 		if(name === "yesNoFeedback"){
@@ -34,8 +34,7 @@ $(document).ready(function () {
 	};
 
 	//Init utility variables
-	var rawLocationObject = $(location);
-	var currentPath = rawLocationObject[0].origin + rawLocationObject[0].pathname;
+	var currentPath = $(location).attr('href');
 	var popupNotification = $("#popupNotification").kendoNotification().data("kendoNotification");
 	var formPopupNotification = $("#feedback-form-popup-container").kendoNotification({
 		appendTo: "#feedback-form-window"
@@ -46,7 +45,7 @@ $(document).ready(function () {
 		if(!cookieUUID){
 			document.cookie = "uuid=" + generateUUID() +"; path=/";
 		}
-		//This is very crude, but necessary because currently there is some kind of url rewriting going on
+		//This is a very crude, but necessary because currently there is somekind of url rewriting going on
 		//so the cookies are set for a base path but then additional navigation is done with url rewriting
 		//so we set the cookie name as complete path to avoid a problem where the cookie is set for multiple pages.
 		if(name === "yesNoFeedback"){
@@ -84,6 +83,7 @@ $(document).ready(function () {
 	var win = $("#feedback-form-window").kendoWindow({
 		actions: ["Close"],
 		draggable: false,
+		height: "700px",
 		modal: true,
 		pinned: false,
 		visible: false,
@@ -108,47 +108,12 @@ $(document).ready(function () {
 	//Bind model to form
 	kendo.bind($("div#feedback-form-window"), formModel);
 	//Attach to form submit to adjust variables and send request
-	var emptyFormValidator = $("#feedback-checkbox-area").kendoValidator({
-		validateOnBlur: false,
+	var validator = feedbackForm.kendoValidator({
 		messages: {
 			// defines a message for the custom validation rule
-			emptyForm: "You need to provide some feedback before submitting the form.",
-		},
-		rules: {
-			emptyForm: function(input) {
-				if (isFormModelEmpty()) {
-					return false
-				}
-				return true;
-			}
-		}
-
-	}).data("kendoValidator");
-
-	var emailValidator = $("#feedback-email-input").kendoValidator({
-		validateOnBlur: false,
-		messages: {
-			email: "Invalid email address."
-		},
-		rules: {
-			email: function(input){
-				if(input.val().length > 0){
-					var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-					return re.test(input.val());
-				}
-				return true;
-			}
-		}
-	}).data("kendoValidator");
-
-
-	var textAreaValidator = $("#feedback-text-input").kendoValidator({
-		validateOnBlur: false,
-		messages: {
-			// defines a message for the custom validation rule
-			htmlValidation: "HTML tags are not allowed in this field.",
-			messageLength: "The message length must not exceed 2500 characters.",
-			whiteSpaces: "Using only white spaces is not allowed in this field."
+			htmlValidation: "HTML tags are not allowed in the input.",
+			messageLength: "Message must be below 2500 symbols.",
+			whiteSpaces: "Whitespaces only text is not allowed."
 		},
 		rules: {
 			htmlValidation: function(input) {
@@ -171,13 +136,12 @@ $(document).ready(function () {
 				return true;
 			},
 			whiteSpaces: function(input) {
-				if (input.is("[id=feedback-text-input]") && input.val().length > 0) {
+				if (input.is("[id=feedback-text-input]")) {
 					return $.trim(input.val()) !== "";
 				}
 				return true;
 			}
-		}}).data("kendoValidator");
-
+		}}).data("kendoValidator")
 	feedbackForm.submit(function(e) {
 		e.preventDefault();
 		//if form is processing do nothing.
@@ -185,16 +149,12 @@ $(document).ready(function () {
 			return;
 		}
 		formIsProcessing = true;
-		//if(isFormModelEmpty()){
-		//	formPopupNotification.show("Please provide some feedback before submitting the form.", "Error");
-		//	formIsProcessing = false;
-		//	return;
-		//}
-		var textAreaIsValidate = textAreaValidator.validate();
-		var emptyFormValidate = emptyFormValidator.validate();
-		var emailValid = emailValidator.validate();
-
-		if(textAreaIsValidate && emptyFormValidate && emailValid) {
+		if(isFormModelEmpty()){
+			formPopupNotification.show("Please provide some feedback before submitting the form.", "Error");
+			formIsProcessing = false;
+			return;
+		}
+		if(validator.validate()) {
 			win.close();
 			setCookieByName("submittingFeedback")
 			formModel.yesNoFeedback = getCookieByName("yesNoFeedback") || "Not submitted";
@@ -203,6 +163,7 @@ $(document).ready(function () {
 			formModel.sheetId = $("#hidden-sheet-id").val();
 			$.post("http://api.everlive.com/v1/lzrla9wpuk636rdd/functions/saveFeedback", formModel.toJSON(), function () {
 				formIsProcessing = false;
+				popupNotification.show("Your feedback was saved. Thank you!", "info");
 			});
 		}else {
 			formIsProcessing = false;
@@ -213,16 +174,12 @@ $(document).ready(function () {
 	$("#form-close-button").click(function () {
 		win.close();
 	});
-    
-    //Attach to submit button inside form window
-    $("#form-submit-button").click(function () {
-        feedbackForm.submit();
-    });
 
 	//Init buttons
 	$("#yesButton").click(function () {
 		setCookieByName("yesNoFeedback", "Yes");
 		toggleFeedbackButtons(false);
+		popupNotification.show("Thank you for your feedback!", "info");
 	});
 	$("#noButton").click(function () {
 		setCookieByName("yesNoFeedback", "No");

@@ -14,7 +14,7 @@ position: 700
 
 A common application design practice is to separate the presentation layer from business logic and encapsulate the business logic inside business objects. The Report Server can be integrated into such applications and/or use their business objects to provide data for reports. Custom .NET assemblies containing dedicated classes and data-retrieval methods can be added to the Report Server and the business objects data will be available during the design-time of reports via the [ObjectDataSource Component](https://docs.telerik.com/reporting/objectdatasource).
 
-## How to Bind to a Business Object
+### How to Bind to a Business Object
 
 1. Create an assembly containing custom business objects. The objects should conform to the [Supported Object Types](https://docs.telerik.com/reporting/objectdatasource#supported-object-types).
 

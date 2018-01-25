@@ -8,39 +8,41 @@ published: True
 position: 200
 ---
 
-# Get Reports, Categories and other resources
+# Resources
+
+Get Reports, Categories, and other resources.
 
 > In order to perform report server operations, you have to login first and get an access token.
 
 Here is a sample code snippet which illustrates how to read the report catalog items from the report server:
 
-```javascript
-  var token =
-    window.sessionStorage.getItem(serverTokenKey);
-      
-  var headers = {};
-  
-  if (token) {
-    headers.Authorization = 'Bearer ' + token;
-  }
+###### Example
 
-  $.ajax({
-    type: "GET",
-    url: serverApi + "reports",
-    headers : headers
-  })
-  .done(function (reports, status, xhr) {
-    var length = reports.length;
-    var reportNames = "";
-    for (var i = 0; i &lt; length; i++) {
-      reportNames += (reports[i].Name + "\r\n")
-    }
-    window.alert(reportNames);
-  })
-  .fail(function (xhr, status, error) {
-    window.alert(xhr.status + ": " + error);
-  });
-```
+	  var token =
+		window.sessionStorage.getItem(serverTokenKey);
+		  
+	  var headers = {};
+	  
+	  if (token) {
+		headers.Authorization = 'Bearer ' + token;
+	  }
+
+	  $.ajax({
+		type: "GET",
+		url: serverApi + "reports",
+		headers : headers
+	  })
+	  .done(function (reports, status, xhr) {
+		var length = reports.length;
+		var reportNames = "";
+		for (var i = 0; i &lt; length; i++) {
+		  reportNames += (reports[i].Name + "\r\n")
+		}
+		window.alert(reportNames);
+	  })
+	  .fail(function (xhr, status, error) {
+		window.alert(xhr.status + ": " + error);
+	  });
 
 You can get the report categories and the other report server resources such as scheduled tasks, data alerts, data connections, etc. in the same way just by changing the request url. 
 

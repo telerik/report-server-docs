@@ -2,14 +2,9 @@
 url: "https://docs.telerik.com/report-server"
 
 # Exclude files which should not be in the output
-exclude: [README.md,Gemfile,Gemfile.lock]
+exclude: [README.md,Gemfile,Gemfile.lock,api_sort.rb,build_kb.rb,switch-ruby.cmd]
 navigation:
 ## List your directory names and order here, like this:
-
-## Overview topics are generated with position 10
-## Other topics are generated with position 100, 200, 300, etc.
-
-## Main Menu
     user-guide:
         position: 110
         title: "User Guide"
@@ -44,19 +39,22 @@ navigation:
         position: 10111
         title: "JavaScript"    
     knowledge-base:
-        position: 1100
         title: "Knowledge Base"
-    "*foo":
-        title: Foo
-
-## Upgrading
-
 
 ## The application virtual path
 baseurl: /report-server
 
 ## The product name
 productName: "Report Server"
+
+## The Kendo UI version used
+cdnVersion: "2018.1.117"
+
+## The MVC Core version used
+mvcCoreVersion: "2018.1.117"
+
+## Progress NPM Registry
+registry_url: 'https://registry.npm.telerik.com/'
 
 ## Assign layout and category per different paths
 defaults:
@@ -66,6 +64,30 @@ defaults:
     values:
         layout: "page"
         category: "default"
+        product: "report-server"
+        editable: true
+-
+    scope:
+        path: "knowledge-base"
+    values:
+        layout: "kb-page"
+
+## Kendo UI Legacy        
+type_links:
+    "kendo.Class": "/api/javascript/class"
+    "kendo.data.DataSource": "/api/javascript/data/datasource"
+    "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+    "Blob": "https://developer.mozilla.org/en/docs/Web/API/Blob"
+    "File": "https://developer.mozilla.org/en-US/docs/Web/API/File"
+    "Boolean": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
+    "Function": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"
+    "jQuery": "http://api.jquery.com/Types/#jQuery"
+    "Promise": "http://api.jquery.com/Types/#Promise"
+    "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+    "Number": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+    "String": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+    "Date": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+    "Element": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
@@ -76,17 +98,14 @@ ff-sheet-id: '1BT1fdkj4RPEdq5_lrEN5-x3ln8OVoaUjkYIT3RDdrUU'
 # The google services configuration
 google_tag_manager: GTM-6X92
 google_custom_search: '001595215763381649090:dikfyfm1qqw'
+google_custom_kb_search: '001595215763381649090:fkoi6yohnf0'
 
 # Assets pipeline configuration
 assets:
     cachebust: soft
     js_compressor: uglifier
+    gzip: false
 
 ## Do not edit below this line
 safe: false
 markdown: MarkdownProcessor
-kramdown:
-    toc_levels: 2..3
-    smart_quotes: ["quot", "quot", "quot", "quot"]
-    input: GFM
-
