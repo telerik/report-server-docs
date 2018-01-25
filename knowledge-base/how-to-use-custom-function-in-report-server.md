@@ -1,11 +1,11 @@
 ---
 title: How to configure Telerik Report Server to use reports with custom functions
-description: 
+description: How to configure Telerik Report Server to use reports with custom functions
 type: how-to
-page_title: 
-slug: 
+page_title: How to configure Telerik Report Server to use reports with custom functions
+slug: how-to-use-custom-function-in-report-server
 position: 
-tags: 
+tags: programming,functions,aggregates
 ticketid: 1148325
 res_type: kb
 ---
