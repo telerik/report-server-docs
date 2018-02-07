@@ -27,13 +27,15 @@ The template should be assigned to the 'templateUrl' property of the HTML5Report
 Here is a sample step-by-step guide:  
   
 1\. Create **styles** folder in (_**Telerik Report Server** installation folder_)\\Telerik.ReportServer.Web\\ReportViewer and add file **telerikReportViewer.css** with the viewer styles.
-If you have Telerik Reporting installed on the machine, you could copy the file **telerikReportViewer.css** file from (_**Telerik Reporting** installation folder_)\Html5\ReportViewer (for example *C:\Program Files (x86)\Progress\Telerik Reporting R1 2018\Html5\ReportViewer\styles*)
+If you have Telerik Reporting installed on the machine, you could copy the file **telerikReportViewer.css** file from (_**Telerik Reporting** installation folder_)\Html5\ReportViewer (for example *C:\Program Files (x86)\Progress\Telerik Reporting R1 2018\Html5\ReportViewer\styles*).
+
 Otherwise, you could download the content of file **telerikReportViewer.css** from the Report Server (URL **(Report Server host)/api/reports/resources/styles/telerikReportViewer-css**), and save it in the local folder.
 
 After creating (copying/downloading) the file, you could modify the appropriate styles to achieve the desired report appearance in the viewer.
 
 2\. Create **templates** folders in (_**Telerik Report Server** installation folder_)\\Telerik.ReportServer.Web\\ReportViewer and add file **telerikReportViewerTemplate.html** - the report viewer template.
-If you have Telerik Reporting installed on the machine, you could copy the file **telerikReportViewerTemplate.html** file from (_**Telerik Reporting** installation folder_)\Html5\ReportViewer (for example *C:\Program Files (x86)\Progress\Telerik Reporting R1 2018\Html5\ReportViewer\templates*)
+If you have Telerik Reporting installed on the machine, you could copy the file **telerikReportViewerTemplate.html** file from (_**Telerik Reporting** installation folder_)\Html5\ReportViewer (for example *C:\Program Files (x86)\Progress\Telerik Reporting R1 2018\Html5\ReportViewer\templates*).
+
 Otherwise, you could copy the code for file **telerikReportViewerTemplate.html** from the Report Server (URL **(Report Server host)/api/reports/resources/templates/telerikReportViewerTemplate-html**). Note that it would be necessary to open the link above, display the actual code with *View Page Source*, and copy and paste the code in the file.
 
 Change the reference to CSS styles for the Report Viewer in **telerikReportViewerTemplate.html** file by substituting this code:
