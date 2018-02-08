@@ -18,9 +18,11 @@ res_type: kb
 	</tr>
 </table>
 
-
 ## Description
-The look of reports Preview in Telerik Report Server is customizable in the same way the Html5 Report Viewer is.
+The layout of Reports Preview in Telerik Report Server is currently fixed, based on default CSS styling and Html template.
+
+## Solution
+The look of reports Preview in the Report Server is customizable in the same way the Html5 Report Viewer is.
 To achieve the desired appearance you could use a local/custom template for the ReportViewer, where to refer a custom/modified CSS file with appropriate ReportViewer styles.  
 The template should be assigned to the 'templateUrl' property of the HTML5ReportViewer, as explained in [this collection of help articles](https://docs.telerik.com/reporting/html5-report-viewer-styling-and-appearance).
   
