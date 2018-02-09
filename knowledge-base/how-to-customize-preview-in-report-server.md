@@ -63,9 +63,3 @@ parameters: @Html.Raw(Json.Encode(Model.Parameters))
 });
 ```
 4\. Restart the Report Server.
-  
-
-Do you want to have your say when we set our development plans?
-Do you want to know when a feature you care about is added or when a bug fixed?
-Explore the [Telerik Feedback Portal](http://www.telerik.com/support/feedback)
-and vote to affect the priority of the items
