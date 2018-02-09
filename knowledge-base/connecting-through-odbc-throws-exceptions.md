@@ -1,8 +1,8 @@
 ---
-title: Connecting through ODBC throws BadImageFormatException or shows "Architecture Mismatch" error message
-description: Rendering a report that uses ODBC connection, throws BadImageFormatException or shows "The specified DSN contains an architecture mismatch between the driver and the application" error message.
+title: BadImageFormatException or Architecture Mismatch message when using ODBC connection
+description: Rendering a report that uses ODBC connection, throws BadImageFormatException or shows "The specified DSN contains an architecture mismatch between the driver and the application" error message
 type: troubleshooting
-page_title: BadImageFormatException or "Architecture Mismatch" message when using ODBC connection
+page_title: BadImageFormatException or Architecture Mismatch message when using ODBC connection
 slug: badimageformatrxception-or-architecture-mismatch-message-when-using-odbc-connection
 tags: oracle,odbc
 res_type: kb

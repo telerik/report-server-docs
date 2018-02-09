@@ -1,8 +1,8 @@
 ---
-title: Export a report from Telerik Report Server via .NET Client
-description: Export a report from Telerik Report Server via .NET Client
+title: How to export a report from Telerik Report Server via .NET Client
+description: How to export a report from Telerik Report Server via .NET Client
 type: how-to
-page_title: Export a report from Telerik Report Server via .NET Client
+page_title: How to export a report from Telerik Report Server via .NET Client
 slug: export-report-via-dotnet-client
 tags: export,api,net
 res_type: kb

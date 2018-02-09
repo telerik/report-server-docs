@@ -1,8 +1,8 @@
 ---
-title: Error "Promise" is undefined
+title: Error Promise is undefined
 description: Error "Promise" is undefined
 type: troubleshooting
-page_title: Error "Promise" is undefined
+page_title: Error Promise is undefined
 slug: error-promise-is-undefined
 tags: promise,viewer
 res_type: kb

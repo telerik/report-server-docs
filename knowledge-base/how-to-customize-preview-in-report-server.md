@@ -1,11 +1,11 @@
 ---
 title: How to customize preview in Report Server
-description: Apply styling when previewing reports in Report Server
+description: How to customize preview and apply styling when previewing reports in Report Server
 type: how-to
-page_title: Display reports in customized Report Server viewer
+page_title: How to customize preview in Report Server
 slug: how-to-customize-preview-in-report-server
 position: 
-tags: Preview
+tags: preview
 ticketid: 1151103
 res_type: kb
 ---

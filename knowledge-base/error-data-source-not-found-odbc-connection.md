@@ -1,8 +1,8 @@
 ---
-title: Error Data Source name not found
-description: Error Data Source name not found
+title: Error Data source name not found
+description: Error Data source name not found and no default driver specified
 type: troubleshooting
-page_title: Error Data Source name not found
+page_title: Error Data source name not found
 slug: error-data-source-not-found-odbc-connection
 tags: odbc
 res_type: kb
