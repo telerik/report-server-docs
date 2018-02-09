@@ -1,10 +1,10 @@
 ---
-title: Error "Data source name not found" when using ODBC connection with Telerik Report Server
-description: Error "Data source name not found" when using ODBC connection with Telerik Report Server
+title: Error Data Source name not found
+description: Error Data Source name not found
 type: troubleshooting
-page_title: Error "Data source name not found" message when using ODBC connection
+page_title: Error Data Source name not found
 slug: error-data-source-not-found-odbc-connection
-tags: odbc,dsn
+tags: odbc
 res_type: kb
 ---
 
