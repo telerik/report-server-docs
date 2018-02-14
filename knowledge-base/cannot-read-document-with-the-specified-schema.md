@@ -1,8 +1,8 @@
 ---
-title: Error Cannot read a document with the specified schema
-description: Error Cannot read a document with the specified schema when previewing report in Report Server
+title: Cannot read a document with the specified schema
+description: Cannot read a document with the specified schema when previewing report in Report Server
 type: troubleshooting
-page_title: Error Cannot read a document with the specified schema
+page_title: Report cannot be opened due to Error Cannot read a document with the specified schema
 slug: cannot-read-document-with-the-specified-schema
 position: 
 tags: version
