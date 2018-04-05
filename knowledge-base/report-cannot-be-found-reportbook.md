@@ -3,7 +3,7 @@ title: Report cannot be found error when previewing report book in Report Server
 description: When previewing report book in Report Server an error Report cannot be found is shown
 type: troubleshooting
 page_title: ReportBook shows Report cannot be found error
-slug: 
+slug: report-cannot-be-found-reportbook
 position: 
 tags: reportbook
 ticketid: 1159773
