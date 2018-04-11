@@ -14,11 +14,11 @@ The **Telerik Report Server Storage Migration Tool** is a standalone module ship
 
 ### Command-Line Interface
 
-The executable must be started with two arguments - **source** and **destination**, followed by a connection information for every storage type. An example usage of the tool with command-line arguments would look like this:
+The executable must be started with two arguments, describing the **source** and **destination** storage types, followed by a connection information for each storage type. An example usage of the tool with command-line arguments would look like this:
 
-*migrate.exe source=file,connection="C:\Report Server\Data" destination=redis,connection=localhost:6981,defaultDatabase=1*
+*migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1*
 
-Available values for **source/destination** parameter (case-insensitive):
+Available values for **type** parameter (case-insensitive):
 
 -	**file** - indicates that a file storage will be used.
 
