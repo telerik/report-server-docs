@@ -18,7 +18,6 @@ res_type: kb
 	</tr>
 </table>
 
-
 ## Description
 
 To perform certain operations, Report Server requires a running instance of Telerik.ReportServer.ServiceAgent service which is a local Windows service.
@@ -43,4 +42,16 @@ To make sure that the service is running and that the Report Server application 
 
 3\. Open server's Web.config located at [installation folder]\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web and check if the address of the service matches the address provided in Telerik.ReportServer.ServiceAgent.exe.config.  
   
+4\. Enable tracing in the Telerik.ReportServer.ServiceAgent.exe.config, start the service manually, and check the generated log file for errors.
 
+	<configuration>
+		...
+		<system.diagnostics>
+			<trace autoflush="true" indentsize="4">
+			  <listeners>
+				<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="c:\temp\StandaloneDesigner.LOG" />              
+				<remove name="Default" />
+			  </listeners>
+			</trace>
+		</system.diagnostics>
+	</configuration>
