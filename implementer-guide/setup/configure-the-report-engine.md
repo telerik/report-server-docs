@@ -5,17 +5,19 @@ description: Configure the Report Rendering Engine
 slug: configure-the-report-engine
 tags: configuration,settings,config,rest,rendering
 published: True
-position: 400
+position: 800
 ---
 
-# Configuration File
+# Configure the Report Rendering Engine
+
+## Configuration File
 
 The reports rendering engine can be fine-tuned using a dedicated configuration file, called TelerikReporting.config .
 This file gets automatically created on the server when it is stated for first time. The default location of this file is
 C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config and affects the
 live report preview generation and the WebApi 'documents' endpoint.
 
-# Telerik.Reporting configuration section
+## Telerik.Reporting configuration section
 
 To become effective, open the TelerikReporting.config file and uncomment the TelerikReporting configuration section registration:
 
@@ -31,7 +33,7 @@ To become effective, open the TelerikReporting.config file and uncomment the Tel
 </configuration>
 ```
 
-# restReportService element settings
+## restReportService element settings
 
 The following are the attribute settings applicable to the Report Server:
 
