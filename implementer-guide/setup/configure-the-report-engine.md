@@ -12,14 +12,14 @@ position: 800
 
 ## Configuration File
 
-The reports rendering engine can be fine-tuned using a dedicated configuration file, called TelerikReporting.config .
-This file gets automatically created on the server when it is stated for first time. The default location of this file is
-C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config and affects the
+The reports rendering engine can be fine-tuned using a dedicated configuration file, called **TelerikReporting.config**.
+This file gets automatically created on the server when it is started for the first time. The default location of this file is
+*C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config* and affects the
 live report preview generation and the WebApi 'documents' endpoint.
 
 ## Telerik.Reporting configuration section
 
-To become effective, open the TelerikReporting.config file and uncomment the TelerikReporting configuration section registration:
+To become effective, open the **TelerikReporting.config** file and uncomment the TelerikReporting configuration section registration:
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
@@ -38,7 +38,7 @@ To become effective, open the TelerikReporting.config file and uncomment the Tel
 The following are the attribute settings applicable to the Report Server:
 
 ### workerCount 
-Optional integer attribute. Specifies the combined count of worker report rendering threads that render report documents 
+Optional integer attribute. Specifies the combined count of report rendering worker threads that render report documents 
 for the live report preview and export and for the 'documents' WebApi endpoint.
 The default value is equal to the logical processors available on the server machine. 
 
@@ -51,4 +51,4 @@ The value must be greater than zero. The default value is 15 minutes.
 Optional integer attribute. Specifies the value in minutes indicating how long a rendered report document
 from a client will be eligible for reuse for another clients' request.
 The value must be greater than or equal to zero. A zero value will prevent rendered report document reuse.
-The default value is zero. Changing this is highly recommended for intensively user Report Server deployment.
+The default value is zero. Changing this is highly recommended for a user-intensive Report Server deployment.
