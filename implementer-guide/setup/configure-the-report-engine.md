@@ -15,7 +15,7 @@ position: 800
 The reports rendering engine can be fine-tuned using a dedicated configuration file, called **TelerikReporting.config**.
 This file gets automatically created on the server when it is started for the first time. The default location of this file is
 *C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config* and affects the
-live report preview generation and the WebApi 'documents' endpoint.
+live report preview generation and the WebApi 'documents' endpoint. The Report Server instance needs to be restarted manually in order to apply the changes.
 
 ## Telerik.Reporting configuration section
 
