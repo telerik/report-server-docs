@@ -48,6 +48,8 @@ You can change the following user settings:
     
 -   *Enabled*
 
+Users cannot be deleted. In order to stop the access for a user and free a CAL the user should be disabled.
+
 ### Manage User Permissions
 
 You can add/remove permissions by clicking on the Manage Permissions button from the Permissions tab.
