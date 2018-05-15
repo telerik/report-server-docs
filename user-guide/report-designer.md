@@ -14,10 +14,11 @@ The Report Designer is a report authoring tool. When you design a report, you sp
 
 Report Server supports [SQL]({%slug data-connections-management%}), [Object]({%slug business-objects-management%}), and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
-## Report Designer Localization with ClickOnce Deployment
+### Report Designer Localization with ClickOnce Deployment
 
 Telerik Report Server supports localization of the Standalone Report Designer when used with ClickOnce deployment.
-The Report Designer -> Options -> Language drop down lists all available language (resources) located locally and on the connected Report Servers. If no language is explicitly defined the Standalone Report Designer will use the language set in the Report Server administration.
+
+The **Report Designer -> Options -> Language** drop down lists all available languages (resources) located locally and on the connected Report Servers. If no language is explicitly defined, the Standalone Report Designer will use the language set in the Report Server administration.
 
 ### Related Articles
 
