@@ -49,7 +49,7 @@ To make sure that the service is running and that the Report Server application 
 		<system.diagnostics>
 			<trace autoflush="true" indentsize="4">
 			  <listeners>
-				<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="c:\temp\StandaloneDesigner.LOG" />              
+				<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="c:\temp\ServiceAgent.LOG" />              
 				<remove name="Default" />
 			  </listeners>
 			</trace>
