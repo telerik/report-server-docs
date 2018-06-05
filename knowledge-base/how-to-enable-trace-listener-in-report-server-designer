@@ -1,6 +1,6 @@
 ---
 title: How to enable Trace Listener for Standalone Designer that opens reports from the Report Server
-description: Trace logs when opening reports from the Report Server
+description: Trace logs when opening/editing reports from the Report Server
 type: how-to
 page_title: Configure Trace Listener for Report Server designer
 slug: 
@@ -32,7 +32,7 @@ By default when the report is opened directly from the Report Server Manager we 
 The _ClickOnce_ install directory is hard to find so while trying to open the report from the server (_Design Reports_ button) invoke the _Windows Task Manager_ (key combination _Ctrl+Shift+Esc_) and open the Standalone Designer location from there (right click on _Telerik Report Designer..._ and select _Open file location_). The location folder looks like _C:\\Users\\**currentUserName**\\AppData\\Local\\Apps\\2.0\\RYEGNMR1.X05\\AAAR4WG1.OO0\\tele...app\_0ec16cac1aa370e1\_000c.0001\_5a5ebd3f2e011654_.  
 Save the following config file in the opened folder. Note that the name of the config file should match the designer EXE file, with additional ._config_ at the end, i.e. _Telerik.ReportDesigner.exe.config_.
 
-```
+```XML
 <?xml version ="1.0"?>
 <configuration>
 	<configSections>
