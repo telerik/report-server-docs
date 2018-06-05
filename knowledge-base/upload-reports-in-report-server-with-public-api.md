@@ -14,7 +14,7 @@ res_type: kb
 <table>
 	<tr>
 		<td>Product Version</td>
-		<td>4.1 18.516</td>
+		<td>4.1 18.604</td>
 	</tr>
 	<tr>
 		<td>Product</td>
