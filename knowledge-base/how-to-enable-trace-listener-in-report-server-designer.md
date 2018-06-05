@@ -18,17 +18,17 @@ res_type: kb
 	</tr>
 	<tr>
 		<td>Product</td>
-		<td>Progress® Telerik® Reporting </td>
+		<td>Progress® Telerik® Report Server </td>
 	</tr>
 </table>
 
 
 ## Description
-Sometimes it is necessary to get the Trace Listener log for the **Standalone Designer** that opens reports from the Telerik Report Server. Here I will provide two major options to consider. 
+Sometimes it is necessary to get the Trace Listener log for the **Standalone Designer** that opens reports from the Telerik Report Server. There are two options to get such Trace logs, based on which report designer instance will be used.
 
 ## Solution
 _**First option**_ :  
-By default when the report is opened directly from the Report Server Manager we use the **_ClickOnce _** deployment. An instance of the Standalone Designer is deployed in a folder, which is not explicitly specified, and could change when the report is opened with _ClickOnce _the next time. Due to this inconsistency we _do NOT recommend_ to use this designer for the purpose of error tracing. If you prefer this approach though, here are the necessary steps:  
+By default when the report is opened directly from the Report Server Manager we use the **_ClickOnce_** deployment. An instance of the Standalone Designer is deployed in a folder, which is not explicitly specified, and could change when the report is opened with _ClickOnce_ the next time. Due to this inconsistency we _do **NOT** recommend_ to use this designer for the purpose of error tracing. If you prefer this approach though, here are the necessary steps:  
 The _ClickOnce_ install directory is hard to find so while trying to open the report from the server (_Design Reports_ button) invoke the _Windows Task Manager_ (key combination _Ctrl+Shift+Esc_) and open the Standalone Designer location from there (right click on _Telerik Report Designer..._ and select _Open file location_). The location folder looks like _C:\\Users\\**currentUserName**\\AppData\\Local\\Apps\\2.0\\RYEGNMR1.X05\\AAAR4WG1.OO0\\tele...app\_0ec16cac1aa370e1\_000c.0001\_5a5ebd3f2e011654_.  
 Save the following config file in the opened folder. Note that the name of the config file should match the designer EXE file, with additional ._config_ at the end, i.e. _Telerik.ReportDesigner.exe.config_.
 
@@ -36,44 +36,44 @@ Save the following config file in the opened folder. Note that the name of the c
 <?xml version ="1.0"?>
 <configuration>
 	<configSections>
-		<section
-				name="Telerik.Reporting"
-				type="Telerik.Reporting.Configuration.ReportingConfigurationSection, Telerik.Reporting"
-				allowLocation="true"
-				allowDefinition="Everywhere"/>
+	    <section
+		name="Telerik.Reporting"
+		type="Telerik.Reporting.Configuration.ReportingConfigurationSection, Telerik.Reporting"
+		allowLocation="true"
+		allowDefinition="Everywhere"/>
 
-    <section
-        name="Telerik.ReportDesigner"
-        type="Telerik.ReportDesigner.Configuration.ReportDesignerConfigurationSection, Telerik.ReportDesigner.Configuration"
-        allowLocation="true"
-        allowDefinition="Everywhere"/>    
+	    <section
+		name="Telerik.ReportDesigner"
+		type="Telerik.ReportDesigner.Configuration.ReportDesignerConfigurationSection, Telerik.ReportDesigner.Configuration"
+		allowLocation="true"
+		allowDefinition="Everywhere"/>    
 	</configSections>
 
 	<startup>
 		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
 	</startup>
 
-  <runtime>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <!--
-      <probing privatePath="path-to-the-assemblies"/>
-      -->
-      <dependentAssembly>
-        <!-- Required for interoperability with older versions of Telerik Reporting -->
-        <assemblyIdentity name="Telerik.Reporting" culture="neutral" publicKeyToken="a9d7983dfcc261be"/>
-        <bindingRedirect oldVersion="0.0.0.0-12.1 18.516" newVersion="12.1 18.516"/>
-      </dependentAssembly>
-    </assemblyBinding>
-  </runtime>
+	<runtime>
+	    	<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+		      <!--
+		      <probing privatePath="path-to-the-assemblies"/>
+		      -->
+		      <dependentAssembly>
+			<!-- Required for interoperability with older versions of Telerik Reporting -->
+			<assemblyIdentity name="Telerik.Reporting" culture="neutral" publicKeyToken="a9d7983dfcc261be"/>
+			<bindingRedirect oldVersion="0.0.0.0-12.1 18.516" newVersion="12.1 18.516"/>
+		      </dependentAssembly>
+	    	</assemblyBinding>
+	</runtime>
 
-  <connectionStrings>
-    <add name="Telerik.Reporting.Examples.CSharp.Properties.Settings.TelerikConnectionString"
-        connectionString="Data Source=(local)\SQLEXPRESS;Initial Catalog=AdventureWorks;Integrated Security=SSPI"
-        providerName="System.Data.SqlClient" />
-  </connectionStrings>
-  
-  <Telerik.ReportDesigner DefaultWorkingDir="Examples">
-  </Telerik.ReportDesigner>
+	<connectionStrings>
+	    <add name="Telerik.Reporting.Examples.CSharp.Properties.Settings.TelerikConnectionString"
+		connectionString="Data Source=(local)\SQLEXPRESS;Initial Catalog=AdventureWorks;Integrated Security=SSPI"
+		providerName="System.Data.SqlClient" />
+	</connectionStrings>
+
+	<Telerik.ReportDesigner DefaultWorkingDir="Examples">
+	</Telerik.ReportDesigner>
 
 	<!-- Add assembly references -->
 	<!--
