@@ -18,7 +18,7 @@ Telerik Report Server Web Application now supports localization for its UI. To d
 
 2. Open the installation folder of the Telerik Report Server Web Application (**Telerik.ReportServer.Web**). Navigate to **Scripts** > **ReportServer** folder and find the **sr.js** and **sr.user.js** files. In **sr.js** you can find all keys and strings used in the Report Server Web Application. Copy the keys you want to translate into the "sr" object in **sr.user.js** file. 
 
-3. Translate the strings copied in the `sr.user.js` for the specified culture.
+3. Translate the strings copied in the **sr.user.js** for the specified culture.
 
 
 ## Localize Standalone Report Designer
