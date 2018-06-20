@@ -21,7 +21,7 @@ More information about keyboard support within kendo widgets can be found in the
 
 The following accessibility features are supported:
 
-### Comprehensive keyboard support
+### Comprehensive Keyboard Support
 
 Includes navigation between and into Report Server areas (menus, contents, detail, or search sections) using shortcut keys,
 TAB, or arrow keys where possible.
