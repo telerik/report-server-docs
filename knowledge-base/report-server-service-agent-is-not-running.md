@@ -1,8 +1,8 @@
 ---
-title: Telerik Report Server Service Agent is not running error when managing reports/tasks/alerts
-description: Cannot create/update report/task/alert due to Telerik Report Server Service Agent is not running error
+title: Telerik Report Server Service Agent is not running
+description: Telerik Report Server Service Agent is not running error
 type: troubleshooting
-page_title: Telerik Report Server Service Agent is not running error after creating/updating report/task/alert
+page_title: Telerik Report Server Service Agent is not running
 slug: report-server-service-agent-is-not-running
 position: 
 tags: tasks,alerts
