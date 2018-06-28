@@ -17,3 +17,5 @@ The Report Server supports [SQL]({%slug data-connections-management%}), [Object]
 - For business objects data management refer to [Business Objects Management]({%slug business-objects-management%}).
 
 - CSV data can be created and managed directly from the report designer.
+
+- JSON data can be fetched from a pre-configured [WebServiceDataSource](https://docs.telerik.com/reporting/webservicedatasource-component).
