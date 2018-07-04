@@ -76,7 +76,7 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 
 ### Scopes
 
--   *All Reports* - the permission applies to all the reports.
+-   *Reports in All Categories* - the permission applies to all the reports.
 
 -   *Reports in Category* - the permission applies to all the reports that belong to a specific category.
 
@@ -93,6 +93,10 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 -   *All Tasks* - the permission applies to all tasks.
 
 -   *Specific Task* - the permission applies to a specific task.
+
+-   *All Data Alerts* - the permission applies to all data alerts.
+
+-   *Specific Data Alert* - the permission applies to a specific data alert.
 
 ### Targets
 
