@@ -18,6 +18,10 @@ res_type: kb
 	</tr>
 </table>
 
+## Notes
+ - The proposed modifications will not be preserved upon Telerik Report Server upgrade. After an upgrade it will be necessary to repeat the process.
+ - With the possible future updates of the Html5 Report Viewer template it may be necessary to change also the suggested workflow.
+
 ## Description
 The layout of Reports Preview in Telerik Report Server is currently fixed, based on default CSS styling and Html template.
 
