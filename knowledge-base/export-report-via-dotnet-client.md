@@ -15,10 +15,6 @@ res_type: kb
   <td>Product</td>
   <td>Progress® Telerik® Report Server</td>
  </tr>
- <tr>
-  <td>Operating System</td>
-  <td>Windows</td>
- </tr>
 </table>
 
 
