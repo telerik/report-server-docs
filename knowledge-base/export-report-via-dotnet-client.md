@@ -33,9 +33,8 @@ The purpose of this article is to provide a demonstration of the same functional
 ## Solution
 
 The same JavaScript client can be written as a .NET client that executes requests and handles their responses. The following example illustrates how to send requests to the Report Server API and ultimately export a report to a report document.
-C#:
 
-###### Example
+###### C#
 
 	using Newtonsoft.Json.Linq;
 	using System;
