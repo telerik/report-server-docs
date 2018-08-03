@@ -28,7 +28,7 @@ Telerik Report Server provides a [REST API]({%slug rest-api-reference%}) which c
 
 - [Export]({%slug rest-api-export%})
 
-The purpose of this article is to provide a demonstration of the same functionality using a .NET client.
+The purpose of this article is to provide a demonstration of the same functionality but using a .NET client.
 
 ## Solution
 
@@ -37,107 +37,117 @@ C#:
 
 ###### Example
 
-	    class Program
-	    {
-		static readonly string reportServerUrl = "http://localhost:83/";
-		static readonly string reportServerApiUrl = reportServerUrl + "api/reportserver/";
-		static readonly string username = "user";
-		static readonly string password = "secret";
+	using Newtonsoft.Json.Linq;
+	using System;
+	using System.Collections.Generic;
+	using System.Net.Http;
+	using System.Net.Http.Headers;
+	using System.Threading.Tasks;
 
-		static void Main(string[] args)
+	namespace Examples.CSharp
+	{
+		class Program
 		{
-		    var reportName = "Dashboard";
-		    var parameters = new { ReportYear = 2004 };
-		    var format = "PDF";
+			static readonly string reportServerUrl = "http://localhost:83/";
+			static readonly string reportServerApiUrl = reportServerUrl + "api/reportserver/";
+			static readonly string username = "user";
+			static readonly string password = "secret";
 
-		    CreateAndDownloadReport(reportName, parameters, format).Wait();
+			static void Main(string[] args)
+			{
+				var reportName = "Dashboard";
+				var parameters = new { ReportYear = 2004 };
+				var format = "PDF";
+
+				CreateAndDownloadReportDocument(reportName, parameters, format).Wait();
+			}
+
+			static async Task CreateAndDownloadReportDocument(string reportName, object parameters, string format)
+			{
+				using (var client = new HttpClient())
+				{
+					client.BaseAddress = new Uri(reportServerApiUrl);
+					client.DefaultRequestHeaders.Accept.Clear();
+					client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+					// Authenticate via OAuth 2.0 Password Grant.
+					var authToken = GetAuthenticationToken(client, username, password);
+					client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+
+					// List all reports.
+					var reports = await GetAllReports(client, reportServerApiUrl);
+
+					// Render the desired report.
+					var report = reports.Find(r => r["Name"].Equals(reportName))["Id"];
+					var documentId = await CreateDocument(client, reportServerApiUrl, format, report, parameters);
+
+					// Download the created document.
+					var downloadPath = DownloadDocument(reportServerApiUrl + "documents/" + documentId, reportName, false);
+
+					// Open the document.
+					System.Diagnostics.Process.Start(downloadPath);
+				}
+			}
+
+			static string GetAuthenticationToken(HttpClient client, string usernameInput, string passwordInput)
+			{
+				var data = new FormUrlEncodedContent(new[]
+				{
+					new KeyValuePair<string, string>("grant_type", "password"),
+					new KeyValuePair<string, string>("username", usernameInput),
+					new KeyValuePair<string, string>("password", passwordInput)
+				});
+
+				// POST Token
+				var response = client.PostAsync(reportServerUrl + "Token", data).Result;
+				response.EnsureSuccessStatusCode();
+
+				var result = response.Content.ReadAsStringAsync().Result;
+				var token = JObject.Parse(result).SelectToken("access_token").ToString();
+
+				return token;
+			}
+
+			static async Task<List<Dictionary<string, string>>> GetAllReports(HttpClient client, string apiUrl)
+			{
+				// GET api/reportserver/reports
+				var response = await client.GetAsync(apiUrl + "reports");
+
+				if (response.IsSuccessStatusCode)
+				{
+					return await response.Content.ReadAsAsync<List<Dictionary<string, string>>>();
+				}
+
+				return null;
+			}
+
+			static async Task<string> CreateDocument(HttpClient client, string apiUrl, string format, string reportId, object parameterValues)
+			{
+				var data = new { ReportId = reportId, Format = format, ParameterValues = parameterValues };
+				// POST api/reportserver/documents
+				var response = await client.PostAsJsonAsync(apiUrl + "documents", data);
+				response.EnsureSuccessStatusCode();
+
+				var result = response.Content.ReadAsStringAsync().Result;
+				var documentId = JObject.Parse(result).SelectToken("DocumentId").ToString();
+
+				return documentId;
+			}
+
+			static string DownloadDocument(string url, string reportName, bool asAttachment)
+			{
+				var queryString = asAttachment ? "?content-disposition=attachment" : "";
+				var fileName = reportName + ".pdf";
+				var folderName = System.IO.Path.GetTempPath();
+				var filePath = System.IO.Path.Combine(folderName, fileName);
+
+				using (var webClient = new System.Net.WebClient())
+				{
+					webClient.DownloadFile(url + queryString, filePath);
+				}
+
+				return filePath;
+			}
 		}
+	}
 
-		static async Task CreateAndDownloadReport(string reportName, object parameters, string format)
-		{
-		    using (var client = new HttpClient())
-		    {
-			client.BaseAddress = new Uri(reportServerApiUrl);
-			client.DefaultRequestHeaders.Accept.Clear();
-			client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-			// Authenticate via OAuth 2.0 Password Grant.
-			var authToken = GetAuthenticationToken(client, username, password);
-			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
-
-			// List all reports.
-			var reports = await GetAllReports(client, reportServerApiUrl);
-
-			// Render the desired report.
-			var report = reports.Find(r => r["Name"].Equals(reportName))["Id"];
-			var documentId = await CreateDocument(client, reportServerApiUrl, format, report, parameters);
-
-			// Download the created document.
-			var downloadPath = DownloadDocument(reportServerApiUrl + "documents/" + documentId, reportName, false);
-
-			// Open the document.
-			System.Diagnostics.Process.Start(downloadPath);
-		    }
-		}
-
-		static string GetAuthenticationToken(HttpClient client, string usernameInput, string passwordInput)
-		{
-		    var data = new FormUrlEncodedContent(new[]
-		    {
-			new KeyValuePair<string, string>("grant_type", "password"),
-			new KeyValuePair<string, string>("username", usernameInput),
-			new KeyValuePair<string, string>("password", passwordInput)
-		    });
-
-		    // POST Token
-		    var response = client.PostAsync(reportServerUrl + "Token", data).Result;
-		    response.EnsureSuccessStatusCode();
-
-		    var result = response.Content.ReadAsStringAsync().Result;
-		    var token = JObject.Parse(result).SelectToken("access_token").ToString();
-
-		    return token;
-		}
-
-		static async Task<List<Dictionary<string, string>>> GetAllReports(HttpClient client, string apiUrl)
-		{
-		    // GET api/reportserver/reports
-		    var response = await client.GetAsync(apiUrl + "reports");
-
-		    if (response.IsSuccessStatusCode)
-		    {
-			return await response.Content.ReadAsAsync<List<Dictionary<string, string>>>();
-		    }
-
-		    return null;
-		}
-
-		static async Task<string> CreateDocument(HttpClient client, string apiUrl, string format, string reportId, object parameterValues)
-		{
-		    var data = new { ReportId = reportId, Format = format, ParameterValues = parameterValues };
-		    // POST api/reportserver/documents
-		    var response = await client.PostAsJsonAsync(apiUrl + "documents", data);
-		    response.EnsureSuccessStatusCode();
-
-		    var result = response.Content.ReadAsStringAsync().Result;
-		    var documentId = JObject.Parse(result).SelectToken("DocumentId").ToString();
-
-		    return documentId;
-		}
-
-		static string DownloadDocument(string url, string reportName, bool asAttachment)
-		{
-		    var queryString = asAttachment ? "?content-disposition=attachment" : "";
-		    var fileName = reportName + ".pdf";
-		    var folderName = System.IO.Path.GetTempPath();
-		    var filePath = System.IO.Path.Combine(folderName, fileName);
-
-		    using (var webClient = new System.Net.WebClient())
-		    {
-			webClient.DownloadFile(url + queryString, filePath);
-		    }
-
-		    return filePath;
-		}
-	    }
-	   
