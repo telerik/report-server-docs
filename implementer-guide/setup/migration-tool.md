@@ -14,7 +14,7 @@ The **Telerik Report Server Storage Migration Tool** is a standalone module ship
 
 ### Command-Line Interface
 
-The executable must be started with two arguments, describing the **source** and **destination** storage types, followed by a connection information for each storage type. An example usage of the tool with command-line arguments would look like this:
+The executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by a connection information for each storage type. An example command that migrates the file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* would look like this:
 
 *migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1*
 
@@ -24,7 +24,7 @@ Available values for **type** parameter (case-insensitive):
 
 -	**redis** - indicates that a Redis storage will be used.
 
--	**mssql** - indicates that a MSSQL server storage will be used.
+-	**mssqlServer** - indicates that a MSSQL Server storage will be used.
 
 ### File Storage Connection Parameters
 
@@ -36,7 +36,7 @@ The migration tool uses *StackExchange.Redis.StrongName v.1.0.479* library as a 
 
 ### MSSQL Storage Connection Parameters
 
-Similar to the **redis** option, when **mssql** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples for constructing the connection string can be found [here](https://www.connectionstrings.com/sql-server/). Note that if you do not specify a table name the data will be stored using the *master* schema.
+Similar to the **redis** option, when **mssqlServer** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples for constructing the connection string can be found [here](https://www.connectionstrings.com/sql-server/). Note that if you do not specify a table name the data will be stored using the *master* schema.
 
 ### Graphical User Interface
 
