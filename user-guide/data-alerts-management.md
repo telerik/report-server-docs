@@ -15,7 +15,7 @@ The **Data Alerts** view is the place from where you can manage data alerts, rev
 ## Data Alerts Grid
 
 The **Data Alerts** grid allows you to create, modify and delete data alerts.
-A Data Alert runs at a scheduled time and checks whether specific data conditions are satisfied. If the data conditions are satisfied a collection of reports documents are generated and sent to the alert's subscribers. A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a data alert is to be run.
+A Data Alert runs at a scheduled time and checks whether specific data conditions are satisfied. If the data conditions are satisfied a report document or a collection of reports documents are generated and sent to the alert's subscribers. A data alert can be run only once or on a recurrent basis, for example: daily, weekly, monthly or yearly. Within the recurrence rule, you set the intervals and range for how often a data alert is to be run.
 
 A Data Alert has various settings which are grouped into different tabs. 
 
@@ -32,7 +32,7 @@ A Data Alert has various settings which are grouped into different tabs.
 
 ### Reports Tab
 
-The reports tab allow you to define the collection of reports for the data alerts. Each report has to have the following settings.
+The Reports tab allow you to define a collection of reports for the **Data Alerts**. Each report has to have the following settings.
 
 -   A **Report** from a selected **Category**.
 
@@ -61,12 +61,11 @@ The "*Use Default Value*" checkbox for all parameters determines whether the val
 
 ### Rules Tab
 
-The rules are used to define conditions which report data should satisfy in order the alert to be triggered. In order to specify the rules, at first
-select a report from a list with all added reporst. Then data item from the report should be selected. After choosing a report and data item, in the Rules grid you can define the actual rules for the data that the item displays. When defining a rule, the Expression part should contain the name of a TextBox item which holds a dynamic expression. During the alert processing its value will be compared to the value in the Value part of the rule. The supported comparisons are: "is", "is not", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like". Currently data alerts can be defined only on a Table(Crosstab) item.
+The rules are used to define conditions which report data should satisfy in order the alert to be triggered. Rules are set on exactly one DataItem in one Report. First, select a Report from an available reports coming from the Reports tab, then a DataItem from it. After choosing a Report and DataItem, in the Rules grid define the actual rules for the data that the item displays. When defining a rule, the Expression part should contain the name of a TextBox item which holds a dynamic expression. During the alert processing its value will be compared to the value in the Value part of the rule. The supported comparisons are: "is", "is not", "is greater than", "is greater than or equal to", "is less than", "is less than or equal to", "in", "like", "not like". Currently data alerts can be defined only on a Table(Crosstab) item.
 
-### Mail Template Tab
+### Mail Template (Local) Tab
 
-Specifies the mail template which is sent when the data conditions are met and a report document is generated. When there is an error during the report processing or a general error during the data alert execution then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used. Data alert error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+Specifies the mail template which is sent to the added local users for the alert, when the data conditions are met and the report document has been successfully generated. When there is an error during the report processing or a general error during the data alert execution then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used. Data alert error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
 If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used.
 In the template you can use the following mail variables which will be replaced automatically when the alert is executed:
 
@@ -108,9 +107,59 @@ In the template you can use the following mail variables which will be replaced 
 
 -   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**.
 
--   {ReportName} - the name of the report(s) document(s).
+-   {ReportName} - the name of the report document.
 
--   {DocumentFormat} - the specified in the report(s) rendering format.
+-   {DocumentFormat} - the specified in the report rendering format.
+
+-   {Link} - the link of the generated report.
+
+-   {@\[ReportParameter.Name\]} - the values of the specified by the \[ReportParameter.Name\] all reports parameters used when running the scheduling task. The \[ReportParameter.Name\] placeholder stands for the actual name of the reports parameters. The list of all possible reports parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
+
+### Mail Template (External) Tab
+
+Specifies the mail template which is sent to the added external users for the alert, when the data conditions are met and the report(s) document has been successfully generated. When there is an error during the report processing or a general error during the data alert execution then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used. Data alert error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used.
+In the template you can use the following mail variables which will be replaced automatically when the alert is executed:
+
+-   {AlertName} - the name of the data alert.
+
+-   {StartTime} - start time of the report document generation.
+
+-   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
+
+-   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system.
+
+-   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system.
+
+-   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system.
+
+-   {EndTime} - end time of the report document generation.
+
+-   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system.
+
+-   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system.
+
+-   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
+
+-   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system.
+
+-   {ExecutionTime} - elapsed time for the report document generation.
+
+-   {ExecutionTimeDays} - elapsed time for the report document generation in **days**.
+
+-   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**.
+
+-   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**.
+
+-   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**.
+
+-   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**.
+
+-   {ReportName} - the name of the report document.
+
+-   {DocumentFormat} - the specified in the report rendering format.
+
+-   {Link} - the link of the generated report.
 
 -   {@\[ReportParameter.Name\]} - the values of the specified by the \[ReportParameter.Name\] all reports parameters used when running the scheduling task. The \[ReportParameter.Name\] placeholder stands for the actual name of the reports parameters. The list of all possible reports parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 

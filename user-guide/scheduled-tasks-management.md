@@ -57,9 +57,9 @@ The reports tab allow you to define the collection of reports for the task. Each
 -   A **Parameters** - the parameter values that will be used for the report when the task is executed. The parameters area includes all report parameters of the report regardless their visibility (visible or invisible). By default the invisible report parameters will use their values specified at design time, i.e. they are not overridden by the parameter values specified in the task. If you want to override the invisible parameters' values with the task's parameters you have to uncheck the "*Use Default Value*" checkbox.
 The "*Use Default Value*" checkbox for all parameters determines whether the value of the report parameter specified at design time will be used or whether it will be overridden by the value that you have specified in the task's parameters. When it is checked the design time value of the report parameter will be used and when it is unchecked the stored in the task parameters value will be used.
 
-### Mail Template Tab
+### Mail Template (Local) Tab
 
-Specifies the mail template which is sent by the scheduling service when the report(s) document(s) has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+Specifies the mail template which is sent to the added local users for the task, by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
 If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
 In the template you can use the following mail variables which will be replaced automatically when the task is executed:
 
@@ -101,9 +101,60 @@ In the template you can use the following mail variables which will be replaced 
 
 -   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**.
 
--   {ReportName} - the name of the report(s) document(s).
+-   {ReportName} - the name of the report.
 
--   {DocumentFormat} - the specified in the report(s) rendering format.
+-   {DocumentFormat} - the specified in the report rendering format.
+
+-   {Link} - the link of the generated report.
+
+-   {@\[ReportParameter.Name\]} - the values of the specified by the \[ReportParameter.Name\] reports parameters used when running the scheduling task. The \[ReportParameter.Name\] placeholder stands for the actual name of the reports parameters. The list of all possible reports parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
+
+
+### Mail Template (External) Tab
+
+Specifies the mail template which is sent to the added external users for the task, by the scheduling service when the report document has been successfully generated. When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
+If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
+In the template you can use the following mail variables which will be replaced automatically when the task is executed:
+
+-   {TaskName} - the name of the scheduled task.
+
+-   {StartTime} - start time of the report document generation.
+
+-   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
+
+-   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system.
+
+-   {StartDate} - start date of the report document generation formatted with the **short date pattern** of the operating system.
+
+-   {StartDateLong} - start date of the report document generation formatted with the **long date pattern** of the operating system.
+
+-   {EndTime} - end time of the report document generation.
+
+-   {EndTimeShort} - end time of the report document generation formatted with the **short time pattern** of the operating system.
+
+-   {EndTimeLong} - end time of the report document generation formatted with the **long time pattern** of the operating system.
+
+-   {EndDate} - end date of the report document generation formatted with the **short date pattern** of the operating system.
+
+-   {EndDateLong} - end date of the report document generation formatted with the **long date pattern** of the operating system.
+
+-   {ExecutionTime} - elapsed time for the report document generation.
+
+-   {ExecutionTimeDays} - elapsed time for the report document generation in **days**.
+
+-   {ExecutionTimeHours} - elapsed time for the report document generation in **hours**.
+
+-   {ExecutionTimeMinutes} - elapsed time for the report document generation in **minutes**.
+
+-   {ExecutionTimeSeconds} - elapsed time for the report document generation in **seconds**.
+
+-   {ExecutionTimeMilliseconds} - elapsed time for the report document generation in **milliseconds**.
+
+-   {ReportName} - the name of the report.
+
+-   {DocumentFormat} - the specified in the report rendering format.
+
+-   {Link} - the link of the generated report.
 
 -   {@\[ReportParameter.Name\]} - the values of the specified by the \[ReportParameter.Name\] reports parameters used when running the scheduling task. The \[ReportParameter.Name\] placeholder stands for the actual name of the reports parameters. The list of all possible reports parameters that can be used in the mail template is available through the *variables* dropdown in the Kendo editor.
 
