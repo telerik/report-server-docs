@@ -1,14 +1,14 @@
 ---
-title: Implement Custom Login Provider
-page_title: Implement Custom Login Provider
-description: Implement Custom Login Provider For Single Sign-On Scenario
-slug: custom-login-provider-implementation
+title: Implement a Custom Login Provider
+page_title: Implement a Custom Login Provider
+description: Implement a Custom Login Provider For Single Sign-On Scenario
+slug: custom-login-provider
 tags: single sign-on,SSO,custom login provider,implementation
 published: True
 position: 800
 ---
 
-# Implement Custom Login Provider
+# Implement a Custom Login Provider
 
 Custom login provider takes place in a single sign-on scenario when the Report Server Manager needs to be accessed as a part of another web
 application - usually an enterprise web application or company business portal. 
@@ -27,13 +27,13 @@ when the browser is redirected to Report Server Manager address.
 The users in the client application must have corresponding registered users in Report Server. 
 It is not necessary that their names match, but in this case a mapping should be done on the client side. 
 The properties specific to this login type are located in the **Custom Provider** group under **Authentication** tab:
-..*	Enabled – determines if custom login is allowed.
-..*	Hash Algorithm – determines the hash algorithm used to sign the user claims. The supported algorithms are MD5, SHA1, SHA256, SHA384 and SHA512
-..*	X509 Certificate – a serialized string representation of the certificate used to sign the claims. The verification will be done using the public key, so setting a certificate with only a public key is sufficient.
+  *	Enabled – determines if custom login is allowed.
+  *	Hash Algorithm – determines the hash algorithm used to sign the user claims. The supported algorithms are MD5, SHA1, SHA256, SHA384 and SHA512.
+  *	X509 Certificate – a Base64-encoded representation of the certificate used to sign the claims. The verification will be done using the public key, so setting a certificate with only a public key is sufficient. The most convenient way to obtain the Base64 string is to export the certificate from the store using the  _Base-64 encoded X.509 (.CER)_ format.
 
 ## Authentication examples
-A sample project named **CustomLoginApp** can be downloaded from this link. It demonstrates how to create the object containing the 
-client claims, sign it and send it with a POST request to the Report Server WebAPI endpoint.
+The POST request that will return the authentication cookie can be performed in many ways. We have created a sample project named **CustomLoginApp** that shows how this task can be done on the client - using jQuery AJAX request, and on the server - using C# code and HttpClient instance. The project also demonstrates how to instantiate the object containing the 
+client claims, sign it, send it to the Report Server WebAPI endpoint and consume the response. The project can be downloaded from [this link](https://www.telerik.com/docs/default-source/devcraft-documentation/reporting/customloginexampleapp.zip?sfvrsn=c18f4365_2). Below are shown the code snippets used in the example with explanations about the authentication workflow.
 
 ### The following code snippets shows how to perform the request using jQuery:
 ```
@@ -179,6 +179,7 @@ The _Login()_ method creates an instance of _Telerik.ReportServer.HttpClient.Cus
 If the response is successful, the authentication cookie is inspected and a new cookie is added to the current _HttpContext.Response_. 
 >Please note that the browser will disable sending the cookie if the response and request domains are different, which makes this approach
 non-suitable for all scenarios.
+
 The _Login()_ method signs the _CustomLoginData_ instance using the following sample code:
 ```
       public void SignCustomLoginData(CustomLoginData data)
@@ -232,7 +233,7 @@ The calling method that redirects to the Report Server if the POST request is su
         }
 ```
 
-## Certificate details
-The current implementation of the custom login method uses certificates whose keys implement 
+## Certificate requirements
+  * The current implementation of the custom login method uses certificates whose keys implement 
 [RSACryptoServiceProvider](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsacryptoserviceprovider?redirectedfrom=MSDN&view=netframework-4.6.2) as the default RSA algorithm. Using certificates with keys implementing a different assymetric algorithm is not currently supported.
-
+  * Make sure the certificate has defined the proper permissions to the applications and identities that use it. Usually the IUSR identity needs to have a certificate permission in order to use its private key for signing. [This forum topic](https://stackoverflow.com/questions/45042108/privatekey-threw-an-exception-of-type-system-security-cryptography-cryptographic) explains some of the possible issues in details.
