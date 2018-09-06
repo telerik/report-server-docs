@@ -168,6 +168,6 @@ The **Activity** view for a scheduled task shows the task execution history. Cre
 
 ## Subscribers View
 
-From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
+From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user which is represented through e-mail address. The external emails should be separated with semicolon (;) or comma (,).
 
 > When there is an error during the report processing or a general error in the task execution, mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
