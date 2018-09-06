@@ -38,6 +38,9 @@ navigation:
     implementer-guide/apis/rest-api/examples/javascript:
         position: 10111
         title: "JavaScript"    
+    implementer-guide/apis/rest-api/examples/csharp:
+        position: 10112
+        title: "C#"   
     knowledge-base:
         title: "Knowledge Base"
 
