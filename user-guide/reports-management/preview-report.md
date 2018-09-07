@@ -9,10 +9,13 @@ position: 130
 ---
 
 # Preview Report
-
-Preview the report in a new web page allowing you to export the report to various formats.
-
 ![preview report](../../images/report-server-images/reports-management/preview-report.png)
+
+The preview window uses the [HTML5 Report Viewer](https://docs.telerik.com/reporting/html5-report-viewer "HTML5 Report Viewer") to display the report.
+
+The viewer Send Mail Message toolbar button is only visible if the Report Server have valid SMTP setting.
+
+The Preview Report view opens in a new web page and supports report export to various formats.
 
 The document format can be any [single document format provided by the Telerik Reporting engine](https://docs.telerik.com/reporting/configuring-rendering-extensions "Rendering Extensions"):
 
@@ -33,8 +36,6 @@ The document format can be any [single document format provided by the Telerik R
 -   PPTX - Renders a report in Microsoft PowerPoint 2007 format (also known as OpenXML) - it is a zipped, XML-based file format developed by Microsoft for presentations.
 
 -   MHTML - Renders a report in MHTML. The report opens in Internet Explorer. The format is shown as Web Archive in the Export drop-down of the report toolbar.
-
-The preview window uses the [HTML5 Report Viewer](https://docs.telerik.com/reporting/html5-report-viewer "HTML5 Report Viewer") to display the report.
 
 ## Query String Report Parameters
 
