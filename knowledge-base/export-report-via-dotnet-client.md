@@ -20,7 +20,7 @@ res_type: kb
 
 ## Description
 
-Telerik Report Server provides a [REST API]({%slug rest-api-reference%}) which can be used to consume resources from an external application. How to communicate with the REST API using a JavaScript client is demonstrated in:
+Telerik Report Server provides a [REST API]({%slug rest-api-reference-v2%}) which can be used to consume resources from an external application. How to communicate with the REST API using a JavaScript client is demonstrated in:
 
 - [Login]({%slug rest-api-login%})
 

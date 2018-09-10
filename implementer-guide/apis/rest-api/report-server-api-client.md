@@ -10,7 +10,7 @@ position: 300
 
 # Report Server API Client
 
-The Report Server API client is a .NET library which comes in handy when developing .NET applications which would connect to the [Report Server API]({%slug rest-api-reference%}).
+The Report Server API client is a .NET library which comes in handy when developing .NET applications which would connect to the [Report Server API]({%slug rest-api-reference-v2%}).
 The client provides access to the available API endpoints. To gain access to the client and its methods it is required to add the following assembly references:
 
 - Telerik.ReportServer.HttpClient.dll

@@ -31,10 +31,16 @@ navigation:
         title: "APIs"      
     implementer-guide/apis/rest-api:
         position: 10100
-        title: "REST API"           
+        title: "REST API"       
     implementer-guide/apis/rest-api/examples:
         position: 10110
         title: "Examples"    
+    implementer-guide/apis/rest-api/v1:
+        position: 10120
+        title: "V1"  
+    implementer-guide/apis/rest-api/v2:
+        position: 10130
+        title: "V2"  
     implementer-guide/apis/rest-api/examples/javascript:
         position: 10111
         title: "JavaScript"    
