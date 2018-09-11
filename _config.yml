@@ -35,17 +35,18 @@ navigation:
     implementer-guide/apis/rest-api/v1:
         position: 10108
         title: "V1"  
+    implementer-guide/apis/rest-api/v1/examples:
+        title: "Examples"  
+    implementer-guide/apis/rest-api/v1/examples/javascript:
+        title: "JavaScript"    
     implementer-guide/apis/rest-api/v2:
         position: 10107
         title: "V2"  
-    implementer-guide/apis/rest-api/examples:
-        position: 10110
-        title: "Examples"    
-    implementer-guide/apis/rest-api/examples/javascript:
-        position: 10111
-        title: "JavaScript"    
-    implementer-guide/apis/rest-api/examples/csharp:
-        position: 10112
+    implementer-guide/apis/rest-api/v2/examples:
+        title: "Examples"   
+    implementer-guide/apis/rest-api/v2/examples/javascript:
+        title: "JavaScript" 
+    implementer-guide/apis/rest-api/v2/examples/csharp:
         title: "C#"   
     knowledge-base:
         title: "Knowledge Base"

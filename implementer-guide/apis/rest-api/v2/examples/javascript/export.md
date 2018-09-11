@@ -2,7 +2,7 @@
 title: Export
 page_title: Export
 description: REST API Export
-slug: rest-api-export
+slug: rest-api-export-v2
 tags: rest, api, rest api, overview
 published: True
 position: 300
@@ -19,7 +19,7 @@ Here is a sample function to illustrate the approach:
 ###### Example
 
 	  var serverHost = "http://reportserver:83/";
-	  var serverApi = serverHost + "api/reportserver/";
+	  var serverApi = serverHost + "api/reportserver/v2/";
 	  
 	  function exportDocument(reportId, format, parameterValues, asAttachment) {
 		if (!reportId) {

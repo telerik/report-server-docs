@@ -2,7 +2,7 @@
 title: Resources
 page_title: Resources
 description: Get Report Server Resources
-slug: rest-api-get-resources
+slug: rest-api-get-resources-v2
 tags: rest, api, rest api, resources
 published: True
 position: 200
@@ -18,14 +18,15 @@ Here is a sample code snippet which illustrates how to read the report catalog i
 
 ###### Example
 
-	  var token =
-		window.sessionStorage.getItem(serverTokenKey);
-		  
+	  var token = window.sessionStorage.getItem(serverTokenKey);
 	  var headers = {};
 	  
 	  if (token) {
 		headers.Authorization = 'Bearer ' + token;
 	  }
+	  
+	  var serverHost = "http://reportserver:83/";
+	  var serverApi = serverHost + "api/reportserver/v2/";
 
 	  $.ajax({
 		type: "GET",
