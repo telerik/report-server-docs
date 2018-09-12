@@ -18,3 +18,5 @@ The installer will not preserve any other config files such as _Web.config_ and 
 On first launch of the Report Server you can select to re-use the same data storage folder from the previous installation.
 
 > The Report Server installer will not run if it detects an already installed Report Server of the same or greater version.
+
+The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. It is recommended to clear the browser cache or force reload the page, usually with **Ctrl+F5**.
