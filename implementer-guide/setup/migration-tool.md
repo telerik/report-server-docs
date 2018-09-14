@@ -14,7 +14,7 @@ The **Telerik Report Server Storage Migration Tool** is a standalone module ship
 
 ### Command-Line Interface
 
-The executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by a connection information for each storage type. An example command that migrates the file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* would look like this:
+The executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by a connection information for each storage type. An example command that performs an exact copy of the file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* would look like this:
 
 *migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1*
 
@@ -50,3 +50,51 @@ The **rs-export.ps1** script starts a Report Server installation in silent mode 
 The **rs-import.ps1** script starts a Report Server installation and unpacks the produced by the first script .zip file as its storage. In case changing the ReportServer storage type is required, the script determines (via a parameter) the connection to the target storage and migrates the contents of the .zip file to MSSQL or REDIS, if needed. The script also modifies the .config file in Report Server directory so it will match the target storage type. Finally the scripts starts the Report Server Manager and exits.
 
 Both scripts accept startup parameters, defining the installation directory and path to the produced .zip file, so they would work even without modification for most common migration scenarios.
+
+## Storage assets upgrade mechanism
+The migration tool can perform a selective upgrade using a rule set defined in external JSON file. This is useful in continuous deployment scenarios, where the target database must be regularly updated without affecting its current assets. This migration mode is determined by an additional *config* parameter of the **migrate.exe** utility and looks like this:
+
+*migrate.exe type=file,connection="C:\Report Server Source\Data" type=file,connection="C:\Report Server Deployed\Data" config=config.json*
+
+The above command will migrate the report server file storage located at *C:\Report Server Source\Data* to the file storage located at *C:\Report Server Deployed\Data*, applying the rules defined in *config.json* file. If the destination storage does not exist, it will be created.
+
+### Configuration file
+The configuration file that determines the rules for the migration is in JSON-format and looks like the one below:
+```json
+{
+  "user": {
+    "name": "newUser",
+    "password": "newPassword",
+    "email": "newMail@somemail.org",
+    "firstName": "First",
+    "lastName": "Second"
+  },
+  "mailConfiguration": {
+   "smtpHost": "myNewHost.smtp.org",
+   "port": "33",
+   "useSecureConnection": "true",
+   "accountName": "newUser",
+   "password": "111111",
+   "senderEmail": "newSenderEmail",
+   "senderName": "newSenderName"
+  },
+  "assets": [ "reports", "data connections", "scheduled tasks", "data alerts" ]
+}
+```
+
+### Configuration file rules
+The configuration file describes which assets will be migrated, applying the rules for each asset or collection as shown below: 
+
+  * **User** – the JSON file must contain a single user. If the username exists in the target storage, its data will not be updated, just its ID will be retrieved and will be used when migrating the reports asset. If the user is new to the target storage, it will be inserted as administrator. If the user exists on the target storage and has NO administrator rights, the migration process should abort with explanatory message.
+  
+  * **Mail Server** – this entry is optional. If provided, it will insert or update the mail server settings on the target storage. 
+  
+  * **Assets** - defines the assets that will be migrated as follows:
+  
+    * **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as a last revision in the target storage. If a report has a specific permission that do not exist on the target storage, the permission will be migrated and assigned to the migration user. 
+  
+    * **Data connections** – the new data connections will be inserted to the target storage. Existing data connections will not be updated, because this could break the currently working reports. The permissions are migrated the same way as with the **Report Permissions** collection.
+  
+    * **Scheduled Tasks** and **Data Alerts** – their migration follow the same rules as with the **Data connections**. If a task or alert is related to a report that does not exist on the target storage, that relation will be preserved, changing the report ID when the report is migrated. The permissions are migrated the same way as with the **Report Permissions** collection.
+
+The application outputs a detailed log in the console so the migration process can be easily tracked. In case an error occurs, the stack trace will be logged as well. The migration process cannot be rolled back, so it is recommended to create a backup of the storage before migrating. This can be done manually, using batch files or through scripts, as explained above.
