@@ -12,9 +12,11 @@ position: 720
 
 The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation and its purpose is to provide easy out-of-the box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in *Tools\\* subfolder of the installation directory.
 
+> The Storage Migration tool will copy the assets from the source storage to the specified destination. If the destination storage does not exist, it will be created. If the destination storage exists, then the source assets will be copied to the destination, **without clearing the destination storage first**, which can produce duplicated entries in the destination storage and 
+
 ### Command-Line Interface
 
-The executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by a connection information for each storage type. An example command that performs an exact copy of the file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* would look like this:
+The executable **migrate.exe** operates in two modes - *simple* and *configurable* migration. The simple mode copies all the entries from the source storage to the destination storage. The configurable mode allows to select which assets will be migrated along with their related entities (see the *Storage assets upgrade mechanism* section below). The migration mode is determined by the arguments, provided to the executable. For simple migration mode the executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by a connection information for each storage type. An example command that performs a copy of the file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* would look like this:
 
 *migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1*
 
@@ -52,7 +54,7 @@ The **rs-import.ps1** script starts a Report Server installation and unpacks the
 Both scripts accept startup parameters, defining the installation directory and path to the produced .zip file, so they would work even without modification for most common migration scenarios.
 
 ## Storage assets upgrade mechanism
-The migration tool can perform a selective upgrade using a rule set defined in external JSON file. This is useful in continuous deployment scenarios, where the target database must be regularly updated without affecting its current assets. This migration mode is determined by an additional *config* parameter of the **migrate.exe** utility and looks like this:
+The migration tool can perform a selective migration using a rule set defined in external JSON file. This is useful in continuous deployment scenarios, where the target database must be regularly updated without affecting its current assets. This migration mode is determined by an additional *config* parameter of the **migrate.exe** utility and looks like this:
 
 *migrate.exe type=file,connection="C:\Report Server Source\Data" type=file,connection="C:\Report Server Deployed\Data" config=config.json*
 
