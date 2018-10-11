@@ -49,7 +49,7 @@ Here is a sample function to illustrate the approach:
 		  headers: headers
 		  })
 		.done(function (data) {
-		  var documentId = data.DocumentId;
+		  var documentId = data;
 
 		  var queryString = "";
 
