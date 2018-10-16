@@ -80,23 +80,28 @@ The configuration file that determines the rules for the migration is in JSON-fo
    "senderEmail": "newSenderEmail",
    "senderName": "newSenderName"
   },
-  "assets": [ "reports", "data connections", "scheduled tasks", "data alerts" ]
+  "assets": [ "reports", "data connections", "scheduled tasks", "data alerts", "users" ]
 }
 ```
 
 ### Configuration file rules
 The configuration file describes which assets will be migrated, applying the rules for each asset or collection as shown below: 
 
-  * **User** – the JSON file must contain a single user. If the username exists in the target storage, its data will not be updated, just its ID will be retrieved and will be used when migrating the reports asset. If the user is new to the target storage, it will be inserted as administrator. If the user exists on the target storage and has NO administrator rights, the migration process should abort with explanatory message.
+  * **User** – the JSON file must contain a single user. If the username exists in the target storage, its data will not be updated, just its ID will be retrieved and will be used when migrating the reports asset. If the user is new to the target storage, it will be inserted as administrator. If the user exists on the target storage and has NO administrator rights, the migration process will abort with explanatory message.
   
   * **Mail Server** – this entry is optional. If provided, it will insert or update the mail server settings on the target storage. 
   
   * **Assets** - defines the assets that will be migrated as follows:
   
-    * **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as a last revision in the target storage. If a report has a specific permission that do not exist on the target storage, the permission will be migrated and assigned to the migration user. 
+  * **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as a last revision in the target storage. If a report has a specific permission that do not exist on the target storage, the permission will be migrated as well. The permissions assignment depends on whether the user exists in the destination storage and the **"users"** flag is used in the assets configuration, as explained below:
+    * if the permission is assigned to a user that exists in destination storage, it will be migrated and assigned to the that user. 
+    * if the permission is assigned to a user that does not exist in destination storage and **users** flag is included in assets configuration, the user will be migrated and the permission will be migrated and assigned to this new user.
+    * if the permission is assigned to a user that does not exist in destination storage and **users** flag is **not** included in assets configuration, then the permission will be migrated and assigned to the migration user.
   
-    * **Data connections** – the new data connections will be inserted to the target storage. Existing data connections will not be updated, because this could break the currently working reports. The permissions are migrated the same way as with the **Report Permissions** collection.
+  * **Data connections** – the data connections that do not exist in the target storage, will be inserted. Existing data connections will not be updated, because this could break the currently working reports. The permissions are migrated the same way as with the **Report Permissions** collection.
   
-    * **Scheduled Tasks** and **Data Alerts** – their migration follow the same rules as with the **Data connections**. If a task or alert is related to a report that does not exist on the target storage, that relation will be preserved, changing the report ID when the report is migrated. The permissions are migrated the same way as with the **Report Permissions** collection.
+  * **Scheduled Tasks** and **Data Alerts** – their migration follow the same rules as with the **Data connections**. If a task or alert is related to a report that does not exist on the target storage, that relation will be preserved, changing the report ID when the report is migrated. The permissions are migrated the same way as with the **Report Permissions** collection.
+
+  * **Users** – The users that do not exist in the target storage, will be inserted along with their roles. Existing users data will not be updated. The permissions are migrated the same way as with the **Report Permissions** collection.
 
 The application outputs a detailed log in the console so the migration process can be easily tracked. In case an error occurs, the stack trace will be logged as well. The migration process cannot be rolled back, so it is recommended to create a backup of the storage before migrating. This can be done manually, using batch files or through scripts, as explained above.
