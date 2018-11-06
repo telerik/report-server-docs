@@ -36,115 +36,115 @@ The same JavaScript client can be written as a .NET client that executes request
 
 ###### C# #
 
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
+    using Newtonsoft.Json.Linq;
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Net.Http.Headers;
+    using System.Threading.Tasks;
 
-namespace GetAndExportReportFromRSWebApi
-{
-    class Program
+    namespace GetAndExportReportFromRSWebApi
     {
-        static readonly string reportServerUrl = "http://localhost:83/";
-        static readonly string reportServerApiUrl = reportServerUrl + "api/reportserver/";
-        static readonly string username = "yourUsername";
-        static readonly string password = "yourPassword";
-
-        static void Main(string[] args)
+        class Program
         {
-            var reportName = "Dashboard";
-            var parameters = new { ReportYear = 2004 };
-            var format = "PDF";
+            static readonly string reportServerUrl = "http://localhost:83/";
+            static readonly string reportServerApiUrl = reportServerUrl + "api/reportserver/";
+            static readonly string username = "yourUsername";
+            static readonly string password = "yourPassword";
 
-            CreateAndDownloadReportDocument(reportName, parameters, format).Wait();
-        }
-
-        static async Task CreateAndDownloadReportDocument(string reportName, object parameters, string format)
-        {
-            using (var client = new HttpClient())
+            static void Main(string[] args)
             {
-                client.BaseAddress = new Uri(reportServerApiUrl);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var reportName = "Dashboard";
+                var parameters = new { ReportYear = 2004 };
+                var format = "PDF";
 
-                // Authenticate via OAuth 2.0 Password Grant.
-                var authToken = GetAuthenticationToken(client, username, password);
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
-
-                // List all reports.
-                var reports = await GetAllReports(client, reportServerApiUrl);
-
-                // Render the desired report.
-                var report = reports.Find(r => r["Name"].Equals(reportName))["Id"];
-                var documentUrl = await CreateDocument(client, reportServerApiUrl, format, report, parameters);
-
-                // Download the created document.
-                var downloadPath = DownloadDocument(documentUrl, reportName, false);
-
-                // Open the document.
-                System.Diagnostics.Process.Start(downloadPath);
-            }
-        }
-
-        static string GetAuthenticationToken(HttpClient client, string usernameInput, string passwordInput)
-        {
-            var data = new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string, string>("grant_type", "password"),
-                new KeyValuePair<string, string>("username", usernameInput),
-                new KeyValuePair<string, string>("password", passwordInput)
-            });
-
-            // POST Token
-            var response = client.PostAsync(reportServerUrl + "Token", data).Result;
-            response.EnsureSuccessStatusCode();
-
-            var result = response.Content.ReadAsStringAsync().Result;
-            var token = JObject.Parse(result).SelectToken("access_token").ToString();
-
-            return token;
-        }
-
-        static async Task<List<Dictionary<string, string>>> GetAllReports(HttpClient client, string apiUrl)
-        {
-            // GET api/reportserver/reports
-            var response = await client.GetAsync(apiUrl + "reports");
-
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadAsAsync<List<Dictionary<string, string>>>();
+                CreateAndDownloadReportDocument(reportName, parameters, format).Wait();
             }
 
-            return null;
-        }
-
-        static async Task<string> CreateDocument(HttpClient client, string apiUrl, string format, string reportId, object parameterValues)
-        {
-            var data = new { ReportId = reportId, Format = format, ParameterValues = parameterValues };
-            // POST api/reportserver/documents
-            var response = await client.PostAsJsonAsync(apiUrl + "documents", data);
-            response.EnsureSuccessStatusCode();
-
-            var documentUrl = response.Headers.Location;
-
-            return documentUrl.ToString();
-        }
-
-        static string DownloadDocument(string url, string reportName, bool asAttachment)
-        {
-            var queryString = asAttachment ? "?content-disposition=attachment" : "";
-            var fileName = reportName + ".pdf";
-            var folderName = System.IO.Path.GetTempPath();
-            var filePath = System.IO.Path.Combine(folderName, fileName);
-
-            using (var webClient = new System.Net.WebClient())
+            static async Task CreateAndDownloadReportDocument(string reportName, object parameters, string format)
             {
-                webClient.DownloadFile(url + queryString, filePath);
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(reportServerApiUrl);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // Authenticate via OAuth 2.0 Password Grant.
+                    var authToken = GetAuthenticationToken(client, username, password);
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authToken);
+
+                    // List all reports.
+                    var reports = await GetAllReports(client, reportServerApiUrl);
+
+                    // Render the desired report.
+                    var report = reports.Find(r => r["Name"].Equals(reportName))["Id"];
+                    var documentUrl = await CreateDocument(client, reportServerApiUrl, format, report, parameters);
+
+                    // Download the created document.
+                    var downloadPath = DownloadDocument(documentUrl, reportName, false);
+
+                    // Open the document.
+                    System.Diagnostics.Process.Start(downloadPath);
+                }
             }
 
-            return filePath;
+            static string GetAuthenticationToken(HttpClient client, string usernameInput, string passwordInput)
+            {
+                var data = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("grant_type", "password"),
+                    new KeyValuePair<string, string>("username", usernameInput),
+                    new KeyValuePair<string, string>("password", passwordInput)
+                });
+
+                // POST Token
+                    var response = client.PostAsync(reportServerUrl + "Token", data).Result;
+                    response.EnsureSuccessStatusCode();
+
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    var token = JObject.Parse(result).SelectToken("access_token").ToString();
+
+                    return token;
+                }
+
+                static async Task<List<Dictionary<string, string>>> GetAllReports(HttpClient client, string apiUrl)
+                {
+                    // GET api/reportserver/reports
+                    var response = await client.GetAsync(apiUrl + "reports");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsAsync<List<Dictionary<string, string>>>();
+                    }
+
+                    return null;
+                }
+
+                static async Task<string> CreateDocument(HttpClient client, string apiUrl, string format, string reportId, object parameterValues)
+                {
+                    var data = new { ReportId = reportId, Format = format, ParameterValues = parameterValues };
+                    // POST api/reportserver/documents
+                    var response = await client.PostAsJsonAsync(apiUrl + "documents", data);
+                    response.EnsureSuccessStatusCode();
+
+                    var documentUrl = response.Headers.Location;
+
+                    return documentUrl.ToString();
+                }
+
+                static string DownloadDocument(string url, string reportName, bool asAttachment)
+                {
+                    var queryString = asAttachment ? "?content-disposition=attachment" : "";
+                    var fileName = reportName + ".pdf";
+                    var folderName = System.IO.Path.GetTempPath();
+                    var filePath = System.IO.Path.Combine(folderName, fileName);
+
+                    using (var webClient = new System.Net.WebClient())
+                    {
+                        webClient.DownloadFile(url + queryString, filePath);
+                    }
+
+                    return filePath;
+                }
+            }
         }
-    }
-}
