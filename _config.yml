@@ -1,8 +1,13 @@
 # The public documentation URL, used for sitemap.xml
 url: "https://docs.telerik.com/report-server"
 
+# KB portal info
+has_kb_portal: true
+old_kb_portal_link: https://www.telerik.com/support/kb/report-server
+
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock,api_sort.rb,build_kb.rb,switch-ruby.cmd]
+exclude_navigation: [knowledge-base/*]
 navigation:
 ## List your directory names and order here, like this:
     user-guide:
@@ -72,32 +77,10 @@ defaults:
     scope:
         path: ""
     values:
-        layout: "page"
+        layout: "documentation"
         category: "default"
         product: "report-server"
         editable: true
--
-    scope:
-        path: "knowledge-base"
-    values:
-        layout: "kb-page"
-
-## Kendo UI Legacy        
-type_links:
-    "kendo.Class": "/api/javascript/class"
-    "kendo.data.DataSource": "/api/javascript/data/datasource"
-    "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
-    "Blob": "https://developer.mozilla.org/en/docs/Web/API/Blob"
-    "File": "https://developer.mozilla.org/en-US/docs/Web/API/File"
-    "Boolean": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
-    "Function": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"
-    "jQuery": "http://api.jquery.com/Types/#jQuery"
-    "Promise": "http://api.jquery.com/Types/#Promise"
-    "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
-    "Number": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
-    "String": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
-    "Date": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
-    "Element": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
@@ -107,9 +90,43 @@ ff-sheet-id: '1BT1fdkj4RPEdq5_lrEN5-x3ln8OVoaUjkYIT3RDdrUU'
 
 # The google services configuration
 google_tag_manager: GTM-6X92
-google_custom_search: '001595215763381649090:dikfyfm1qqw'
-google_custom_kb_search: '001595215763381649090:fkoi6yohnf0'
+gcs_engine: '001595215763381649090:dikfyfm1qqw'
+#google_custom_kb_search: '001595215763381649090:fkoi6yohnf0'
+gcs_api_key: 'AIzaSyDNYtM2t6kQtudXwrkft8fSt0PaDxAyxx4'
 
+edit_repo_url: https://github.com/telerik/report-server-docs/edit/master
+product: "Report Server"
+platform: report-server
+download: http://www.telerik.com/download/report-server
+nav:
+  "Demos": https://demos.telerik.com/report-server/
+  "Release History": https://www.telerik.com/support/whats-new/report-server/release-history
+  "About": http://www.telerik.com/report-server
+  "Pricing": http://www.telerik.com/purchase/report-server
+
+footer:
+-
+  title: "Getting Started"
+  links:
+    "Install Now": http://www.telerik.com/download/report-server
+    "Demos": https://demos.telerik.com/report-server/
+-
+  title: "Support Resources"
+  links: 
+    "Contact Support": https://www.telerik.com/account/support-tickets
+-
+  title: "Community"
+  links:
+    "Forums": https://www.telerik.com/forums/report-server
+    "Blogs": http://www.telerik.com/blogs/tag/report-server
+    "Feedback Portal": https://feedback.telerik.com/Project/171
+  
+footer_social: 
+    facebook: https://www.facebook.com/Telerik/
+    youtube: https://www.youtube.com/user/TelerikInc
+    linkedin: https://www.linkedin.com/showcase/telerik/ 
+    twitter: https://twitter.com/Telerik/ 
+    
 # Assets pipeline configuration
 assets:
     cachebust: soft
