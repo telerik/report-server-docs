@@ -95,7 +95,7 @@ gcs_engine: '001595215763381649090:dikfyfm1qqw'
 gcs_api_key: 'AIzaSyDNYtM2t6kQtudXwrkft8fSt0PaDxAyxx4'
 
 edit_repo_url: https://github.com/telerik/report-server-docs/edit/master
-product: "Report Server"
+product: "Telerik Report Server"
 platform: report-server
 download: http://www.telerik.com/download/report-server
 nav:
