@@ -33,7 +33,7 @@ Please test the following:
 1. On an accessible by the server machine MSSQL Server, create a blank database;
 2. Close all browsers;
 3. Uninstall and reinstall Telerik Report Server in a custom folder, when you are asked where to place the installation. Our recommendation is to use the MSI file from your [Telerik account](https://www.telerik.com/account/) -> Downloads -> Report Server -> MSI and to run the installer as an administrator of the machine;
-4. When you start *http://yourreprotserverhost:83* select to use MsSqlServerStorage and provide the connection string to the database configured in step 1. Verify the database is accessible by the identity of the IIS Application pool associated with the Report Server Web part.
+4. When you start *http://yourreportserverhost:83*, select **MsSqlServerStorage** from the initially provided options and enter the connection string to the database configured in step 1. Verify the database is accessible by the identity of the IIS Application pool associated with the Report Server Web part.
 
 ## See Also
 - [Telerik Report Server Storage Settings](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings)
