@@ -28,20 +28,20 @@ Extending the report engine of the Report Server is not supported out of the box
 	<li>Copy the assembly containing the user function(s) in:
 		<ul>
 			<li>
-				The bin folder of the Report Server web application, i.e. (<i>Telerik Report Server installation folder</i>)\Telerik.ReportServer.Web\bin (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\bin</b>)
+				The bin folder of the Report Server web application, i.e. [Telerik Report Server installation folder]\Telerik.ReportServer.Web\bin (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\bin</b>)
 			</li>
 			<li>
-				for scheduling services only - in the folder of the scheduling service, i.e. (<i>Telerik Report Server installation folder</i>)\Services (usually <i>C:\Program Files (x86)\Progress\Telerik Report Server\Services</i>)
+				for scheduling services only - in the folder of the scheduling service, i.e. [Telerik Report Server installation folder]\Services (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Services</b>)
 			</li>
 		</ul>
 	</li>
 	<li>Register the same assembly in the corresponding application configuration files, using the snippets that could be found <a href="https://docs.telerik.com/reporting/standalone-report-designer-extending-configuration">here</a>.
 		<ul>
 			<li>
-				in (<i>Telerik Report Server installatiion folder</i>)\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
+				in [Telerik Report Server installatiion folder]\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
 			</li>
 			<li>
-				for scheduling services only in (<i>Telerik Report Server installatiion folder</i>)\Services\Telerik.ReportServer.ServiceAgent.exe.config (usually <i>C:\Program Files (x86)\Progress\Telerik Report Server\Services\Telerik.ReportServer.ServiceAgent.exe.config</i>)
+				for scheduling services only in [Telerik Report Server installation folder]\Services\Telerik.ReportServer.ServiceAgent.exe.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Services\Telerik.ReportServer.ServiceAgent.exe.config</b>)
 			</li>
 		</ul>
 	</li>
