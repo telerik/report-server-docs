@@ -38,7 +38,7 @@ Extending the report engine of the Report Server is not supported out of the box
 	<li>Register the same assembly in the corresponding application configuration files, using the snippets that could be found <a href="https://docs.telerik.com/reporting/standalone-report-designer-extending-configuration">here</a>.
 		<ul>
 			<li>
-				in [Telerik Report Server installatiion folder]\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
+				in [Telerik Report Server installation folder]\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
 			</li>
 			<li>
 				for scheduling services only in [Telerik Report Server installation folder]\Services\Telerik.ReportServer.ServiceAgent.exe.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Services\Telerik.ReportServer.ServiceAgent.exe.config</b>)
