@@ -10,6 +10,4 @@ position: 100
 
 # Mail Server Settings
 
-The mail server settings view allows you to specify 
-
 

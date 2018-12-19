@@ -9,8 +9,8 @@ position: 500
 ---
 
 # Designer Settings
-The designer view allows you to change the language of the standalon Designer. 
+The designer view allows you to change the language of the Standalone Designer. 
 
-A drop down lists all languages available in the report server languages directory. 
+A drop down lists all languages available in the report server languages directory - [Telerik Report Server Installation Directory]\Telerik.ReportServer.Web\Report Designer\Languages\[culture name]
 
-For more information see Localization article.
+For more information see [Localization](https://docs.telerik.com/report-server/implementer-guide/setup/localization#localize-standalone-report-designer) article.
