@@ -2,7 +2,7 @@
 title: Designer Settings
 page_title: Designer Settings
 description: Designer Settings
-slug: designer-settings
+slug: designer
 tags: Designer,settings
 published: True
 position: 500

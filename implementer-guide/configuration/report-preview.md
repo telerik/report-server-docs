@@ -2,7 +2,7 @@
 title: Report Preview Settings
 page_title: Report Preview Settings
 description: Report Preview Settings
-slug: report-preview-settings
+slug: report-preview
 tags: Report Preview,settings
 published: False
 position: 800
