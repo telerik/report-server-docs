@@ -1,0 +1,15 @@
+---
+title: Mail Server Settings
+page_title: Mail Server Settings
+description: Mail Server Settings
+slug: mail-server-settings
+tags: Mail Server,settings
+published: True
+position: 100
+---
+
+# Mail Server Settings
+
+The mail server settings view allows you to specify 
+
+

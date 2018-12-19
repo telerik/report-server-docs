@@ -5,7 +5,7 @@ description: Whitelabeling
 slug: whitelabeling
 tags: whitelabeling
 published: true
-position: 450
+position: 600
 ---
 
 # Whitelabeling

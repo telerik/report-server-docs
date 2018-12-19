@@ -5,7 +5,7 @@ description: Mail Templates
 slug: mail templates
 tags: mail, templates, configuration
 published: True
-position: 500
+position: 300
 ---
 
 # Mail Templates
