@@ -16,8 +16,7 @@ Here is a sample code snippet which demonstrates how to login and get the token:
 
 ###### Example
 
-	  var serverHost = "http://reportserver:83/";
-	  var serverApi = serverHost + "api/reportserver/v2/";
+	  var serverHost = "http://reportserver:83/";	  
 
 	  function login(username, password) {
 	  
