@@ -24,16 +24,18 @@ res_type: kb
 
 
 ## Description
-The Report Server application fails to start and an error message *'Could not find stored procedure 'sp_tr_GetBytes'* appears.
+The Report Server web manegement application browsing fails with the error message *'Could not find stored procedure 'sp_tr_GetBytes'* appears.
 
 ## Solution
-The error could occur if using [MsSqlServerStorage](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings) which requires an MSSQL database.
+The error could occur when using [MsSqlServerStorage](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings) as it requires a configured MSSQL database.
 
 Please test the following:
-1. On an accessible by the server machine MSSQL Server, create a blank database;
+1. Create a blank database on a MSSQL server instance accessible by the deployment machine;
 2. Close all browsers;
-3. Uninstall and reinstall Telerik Report Server in a custom folder, when you are asked where to place the installation. Our recommendation is to use the MSI file from your [Telerik account](https://www.telerik.com/account/) -> Downloads -> Report Server -> MSI and to run the installer as an administrator of the machine;
+3. Rename or delete the configuration file *{Report Server Installation Folder}\Telerik.ReportServer.Web\ReportServerAdmin.config*
 4. When you start *http://yourreportserverhost:83*, select **MsSqlServerStorage** from the initially provided options and enter the connection string to the database configured in step 1. Verify the database is accessible by the identity of the IIS Application pool associated with the Report Server Web part.
+
+If this does not help, try to uninstall and then reinstall Telerik Report Server in a custom folder (configured in the installer). Our recommendation is to use the MSI file from your [Telerik account](https://www.telerik.com/account/) -> Downloads -> Report Server -> MSI and to run the installer as administrator of the machine. Then execute step 4. again.
 
 ## See Also
 - [Telerik Report Server Storage Settings](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings)
