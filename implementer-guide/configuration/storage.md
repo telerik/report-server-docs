@@ -2,7 +2,7 @@
 title: Storage Settings
 page_title: Storage Settings
 description: Storage Settings
-slug: storage-settings
+slug: storage
 tags: storage,settings
 published: True
 position: 400

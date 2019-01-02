@@ -3,9 +3,9 @@ title: Whitelabeling
 page_title: Whitelabeling
 description: Whitelabeling
 slug: whitelabeling
-tags: whitelabeling
+tags: whitelabeling,settings
 published: true
-position: 450
+position: 600
 ---
 
 # Whitelabeling
