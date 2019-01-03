@@ -10,4 +10,4 @@ position: 100
 
 # Mail Server Settings
 
-
+An SMTP server is required in order to be able to send e-mail messages for account creation and task execution. After the SMTP server is installed on a machine fill its host address, port, and credentials in this view to enable the e-mail services in Report Server.
