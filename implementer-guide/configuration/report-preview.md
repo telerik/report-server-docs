@@ -4,7 +4,7 @@ page_title: Report Preview Settings
 description: Report Preview Settings
 slug: report-preview
 tags: Report Preview,settings
-published: False
+published: True
 position: 800
 ---
 
