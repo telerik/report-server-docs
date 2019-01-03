@@ -25,6 +25,9 @@ navigation:
     implementer-guide/user-management:
         position: 210
         title: "User Management"    
+    implementer-guide/configuration:
+        position: 220
+        title: "Configuration Page"  
     user-guide/reports-management:
         position: 400
         title: "Reports Management" 
