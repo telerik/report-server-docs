@@ -10,7 +10,7 @@ position: 400
 
 # Service Agent Settings
 
-The service agent is responsible for the execution of scheduled tasks and data alerts, and for sending e-mail messages. It runs its tasks on multiple worker threads to optimize execution performance. Also, the agent itself can be configured to run in a multiple instance environment.
+The service agent is responsible for the execution of scheduled tasks and data alerts, and for sending e-mail messages. It runs its tasks on multiple worker threads to optimize execution performance. Also, the agent itself is able to run in a multiple instance environment.
 
 ## Worker Count
 
