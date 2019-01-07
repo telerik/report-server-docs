@@ -65,12 +65,6 @@ baseurl: /report-server
 ## The product name
 productName: "Report Server"
 
-## The Kendo UI version used
-cdnVersion: "2018.1.117"
-
-## The MVC Core version used
-mvcCoreVersion: "2018.1.117"
-
 ## Progress NPM Registry
 registry_url: 'https://registry.npm.telerik.com/'
 
