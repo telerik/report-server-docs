@@ -22,4 +22,6 @@ The queued tasks grid shows all tasks which are currently queued for execution. 
 
 ## Multiple-instance Service Agent
 
-The service agent can operate in a multi-instance environment. In such environment each instance of the service agent will take as many tasks from the task queue at once as defined in the worker thread count setting. If the worker count setting is modified while multiple instances of the service agent are running it is required to restart all instances manually in order for the new settings to take effect.
+The service agent can operate in a multi-instance environment out of the box. The only requirement is that all Report Server instances should be configured to point to the same [storage]({%slug storage-settings%}). In such environment each instance of the service agent will take as many tasks from the task queue at once as defined in the worker count setting.
+
+>If the worker count setting is modified while multiple instances of the service agent are running it is required to restart all instances manually in order for the new setting to take effect.
