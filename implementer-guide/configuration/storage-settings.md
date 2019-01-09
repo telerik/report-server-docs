@@ -1,6 +1,6 @@
 ---
-title: Storage Settings
-page_title: Storage Settings
+title: Storage
+page_title: Storage
 description: Storage Settings
 slug: storage-settings
 tags: storage,settings
@@ -8,7 +8,7 @@ published: True
 position: 400
 ---
 
-# Storage Settings
+# Storage
 
 The storage settings view allows you to specify where the reports and their metadata will be stored on the server. By default the application is using a **File** storage with relative to the web application path: "_~/Data"_
 

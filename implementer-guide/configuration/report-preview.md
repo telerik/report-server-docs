@@ -1,6 +1,6 @@
 ---
-title: Report Preview Settings
-page_title: Report Preview Settings
+title: Report Preview
+page_title: Report Preview
 description: Report Preview Settings
 slug: report-preview
 tags: Report Preview,settings
@@ -8,7 +8,7 @@ published: True
 position: 800
 ---
 
-# Report Preview Settings
+# Report Preview
 
 The report preview settings view enables Report Server customers to modify Telerik Report Viewer options in Preview view.
 

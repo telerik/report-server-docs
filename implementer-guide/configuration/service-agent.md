@@ -1,6 +1,6 @@
 ---
-title: Service Agent Settings
-page_title: Service Agent Settings
+title: Service Agent
+page_title: Service Agent
 description: Service Agent Settings
 slug: service-agent
 tags: service,agent,settings
@@ -8,7 +8,7 @@ published: True
 position: 400
 ---
 
-# Service Agent Settings
+# Service Agent
 
 The service agent is responsible for the execution of scheduled tasks and data alerts, and for sending e-mail messages. It runs its tasks on multiple worker threads to optimize execution performance. Also, the agent itself is able to run in a multiple instance environment.
 
