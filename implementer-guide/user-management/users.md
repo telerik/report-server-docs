@@ -48,7 +48,11 @@ You can change the following user settings:
     
 -   *Enabled*
 
-Users cannot be deleted. In order to stop the access for a user and free a CAL the user should be disabled.
+Disabling a user will stop its access to the report server assets and will free a CAL for a new user.
+
+### Delete User
+
+The Guest user and currently logged user cannot be deleted. All other users can be deleted by a user with sufficient permissions. Deleting a user will unlock their reports and will remove the user from all the roles he currently is assigned to. Deleting a user will free a CAL for a new user.
 
 ### Manage User Permissions
 
