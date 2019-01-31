@@ -9,13 +9,21 @@ position: 300
 ---
 
 # Application Startup
-When the report server application is started it detects if it has the minimum configuration available to serve the assets management. If these configuration settings are not available, the app starts a two-page setup process for the user, assuming this is the person that installed the product. The pages are:
+When you start the report server admin app, it detects if you have already configured it. It requires a set of settings to enable the supported assets management. If these settings are not available, the app starts a two-page setup process for the user.  The user that installed the product usually performs this initial setup. The pages are:
 
 ## Step 1/2: Setup storage
-All Report Server assets including reports, scheduled tasks, and users need to be persisted. The supported target storages are File storage, MS SQL Server storage, and Redis storage. By default, the setup page offers the File storage which is basically a folder where all assets get stored as files. It is chosen by default as it does not require any additional tool installation, so it is perfect for test deployment and as well for production deployment, if the Report Server instance will not be highly utilized. For other cases including multi-instance setup one of the other options is a must. More info on each supported storage can be found in the article [Storage]({%slug storage-settings%}). The storage settings go into the Report Server configuration file called *ReportServerAdmin.config*
+The Report Server persists all assets such as reports, scheduled tasks, and users. The supported storage types are File storage, MS SQL Server storage, and Redis storage.
+
+![Setup Storage](../../images/setup_storage.png)
+By default, the setup page offers the File storage which stores all assets  as files in a target folder. It is the default option as it does not need the installation of extra tools. This makes it perfect for test deployment. This storage suits a production deployment only  if the Report Server instance will not get heavily utilized . For other cases, including multi-instance setup, one of the other options is a must. You can find more info on each supported storage in the [Storage]({%slug storage-settings%}) article. 
+
+The storage settings go into the Report Server configuration file called *ReportServerAdmin.config*. The Report Server installer preserves that file upon upgrade. That way the setting will remain when you upgrade the Report Server version.
 
 ## Step 2/2: Register administrator
-Once we have storage, it can be used to store the first user of the server. This user gets assigned in the System Administrator role so that they can setup all other users and configure the server. Please input all needed fields.
+Once you have setup the target storage, the app can use it to store the first user of the server. This user gets assigned in the System Administrator role. That enables them to setup all other users and to further configure the server. Please input all needed fields.
+![Setup Storage](../../images/setup_admin_user.png)
 
 ## Further setup
-When finished, this sequence leads to the Reports page that lists the core assets of the server - the reports. A few sample reports get added to showcase the functionality. It is recommended to go to the Configuration page (accessible in the up-right menu of the RS UI) and configure a [send mail server]({%slug mail-server%}) so that users can utilize the report scheduling functionality.
+When done with this sequence, you will land on the Reports page that lists the core assets of the server - the reports. The app adds a few sample reports to showcase the functionality.
+
+As a next step, go to the Configuration page to configure a [send mail server]({%slug mail-server%}). This would enable the report scheduling functionality for all users.  The Configuration page is accessible in the up-right menu of the app UI.
