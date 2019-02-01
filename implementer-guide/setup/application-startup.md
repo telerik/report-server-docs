@@ -13,8 +13,8 @@ When you start the report server admin app, it detects if you have already confi
 
 ## Step 1/2: Setup storage
 The Report Server persists all assets such as reports, scheduled tasks, and users. The supported storage types are File storage, MS SQL Server storage, and Redis storage.
-
 ![Setup Storage](../../images/report-server-images/setup_storage_960.png)
+
 By default, the setup page offers the File storage which stores all assets  as files in a target folder. It is the default option as it does not need the installation of extra tools. This makes it perfect for test deployment. This storage suits a production deployment only  if the Report Server instance will not get heavily utilized . For other cases, including multi-instance setup, one of the other options is a must. You can find more info on each supported storage in the [Storage]({%slug storage-settings%}) article. 
 
 The storage settings go into the Report Server configuration file called *ReportServerAdmin.config*. The Report Server installer preserves that file upon upgrade. That way the setting will remain when you upgrade the Report Server version.
