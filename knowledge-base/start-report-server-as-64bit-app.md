@@ -27,7 +27,7 @@ res_type: kb
 
 ## Description
 
-The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation](https://docs.telerik.com/report-server/implementer-guide/setup/installation) article) for compatibility reasons. To allow addressing more memory or using specific version of database drivers, the mode in which the Report Server is started may need to be changed.
+The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation](../implementer-guide/setup/installation) article) for compatibility reasons. To allow addressing more memory or using specific version of database drivers, the mode in which the Report Server is started may need to be changed.
 
 ## Solution
 

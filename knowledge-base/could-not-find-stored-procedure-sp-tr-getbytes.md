@@ -27,16 +27,20 @@ res_type: kb
 The Report Server web management application fails with the error message *'Could not find stored procedure 'sp_tr_GetBytes'*.
 
 ## Solution
-The error could occur when using [MsSqlServerStorage](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings) as it requires a configured MSSQL database.
+The error could occur when using [MsSqlServerStorage](../implementer-guide/setup/storage-settings) as it requires a configured MSSQL database.
 
 Please test the following:
+
 1. Create a blank database on an MSSQL server instance accessible by the deployment machine;
+
 2. Close all browsers;
+
 3. Rename or delete the configuration file *{Report Server Installation Folder}\Telerik.ReportServer.Web\ReportServerAdmin.config*
+
 4. When you start *http://yourreportserverhost:83*, select **MsSqlServerStorage** from the initially provided options and enter the connection string to the database configured in step 1. Verify the database is accessible by the identity of the IIS Application pool associated with the Report Server Web part.
 
 If this does not help, try to uninstall and then reinstall Telerik Report Server in a custom folder (configured in the installer). Our recommendation is to use the MSI file from your [Telerik account](https://www.telerik.com/account/) -> Downloads -> Report Server -> MSI and to run the installer with administrator rights. Then execute step 4. again.
 
 ## See Also
-- [Telerik Report Server Storage Settings](https://docs.telerik.com/report-server/implementer-guide/setup/storage-settings)
+- [Telerik Report Server Storage Settings](../implementer-guide/setup/storage-settings)
 - [MsSqlServerStorage Class Remarks](https://docs.telerik.com/reporting/t-telerik-reporting-cache-mssqlserverstorage#remarks)

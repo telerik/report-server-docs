@@ -32,6 +32,7 @@ This error is caused by the mismatch in Telerik Reporting versions, report that 
 To avoid issues caused by the version mismatch when using both Telerik Reporting and Report Server products it is recommended: 
   
 1\. To have Telerik Reporting and Report Server of the same version on the machine. If you have upgraded Telerik Reporting to the latest version consider upgrading Report Server as well.  
+
 2\. Create and modify reports with Standalone designer that is shipped with Report Server, this way you can be sure that version of designer and Report Server is the same. The designer can be found in product installation folder: C:\\Program Files (x86)\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web\\Report Designer. 
 
 ## See Also
