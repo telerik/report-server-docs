@@ -12,6 +12,8 @@ position: 400
 
 The service agent is responsible for the execution of scheduled tasks and data alerts, and for sending e-mail messages. It runs its tasks on multiple worker threads to optimize execution performance. Also, the agent itself is able to run in a multiple instance environment.
 
+![service-agent-configuration](../../images/report-server-images/service-agent-configuration.png)
+
 ## Worker Count
 
 This is the total number of threads which will be used when executing scheduled tasks and data alerts. By default the worker thread count is equal to 0. This value means that all of the available logical processors on the machine will be used.
