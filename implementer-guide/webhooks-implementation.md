@@ -88,10 +88,11 @@ to the HTTP callbacks made when an event occurs. To successfully make a POST req
 	
 ## Receive Webhooks
 
-To implement a webhook receiver in your web application follow these steps:
+To implement a webhook receiver follow these steps:
 
-1. Install the [Microsoft.AspNet.WebHooks.Receivers.Custom](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Receivers.Custom) Nuget package and its dependencies.
-2. Initialize the custom webhook receiver:
+1. Create a new ASP.NET Web Application with the **Web API** project template, or use an existing Web API enabled application.
+2. Install the [Microsoft.AspNet.WebHooks.Receivers.Custom](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Receivers.Custom) Nuget package and its dependencies.
+3. Initialize the custom webhook receiver:
 	```
 		public static class WebApiConfig
 		{
@@ -113,7 +114,7 @@ To implement a webhook receiver in your web application follow these steps:
 			}
 		}
 	```
-3. The receiver uses a shared **secret** to validate that the request comes from the report server. On the report server side the secret is set when creating the webhook. 
+4. The receiver uses a shared **secret** to validate that the request comes from the report server. On the report server side the secret is set when creating the webhook. 
 On the receiver it is provided by adding an application setting in the *web.config* file. The secret should be between 32 and 128 characters. For example:
 
 	```
@@ -136,7 +137,7 @@ On the receiver it is provided by adding an application setting in the *web.conf
 		Secret: "11111122222233333344444455555511",
 	```
 	
-4. Once a webhook request from the report server has been validated by a receiver, it is ready to be processed by user code. This happens inside a handler.
+5. Once a webhook request from the report server has been validated by a receiver, it is ready to be processed by user code. This happens inside a new webhook handler class.
 	```
 		public class CustomWebHookHandler : WebHookHandler
 		{
