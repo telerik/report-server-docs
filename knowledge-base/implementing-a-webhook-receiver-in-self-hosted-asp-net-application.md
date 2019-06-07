@@ -23,7 +23,7 @@ res_type: kb
 
 A step-by-step instructions on how to create and receive webhooks is provided in [Implement Webhooks](../implementer-guide/webhooks-implementation) documentation article. 
 
-This knowledge base article is an example of implementing a self hosted custom webhook receiver.
+This knowledge base article is an example of implementing a self-hosted custom webhook receiver.
 
 ## Solution
 
