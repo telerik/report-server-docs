@@ -165,5 +165,5 @@ On the receiver it is provided by adding an application setting in the *web.conf
 Report server will resend a webhook notification 3 times if a response is not generated within a handful of seconds. This means that your handler must complete the processing within that time frame in order not for it to be called again.
 If the processing takes longer, or is better handled separately then a [Queued Processing](https://docs.microsoft.com/en-us/aspnet/webhooks/receiving/handlers#queued-processing) approach can be used.
 	
->The report server webhooks implementation is based on [ASP.NET WebHooks](https://github.com/aspnet/aspnetwebhooks). 
->Further information can be found in the official [Resources](https://github.com/aspnet/aspnetwebhooks#resources) and [Samples](https://github.com/aspnet/aspnetwebhooks#samples).
+>The report server webhooks implementation is based on [ASP.NET WebHooks](https://docs.microsoft.com/en-us/aspnet/webhooks). 
+>Further information can be found in the official [Documentation](https://docs.microsoft.com/en-us/aspnet/webhooks), [Resources](https://github.com/aspnet/aspnetwebhooks#resources), and [Samples](https://github.com/aspnet/aspnetwebhooks#samples).
