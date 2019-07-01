@@ -10,6 +10,8 @@ position: 100
 
 # System Requirements
 
+- Windows OS
+
 - Internet Information Services (IIS 7+)
 
 - Microsoft .NET Framework 4.5.1
