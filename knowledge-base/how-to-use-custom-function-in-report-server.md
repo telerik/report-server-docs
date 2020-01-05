@@ -45,6 +45,10 @@ Extending the report engine of the Report Server is not supported out of the box
 			</li>
 		</ul>
 	</li>
+	<li>
+		 (optional) If the custom functions are aggregate functions, it would be necessary the Telerik Reporting version used for creating the custom assembly, and the one used in Telerik Report Server to match. 
+	</li>
+	<li>
+		 (optional) If Telerik Reporting version on the Report Server is different, add a binding redirect to point the version of Telerik Reporting used to create the custom function in the same way as explained in <a href="https://docs.telerik.com/reporting/standalone-report-designer-configuration/">this help article</a>.
+	</li>
 </ol>
-
-If the custom functions are aggregate functions, it would be necessary the Telerik Reporting version used for creating the custom assembly, and the one used in Telerik Report Server to match. If the Telerik Reporting version on the Report Server is newer, you could use binding redirect to point the version of Telerik Reporting used to create the aggregate function in the same way as explained in [this help article](https://docs.telerik.com/reporting/standalone-report-designer-configuration/).
