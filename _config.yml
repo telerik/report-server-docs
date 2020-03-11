@@ -57,6 +57,7 @@ navigation:
     implementer-guide/apis/rest-api/v2/examples/csharp:
         title: "C#"   
     knowledge-base:
+        position: 10
         title: "Knowledge Base"
 
 ## The application virtual path
