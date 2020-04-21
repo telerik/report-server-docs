@@ -38,10 +38,26 @@ Extending the report engine of the Report Server is not supported out of the box
 	<li>Register the same assembly in the corresponding application configuration files, using the snippets that could be found <a href="https://docs.telerik.com/reporting/standalone-report-designer-extending-configuration">here</a>.
 		<ul>
 			<li>
-				in [Telerik Report Server installation folder]\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
+				for Report Server web application:
+				<ul>
+					<li>
+						in versions up to <b>R3 2018 SP2 (4.2.18.1129)</b> in [Telerik Report Server installation folder]\Telerik.ReportServer.Web\Web.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Web.config</b>)
+					</li>
+					<li>
+						from version <b>R1 2019 (5.0.19.116)</b> in [Telerik Report Server installation folder]\Telerik.ReportServer.Web\TelerikReporting.config
+					</li>
+				</ul>
 			</li>
 			<li>
-				for scheduling services only in [Telerik Report Server installation folder]\Services\Telerik.ReportServer.ServiceAgent.exe.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Services\Telerik.ReportServer.ServiceAgent.exe.config</b>)
+				for scheduling services only:
+				<ul>
+					<li>
+						in versions up to <b>R3 2018 SP2 (4.2.18.1129)</b> in [Telerik Report Server installation folder]\Services\Telerik.ReportServer.ServiceAgent.exe.config (usually <b>C:\Program Files (x86)\Progress\Telerik Report Server\Services\Telerik.ReportServer.ServiceAgent.exe.config</b>)
+					</li>
+					<li>
+						from version <b>R1 2019 (5.0.19.116)</b> in [Telerik Report Server installation folder]\Services\TelerikReporting.config
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</li>
