@@ -27,7 +27,7 @@ Report Server uses the advanced Telerik Reporting engine and the royalty free De
 
 You can publish reports, and access reports on-demand. Existing reports in XML format saved as TRDX files can be published directly. Reports created in Visual Studio will have to be serialized or imported in the Standalone Designer tool. You can select from a variety of viewing formats, export reports to other applications such as Microsoft Excel. The reports that you create can be viewed over a Web-based connection.
 
-All web report viewers of Telerik Reporting for HTML5, ASP.NET WebForms, ASP.NET MVC, WinForms and WPF apps can display reports stored on a Telerik Report Server in a web application. This lets the users view reports directly in the applications they use daily without the need to be registered Report Server users or to launch the Report Server web interface. They have the option of using a guest account or personal user account.
+All report viewers of Telerik Reporting for HTML5, ASP.NET WebForms, ASP.NET MVC, WinForms and WPF apps can display reports stored on a Telerik Report Server in a web application. This lets the users view reports directly in the applications they use daily without the need to be registered Report Server users or to launch the Report Server web interface. They have the option of using a guest account or personal user account.
 
 To read more about the benefits of using Telerik Report Server, please visit the [product overview page](http://www.telerik.com/report-server).
 
