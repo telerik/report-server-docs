@@ -23,8 +23,58 @@ Telerik Report Server provides a full range of ready-to-use tools and services t
 
 Telerik Report Server enables you to access reports from any device and has built-in caching capabilities for better performance and fast loading of the reports. Built-in user and user roles management gives you the ability to determine the permission for each user, so you rest assured that the data viewed in reports is protected.
 
-Report Server uses the advanced Telerik Reporting engine and the royalty free Report Designer to easily create complex and visually appealing report definitions in our XML proprietary format (trdx). With Telerik Reporting, you can create interactive, tabular, graphical, or free-form reports from relational or multidimensional data sources. Reports can include rich data visualization, including charts, maps, and choropleths. 
+Report Server uses the advanced Telerik Reporting engine and the royalty free Desktop Report Designer and Web Report Designer to easily create complex and visually appealing report definitions in our XML proprietary format (trdx). With Telerik Reporting, you can create interactive, tabular, graphical, or free-form reports from relational or multidimensional data sources. Reports can include rich data visualization, including charts, maps, and choropleths. 
 
 You can publish reports, and access reports on-demand. Existing reports in XML format saved as TRDX files can be published directly. Reports created in Visual Studio will have to be serialized or imported in the Standalone Designer tool. You can select from a variety of viewing formats, export reports to other applications such as Microsoft Excel. The reports that you create can be viewed over a Web-based connection.
 
-All web report viewers of Telerik Reporting for HTML5, ASP.NET WebForms and ASP.NET MVC apps can display reports stored on a Telerik Report Server in a web application. This lets the users view reports directly in the applications they use daily without the need to be registered Report Server users or to launch the Report Server web interface. They have the option of using a guest account or personal user account.
+All web report viewers of Telerik Reporting for HTML5, ASP.NET WebForms, ASP.NET MVC, WinForms and WPF apps can display reports stored on a Telerik Report Server in a web application. This lets the users view reports directly in the applications they use daily without the need to be registered Report Server users or to launch the Report Server web interface. They have the option of using a guest account or personal user account.
+
+To read more about the benefits of using Telerik Report Server, please visit the [product overview page](http://www.telerik.com/report-server).
+
+<style>
+/* Telerik Report Server download trial button */
+div#report_server_trial {
+	text-align: center !important;
+}
+
+div#report_server_trial .report_server_download_btn {	
+	color: #fff;
+	background-color: #e74b3c;
+	padding:.44em .9em .52em;
+	font-size: 20px;
+	font-weight:400;
+	letter-spacing:-.025em;
+	position:relative;
+	display:inline-block;
+	line-height:1.2;
+	-webkit-transition:color .2s ease,background-color .2s ease;
+	transition:color .2s ease,background-color .2s ease;
+	border-radius:2px;
+	-webkit-appearance:none;
+	font-family:Metric,Arial,Gadget,sans-serif;
+	text-align:center	
+}
+</style>
+
+<div id="report_server_trial">
+<br />
+<a href="https://www.telerik.com/download-trial-file/v2-b/report-server" class="report_server_download_btn" style="display: none">Download Free Trial</a>
+</div>
+
+## Trial Version and Commercial License
+
+Telerik Report Server is a commercial product. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase/report-server). Feel free to review the Telerik Report Server [License Agreement](https://www.telerik.com/purchase/license-agreement/report-server) to get acquainted with the full terms of use.
+
+## Support Options
+
+For any issues you might encounter while working with Telerik Report Server, use any of the available support channels:
+
+* Telerik Report Server license holders and active trialists can take advantage of the outstanding customer support delivered by the developers building the library. To submit a support ticket, use the [Telerik Report Server dedicated support](https://www.telerik.com/account/support-tickets?pid=1586) system.
+* [Telerik Report Server forums](https://www.telerik.com/forums/report-server) are part of the free support you can get from the community and from the Telerik Report Server team on all kinds of general issues.
+* [Telerik Report Server feedback portal](https://feedback.telerik.com/report-server) and [Telerik Report Server roadmap](https://www.telerik.com/support/whats-new/report-server/roadmap) provide information on the features in discussion and also the planned ones for release.
+* You may still need a tailor-made solution for your project. In such cases, go straight to [Progress Services](https://www.progress.com/services).
+
+## Learning Resources
+
+* [Knowledge Base](https://docs.telerik.com/report-server/knowledge-base)
+* [Support Resources Hub Page](https://www.telerik.com/support/report-server)
