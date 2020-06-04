@@ -58,7 +58,7 @@ div#report_server_trial .report_server_download_btn {
 
 <div id="report_server_trial">
 <br />
-<a href="https://www.telerik.com/download-trial-file/v2-b/report-server" class="report_server_download_btn" style="display: none">Download Free Trial</a>
+<a href="https://www.telerik.com/download-trial-file/v2-b/report-server" class="report_server_download_btn">Download Free Trial</a>
 </div>
 
 ## Trial Version and Commercial License
