@@ -21,7 +21,7 @@ To use this storage you should specify a connection string to the desired databa
 >When saving the configuration settings, the tables and the stored procedures that are needed will be created automatically. However, the database should be created in advance and the user under which the web application is running should have the necessary permissions to modify the database schema.
 
 ### Redis
-This storage type uses the [Redis](http://redis.io/) key-value cache and store. The **Redis** storage is configured through a [configuration](https://github.com/StackExchange/StackExchange.Redis/blob/master/Docs/Configuration.md) string.
+This storage type uses the [Redis](http://redis.io/) key-value cache and store. The **Redis** storage is configured through a [configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration.html) string.
 
 ### File
 Тhe file storage uses the file system of the operating system in order to store the reports and other data. To configure this storage specify the location of the storage by using the **BasePath** parameter. 
