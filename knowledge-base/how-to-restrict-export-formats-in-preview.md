@@ -22,10 +22,10 @@ res_type: kb
 
 
 ## Description
-I want to hide some of the rendering extensions.
+The article explains how to hide some of the rendering extensions in the Report Preview mode of the Report Server.
 
 ## Solution
-By default, all extensions are visible in the viewer of the Report Server. To hide any of them it will be necessary to set accordingly the [extensions Element](https://docs.telerik.com/reporting/configuring-telerik-reporting-extensions) of the [Telerik Reporting Configuration](../implementer-guide/setup/configure-the-report-engine) section of the **TelerikReporting.config** file in the (_Telerik Report Server installation folder_)\\Telerik.ReportServer.Web (e.g. _C:\\Program Files (x86)\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web_). After modifications the config file should look like :  
+By default, all rendering extensions in the export options of the viewer of the Report Server are visible. To hide any of them it will be necessary to set accordingly the [extensions Element](https://docs.telerik.com/reporting/configuring-telerik-reporting-extensions) of the [Telerik Reporting Configuration](../implementer-guide/setup/configure-the-report-engine) section of the **TelerikReporting.config** file in the (_Telerik Report Server installation folder_)\\Telerik.ReportServer.Web (e.g. _C:\\Program Files (x86)\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web_). After modifications the config file should look like :  
   
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
