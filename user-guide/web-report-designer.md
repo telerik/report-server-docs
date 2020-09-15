@@ -31,3 +31,4 @@ The Web Report Designer can run on web browsers that supports JavaScript EcmaScr
 - [SqlDataSource Component](https://docs.telerik.com/reporting/sqldatasource "SqlDataSource Component")
 - [SqlDataSource Wizard](https://docs.telerik.com/reporting/web-report-designer-tools-sqldatasource-wizard "SqlDataSource Wizard Overview")
 - [CsvDataDource Wizard](https://docs.telerik.com/reporting/csvdatasource-wizard "CsvDataDource Wizard Overview")
+- [Table/Crosstab Wizard](https://docs.telerik.com/reporting/web-report-designer-table-crosstab-wizard "Table/Crosstab Wizard")
