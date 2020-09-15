@@ -20,7 +20,7 @@ To enable it, run the server and navigate to **Configuration** -> **Designer** -
 
 ### Data Connectivity
 
-Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [SQL]({%slug data-connections-management%}) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
+Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [SQL](https://docs.telerik.com/reporting/sqldatasource) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
 ### Browsers Support
 The Web Report Designer can run on web browsers that supports JavaScript EcmaScript 6: Google Chrome 77.0 or newer; Mozilla Firefox 69.0 or later, Microsoft Edge 44.17763 or later.
