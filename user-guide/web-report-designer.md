@@ -18,6 +18,7 @@ Further information about this controll can be found in [Telerik Web Report Desi
 ### Access
 
 To enable it, run the server and navigate to **Configuration** -> **Designer** -> check **Enable Web Report Designer** ->  **Save Changes**:
+
 ![wrd_config](../../images/wrd_config.png)
 
 Once you enable it, you will be able to see the icon in the reports view:
