@@ -13,17 +13,17 @@ position: 200
 Since R2 2019, we offer a web-based report designer which allows creating and designing reports in the Report Server. 
 Further information about this controll can be found in [Telerik Web Report Designer article](https://docs.telerik.com/reporting/web-report-designer).
 
-![wrd](../../images/wrd.png)
+![wrd](../images/wrd.png)
 
 ### Access
 
 To enable it, run the server and navigate to **Configuration** -> **Designer** -> check **Enable Web Report Designer** ->  **Save Changes**:
 
-![wrd_config](../../images/wrd_config.png)
+![wrd_config](../images/wrd_config.png)
 
 Once you enable it, you will be able to see the icon in the reports view:
 
-![wrd_reportView](../../images/wrd_reportView.png)
+![wrd_reportView](../images/wrd_reportView.png)
 
 ### Data Connectivity
 
