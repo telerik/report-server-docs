@@ -11,7 +11,7 @@ position: 200
 # Web Report Designer
 
 Since R2 2019, we offer a web-based report designer which allows creating and designing reports in the Report Server. 
-Further information about this controll can be found in [Telerik Web Report Designer article](https://docs.telerik.com/reporting/web-report-designer).
+Further information about this controll can be found in [Telerik Web Report Designer](https://docs.telerik.com/reporting/web-report-designer) article.
 
 ![wrd](../images/wrd.png)
 
