@@ -21,7 +21,7 @@ To enable it, run the server and navigate to **Configuration** -> **Designer** -
 
 ![wrd_config](../images/wrd_config.png)
 
-Once you enable it, you will be able to see the icon in the reports view:
+Once you enable it, you will see the icon in the reports view:
 
 ![wrd_reportView](../images/wrd_reportView.png)
 
