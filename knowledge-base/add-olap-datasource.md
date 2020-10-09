@@ -26,7 +26,7 @@ res_type: kb
 
 
 ## Description
-This doucment describes how to configure Report Server and Report Designer so you can add an OLAP Data Source (Cube Data Source).
+This document describes how to configure the Report Server and Report Designer so you can add an OLAP Data Source (Cube Data Source).
 
 ## Prerequisites
 The suggested solution requires the following:
