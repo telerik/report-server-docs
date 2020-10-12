@@ -18,6 +18,10 @@ The installer registers the new web site under port 83 by default. The installat
 
 You can download the licensed product version from the **Telerik Control Panel** which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility which will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
 
+## Installation Options
+The installation can be customized to include SDK examples in the installation folder and enable JSON dynamic compression for Report Server web site in IIS. These options can be selected from the *Customization* installer page when clicking the **Customize** button.
+The SDK examples show how to implement a [custom login provider](../custom-login-provider) and how to use the [Telerik.ReportServer.HttpClient](../apis/rest-api/report-server-api-client) library to programmatically access Report Server assets and control the Report Server engine. The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration](iis-configuration) article for more details or if you plan to do it manually later.
+
 ## New Versions
 
 The best way is to download the Control Panel from [Your Account](http://www.telerik.com/account/):
