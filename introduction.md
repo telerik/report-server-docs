@@ -14,6 +14,10 @@ position: 100
 
 The **User Guide** provides instructions and explanations of how to create and manage reports and other topics related to the usage of the Progress® Telerik® Report Server. The **Implementer Guide** is targeted at implementers and administrators and covers subjects such as installation, configuration, user management, deployment, integration with other systems, and APIs.
 
+{% if site.has_cta_panels == true %}
+{% include cta-panel-introduction.html %}
+{% endif %}
+
 ### Introduction
 
 
@@ -30,36 +34,6 @@ You can publish reports, and access reports on-demand. Existing reports in XML f
 All report viewers of Telerik Reporting for HTML5, ASP.NET WebForms, ASP.NET MVC, WinForms and WPF apps can display reports stored on a Telerik Report Server in a web application. This lets the users view reports directly in the applications they use daily without the need to be registered Report Server users or to launch the Report Server web interface. They have the option of using a guest account or personal user account.
 
 To read more about the benefits of using Telerik Report Server, please visit the [product overview page](http://www.telerik.com/report-server).
-
-<style>
-/* Telerik Report Server download trial button */
-div#report_server_trial {
-	text-align: center !important;
-}
-
-div#report_server_trial .report_server_download_btn {	
-	color: #fff;
-	background-color: #e74b3c;
-	padding:.44em .9em .52em;
-	font-size: 20px;
-	font-weight:400;
-	letter-spacing:-.025em;
-	position:relative;
-	display:inline-block;
-	line-height:1.2;
-	-webkit-transition:color .2s ease,background-color .2s ease;
-	transition:color .2s ease,background-color .2s ease;
-	border-radius:2px;
-	-webkit-appearance:none;
-	font-family:Metric,Arial,Gadget,sans-serif;
-	text-align:center	
-}
-</style>
-
-<div id="report_server_trial">
-<br />
-<a href="https://www.telerik.com/download-trial-file/v2-b/report-server" class="report_server_download_btn">Download Free Trial</a>
-</div>
 
 ## Trial Version and Commercial License
 
