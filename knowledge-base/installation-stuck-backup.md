@@ -20,7 +20,7 @@ res_type: kb
 
 ## Description
 
-When upgrading an existing instance of the Report Server to a newer version, the installation appears to get stuck at the at the "Running metadata backup script" step.
+When upgrading an existing instance of the Report Server to a newer version, the installation appears to get stuck at the "Running metadata backup script" step.
 
 Fig.1 - Stuck in the MSI installer
 
