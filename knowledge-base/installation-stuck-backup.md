@@ -1,6 +1,6 @@
 ---
 title: Report Server installation is stuck at Backup Step
-description: Report Server upgrade installation gets stuck when running the backup script,
+description: Report Server upgrade installation gets stuck when running the backup script
 type: troubleshooting
 page_title: Report Server installation is stuck at Backup Step
 slug: installation-stuck-backup
