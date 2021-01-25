@@ -58,5 +58,5 @@ If you want to run the backup script, then you can be proactive before running t
     
     If you see that user input is needed, complete those steps now and close the PowerShell instance.
 
-3. Repeat Step 2 to confirm there is no longer any need for user input when a new instance in launched. 
+3. Repeat Step 2 to confirm there is no longer any need for user input when a new instance is launched. 
 4. Run the Report Server installer with backups enabled.
