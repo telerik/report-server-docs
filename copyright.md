@@ -1,7 +1,7 @@
 ---
 title: Copyright
 page_title: Copyright
-description: Copyright
+description: Copyright information and guidelines!
 slug: copyright
 tags: copyright
 published: true

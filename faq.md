@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions
 page_title: Frequently Asked Questions
-description: Frequently Asked Questions
+description: Find the answers to Telerik Report Server's FAQs!
 slug: faq
 tags: report,server,faq,questions
 published: true

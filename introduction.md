@@ -1,7 +1,7 @@
 ---
 title: Introduction
-page_title: Progress® Telerik® Report Server Documentation
-description: Introduction
+page_title: Telerik Report Server Documentation - The End-to-End Report Management Solution
+description: Report Server is a server-based reporting platform that provides centralized storage for reports and various ways to organize and preview them. Check the Documentation for more!
 slug: introduction
 tags: introduction
 published: True

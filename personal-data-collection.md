@@ -1,7 +1,7 @@
 ---
 title: Personal Data Collection
 page_title: Personal Data Collection
-description: Personal Data Collection
+description: Learn how Telerik and Telerik Report Server treat personal data.
 slug: personal-data-collection
 tags: GDPR,data,collection
 published: True

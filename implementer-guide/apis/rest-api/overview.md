@@ -1,7 +1,7 @@
 ---
 title: Overview
-page_title: Overview
-description: REST API Overview
+page_title: REST API Overview - REST API Documentation
+description: Learn how Report Server API enables developers to use the Report Server functionality inside their own applications. Check REST API Overview article.
 slug: rest-api-overview
 tags: rest, api, rest api, overview
 published: True
