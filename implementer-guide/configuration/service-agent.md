@@ -5,7 +5,7 @@ description: Service Agent Settings
 slug: service-agent
 tags: service,agent,settings
 published: True
-position: 400
+position: 450
 ---
 
 # Service Agent
