@@ -62,6 +62,26 @@ navigation:
         position: 10
         title: "Knowledge Base"
 
+## Assign layout and category per different paths
+defaults:
+-
+    scope:
+        path: ""
+    values:
+        description_suffix: "Learn more in Telerik Report Server Documentation!"
+-
+    scope:
+        path: "user-guide"
+    values:
+        title_prefix: "User Guide"
+        title_prefix_separator: " - "
+-
+    scope:
+        path: "implementer-guide"
+    values:
+        title_prefix: "Implementer Guide"
+        title_prefix_separator: " - "
+
 ## The application virtual path
 baseurl: /report-server
 
