@@ -34,7 +34,7 @@ In our [GitHub repository](https://github.com/telerik/reporting-samples/tree/mas
 ```CSharp
 var settings = new Telerik.ReportServer.HttpClient.Settings()
             {
-                BaseAddress = "http://ntodorova:83/"
+                BaseAddress = "http://localhost:83/"
             };
 ```
 
