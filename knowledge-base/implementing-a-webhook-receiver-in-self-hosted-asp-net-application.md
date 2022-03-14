@@ -122,7 +122,7 @@ The following example shows a webhook with a secret identified by an {id} parame
   }
   ```
   
-Report server will resend a webhook notification 3 times if a response is not generated within a handful of seconds. This means that your handler must complete the processing within that time frame in order not for it to be called again. If the processing takes longer, or is better handled separately then a [Queued Processing](https://media.readthedocs.org/pdf/aspnetwebhooks/stable/aspnetwebhooks.pdf) approach can be used.
+Report server will resend a webhook notification 3 times if a response is not generated within a handful of seconds. This means that your handler must complete the processing within that time frame in order not for it to be called again. If the processing takes longer, or is better handled separately then a [Queued Processing](https://docs.microsoft.com/en-us/windows/win32/cossdk/benefits-of-queued-processing) approach can be used.
 
 ## Notes
 The report server webhooks implementation is based on [ASP.NET WebHooks](https://github.com/aspnet/aspnetwebhooks). Further information can be found in the official [Resources](https://github.com/aspnet/aspnetwebhooks#resources) and [Samples](https://github.com/aspnet/aspnetwebhooks#samples).
