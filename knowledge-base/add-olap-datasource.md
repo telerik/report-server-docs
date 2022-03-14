@@ -41,12 +41,12 @@ The following steps describe how to implement the required configuration:
 1. Locate the __Telerik.ReportDesigner.exe__ file in the Telerik Reporting installation folder and open the exe file.
 
 1. Create a new report or open an existing one in Telerik Report Designer. For more information on how to create or open a report, see
-[Working with Report Server Reports](../standalone-report-designer-working-with-server-reports#create-a-report-to-the-server).
+[Working with Report Server Reports](../../reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/working-with-report-server-reports).
 
-1. Perform *step 1* described in [Configuring your project for using Microsoft Analysis Services](../cubedatasource-configuring-project).
+1. Perform *step 1* described in [Configuring your project for using Microsoft Analysis Services](../../reporting/designing-reports/connecting-to-data/data-source-components/cubedatasource-component/configuring-your-project-for-using-microsoft-analysis-services).
 
-1. Apply *step 2* and *step 3* described in [Configuring your project for using Microsoft Analysis Services](../cubedatasource-configuring-project) to the
-__Telerik.ReportDesigner.exe.config__ file. [This example](../standalone-report-designer-extending-configuration) shows how to add the required 
+1. Apply *step 2* and *step 3* described in [Configuring your project for using Microsoft Analysis Services](../../reporting/designing-reports/connecting-to-data/data-source-components/cubedatasource-component/configuring-your-project-for-using-microsoft-analysis-services) to the
+__Telerik.ReportDesigner.exe.config__ file. [This example](../../reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/configuration/extending-report-designer) shows how to add the required 
 assembly references to the designer's config file.
 
     >__Note__
