@@ -27,7 +27,10 @@ The Telerik Report Server is a Web application running on IIS server, and the co
 
 ## Solution
 Note that a SSL certificate is required.
+
 - [How To Set Up an HTTPS Service in IIS](https://support.microsoft.com/en-us/help/324069/how-to-set-up-an-https-service-in-iis) from **Microsoft**;
+
 - [Setting up IIS with HTTPS Binding](https://www.codeproject.com/Tips/722979/Setting-up-IIS-with-HTTPS-Binding) from **Code Project**;
-- [Enable HTTPS on IIS](https://brianflove.com/2014/12/02/enable-https-on-iis/)
+
+- [Enabling SSL in IIS](https://onlinehelp.coveo.com/en/ces/7.0/administrator/enabling_ssl_in_iis.htm)
 
