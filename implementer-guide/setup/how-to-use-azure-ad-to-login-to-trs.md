@@ -26,12 +26,12 @@ In this article we’ll assume that Telerik Report Server is installed and acces
 
 ### 1.  Setup the Azure AD Application
 
-In our Azure portal, create an **Enterprise** application and marked it as a "**Non-gallery app**". It should look like this:
+In your Azure portal, create an **Enterprise** application and marked it as a "**Non-gallery app**". It should look like this:
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step1.png)
 
 
-### 2.  Inspect IDs:
+### 2.  Inspecting IDs:
 
 
 After creating the app, inspect its IDs in the **Overview** page:
@@ -41,7 +41,7 @@ After creating the app, inspect its IDs in the **Overview** page:
 
 ### 3.  Set up the Single Sign On settings:
 
-In the "Single Sign On" page we chose SAML protocol and configured the following properties:
+In the "Single Sign On" page, choose SAML and configure the following properties:
 
 - **Identifier (Entity ID)** - match the URL on which our Report Server was hosted. In this example, the server is hosted on the machine by using HTTPS binding and some self-signed certificate. The same URL must be used in the  **Authentication Settings** page in the Report Server configuration. 
 Basically those two fields must match and it's not mandatory to use the actual server URL.
@@ -54,42 +54,43 @@ SAML Signing Certificate - here you should have the App Federation Metadata Url 
 
 
 
-### 4.  After creating the app, you can inspect its IDs in the Overview page:
+### 4.  Configuration of SAML authentication of Report Server against Azure AD users
 
 
-When the SAML configuration is completed, in the application's Properties page we set the "User assignment required?" and "Visible to users?" to NO to avoid explicitly adding users in "Users and groups" page.
+When the SAML configuration is completed, go to the application's Properties page and set the "**User assignment required?**" and "**Visible to users?**" to **NO**. This is to avoid explicitly adding users in "**Users and groups**" page.
 
-This concludes the configuration of SAML authentication of Report Server against Azure AD users. Naturally, the same users must be registered in the Report Server's assets storage as Federation users, using their NameId or e-mail (depending on your scenario). At this point you should be able to log in to Report Server using the web interface, clicking on the blue button "Active Directory Credentials" on the login screen.
+
+This concludes the configuration of SAML authentication of Report Server against Azure AD users. Naturally, the same users must be registered in the Report Server's assets storage as Federation users, using their NameId or e-mail (depending on your scenario). At this point you should be able to log in to Report Server using the web interface, clicking on the blue button "**Active Directory Credentials**" on the login screen.
 
 Now let's register the Report Designer application and connect it to Telerik Report Server.
 
 
-### 5.  After creating the app, you can inspect its IDs in the Overview page:
+### 5.  Adding a new registration
 
 
-In Azure Active Directory, navigate to App registrations and create a new registration. In the opened pane change only the Redirect URI type - by default it's set to Web, but we'll use a Public client/native (mobile and desktop) entry. For a value just use the URL of the report server - although the Standalone Report Designer doesn't redirect anywhere, having this URL might be required for validation purposes.
+In Azure Active Directory, navigate to **App registrations** and create a new registration. In the opened pane change only the **Redirect URI type** - by default it's set to **Web**, but you need to use a **Public client/native (mobile and desktop)** entry. For a value just use the URL of the report server - although the Standalone Report Designer doesn't redirect anywhere, having this URL might be required for validation purposes.
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step4.png)
 
-### 6.   After registration is complete, go to Overview tab and get the Application (client) ID. It must be pasted in the ClientID field the Report Server's Authentication Settings page.
+### 6.   Getting the Application (client) ID
 
+After registration is complete, go to **Overview** tab and get the **Application (client) ID**. It must be pasted in the ClientID field the Report Server's Authentication Settings page.
 
-In our Azure portal we created an Enterprise application and marked it as a "Non-gallery app". should look like this:
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step5.png)
 
-### 7.  After creating the app, you can inspect its IDs in the Overview page:
 
+### 7.  Setting Endpoints
 
- Go to Endpoints tab and copy the OAuth 2.0 authorization endpoint (v2). It should be the first one in the list, as shown on the screenshot below. Paste it into Authority field in the Report Server's Authentication Settings page.
+Go to **Endpoints** tab and copy the OAuth 2.0 authorization endpoint (v2). It should be the first one in the list, as shown on the screenshot below. Paste it into **Authority field** in the Report Server's Authentication Settings page.
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step6.png)
 
 
-### 8.  After creating the app, you can inspect its IDs in the Overview page:
+### 8.  Providing permission to the Report Designer application
 
 
- Last thing we need to do is to provide permission to the Report Designer app to access Report Server app. Go to API permissions, add new permission and click on "APIs my organization uses" tab above - the Report Server API should be listed there. The only option is to use "user_impersonation" so just confirm the choice. There is also one option named "Admin consent required", which - as far as I understood - will prevent displaying a confirm dialog every time a new user wants to login to Report Server through Standalone Report Designer.
+The last steps is to provide permission to the Report Designer app to access Report Server app. Go to API permissions, add new permission and click on "**APIs my organization uses**" tab above - the Report Server API should be listed there. The only option is to use "user_impersonation" so just confirm the choice. There is also one option named "Admin consent required", which - as far as I understood - will prevent displaying a confirm dialog every time a new user wants to login to Report Server through Standalone Report Designer.
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step7.png)
 
@@ -99,14 +100,18 @@ If you now click the **Log in with ADFS credentials** button, the Azure login pa
 
 ### Note
 
-There is one know issue which you may experience - Web.config error after authenticating with Active Directory. The workaround is adding the following requestValidationMode="2.0" setting in the web.config file of the Telerik Report Server which will remove the "potentially dangerous" exception:
+There is one knonw issue which you may experience - Web.config error after authenticating with Active Directory. The workaround is adding the following **requestValidationMode="2.0"** setting in the web.config file of the Telerik Report Server which will remove the "potentially dangerous" exception:
 
+````XML
 <httpRuntime maxRequestLength="2097152" requestValidationMode="2.0"/> 
-More details about the workaround can be found at the following StackOverflow thread - Potentially dangerous Request.Form in WSFederationAuthenticationModule.IsSignInResponse.
+````
+
+
+More details about the workaround can be found at the following StackOverflow thread - [Potentially dangerous Request.Form in WSFederationAuthenticationModule.IsSignInResponse](https://stackoverflow.com/questions/5443563/potentially-dangerous-request-form-in-wsfederationauthenticationmodule-issigninr).
 
 The Report Server's Web.config configuration file can be found in {reportServer_installDir}/Telerik.ReportServer.Web. For example, if you have installed the product with the default settings, you can find the file at the following path:
 
-C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web
+**C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web**
 
 
 
