@@ -2,7 +2,7 @@
 title: Report Server Manager Overview
 page_title: Report Server Manager Overview
 description: Overview of the common functionality for all Report Server Manager Views - Search, Sorting, etc.
-slug: report-server-manager-overview
+slug: search
 tags: search, sorting, reports, categories, users
 published: True
 position: 800
