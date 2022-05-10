@@ -28,7 +28,7 @@ The Report Server Manager is the ASP.NET Application that lets the Report Server
 
 * [User Roles]({%slug user-roles%}) 
 
-The purpose of this article is to describe the common functionality of the Report Server views that would let you access and control your Report Server assest easier. This includes [Sorting](#Sort), [Page Size](#page-size) and [Searching](#search).
+The purpose of this article is to describe the common functionality of the Report Server views that would let you access and organize your Report Server assest easier. This includes [Sorting](#Sort), [Page Size](#page-size) and [Searching](#search).
 
 
 ## Sort
@@ -48,9 +48,9 @@ The Report Server allows you to sort the items in each view by the grid columns 
 |__Roles__| Name | | |
 |__Webhooks__| Webhook URL | | |
 
-The items' order in the multi-column sorting depends on the sequence in which you have applied sorting to the columns. The sorting applied earlier is prioritized. For example, if you sort the Reports view first by `Category`, and then by `Name/Description`, the grid will sort the items by `Category` and then would apply the sorting within each category by report `Name/Description`. 
+The items' order in the multi-column sorting depends on the sequence in which you have applied sorting to the columns. The sorting applied earlier is prioritized. For example, if you sort the Reports view first by `Category`, and then by `Name/Description`, the grid will sort the items by `Category` and then would apply the sorting within each category by report `Name/Description` as shown in the next image. 
 
->caption __Sorting__ and __Page Size__ in Report Server Views
+>caption __Sorting__ and __Page Size__ in Report Server Grid Views
 
 ![Sorting and Page Size](../../images/report-server-images/sorting-page-size.png)
 
@@ -60,9 +60,9 @@ The Sorting is kept in the [browser's Window Local Storage](https://developer.mo
 
 ## Page Size
 
-The Page Size indicates the number of items that would be listed per page. You may choose between the values `10, 20, 50, 100`. The default is `20`. The number of the items per page and the total number of items is displayed at the bottom of the page, in the right corner of the footer. 
+The Page Size indicates the number of items that would be listed per page. You may choose between the values `10, 20, 50, 100`. The default is `20`. The number of the items per page and the total number of items is displayed at the bottom of the page, in the right corner of the footer (see the image above). 
 
-You may navigate between the pages through the buttons at the left corner of the footer.
+You may navigate between the pages through the buttons at the left corner of the footer as shown in the image.
 
 The Page Size is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). This means that the page size is applied for each client individually. The local storage property name is `pageSize`.
 
