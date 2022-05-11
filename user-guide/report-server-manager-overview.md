@@ -28,7 +28,7 @@ The Report Server Manager is the ASP.NET Application that lets the Report Server
 
 * [User Roles]({%slug user-roles%}) 
 
-The purpose of this article is to describe the common functionality of the Report Server views that would let you access and organize your Report Server assest easier. This includes [Sorting](#Sort), [Page Size](#page-size) and [Searching](#search).
+The purpose of this article is to describe the common functionality of the Report Server views that would let you access and organize your Report Server assets easier. This includes [Sorting](#Sort), [Page Size](#page-size) and [Searching](#search).
 
 
 ## Sort
@@ -54,9 +54,9 @@ The items' order in the multi-column sorting depends on the sequence in which yo
 
 ![Sorting and Page Size](../../images/report-server-images/sorting-page-size.png)
 
-If you sort first by `Name/Description`, the grid will sort the items by this column, and when you apply a secondary sorting by `Category` it would be applied to the already sorted list. This may have effect only when there are reports with the same name in different categories.
+If you sort first by `Name/Description`, the grid will sort the items by this column, and when you apply a secondary sorting by `Category` it would be applied to the already sorted list. This may have an effect only when there are reports with the same name in different categories.
 
-The Sorting is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). This means that the sorting is applied for each client individually. The local storage property name is `sortArray`.
+The Sorting is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) in a property called `sortArray`. This way the preferred sort rules get preserved individually for each user within their web browser.
 
 ## Page Size
 
@@ -64,8 +64,8 @@ The Page Size indicates the number of items that would be listed per page. You m
 
 You may navigate between the pages through the buttons at the left corner of the footer as shown in the image.
 
-The Page Size is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). This means that the page size is applied for each client individually. The local storage property name is `pageSize`.
+The Page Size is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) in a property called `pageSize`. This way the preferred sort rules get preserved individually for each user within their web browser.
 
 ## Search
 
-The search text box is located on top of the search supporting pages. To search for an item, specify all or part of the text that you want to match. The search starts to filter the grid after the second character. Still you can press Enter or the search button to invoke search. The characters in the grid that match the search string are highlighted. The search string is not case-sensitive. You cannot use search operators such as plus (+) or minus (–) symbols to require or exclude search criteria. The search is working with the exact input character match.
+The search text box is located on top of the search supporting pages. To search for an item, specify all or part of the text that you want to match. The search starts to filter the grid after the first character. The characters in the grid that match the search string are highlighted. The search string is not case-sensitive. You cannot use search operators such as plus (+) or minus (–) symbols to require or exclude search criteria. The search is working with the exact input character match.
