@@ -5,7 +5,7 @@ description: Overview of the common functionality for all Report Server Manager 
 slug: search
 tags: search, sorting, reports, categories, users
 published: True
-position: 800
+position: 100
 ---
 
 # Report Server Manager
