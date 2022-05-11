@@ -52,7 +52,7 @@ The items' order in the multi-column sorting depends on the sequence in which yo
 
 >caption __Sorting__ and __Page Size__ in Report Server Grid Views
 
-![Sorting and Page Size](../../images/report-server-images/sorting-page-size.png)
+![Sorting and Page Size](../images/report-server-images/sorting-page-size.png)
 
 If you sort first by `Name/Description`, the grid will sort the items by this column, and when you apply a secondary sorting by `Category` it would be applied to the already sorted list. This may have an effect only when there are reports with the same name in different categories.
 
