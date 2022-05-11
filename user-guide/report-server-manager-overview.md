@@ -42,7 +42,7 @@ The Report Server allows you to sort the items in each view by the grid columns 
 |__Reports__| Favorite | Date Modified | Name |
 |__Categories__| Name | | |
 |__Data__| Name | | |
-|__Scheduling__| Enabled | Next Occurance | Name |
+|__Scheduling__| Enabled | Next Occurrence | Name |
 |__Data Alerts__| Enabled | Last Run | Name |
 |__Users__| Username | | |
 |__Roles__| Name | | |
@@ -54,7 +54,7 @@ The items' order in the multi-column sorting depends on the sequence in which yo
 
 ![Sorting and Page Size](../images/report-server-images/sorting-page-size.png)
 
-If you sort first by `Name/Description`, the grid will sort the items by this column, and when you apply a secondary sorting by `Category` it would be applied to the already sorted list. This may have an effect only when there are reports with the same name in different categories.
+If you sort first by `Name/Description`, the grid will sort the items by this column, and when you apply a secondary sorting by `Category`, it would be applied to the already sorted list. This may have an effect only when there are reports with the same name in different categories.
 
 The Sorting is kept in the [browser's Window Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) in a property called `sortArray`. This way the preferred sort rules get preserved individually for each user within their web browser.
 
