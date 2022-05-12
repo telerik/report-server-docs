@@ -15,7 +15,7 @@ res_type: kb
 	<tbody>
 		<tr>
 			<td>Product Version</td>
-			<td>7.2.21.1125/8.0.22.119</td>
+			<td>7.2.21.1125+</td>
 		</tr>
 		<tr>
 			<td>Product</td>
@@ -25,18 +25,20 @@ res_type: kb
 </table>
 
 
-## Description
+## Description 
+
 Starting with version [R3 2021 SP2 (7.2.21.1125)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2021-sp2-7-2-21-1125),
-the __CommandTimeout__ of the Report Server MSSQL Storage is configurable. Generally, this should be set when you configure the MSSQL storage from the Configuration page 
+the `CommandTimeout` of the Report Server MSSQL Storage is configurable. Generally, this should be set when you configure the MSSQL storage from the Configuration page 
 of the Report Server along with the connection string. This is a bug in the Report Server UI that is reported in 
 [The MSSQL Storage Configuration page doesn't allow setting the CommandTimeout property](https://feedback.telerik.com/report-server/1548474-the-mssql-storage-configuration-page-doesn-t-allow-setting-the-commandtimeout-property).
 
-## Solution
-You may configure the value of the __CommandTimeout__ property for the MSSQL Storage in the __ReportServerAdmin.config__ configuration file of your Report Server web application. 
-The file resides by default in the installation folder of the Report Server web application, for example, 
-__C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web__. Here is a sample code for the config file: 
+## Solution 
 
-```XML
+You may configure the value of the `CommandTimeout` property for the MSSQL Storage in the `ReportServerAdmin.config` configuration file of your Report Server web application. 
+The file resides by default in the installation folder of the Report Server web application, for example, 
+`C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web`. Here is a sample code for the config file: 
+
+````XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <configSections>
@@ -51,6 +53,6 @@ __C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web
     </storage>
   </reportServer>
 </configuration>
-```
+````
 
 You need to edit the file manually to add the command timeout configuration.
