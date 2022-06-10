@@ -14,9 +14,9 @@ The report preview settings view enables Report Server customers to modify Teler
 
 ## Parameters Area options
 
-The parameters area section allows you to set single multi-select parameters editors type. The available values for both are ListView and ComboBox. The ListView is the default option. It is reprezent as a [Kendo UI ListView](https://docs.telerik.com/kendo-ui/api/javascript/ui/listview) widget.
+The parameters area section allows you to set single and multi-select report parameters' editor type. The available values for both are ListView and ComboBox. The ListView is the default option. It represents a [Kendo UI ListView](https://docs.telerik.com/kendo-ui/api/javascript/ui/listview) widget.
 
-The ComboBox has two difrent reprezentation the Telerik Report Viewe for both editors:
+The ComboBox has two different representations of the Telerik Report Viewer for both editors:
 * Single select editor - it is rendered as a [Kendo UI ComboBox](https://docs.telerik.com/kendo-ui/api/javascript/ui/combobox) widget.
 
 * Multi-select editor - it is rendered as a [Kendo UI MultiSelect](https://docs.telerik.com/kendo-ui/api/javascript/ui/multiselect) widget
