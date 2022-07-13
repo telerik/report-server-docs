@@ -23,7 +23,7 @@ To enable it, run the server and navigate to **Configuration** -> **Designer** -
 
 Once you enable it, you will see the icon in the reports view:
 
-![Lounch Web report Designer](../images/wrd_reportView.png)
+![Launch Web report Designer](../images/wrd_reportView.png)
 
 ### Data Connectivity
 
