@@ -10,14 +10,13 @@ position: 700
 
 # Azure AD Authentication
 
-Active Directory have proved itself as a standard in directory and identity management services. In this article we will explain how to use its cloud-based form to provide authentication for the Telerik Reporting Server users.
+Active Directory have proved itself as a standard in directory and identity management services. In this article, we will explain how to use its cloud-based form to provide authentication for the Telerik Reporting Server users.
 
 ## Configuration Steps
 
 ### Prerequisites
 
 -   Telerik Report Server installation with at least one administrator account.
-
 -   An Azure account with Active Directory support.
 
 In this article we’ll assume that Telerik Report Server is installed and accessible on **http://localhost:86**. For security reasons it’s better to access it via **https**, but this will require registering a domain certificate, which is not a subject of the current tutorial.
@@ -32,7 +31,6 @@ In your Azure portal, create an **Enterprise** application and marked it as a "*
 
 
 ### 2.  Inspecting IDs:
-
 
 After creating the app, inspect its IDs in the **Overview** page:
 
@@ -53,12 +51,9 @@ SAML Signing Certificate - here you should have the App Federation Metadata Url 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step3.png)
 
 
-
 ### 4.  Configuration of SAML authentication of Report Server against Azure AD users
 
-
 When the SAML configuration is completed, go to the application's Properties page and set the "**User assignment required?**" and "**Visible to users?**" to **NO**. This is to avoid explicitly adding users in "**Users and groups**" page.
-
 
 This concludes the configuration of SAML authentication of Report Server against Azure AD users. Naturally, the same users must be registered in the Report Server's assets storage as Federation users, using their NameId or e-mail (depending on your scenario). At this point you should be able to log in to Report Server using the web interface, clicking on the blue button "**Active Directory Credentials**" on the login screen.
 
@@ -67,15 +62,14 @@ Now let's register the Report Designer application and connect it to Telerik Rep
 
 ### 5.  Adding a new registration
 
-
 In Azure Active Directory, navigate to **App registrations** and create a new registration. In the opened pane change only the **Redirect URI type** - by default it's set to **Web**, but you need to use a **Public client/native (mobile and desktop)** entry. For a value just use the URL of the report server - although the Standalone Report Designer doesn't redirect anywhere, having this URL might be required for validation purposes.
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step4.png)
 
+
 ### 6.   Getting the Application (client) ID
 
 After registration is complete, go to **Overview** tab and get the **Application (client) ID**. It must be pasted in the ClientID field the Report Server's Authentication Settings page.
-
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step5.png)
 
@@ -89,7 +83,6 @@ Go to **Endpoints** tab and copy the OAuth 2.0 authorization endpoint (v2). It s
 
 ### 8.  Providing permission to the Report Designer application
 
-
 The last steps is to provide permission to the Report Designer app to access Report Server app. Go to API permissions, add new permission and click on "**APIs my organization uses**" tab above - the Report Server API should be listed there. The only option is to use "user_impersonation" so just confirm the choice. There is also one option named "Admin consent required", which - as far as I understood - will prevent displaying a confirm dialog every time a new user wants to login to Report Server through Standalone Report Designer.
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step7.png)
@@ -97,15 +90,34 @@ The last steps is to provide permission to the Report Designer app to access Rep
 
 If you now click the **Log in with ADFS credentials** button, the Azure login page will appear and you can login with your credentials. When you successfully log in, you will see that the report server entry is added to the list of available servers and you can use it the same way you do with the local accounts.
 
+## Report Server Users
 
-### Note
+Once the Report Server is configured to authenticate using your Azure Active Directory, it's time to add a new Active Directory user. It is extremely important that the Report Server user's `username` value must use the AAD user's `User Principal Name` value.
 
-There is one knonw issue which you may experience - Web.config error after authenticating with Active Directory. The workaround is adding the following **requestValidationMode="2.0"** setting in the web.config file of the Telerik Report Server which will remove the "potentially dangerous" exception:
+To help explain, let's first look at the steps to add a new user:
+
+1. Select **User Management > Users** option
+2. Click the **New User** button
+3. In the popup, select Federation, enter the AAD username and email, then select Report Server rols you want that user to have
+4. Click **Register**
+
+![Azure AD - Add Report Server User](../../images/report-server-images/HowToLoginUsingADFS/AAD-setup-add_report_server_user.png)
+
+
+You can find the **User Principal Name** value in the Azure AD portal on that user's properties blade.
+
+![Azure AD - Principal User Name in AAD](../../images/report-server-images/HowToLoginUsingADFS/AAD-setup-user_principal_name.png)
+
+
+## Troubleshooting
+
+### Runtime Error
+
+There is one known issue which you may experience - Web.config error after authenticating with Active Directory. The workaround is adding the following **requestValidationMode="2.0"** setting in the `<httpRuntime />` property of the Telerik Report Server's web.config file. This will remove the "potentially dangerous" exception:
 
 ````XML
 <httpRuntime maxRequestLength="2097152" requestValidationMode="2.0"/> 
 ````
-
 
 More details about the workaround can be found at the following StackOverflow thread - [Potentially dangerous Request.Form in WSFederationAuthenticationModule.IsSignInResponse](https://stackoverflow.com/questions/5443563/potentially-dangerous-request-form-in-wsfederationauthenticationmodule-issigninr).
 
@@ -113,8 +125,20 @@ The Report Server's Web.config configuration file can be found in {reportServer_
 
 **C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web**
 
+### Signin Error
+
+If you see an **Unauthorized access** error after an AAD user signs in:
+
+![Azure AD - Login Error](../../images/report-server-images/HowToLoginUsingADFS/AAD-setup-login_error.png)
 
 
-### Conclusion
+This typically occurs because the Report Server user's username doesn't match the `User Principal Name` in Active Directory. See [Report Server Users](#report-server-users) section above for setup guidance.
+
+You will also want to confirm that the Azure AD Enterprise Application has given those users (or group) access permissions. This can be found on the Enterprise Application's **Users and Groups** blade:
+
+![Azure AD - User and Group Access](../../images/report-server-images/HowToLoginUsingADFS/AAD-setup-ensure_user_or_group_access_to_AD_app.png)
+
+
+## Conclusion
 
 In this tutorial we demonstrated how to connect to Telerik Report Server using accounts defined in Azure Active Directory. The same approach can be used to authenticate the users from Active Directory for Windows domain networks.
