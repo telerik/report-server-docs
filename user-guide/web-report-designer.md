@@ -30,9 +30,9 @@ Once you enable it, you will see the icon in the reports view:
 Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [JSON](https://docs.telerik.com/reporting/jsondatasource-component), [SQL](https://docs.telerik.com/reporting/sqldatasource) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
 ### Report Resources
-The Web report Designer allows uploading shared resources like images, styles, and data on the server.
+The Web Report Designer allows uploading shared resources like images, styles, and data on the server.
 It makes them easily accessible and allows to reuse them among different reports to achieve and maintain a common report vision.
-It also makes it easy to swap the offline data for multiple reports visualizing it.
+It also makes it easy to renew the offline data in JSON or CSV format for multiple reports visualizing it.
 The respective tool is called Assets Manager and more information on how it can be used is available in the 
 [Report shared resources](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/web-report-designer/tools/shared-resources) article.
 Note that in the context of the Report Server the reports are organized into one-level directories representing the report categories on the Report Server.
