@@ -31,3 +31,7 @@ Guest user is a special built-in user which is created upon the initial setup of
 -	Share a report that resides in Report Server - Report Server's API provides a method that serves a report by specified category, report name and report revision. The format of the method is *{serverUrl}/report/share/{category}/{reportName}/{revision}*. The Revision parameter can be omitted, which will result of displaying the last revision of the specified report. In case the Guest account is disabled, a 403-Forbidden error is returned.
 
 -	Access the report using HTML5 report viewer - the Guest account can be used for authentication against the Report Server when you want to connect the HTML5 Report Viewer to its report service API. Please note that in this case no authentication token is required and Guest user validation is done on the server. You can read more [here](https://docs.telerik.com/reporting/html5-report-viewer-howto-use-it-with-reportserver "Configuring the HTML5 Report Viewer to work with Report Server").
+
+### Guest User Administration
+
+- The **Guest** user is disabled by default. To enable the **Guest** user, navigate to the _User Management -> Users_ view, select the Guest user from the list of users and check the _Enabled_ switch.
