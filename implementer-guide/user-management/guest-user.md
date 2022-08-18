@@ -34,4 +34,5 @@ Guest user is a special built-in user which is created upon the initial setup of
 
 ### Guest User Administration
 
-- The **Guest** user is disabled by default. To enable the **Guest** user, navigate to the _User Management -> Users_ view, select the Guest user from the list of users and check the _Enabled_ switch.
+The **Guest** user is disabled by default. To enable the **Guest** user, navigate to the _User Management -> Users_ view, select the Guest user from the list of users and check the _Enabled_ switch.
+![Enable the Guest user](../../images/report-server-images/enable_guest_user.png)
