@@ -52,7 +52,7 @@ Disabling a user will stop its access to the report server assets and will free 
 
 ### Delete User
 
-The Guest user and currently logged user cannot be deleted. All other users can be deleted by a user with sufficient permissions. Deleting a user will unlock their reports and will remove the user from all the roles he currently is assigned to. Deleting a user will free a CAL for a new user.
+The [Guest]({%slug guest-user%}) user and currently logged user cannot be deleted. All other users can be deleted by a user with sufficient permissions. Deleting a user will unlock their reports and will remove the user from all the roles he currently is assigned to. Deleting a user will free a CAL for a new user.
 
 ### Manage User Permissions
 
