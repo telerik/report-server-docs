@@ -54,4 +54,4 @@ Once you get the access token, you can store it in [window.sessionStorage](https
 		window.sessionStorage.setItem(serverTokenKey, accessToken);
 	  })
 
-The Guest user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case a 1.1.400 Bad Request will be returned from the server.
+The [Guest]({%slug guest-user%}) user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case a 1.1.400 Bad Request will be returned from the server.
