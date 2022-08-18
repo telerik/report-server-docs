@@ -34,4 +34,4 @@ Guest user is a special built-in user which is created upon the initial setup of
 
 ### Guest User Administration
 
-- Report Server Administration - To enable the guest user, navigate to the yarpadarp section, and click the radio entitled 'enable guest user' [screenshot here]
+- The **Guest** user is disabled by default. To enable the **Guest** user, navigate to the _User Management -> Users_ view, select the Guest user from the list of users and check the _Enabled_ switch.
