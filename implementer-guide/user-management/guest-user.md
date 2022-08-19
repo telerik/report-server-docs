@@ -25,7 +25,7 @@ which will result in displaying the last revision of the specified report. In ca
 ###	Display a server report in an embedded Report Viewer control
 The Guest account can be used for authentication against the Report Server when you want to embed any Report Viewer displaying server reports into a user application.
 To do this no authentication token is provided and Guest user authorization is done on the server. 
-You can read more in the (%slug integration-with-report-viewers%) article.
+You can read more in the [Integration With Report Viewers](%slug integration-with-report-viewers%) article.
 
 ## Limitations of the Guest user
 -	Cannot be edited - since it doesn't have any user-related fields except *username*, the _Edit_ button is disabled when the Guest user is selected.
