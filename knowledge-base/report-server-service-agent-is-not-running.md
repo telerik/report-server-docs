@@ -21,7 +21,7 @@ res_type: kb
 ## Description
 
 The Telerik.ReportServer.ServiceAgent is a Windows Service which should be constantly running on the machine where the Report Server is installed. 
-It uses WCF to communicate with Report Server and the corresponding settings are configured in its own configuration file *Telerik.ReportServer.ServiceAgent.(x86).exe.config* and Report Server's configuration file *web.config*.
+It uses WCF to communicate with Report Server and the corresponding settings are stored in two configuration files: *Telerik.ReportServer.ServiceAgent.(x86).exe.config* and Report Server's configuration file *web.config*.
 The Report Server maintains the connection with the Service Agent and polls it when a certain event occurs: a Scheduled Task or a Data Alert is added or modified, or the Report Server settings are changed.
 
 ## Error Message
@@ -49,40 +49,39 @@ To make sure that the service is running and that the Report Server application 
 3\. Open server's **Web.config** file located at [installation folder]\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web and check if the address of the service matches the address provided in Telerik.ReportServer.ServiceAgent.exe.config.  
   
 4\. Enable tracing in the **Telerik.ReportServer.ServiceAgent.exe.config** file, start the service manually, and check the generated log file for errors.
-
-	<configuration>
-		...
-		<system.diagnostics>
-			<trace autoflush="true" indentsize="4">
-			  <listeners>
-				<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="serviceAgent.log" />              
-				<remove name="Default" />
-			  </listeners>
-			</trace>
-		</system.diagnostics>
-	</configuration>
-
+````
+<configuration>
+	...
+	<system.diagnostics>
+		<trace autoflush="true" indentsize="4">
+		  <listeners>
+			<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="serviceAgent.log" />              
+			<remove name="Default" />
+		  </listeners>
+		</trace>
+	</system.diagnostics>
+</configuration>
+````
 5\. Enable tracing in the Telerik.ReportServer's **Web.config** file, restart the web application and check the generated log file for errors.
-
-	<configuration>
-		...
-		<system.diagnostics>
-			<trace autoflush="true" indentsize="4">
-			  <listeners>
-				<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="reportServer.log" />              
-				<remove name="Default" />
-			  </listeners>
-			</trace>
-		</system.diagnostics>
-	</configuration>
-
+````
+<configuration>
+	...
+	<system.diagnostics>
+		<trace autoflush="true" indentsize="4">
+		  <listeners>
+			<add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="reportServer.log" />              
+			<remove name="Default" />
+		  </listeners>
+		</trace>
+	</system.diagnostics>
+</configuration>
+````
 6\. The communication layer between the Service Agent and Report Server uses WCF services and by default relies on port 80 for initial client registration. Ensure that the port is currently not used by another application or service. Use the **netstat** command to list the active connections and check if port 80 is available. A common issue is to have a web server (e.g. Apache Tomcat) already using this port. In this case either move the application that occupies port 80 to another port, or change the configuration of the **wsDualHttpBinding** entry in Report Server's web.config file, adding [**clientBaseAddress** attribute](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wsdualhttpbinding.clientbaseaddress?view=netframework-4.8) to the **binding** entry:
-
 ````
 <system.serviceModel>
     <bindings>
         <wsDualHttpBinding>
-            <binding clientBaseAddress="https://reportserver:56436" name="WSDualHttpBinding_IServiceAgentCommService" sendTimeout="00:00:10"/>
+            <binding clientBaseAddress="https://your-reportserver-url:56436" name="WSDualHttpBinding_IServiceAgentCommService" sendTimeout="00:00:10"/>
         </wsDualHttpBinding>
     </bindings>
 	...
