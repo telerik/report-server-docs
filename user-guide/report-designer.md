@@ -17,7 +17,6 @@ The Report Designer is a report authoring tool. When you design a report, you sp
 The Report Designer tool can be accessed from the Report Server web management application upon new report or edit report action. If the web browser agent supports the ClickOnce deployment technology (built-in for IE and extension for other browsers), the tool gets installed on the client machine. Otherwise, the web application will provide a link to download and run the tool manually.
 In the first case the user will get the subsequent tool updates handled by the ClickOnce technology, and in the latter this should be handled by the user (re-download a fresh version of the tool).
 
-
 ### Schema compatibility
 
 The supported report definitions format eventually changes with the new versions of the Report Server product. The version of the report definition is referred as [Schema version](https://docs.telerik.com/reporting/upgrading-xml-report-definition-versioning#xml-schema-versioning). The definition schema version of a particular report stored on the server gets updated upon editing with a newer Report Designer. However, no Report Designer can be used having newer schema version than the one supported from the Report Server. This rule gets enforced from the Server and Designer negotiation logic so that the Server can actually render the uploaded report definition. The best practice is to always use the Report Designer coming with the current version of the Report Server product.
@@ -34,10 +33,10 @@ Report Server supports [WebService](https://docs.telerik.com/reporting/webservic
 
 ### Related Articles
 
-- [Report Designer Overview](https://docs.telerik.com/reporting/standalone-report-designer.html "Standalone Report Designer Overview")  
-- [Create, Open, Edit, Save and Publish Reports](https://docs.telerik.com/reporting/standalone-report-designer-working-with-server-reports.html "Working with server reports")  
-- [SqlDataSource Component](https://docs.telerik.com/reporting/sqldatasource "SqlDataSource Component")
-- [SqlDataSource Wizard](https://docs.telerik.com/reporting/sqldatasource-wizard.html "SqlDataSource Wizard Overview")
-- [CsvDataSource Component](https://docs.telerik.com/reporting/csvdatasource-component "CsvDataSource Component")
-- [CsvDataDource Wizard](https://docs.telerik.com/reporting/csvdatasource-wizard "CsvDataDource Wizard Overview")
+- [Report Designer Overview](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/overview "Standalone Report Designer Overview")
+- [Create, Open, Edit, Save and Publish Reports](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/working-with-report-server-reports "Working with server reports")
+- [SqlDataSource Component](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/sqldatasource-component/overview "SqlDataSource Component")
+- [SqlDataSource Wizard](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/tools/data-source-wizards/sqldatasource-wizard/overview "SqlDataSource Wizard Overview")
+- [CsvDataSource Component](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/csvdatasource-component/overview "CsvDataSource Component")
+- [CsvDataDource Wizard](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/tools/data-source-wizards/csvdatasource-wizard "CsvDataDource Wizard Overview")
 - [Connecting to Business Objects]({%slug business-objects-management%})
