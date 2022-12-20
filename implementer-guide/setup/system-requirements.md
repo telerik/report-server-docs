@@ -10,10 +10,12 @@ position: 100
 
 # System Requirements
 
+## Server
 - Windows OS
 
 - Internet Information Services (IIS 7+)
 
-- Microsoft .NET Framework 4.5.1
+- Microsoft .NET Framework 4.5.1+
 
-- HTML5 compatible web browser
+## Client
+- HTML5 compliant browser with support for JavaScript 1.8.5 (ECMAScript5) and CSS3
