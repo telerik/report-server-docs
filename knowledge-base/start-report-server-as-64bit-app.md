@@ -10,26 +10,24 @@ res_type: kb
 ## Environment
 
 <table>
- <tr>
-  <td>Product</td>
-  <td>Progress® Telerik® Report Server</td>
- </tr>
- <tr>
-  <td>Operating System</td>
-  <td>Windows</td>
- </tr>
- <tr>
-  <td>.Net framework</td>
-  <td>Version 4.6</td>
- </tr>
+	<tr>
+		<td>Product</td>
+		<td>Progress® Telerik® Report Server</td>
+	</tr>
+	<tr>
+		<td>Operating System</td>
+		<td>Windows</td>
+	</tr>
+	<tr>
+		<td>.Net framework</td>
+		<td>Version 4.6</td>
+	</tr>
 </table>
-
 
 ## Description
 
-The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation](../implementer-guide/setup/installation) article) for compatibility reasons. To allow addressing more memory or using specific version of database drivers, the mode in which the Report Server is started may need to be changed.
+The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation]({%slug installation%}) article) for compatibility reasons. To allow addressing more memory or using specific version of database drivers, the mode in which the Report Server is started may need to be changed.
 
 ## Solution
 
-The mode in which the Report Server instance runs is determined by its application pool settings, which define it as a 32-bit application by default. 
-To change it, navigate to the Report Server's application pool, open its *Advanced Settings* form and look for a *Enable 32-bit Applications* property. Change it to **False** to run the Report Server instance in 64-bit mode and recycle the pool.
+The mode in which the Report Server instance runs is determined by its application pool settings, which define it as a 32-bit application by default. To change it, navigate to the Report Server's application pool, open its `Advanced Settings` form and look for a `Enable 32-bit Applications` property. Change it to **False** to run the Report Server instance in 64-bit mode and recycle the pool.
