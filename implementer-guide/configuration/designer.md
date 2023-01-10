@@ -12,6 +12,6 @@ position: 500
 
 The designer view allows you to change the language of the Standalone Designer. 
 
-A drop down lists all languages available in the report server languages directory - [Telerik Report Server Installation Directory]\Telerik.ReportServer.Web\Report Designer\Languages\[culture name]
+A drop down lists all languages available in the report server languages directory - `_TelerikReportServerInstallationDirectory_\Telerik.ReportServer.Web\Report Designer\Languages\_CultureName_`. By default, for the German language this would be `C:\Program Files (c86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Report Designer\Languages\de`.
 
-For more information see [Localization](https://docs.telerik.com/report-server/implementer-guide/setup/localization#localize-standalone-report-designer) article.
+For more information see [Localization]({%slug localization%}#localize-standalone-report-designer) article.

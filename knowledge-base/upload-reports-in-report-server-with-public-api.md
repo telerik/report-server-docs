@@ -11,6 +11,7 @@ res_type: kb
 ---
 
 ## Environment
+
 <table>
 	<tr>
 		<td>Product Version</td>
@@ -24,20 +25,24 @@ res_type: kb
 
 
 ## Description
-How to upload a report in the Report Server using the public [API](../implementer-guide/apis/rest-api/overview).
+
+How to upload a report in the Report Server using the public [API]({%slug rest-api-overview%}).
 
 ## Solution
-A simple console application in **C#** demonstrating how to upload a report (_Concentric_NumericalScale_test.trdx_ that is included in the project) programmatically using the Report Server API is available in the attached [UseReportServerApi.zip file](https://www.telerik.com/docs/default-source/knowledgebasearticleattachments/reporting/usereportserverapi.zip?sfvrsn=7c04b2b5_2).
+
+A simple console application in `C#` demonstrating how to upload a report (_Concentric_NumericalScale_test.trdx_ that is included in the project) programmatically using the Report Server API is available in the attached [UseReportServerApi.zip file](https://www.telerik.com/docs/default-source/knowledgebasearticleattachments/reporting/usereportserverapi.zip?sfvrsn=7c04b2b5_2).
 
 It is necessary to change the Log-in details to reflect your local settings, i.e. modify the following code accordingly:
-```CSharp
+
+````CSharp
 class Program
 {
-    static void Main(string[] args)
-    {
-        ReportServerClient reportServerClient = new ReportServerClient(@"http://yourlocalreportserver:83/api/reportserver/");
-        reportServerClient.Login("demoUser", "demoPass");
-        ...
-    }
+	static void Main(string[] args)
+	{
+		ReportServerClient reportServerClient = new ReportServerClient(@"http://yourlocalreportserver:83/api/reportserver/");
+		reportServerClient.Login("demoUser", "demoPass");
+		//...
+	}
 }
-```
+````
+
