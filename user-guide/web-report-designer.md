@@ -29,6 +29,10 @@ Once you enable it, you will see the icon in the reports view:
 
 Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [JSON](https://docs.telerik.com/reporting/jsondatasource-component), [SQL](https://docs.telerik.com/reporting/sqldatasource) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
+### Shared Data Source
+
+As of the `R1 2023` release, the Report Server's Web Report Designer also supports the [`SharedDataSource`](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/shareddatasource-component) component which allows for reusing any of the available data source components across multiple report definitions. The `Shared Data Sources` files(`.sdsx`) are considered assets and are thus __not__ controller by [User Permissions]({%slug users%}). 
+
 ### Report Resources
 The Web Report Designer allows uploading shared resources like images, styles, and data on the server.
 It makes them easily accessible and allows to reuse them among different reports to achieve and maintain a common report vision.
