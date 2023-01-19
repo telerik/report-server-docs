@@ -31,7 +31,12 @@ Report Server supports [WebService](https://docs.telerik.com/reporting/webservic
 
 ### Shared Data Source
 
-As of the `R1 2023` release, the Report Server's Web Report Designer also supports the [`SharedDataSource`](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/shareddatasource-component) component which allows for reusing any of the available data source components across multiple report definitions. The `Shared Data Source` files(`.sdsx`) are considered assets and are thus not controlled by [User Permissions]({%slug users%}). 
+In the Web Report Designer the report authors can predefine Data Source definitions called [Shared Data Source](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/shareddatasource-component). 
+Each available Shared Data Source can be then utilized as a resource by the report authors while building reports to connect and return tabular data sets.
+This way the report authors can create multiple reports conveying different messages using the same Shared Data Source definition.
+Also, using this feature, two professionals can collaborate to produce the reports: A data expert can define the shared data sources, and a visualization specialist can focus on the data presentation creating reports on top of the available data sources.
+
+The `Shared Data Source` files(`.sdsx`) are considered assets and are thus not controlled by [User Permissions]({%slug users%}). 
 
 ### Report Resources
 
