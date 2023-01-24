@@ -85,8 +85,8 @@ Open Telerik Report Server Manager web application and log in with a user with a
 - Check the **Enabled** checkbox below the Federation provider label.
 - Paste the copied OAuth 2.0 authorization endpoint URL into the **Authority** textbox.
 - Switch again to the Endpoints tab in Azure and copy the **Federation metadata document** URI.
-- Switch to Report Server's Configuration page and paste it into the **Metadata URI** textbox. Append the following chunk to the URI: ````?appid={your-application-id}```` where ````{your-application-id}```` is the **Application (client) ID** of the Azure application. You can see it in the Essentials panel in the Overview tab. Finally, the contents of the **Metadata URI** textbox should look like this: 
-````https://login.microsoftonline.com/{your-directory(tenant)-id}/federationmetadata/2007-06/federationmetadata.xml?appid={your-application-id}````
+- Switch to Report Server's Configuration page and paste it into the **Metadata URI** textbox. Append the following chunk to the URI: `?appid={your-application-id}` where `{your-application-id}` is the **Application (client) ID** of the Azure application. You can see it in the Essentials panel in the Overview tab. Finally, the contents of the **Metadata URI** textbox should look like this: 
+`https://login.microsoftonline.com/{your-directory(tenant)-id}/federationmetadata/2007-06/federationmetadata.xml?appid={your-application-id}`
 - Enter the URL of the Telerik Report Server application in the **Relying Party ID** textbox. Its value must be the same as the value of the Redirect URI configured in step 5.
 
 The configuration of the Azure application and Telerik Report Server is now complete. To login into Report Server Manager web app, ensure that the Azure AD users are added as Telerik Report Server users, as described in section [Report Server Users](#report-server-users) below. After adding the Federation user accounts, you should be able to log in to Report Server using the web interface, clicking on the blue button "**Active Directory Credentials**" on the login screen.
