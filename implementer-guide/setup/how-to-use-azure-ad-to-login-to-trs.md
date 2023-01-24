@@ -10,7 +10,7 @@ position: 700
 
 # Overview
 
-Active Directory have proved itself as a standard in directory and identity management services. In this article, we will explain how to use its cloud-based form to provide authentication for Telerik Report Server users. Besides the enhanced authentication security, this approach also improves the user experience, because the users that are alreadt registered in Azure AD will be able to login into Report Server Manager UI without entering their login credentials each time.
+Active Directory have proved itself as a standard in directory and identity management services. In this article, we will explain how to use its cloud-based form to provide authentication for Telerik Report Server users. Besides the enhanced authentication security, this approach also improves the user experience, because the users that are already registered in Azure AD will be able to login into Report Server Manager UI without entering their login credentials each time.
 
 The article consists of two sections:
 - The first one explains how to configure SSO for the Report Server Manager web application. 
