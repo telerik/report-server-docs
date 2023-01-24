@@ -89,7 +89,7 @@ Open Telerik Report Server Manager web application and login with an user with a
 ````https://login.microsoftonline.com/{your-directory(tenant)-id}/federationmetadata/2007-06/federationmetadata.xml?appid={your-application-id}````
 - Enter the URL of the Telerik Report Server application in the **Relying Party ID** textbox. Its value must be the same as the value of the Redirect URI configured in step 5.
 
-With this step the authentication configurations for both Azure application and Telerik Report Server is complete. At this point you should be able to log in to Report Server using the web interface, clicking on the blue button "**Active Directory Credentials**" on the login screen.
+The configuration of the Azure application and Telerik Report Server is now complete. To login into Report Server Manager web app, ensure that the Azure AD users are added as Telerik Report Server users, as described in section [Report Server Users](#report-server-users) below. After adding the Federation user accounts, you should be able to log in to Report Server using the web interface, clicking on the blue button "**Active Directory Credentials**" on the login screen.
 
 In the next section we'll explain how to configure Standalone Report Designer application to authenticate against Telerik Report Server using Azure AD.
 
