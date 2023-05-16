@@ -1,7 +1,7 @@
 ---
 title: Data Alerts Management
-page_title: Data Alerts Management
-description: Data Alerts Management
+page_title: Managing Telerik Report Server's Data Alerts
+description: "Understand how to create, modify, and delete Telerik Report Server data alerts. Learn more about the available configuration options, such as report target formats, mail templates, and data alert scheduling."
 slug: alerts-management
 tags: scheduling,alerts,management
 published: True
@@ -169,6 +169,6 @@ The **Activity** view for a data alert shows the alert execution history. Create
 
 ## Subscribers View
 
-From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing Report Server user or an external user which is represented through his email. The external emails should be separated with semicolon (;) or comma (,).
+From the **Subscribers** view, you can manage who will receive the created documents as mail attachments. A subscriber can be an existing report server user or an external user who is represented through an e-mail address. The emails should be separated with a new line, a semicolon ( ; ) or a comma ( , ).
 
 > When there is an error during the report processing or a general error in the data alert execution, mails will be sent to the **System Administrator** and **Report Creator** [roles]({%slug user-roles%}) only.
