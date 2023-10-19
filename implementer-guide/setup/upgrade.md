@@ -19,9 +19,9 @@ The installer has a step that [backs up the assets' storage]({%slug storage-back
 
 # Before upgrading the Report Server
 
-We recommended performing a file backup before upgrading. This is specifically recommended if you applied in the application configuration files _/Telerik.ReportServer.Web/Web.config_ and _/Services/Telerik.ReportServer.ServiceAgent.exe.config_
+We advise performing a file backup before upgrading. This is specifically recommended if you have changed the application configuration files _/Telerik.ReportServer.Web/Web.config_ and _/Services/Telerik.ReportServer.ServiceAgent.exe.config_
 
-Note the _Telerik Report Server_ settings applied in the IIS console, including the applied Bindings. You will need to reapply these after the upgrade. 
+Note the _Telerik Report Server_ settings applied in the IIS console, including the Bindings. You will need to reapply these after the upgrade. 
 
 # After upgrading the Report Server
 
@@ -29,4 +29,4 @@ After the upgrade progress has passed, open the Report Server Manager (the Finis
 
 Open the IIS manager and reapply the web application settings, including the Bindings, noted before the upgrade. Make sure the Telerik Report Server web application is working again.
 
-The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. We recommend clearing the browser cache or force-reload the page, usually with **Ctrl+F5**.
+The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. We recommend clearing the browser cache or force-reloading the page, usually with **Ctrl+F5**.
