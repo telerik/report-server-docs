@@ -49,4 +49,4 @@ It automatically detects the latest version and lets you install it for the prod
 
 ## See Also
 
-* [Upgrade Report Server]({%slug upgrade%}
+* [Upgrade Report Server]({%slug upgrade%})
