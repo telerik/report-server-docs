@@ -29,4 +29,4 @@ After the upgrade progress has passed, open the Report Server Manager (the Finis
 
 Open the IIS manager and reapply the web application settings, including the Bindings, noted before the upgrade. Make sure the Telerik Report Server web application is working again.
 
-The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. We recommend clearing the browser cache or force-reloading the page, usually with **Ctrl+F5**.
+The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. We recommend clearing the browser cache or force reloading the page, usually with **Ctrl+F5**.
