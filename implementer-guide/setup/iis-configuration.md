@@ -10,7 +10,7 @@ position: 203
 
 # IIS Configuration
 
-The Report Server installer performs basic setup of the new Report Server web site under port 83. It is recommended to apply additional settings in IIS in order to compress resources sent from Report Server to the clients and improve load times.
+The Report Server installer performs a basic setup of the new Report Server web app by adding an HTTP binding under port 83, if available, or under the first subsequent available port. We recommend to set up an HTTPS secured binding for the production deployment. We also recommend to apply additional settings in IIS in order to compress resources sent from Report Server to the clients and improve load times:
 
 The first step is to enable static and dynamic HTTP compression for the Report Server web site. A detailed guide is available in the [HTTP Compression](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/httpcompression/) MSDN article.
 
