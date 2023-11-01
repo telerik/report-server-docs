@@ -14,20 +14,21 @@ The Data Connections View is a centralized place from which you can manage the c
 
 The Data Connections View provides the following functions:
 
-  - _Add a data connection_ - a new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_
+* _Add a data connection_ - a new data connection is defined by a _name_, a _description_, a _data provider_ and a _connection string_
 
-  > Data connections with duplicate names are not allowed.
+	> Data connections with duplicate names are not allowed.
 
-  - _Edit a data connection_  - the properties of an existing data connection can be modified at any time
-  
-  - _Delete a data connection_  - you can delete an existing data connection when it is not used any more
-  
-  - _Copy a data connection_  - to create a similar to an existing connection you can simply copy the source connection and modify its properties
-  
-  - _Search_ by Name, Data Provider or Connection String. For more information, see [Search]({%slug search%})
-
-
+* _Edit a data connection_ - the properties of an existing data connection can be modified at any time
+* _Delete a data connection_ - you can delete an existing data connection when it is not used any more
+* _Copy a data connection_ - to create a similar to an existing connection you can simply copy the source connection and modify its properties
+* _Search_ by Name, Data Provider or Connection String. For more information, see [Search]({%slug search%}#search)
 
 > In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permissions for the Data Connections View or they must be assigned the corresponding role - see [User Roles]({%slug user-roles%}).
 
+## Telerik Report Server Learning Resources
 
+* [Telerik Report Server Homepage](https://www.telerik.com/report-server)
+* [Telerik Report Server Installation]({%slug installation%})
+* [Telerik Report Server User Management]({%slug user-management%})
+* [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+* [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
