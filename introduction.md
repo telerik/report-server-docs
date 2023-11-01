@@ -52,8 +52,4 @@ Telerik Report Server is a commercial product. You are welcome to explore its fu
 * [Telerik Report Server Pricing](https://www.telerik.com/purchase/report-server)
 * [Telerik Report Server Support](https://www.telerik.com/support/report-server)
 * [What’s New in Telerik Report Server](https://www.telerik.com/support/whats-new/report-server)
-
-
-
 * [Telerik Report Server Feedback](https://feedback.telerik.com/report-server)
-* [Progress Services](https://www.progress.com/services).
