@@ -19,11 +19,11 @@ The Data Connections View provides the following functions:
 	> Data connections with duplicate names are not allowed.
 
 * _Edit a data connection_ - the properties of an existing data connection can be modified at any time
-* _Delete a data connection_ - you can delete an existing data connection when it is not used any more
+* _Delete a data connection_ - you can delete an existing data connection when it is not used anymore
 * _Copy a data connection_ - to create a similar to an existing connection you can simply copy the source connection and modify its properties
-* _Search_ by Name, Data Provider or Connection String. For more information, see [Search]({%slug search%}#search)
+* _Search_ by Name, Data Provider, or Connection String. For more information, see [Search]({%slug search%}#search)
 
-> In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permissions for the Data Connections View or they must be assigned the corresponding role - see [User Roles]({%slug user-roles%}).
+> In order to read, write, or modify connection strings from the Report Server or from the Standalone Report Designer, the user must have permission for the Data Connections View or they must be assigned the corresponding role - see [User Roles]({%slug user-roles%}).
 
 ## Telerik Report Server Learning Resources
 
