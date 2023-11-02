@@ -42,7 +42,7 @@ Telerik Report Server is a commercial product. You are welcome to explore its fu
 
 * [Telerik Report Server Homepage](https://www.telerik.com/report-server)
 * [Telerik Report Server FAQ](https://www.telerik.com/report-server/faq)
-* [Telerik Report Server Forum](https://www.telerik.com/forums/report-server.)
+* [Telerik Report Server Forum](https://www.telerik.com/forums/report-server)
 * [Telerik Report Server Knowledge Base](/knowledge-base)
 
 ## Telerik Report Server Additional Resources
