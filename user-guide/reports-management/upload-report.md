@@ -18,8 +18,16 @@ Upload an existing report definition from the file system. When uploading a repo
 
 ## Upload Revision
 
-Upload a new revision to an existing definition in TRDP, TRBP or TRDX format. When uploading a report revision, it will appear as the latest available revision of the selected report. The validation rules for the revision upload are same as the rules for the report definition upload described above.
+Upload a new revision to an existing definition in TRDP, TRBP, or TRDX format. When uploading a report revision, it will appear as the latest available revision of the selected report. The validation rules for the revision upload are same as the rules for the report definition upload described above.
 
 ![upload report](../../images/report-server-images/reports-management/upload-revision.png)
 
-A new revision can also be uploaded via Standalone Report Designer, using __Save As...__ option from __File__ menu. the __Save__ dialog appears, type the report name that will be associated with the revision. A confirmation message will appear, notifying that a report with the same name already exists. After confirming, the opened report will be uploaded as a revision of the report whose name is typed in the __Save__ dialog. Note that the report name is case-insensitive.
+A new revision can also be uploaded via Standalone Report Designer, using __Save As...__ option from __File__ menu. When the __Save__ dialog appears, type the report name that will be associated with the revision. A confirmation message will appear, notifying that a report with the same name already exists. After confirming, the opened report will be uploaded as a revision of the report whose name is typed in the __Save__ dialog. Note that the report name is case-insensitive.
+
+## Telerik Report Server Learning Resources
+
+* [Telerik Report Server Homepage](https://www.telerik.com/report-server)
+* [Telerik Report Server Installation]({%slug installation%})
+* [Telerik Report Server User Management]({%slug user-management%})
+* [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+* [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
