@@ -30,7 +30,7 @@ The _Telerik Report Server_ settings applied in the IIS console, including the H
 
 When upgrading from _Telerik Report Server_ `9.2.23.1010 or older`, you need to reapply the IIS Settings after the upgrade.
 
-This means that if you need automatically preserving the IIS Settings, first you need to upgrade to `9.2.23.1115 or later` and reapply the settings.
+This means that if you need to automatically preserve the IIS Settings, first you need to upgrade to `9.2.23.1115 or later` and reapply the settings.
 
 __Example__:
 
