@@ -26,7 +26,7 @@ We advise performing a file backup before upgrading. This is specifically recomm
 
 ### IIS Settings
 
-The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version `9.2.23.1114 or later` and upgrade to a newer version.
+The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version [R3 2023 SP1 (9.2.23.1114)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2023-sp1-9-2-23-1114) or later and upgrade to a newer version.
 
 When upgrading from _Telerik Report Server_ `9.2.23.1010 or older`, you need to reapply the IIS Settings after the upgrade.
 
