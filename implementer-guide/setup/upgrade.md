@@ -26,11 +26,11 @@ We advise performing a file backup before upgrading. This is specifically recomm
 
 ### IIS Settings
 
-The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version `9.2.23.1115 or later` and upgrade to a newer version.
+The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version `9.2.23.1114 or later` and upgrade to a newer version.
 
 When upgrading from _Telerik Report Server_ `9.2.23.1010 or older`, you need to reapply the IIS Settings after the upgrade.
 
-This means that if you need to automatically preserve the IIS Settings, first you need to upgrade to `9.2.23.1115 or later` and reapply the settings.
+This means that if you need to automatically preserve the IIS Settings, first you need to upgrade to `9.2.23.1114 or later` and reapply the settings.
 
 __Example__:
 
@@ -38,11 +38,11 @@ __Example__:
 
 	When upgrading from `9.0.23.118` to `10.0.24.131`
 	
-	When upgrading from `9.2.23.1010` to `9.2.23.1115`
+	When upgrading from `9.2.23.1010` to `9.2.23.1114`
 
 * IIS settings will be kept
 
-	When upgrading from `9.2.23.1115` to `10.0.24.131`
+	When upgrading from `9.2.23.1114` to `10.0.24.131`
 	
 	When upgrading from `10.0.24.131` to `10.1.24.605`
 
