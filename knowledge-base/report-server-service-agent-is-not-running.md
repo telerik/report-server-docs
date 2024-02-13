@@ -41,7 +41,7 @@ The Report Server maintains the connection with the Service Agent and polls it w
 
 ## Solution
 
-Telerik Report Server $R2 2018 (4.1.18.516)$ exhibits this issue. It has been fixed in [R2 2018 SP1 (4.1.18.620)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r2-2018-sp1-4-1-18-620). If you are using a different version than 4.1.18.516 and still experience the issue, please follow the steps below.
+Telerik Report Server _R2 2018 (4.1.18.516)_ exhibits this issue. It has been fixed in [R2 2018 SP1 (4.1.18.620)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r2-2018-sp1-4-1-18-620). If you are using a different version than 4.1.18.516 and still experience the issue, please follow the steps below.
 
 To make sure that the service is running and that the Report Server application can find the service using the configured address check the following:
 
