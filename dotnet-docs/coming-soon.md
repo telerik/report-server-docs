@@ -1,6 +1,6 @@
 ---
-title: Report Server.NET Documentation Coming Soon
-page_title: Report Server.NET Documentation Coming Soon
+title: Coming Soon...
+page_title: Coming Soon...
 description: Report Server.NET Documentation Coming Soon
 slug: coming-soon
 tags: report,server,dotnet,coming,soon
