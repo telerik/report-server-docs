@@ -61,6 +61,12 @@ navigation:
     knowledge-base:
         position: 10
         title: "Knowledge Base"
+    dotnet-docs:
+        position: 130
+        title: "Report Server for .NET"
+    dotnet-docs/coming-soon:
+        position: 130
+        title: "Coming soon..."
 
 ## Assign layout and category per different paths
 ## defaults:
