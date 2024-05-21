@@ -8,7 +8,7 @@ published: True
 position: 200
 ---
 
-# Report Server for .NET Installation
+# Report Server for .NET Installation on Windows
 
 The Report Server for .NET (`RS.NET`) is currently distributed along with the Report Server for the installer for the .NET Framework 4.6.2. By default, the installer does not install RS.NET. Users must click `Customize` to install RS.NET.
 
@@ -28,7 +28,10 @@ The __RS.NET Service Agent__ is installed in `{Installation Folder}\Telerik Repo
 
 ### Automatic Configuration
 
-The installation wizard will do the initial configuration of RS.NET and RS.NET Service Agent on Windows, making them ready-to-run. 
+The installation wizard will do the initial configuration of _RS.NET_ and _RS.NET Service Agent_ on Windows, making them ready-to-run.
 
-For configuring RS.NET and RS.NET Service Agent on non-windows platforms, please, check [this article](link to other article with linux/docker docs).
+###  Initialization process
 
+1. When the Report Server is started for the first time, the user is supposed to pass the _Configure Storage_ and _Register Administrator_ pages. The settings from these pages are stored in a file named `ReportServerAdmin.json`.
+1. Next, the RS.NET checks its `appsettings.json` configuration file for the key __InitialAgentUrl__. If the installation has passed successfully, the key must exist and must have a valid value like `http://localhost:84`. This is where the MSI has registered the __RS.NET Service Agent__.
+1. The RS.NET calls the above URL and passes the storage settings to the service agent. They are saved in a file in the RS.NET Service Agent's directory, named `\Services\.NET\ServiceAgent.json`. If such a file does not exist, the agent was not initialized or registered in the IIS.
