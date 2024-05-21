@@ -64,9 +64,9 @@ navigation:
     dotnet-docs:
         position: 130
         title: "Report Server for .NET"
-    dotnet-docs/coming-soon:
+    dotnet-docs/overview:
         position: 130
-        title: "Coming soon..."
+        title: "Overview"
 
 ## Assign layout and category per different paths
 ## defaults:
