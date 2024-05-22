@@ -34,7 +34,7 @@ The __RS.NET Service Agent__ is installed in `{Installation Folder}\Telerik Repo
 
 The installation wizard will do the initial configuration of _RS.NET_ and _RS.NET Service Agent_ on Windows, making them ready-to-run.
 
-If the automatic configuration fails, please, familiarize with the [initialization process](#initialization-process) and follow the [instructions for manual configuration](#manual-configuration-on-windows).
+If the automatic configuration fails, please, get familiar with the [initialization process](#initialization-process) and follow the [instructions for manual configuration](#manual-configuration-on-windows).
 
 ### Initialization process
 
