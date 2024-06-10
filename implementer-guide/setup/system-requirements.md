@@ -15,7 +15,7 @@ position: 100
 
 - Internet Information Services (IIS 7+)
 
-- Microsoft .NET Framework 4.5.1+
+- Microsoft .NET Framework 4.6.2+
 
 ## Client
 - HTML5 compliant browser with support for JavaScript 1.8.5 (ECMAScript5) and CSS3
