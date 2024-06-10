@@ -10,17 +10,18 @@ position: 100
 
 # System Requirements
 
-## Report Server for the .NET Framework
+## Report Server for .NET Framework
 
-- Windows OS
-- Internet Information Services (IIS 7+)
+- Windows platform
+- Internet Information Services (IIS) 7+
 - Microsoft .NET Framework 4.6.2+
 
-## Report Server for the .NET
+## Report Server for .NET
 
-- Windows OS, Linux OS, or Docker Containers
-- Microsoft .NET 6.0+
+- Windows or Linux platform
+- ASP.NET Core web server, e.g. IIS 7+, Kestrel
+- Microsoft .NET 8
 
 ## Client
 
-- HTML5 compliant browser with support for JavaScript 1.8.5 (ECMAScript5) and CSS3
+- HTML5-compliant browser with support for JavaScript 1.8.5 (ECMAScript5) and CSS3
