@@ -15,7 +15,7 @@ position: 100
 The **User Guide** provides instructions and explanations of how to create and manage reports and other topics related to the usage of the Progress® Telerik® Report Server. The **Implementer Guide** is targeted at implementers and administrators and covers subjects such as installation, configuration, user management, deployment, integration with other systems, and APIs.
 
 {% if site.has_cta_panels == true %}
-{% include cta-panel-introduction-rs.html %}
+{% include cta-panel-introduction.html %}
 {% endif %}
 
 ### Introduction
