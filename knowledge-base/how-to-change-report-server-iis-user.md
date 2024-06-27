@@ -17,7 +17,7 @@ res_type: kb
 
 ## Description
 
-This tutorial will show you how to change the Report Server's IIS application pool and service agent to use an identity with limitd permissions.
+This tutorial will show you how to change the Report Server's IIS application pool and service agent to use an identity with limited permissions.
 
 ## Solution
 
