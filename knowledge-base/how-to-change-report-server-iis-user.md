@@ -1,8 +1,8 @@
 ---
 title: How to Create a limited IIS User for Report Server and Service Agent
-description: this tutorial shows how to use a lower privlidged user to host Report Server in IIS
+description: this tutorial shows how to use a lower privileged user to host Report Server on IIS
 type: how-to
-page_title: How to change IIS user for Report Server and Service Agent
+page_title: How to run Report Server and Service Agent with limited permissions
 slug: how-to-change-report-server-iis-user
 tags: report server, iis, user permissions, iis permissions
 res_type: kb
@@ -31,7 +31,9 @@ This tutorial will show you how to change the Report Server's IIS application po
 
       ![](images/change-iis-user/2-add-permissions-to-rsuser.png)
 
-      *Ensure the user does not have read or write permissions to any other folders. For more help, see [Microsoft Q&A - How do I set up user account and manage permissions](https://learn.microsoft.com/en-us/answers/questions/1389054/how-do-i-set-up-user-accounts-and-manage-permissio).*
+    - Ensure the user does not have read or write permissions to any other folders.
+    - You can use any username you prefer, we are recommending `RSUser` so that it is clear this user was created for a specific purpose.
+    - For more help, see [Microsoft Q&A - How do I set up user account and manage permissions](https://learn.microsoft.com/en-us/answers/questions/1389054/how-do-i-set-up-user-accounts-and-manage-permissio).
 
 3. Open Internet Information Services (IIS) Manager (`Windows Key` + `R` to open the Run window, then enter `inetmgr`).
 
