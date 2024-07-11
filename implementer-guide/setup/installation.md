@@ -10,7 +10,8 @@ position: 200
 
 # Report Server Installation
 
-The Report Server web application is installed by a Windows installer which automatically creates a separate web site with its own application pool on the IIS. The web site is registered on port 83 by default. The application pool is configured to use the *LocalSystem* identity. The installation process includes registering and starting a Scheduler Windows service named **Telerik.ReportServer.ServiceAgent**.
+The Report Server web application is installed by a Windows installer which automatically creates a separate web site with its own application pool on the IIS. The web site is registered on port 83 by default. The application pool is configured to use the `LocalSystem` identity, but you can apply the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and manually create an [identity with limited permissions]({%slug how-to-change-report-server-iis-user%}). The installation process also includes registering and starting a Scheduler Windows service named `Telerik.ReportServer.ServiceAgent`.
+
 Generally, it is possible to deploy multiple Report Server instances on the same IIS if they have different web site names, ports and application folders. However, the Scheduler Windows service cannot be duplicated and will always point to the Storage of the last installed Report Server instance. For that reason only one fully functional Telerik Report Server can be installed on a single machine.
 
 ## Downloading and Installing
@@ -50,3 +51,4 @@ It automatically detects the latest version and lets you install it for the prod
 ## See Also
 
 * [Upgrade Report Server]({%slug upgrade%})
+* [Run Report Server with Low-Privileged User]({%slug how-to-change-report-server-iis-user%})
