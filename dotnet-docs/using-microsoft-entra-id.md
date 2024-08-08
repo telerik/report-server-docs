@@ -38,7 +38,7 @@ In this article, we will explain how to use set up and enable the Microsoft Entr
 	
 1. Register the application by choosing `Add` > `App registration`.
 
-	> Add **Report Server Application**, for example, as a name and leave the rest options to be the default.
+	> Add **Report Server Application**, for example, as a name, leave the rest options to be the default, and click `Register`.
 	
 1. Expand the **Manage** dropdown in the menu on the left and choose **Authentication**.
 1. Click on `Add Platform` >> `Web` >> Tick the `ID Tokens` checkbox, then click on ***Configure*.
