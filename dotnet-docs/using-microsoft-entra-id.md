@@ -74,7 +74,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only once, otherwise another secret should be created and its value used.
 
 1. Go to the installation folder of the Telerik Report Server for .NET e.g. `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
-1. Open the `appsettings.json` file in a text editor of choice and add the following(replacing the secret from the example below with your secret):
+1. Open the `appsettings.json` file in a text editor and add the following (replacing the secret from the example below with your secret):
 
 	````JSON
 "ExternalLogin":{
