@@ -48,7 +48,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 ### 2. Registering the Telerik Report Server for .NET Application
 
-1. If the steps from the previous section were completed successfully, the following green message should appear above the Captcha: `Tenant creation was successful. Click here to navigate to your new tenant: Report Server Tenant`. The text - `Report Server Tenant` will be your chosen organization name and it will be a link to the **Report Server Tenant Overview** page. 
+1. If the steps from the previous section were completed successfully, the following green message should appear above the Captcha: `Tenant creation was successful. Click here to navigate to your new tenant: Report Server Tenant`. The text - `Report Server Tenant` will be your chosen organization name and there will be a link to the **Report Server Tenant Overview** page. 
 
 	> If you are not on the **Report Server Tenant Overview** page, then go to the top left `Menu` >> `Microsoft Entra ID` >> `Click Add` >> `App Registration`.
 	
