@@ -19,9 +19,9 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Download the archive `Telerik_ReportServer_Net_NonWindows_{Report Server version}.zip` from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER) and unzip it.
 1. Unzip the archive. The content gets deployed in two folders `ReportServer` and `ReportServiceAgent`.
 1. Open the `powershell` and navigate to the subfolder `ReportServer`.
-1. Run the command `docker build -t telerik-report-server:local .` in powershell to build the Report Server Manager image.
+1. Run the command `docker build -t telerik-report-server:local .` in Powershell to build the Report Server Manager image.
 1. Navigate to the subfolder `ReportServiceAgent`.
-1. Run the command `docker build -t telerik-report-server-agent:local .` in powershell to build the Report Server ServiceAgent image.
+1. Run the command `docker build -t telerik-report-server-agent:local .` in Powershell to build the Report Server ServiceAgent image.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
 1. Open the file `docker-compose.yml` in a text editor like _Notepad++_ and edit its content. Delete everything between the lines `services:` and `  storage:`. Before the line `    environments` include the next lines:
 
@@ -53,7 +53,7 @@ services:
 
 	Save the modified file.
 
-1. Run the command `docker-compose up` in powershell to execute the above script and create the MsSqlServer container we are going to use as Report Server Storage.
+1. Run the command `docker-compose up` in Powershell to execute the above script and create the MsSqlServer container we are going to use as Report Server Storage.
 1. Open `MSSQL Management Studio` and _Login_ with the following parameters:
 
 	* _Server_  : `localhost`
@@ -106,11 +106,15 @@ services:
 
 	Save the file.
 
-1. Go back to powershell environment and execute the above yaml with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
+1. Go back to the Powershell environment and execute the above yaml file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
+
 The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
+
+You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4).
 
 ## See Also
 
 * [Telerik Report Server Introduction]({%slug introduction%})
 * [Report Server for .NET Introduction]({%slug coming-soon%})
+* [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4)
