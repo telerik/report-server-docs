@@ -12,7 +12,7 @@ position: 201
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET. 
 
-In this article, we will explain how to use set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users that are already registered in Microsoft Entra will be able to login into Report Server Manager UI without entering their login credentials each time.
+In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into Report Server Manager UI without entering their login credentials each time.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ In this article, we will explain how to use set up and enable the Microsoft Entr
 
 1. Click on the **Create** button on the **Manage Tenants** page
 
-	![An image of where the Create button is located on the Manage Tenants page in the Azure portal](../images/rs-net-images/microsoft-entra-id-create-tenant-step.png.png)
+	![An image of where the Create button is located on the Manage Tenants page in the Azure portal](../images/rs-net-images/microsoft-entra-id-create-tenant-step.png)
 
 1. On the **Create a tenant** page, choose `Microsoft Entra ID` as the tenant type (it should be selected by default).
 
@@ -94,7 +94,7 @@ In this article, we will explain how to use set up and enable the Microsoft Entr
 
 1. Enable the `Microsoft Entr ID Provider`.
 1. In the **Instance** field, use the URL - `https://login.microsoftonline.com/`.
-1. In the **Domain** field, use the one from [step 5 in the Create a Microsoft Entra ID Tenant section]() and add it as URL, for example - `https://ReportServerNetDomain.onmicrosoft.com/`.
+1. In the **Domain** field, use the one from [step 5 in the Create a Microsoft Entra ID Tenant section]() and add it as a URL, for example - `https://ReportServerNetDomain.onmicrosoft.com/`.
 1. Open the [Microsoft Azure Portal](https://portal.azure.com/) to get the `Tenant ID`:
 
 	* From the menu in the top left corner of the page, select **Microsoft Entra ID**.
@@ -104,15 +104,15 @@ In this article, we will explain how to use set up and enable the Microsoft Entr
 
 	* From the menu in the top left corner of the page, select **Microsoft Entra ID**.
 	* Expand the Manage dropdown >> App Registrations >> All Applications.
-	* Click on the application name e.g. `Report Server Application` (defined in the previous section.).
-	* Copy the Application (client) ID and add it in the Report Server's in the Client ID field.
+	* Click on the application name e.g. `Report Server Application` (defined in the previous section).
+	* Copy the Application (client) ID and add it to the Report Server in the Client ID field.
 
 		![An image of the Report Server Application page in the Azure portal where the application(client) ID is located](../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png)
 
 	* Click on the `Save Changes` button in the Report Server for .NET's Configuration page(a message that a manual restart of the service is required will appear on the screen).
-	* The restart can be performed from the IIS Manager >> Application Pools >> Right click on the Telerik Report Server for .NET site and choose `Recycle`.	
+	* The restart can be performed from the IIS Manager >> Application Pools >> Right-click on the Telerik Report Server for .NET site and choose `Recycle`.	
 
-1. Once the service is manually restarted, log in with a user that has administrator role and go to `User Management`.
+1. Once the service is manually restarted, log in with a user that has an administrator role and go to `User Management`.
 1. Click on the `Add New User` button:
 
 	* Select the `Authentication Provider` to be `EntraId`.
