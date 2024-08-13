@@ -114,10 +114,11 @@ The first time you open the Report Server you need to configure it as explained 
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4).
 
-The above approach for starting the RS.NET from the container won't preserve the Storage. That said, every time you restart the Docker it will create a new Storage for the Report Server. To avoid this, execute the following commands in Powershell from the folder _.\ReportServer\docker-configs_ to start/stop the Report Server:
+The above approach for starting the RS.NET from the container will stop each time you restart the machine. That said, every time you restart the Docker it will create a new Storage for the Report Server. To avoid this, execute the following commands in Powershell from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server:
 
-1. `docker swarm init`
-1. `.\start-docker-server.bat` to start or `.\stop-docker-server.bat` to stop the server
+1. `docker swarm init` (if never used before)
+1. `.\start-docker-server.bat` to start or
+1. (optional) `.\stop-docker-server.bat` to stop the server
 
 ## See Also
 
