@@ -44,7 +44,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	![An image of the review and create step of creating a tenant](../images/rs-net-images/microsoft-entra-id-tenant-review-step.png)
 
-1. Click on **Create** and then fill in the Captcha(it will take a minute or two to complete the process once it has been submitted).
+1. Click on **Create** and then fill in the Captcha (it will take a minute or two to complete the process once it has been submitted).
 
 ### 2. Registering the Telerik Report Server for .NET Application
 
