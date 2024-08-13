@@ -61,13 +61,14 @@ services:
 	* _Password_: `place_your_sa_password_here` (this is the argument _SA_PASSWORD_ from the above script file. You may change it as required.)
 
 1. Add the database named `reportserver`. After successfully creating the database, you may close the management studio.
+1. Stop the current process in Powershell, for example, with the key combination `Ctrl+C`.
 1. Go back to the text editor with the opened file `docker-compose.yml` and restore its original content:
 
 	````yaml
 services:
 
 	# template configuration of Report Server.
-	# Includes sample config for /app/Data File Storage.      
+	# Includes sample config for /app/Data File Storage.
 	telerik-report-server:
 	  env_file:
 	  - mssql_storage.env
@@ -112,6 +113,11 @@ services:
 The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4).
+
+The above approach for starting the RS.NET from the container won't preserve the Storage. That said, every time you restart the Docker it will create a new Storage for the Report Server. To avoid this, execute the following commands in Powershell from the folder _.\ReportServer\docker-configs_ to start/stop the Report Server:
+
+1. `docker swarm init`
+1. `.\start-docker-server.bat` to start or `.\stop-docker-server.bat` to stop the server
 
 ## See Also
 
