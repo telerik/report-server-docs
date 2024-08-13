@@ -108,9 +108,9 @@ services:
 
 1. Go back to powershell environment and execute the above yaml with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
-The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
+The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
 ## See Also
 
-* [Telerik Report Server Introduction]({%slug introduction%})
+* [Telerik Report Server Introduction]({%slug introduction%})
 * [Report Server for .NET Introduction]({%slug coming-soon%})
