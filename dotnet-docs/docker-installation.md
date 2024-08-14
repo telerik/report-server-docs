@@ -39,12 +39,12 @@ services:
 	  image: "mcr.microsoft.com/mssql/server:2019-latest"
 	  restart: always
 	  ports:
-	  - "1433:1433"
+	    - "1433:1433"
 	  environment:
-	  - SA_PASSWORD=place_your_sa_password_here
-	  - ACCEPT_EULA=Y
+	    - SA_PASSWORD=place_your_sa_password_here
+	    - ACCEPT_EULA=Y
 	  volumes: 
-	  - mssql-storage:/var/opt/mssql
+	    - mssql-storage:/var/opt/mssql
 
 	volumes:
 	mssql-storage:
@@ -71,35 +71,35 @@ services:
 	# Includes sample config for /app/Data File Storage.
 	telerik-report-server:
 	  env_file:
-	  - mssql_storage.env
+	    - mssql_storage.env
 	  image: telerik-report-server:local
 	  restart: always
 	  ports:
-	  - "82:80"
+	    - "82:80"
 	  depends_on: 
-	  - storage
+	    - storage
 
 	# template configuration of Report Server Agent.
 	# Includes sample config for /app/Data File Storage.
 	telerik-report-server-agent:
 	  environment:
-	  - Agent__Name=FirstAgent,
-	  - Agent__Address=http://telerik-report-server-agent:80
+	    - Agent__Name=FirstAgent,
+	    - Agent__Address=http://telerik-report-server-agent:80
 	  env_file:
-	  - mssql_storage.env
+	    - mssql_storage.env
 	  image: telerik-report-server-agent:local
 	  restart: always
 	  depends_on:
-	  - storage
+	    - storage
 
 	storage:
 	  image: "mcr.microsoft.com/mssql/server:2019-latest"
 	  restart: always
 	  environment:
-	  - SA_PASSWORD=place_your_sa_password_here
-	  - ACCEPT_EULA=Y
+	    - SA_PASSWORD=place_your_sa_password_here
+	    - ACCEPT_EULA=Y
 	  volumes: 
-	  - mssql-storage:/var/opt/mssql
+	    - mssql-storage:/var/opt/mssql
 
 	volumes:
 	mssql-storage:
