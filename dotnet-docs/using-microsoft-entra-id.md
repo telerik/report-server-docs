@@ -16,8 +16,8 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 ## Prerequisites
 
-- Telerik Report Server installation with at least one administrator account and enabled **https** site binding in its Internet Information Services registration.
-- An Azure account with Active Directory support.
+- Telerik Report Server installation with at least one **administrator** account.
+- An Azure account with Microsoft Entra ID support.
 
 > In case you are unfamiliar with the process of using Microsoft Entra ID, we recommend checking out the [Set up Microsoft Entra ID](https://learn.microsoft.com/en-us/mem/intune/industry/education/tutorial-school-deployment/set-up-microsoft-entra-id) article.
 
