@@ -1,6 +1,6 @@
 ---
 title: Using Microsoft Entra ID
-page_title: Single Sing-On with Microsoft Entra ID
+page_title: Single Sign-On with Microsoft Entra ID
 description: "Learn how to setup the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance."
 slug: using-microsoft-entra-id
 tags: azure,microsoft,entra,id
