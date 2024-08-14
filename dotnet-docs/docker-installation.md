@@ -107,7 +107,7 @@ services:
 
 	Save the file.
 
-1. Go back to the _Powershell_ environment and execute the above yaml file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
+1. Go back to the _Powershell_ environment and execute the above _yaml_ file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
 The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
@@ -116,9 +116,9 @@ You may download and watch the whole process from our `reporting-samples` GitHub
 
 The above approach for starting the RS.NET from the container will stop it each time you restart the machine. To avoid this, execute the following commands in _Powershell_ from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
 
-1. `docker swarm init` (if never used before).
-1. Start the RS.NET with `.\start-docker-server.bat`.
-1. (_optional_) Stop the RS.NET with `.\stop-docker-server.bat`.
+1. (_optional_, use it only if it was not used before) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm:`docker swarm init`
+1. Start the RS.NET with `.\start-docker-server.bat`
+1. (_optional_) Stop the RS.NET with `.\stop-docker-server.bat`
 
 ## See Also
 
