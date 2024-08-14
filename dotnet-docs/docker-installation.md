@@ -3,7 +3,7 @@ title: Installation on Docker Container
 page_title: Installing ReportServer.NET on Docker Container
 description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Docker Container."
 slug: dotnet-installation-on-docker-container
-tags: installation,dotnet,docker,container
+tags: installation,dotnet,docker,linux,container
 published: True
 position: 300
 ---
@@ -105,6 +105,7 @@ services:
 	mssql-storage:
 ````
 
+
 	Save the file.
 
 1. Go back to the _Powershell_ environment and execute the above _yaml_ file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
@@ -112,9 +113,13 @@ services:
 
 The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
+## Additional Resources
+
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4).
 
-The above approach for starting the RS.NET from the container will stop it each time you restart the machine. To avoid this, execute the following commands in _Powershell_ from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
+## Notes
+
+The above approach for starting the RS.NET from the container will stop it *each* time you restart the machine. To avoid this, execute the following commands in _Powershell_ from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
 
 1. (_optional_, use it only if it was not used before) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm:`docker swarm init`
 1. Start the RS.NET with `.\start-docker-server.bat`
