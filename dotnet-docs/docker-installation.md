@@ -19,9 +19,9 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Download the archive `Telerik_ReportServer_Net_NonWindows_{Report Server version}.zip` from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 1. Unzip the archive. The content gets deployed in two folders `ReportServer` and `ReportServiceAgent`.
 1. Open the `Powershell` and navigate to the subfolder `ReportServer`.
-1. Run the command `docker build -t telerik-report-server:local .` in Powershell to build the Report Server Manager image.
+1. Run the command `docker build -t telerik-report-server:local .` in _Powershell_ to build the Report Server Manager image.
 1. Navigate to the subfolder `ReportServiceAgent`.
-1. Run the command `docker build -t telerik-report-server-agent:local .` in Powershell to build the Report Server ServiceAgent image.
+1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
 1. Open the file `docker-compose.yml` in a text editor like _Notepad++_ and edit its content. Delete everything between the lines `services:` and `  storage:`. Before the line `    environments` include the next lines:
 
@@ -53,7 +53,7 @@ services:
 
 	Save the modified file.
 
-1. Run the command `docker-compose up` in Powershell to execute the above script and create the MsSqlServer container we are going to use as Report Server Storage.
+1. Run the command `docker-compose up` in _Powershell_ to execute the above script and create the MsSqlServer container we are going to use as Report Server Storage.
 1. Open `MSSQL Management Studio` and _Login_ with the following parameters:
 
 	* _Server_  : `localhost`
@@ -61,7 +61,7 @@ services:
 	* _Password_: `place_your_sa_password_here` (this is the argument _SA_PASSWORD_ from the above script file. You may change it as required.)
 
 1. Add the database named `reportserver`. After successfully creating the database, you may close the management studio.
-1. Stop the current process in Powershell, for example, with the key combination `Ctrl+C`.
+1. Stop the current process in _Powershell_, for example, with the key combination `Ctrl+C`.
 1. Go back to the text editor with the opened file `docker-compose.yml` and restore its original content:
 
 	````yaml
@@ -107,14 +107,14 @@ services:
 
 	Save the file.
 
-1. Go back to the Powershell environment and execute the above yaml file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
+1. Go back to the _Powershell_ environment and execute the above yaml file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
 The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4).
 
-The above approach for starting the RS.NET from the container will stop it each time you restart the machine. To avoid this, execute the following commands in Powershell from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
+The above approach for starting the RS.NET from the container will stop it each time you restart the machine. To avoid this, execute the following commands in _Powershell_ from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
 
 1. `docker swarm init` (if never used before).
 1. Start the RS.NET with `.\start-docker-server.bat`.
