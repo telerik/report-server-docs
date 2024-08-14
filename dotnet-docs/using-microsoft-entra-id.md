@@ -20,6 +20,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 - An Azure account with Active Directory support.
 
 > In case you are unfamiliar with the process of using Microsoft Entra ID, we recommend checking out the [Set up Microsoft Entra ID](https://learn.microsoft.com/en-us/mem/intune/industry/education/tutorial-school-deployment/set-up-microsoft-entra-id) article.
+
 ### 1. Create a Microsoft Entra ID Tenant
 
 1. Navigate to the [Microsoft Azure Home page](https://portal.azure.com/#home).
@@ -55,6 +56,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 1. Register the application by choosing `Add` > `App registration`.
 
 	> Add **Report Server Application**, for example, as a name, leave the rest options to be the default, and click `Register`.
+ 
 	![An image of the step where the Report Server for .NET application is registered in Azure](../images/rs-net-images/microsoft-entra-id-app-registration-step.png)
 
 1. Expand the **Manage** dropdown in the menu on the left and choose **Authentication**.
@@ -69,7 +71,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 1. Click on **Certificates & secrets** in the expanded **Manage** dropdown in the menu on the left.
 1. On the **Certificates & secrets** page, click on the **New client secret** button.
 
-	> ![An image of how to trigger the creation of new client secret in the Azure portal](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
+	![An image of how to trigger the creation of new client secret in the Azure portal](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
 
 	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only once, otherwise another secret should be created and its value used.
 
@@ -94,7 +96,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 1. Enable the `Microsoft Entra ID Provider`.
 1. In the **Instance** field, use the URL - `https://login.microsoftonline.com/`.
-1. In the **Domain** field, use the one from [step 5 in the Create a Microsoft Entra ID Tenant section](#1.-ceate-a-microsoft-entra-id-tenant) and add it as a URL, for example - `https://ReportServerNetDomain.onmicrosoft.com/`.
+1. In the **Domain** field, use the one from [step 5 in the Create a Microsoft Entra ID Tenant section](#1-create-a-microsoft-entra-id-tenant) and add it as a URL, for example - `https://ReportServerNetDomain.onmicrosoft.com/`.
 1. Open the [Microsoft Azure Portal](https://portal.azure.com/) to get the `Tenant ID`:
 
 	* From the menu in the top left corner of the page, select **Microsoft Entra ID**.
