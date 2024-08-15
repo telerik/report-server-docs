@@ -26,8 +26,9 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Open the file `docker-compose.yml` in a text editor like _Notepad++_ and edit its content. Delete everything between the lines `services:` and `  storage:`. Before the line `    environments` include the next lines:
 
 	````yaml
-ports:
-	  - "1433:1433"
+
+	  ports:
+	    - "1433:1433"
 ````
 
 	The tabulation is essential and should be preserved. Here is the final content of the `docker-compose.yml` file:
