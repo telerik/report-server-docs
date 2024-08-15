@@ -115,7 +115,7 @@ The first time you open the Report Server you need to configure it as explained 
 
 ## Additional Resources
 
-You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.zip).
+You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.zip](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.zip).
 
 ## Notes
 
