@@ -262,7 +262,7 @@ services:
 
 	![Creating a user with EntraID authentication in the Report Server for .NET Application](../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
 
-1. Log out from the Login page.
+1. Log out of the Report Server to go to the Login page.
 
 	![The Login page of the Report Server for .NET with enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
 
