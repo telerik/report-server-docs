@@ -1,7 +1,7 @@
 ---
 title: Using Microsoft Entra ID on Linux
 page_title: Single Sign-On with Microsoft Entra ID on Linux
-description: "Learn how to setup the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance that is hosted on Linux/Container."
+description: "Learn how to set up the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance hosted on Linux or Docker Container."
 slug: using-microsoft-entra-id-linux
 tags: azure,microsoft,entra,id,linux
 published: True
@@ -79,7 +79,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	![Trigger the creation of new client secret in the Azure portal.](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
 
-	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only at this step. The failure would require another secret to be created, saved and used.
+	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only at this step. The failure would require another secret to be created, saved, and used.
 
 ### 3. EntraID Setup on a local Telerik Report Server for .NET installation on Linux
 
@@ -262,11 +262,11 @@ services:
 
 	![Creating a user with EntraID authentication in the Report Server for .NET Application](../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
 
-1. Log out and from the Login page, Click the blue `Microsoft Entra ID` button.
+1. Log out from the Login page.
 
 	![The Login page of the Report Server for .NET with enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
 
-1. If all instructions were correctly applied, you should now be successfully logged in with your **EntraID** automatically.
+1. Click the blue `Microsoft Entra ID` button. You should be automatically logged in with your **EntraID**.
 
 ## See Also
 
