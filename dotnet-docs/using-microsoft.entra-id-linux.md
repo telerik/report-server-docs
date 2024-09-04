@@ -29,19 +29,19 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 1. From the menu in the top left corner of the page, select **Microsoft Entra ID**.
 1. In the displayed *Overview* page, click **Manage Tenants**:
 
-	![The location of the Manage Tenant button in the Azure portal.](../images/rs-net-images/microsoft-entra-id-manage-tenants-step.png)
+	![Location of the Manage Tenant button in the Azure portal.](../images/rs-net-images/microsoft-entra-id-manage-tenants-step.png)
 
 1. Click the **Create** button on the **Manage Tenants** page:
 
-	![The location of the Create button on the Manage Tenants page in the Azure portal.](../images/rs-net-images/microsoft-entra-id-create-tenant-step.png)
+	![Location of the Create button on the Manage Tenants page in the Azure portal.](../images/rs-net-images/microsoft-entra-id-create-tenant-step.png)
 
 1. On the **Create a tenant** page, choose `Microsoft Entra ID` as the tenant type (it should be selected by default):
 
-	![Create a tenant page with Microsoft Entra ID as the selected type.](../images/rs-net-images/microsoft-entra-id-select-tenant-type-step.png)
+	![The Create a tenant page with Microsoft Entra ID as the selected type.](../images/rs-net-images/microsoft-entra-id-select-tenant-type-step.png)
 
 1. Click **Next: Configuration >** and type Organization name (for example, `Report Server Tenant`) and Initial Domain Name (e.g. `ReportServerNetDomain`):
 
-	![The configuration step for creating a tenant with sample directory details.](../images/rs-net-images/microsoft-entra-id-tenant-configuration-step.png)
+	![The configuration step of creating a tenant with sample directory details.](../images/rs-net-images/microsoft-entra-id-tenant-configuration-step.png)
 
 1. Click **Next: Review + create >** and if the configuration is correct, a green message notifying that the validation has passed will be displayed:
 
@@ -68,16 +68,16 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 1. Expand the **Manage** dropdown in the menu on the left and choose **Authentication**.
 1. Click `Add Platform` >> `Web` >> Tick the `ID Tokens` checkbox, then click **Configure**.
 
-	![Open the authentication page for the Report Server application in Azure.](../images/rs-net-images/microsoft-entra-id-authentication-step.png)
+	![Opening the authentication page for the Report Server application in Azure.](../images/rs-net-images/microsoft-entra-id-authentication-step.png)
 
 1. Add a Redirect URL, for example, `http://localhost:82/signin-oidc`.
 
-	![Configure a redirect URL and the token settings for authentication between the Report Server and Azure.](../images/rs-net-images/microsoft-entra-id-authentication-redirect-and-token-settings-step.png)
+	![Configuring a redirect URL and the token settings for authentication between the Report Server and Azure.](../images/rs-net-images/microsoft-entra-id-authentication-redirect-and-token-settings-step.png)
 
 1. Click **Certificates & secrets** in the expanded **Manage** dropdown in the menu on the left.
 1. On the **Certificates & secrets** page, Click the **New client secret** button.
 
-	![Trigger the creation of new client secret in the Azure portal.](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
+	![Triggering the creation of new client secret in the Azure portal.](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
 
 	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only at this step. The failure would require another secret to be created, saved, and used.
 
@@ -264,7 +264,7 @@ services:
 
 1. Log out of the Report Server to go to the Login page.
 
-	![The Login page of the Report Server for .NET with enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
+	![The Report Server for .NET Login page with an enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
 
 1. Click the blue `Microsoft Entra ID` button. You should be automatically logged in with your **EntraID**.
 
