@@ -1,9 +1,9 @@
 ---
-title: Using Microsoft Entra ID
-page_title: Single Sign-On with Microsoft Entra ID
-description: "Learn how to set up the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance."
+title: Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Windows
+page_title: Single Sign-On with Microsoft Entra ID on Windows
+description: "Learn how to set up the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance hosted on Windows IIS."
 slug: using-microsoft-entra-id
-tags: azure,microsoft,entra,id
+tags: azure,microsoft,entra,id,windows,iis
 published: True
 position: 201
 ---
@@ -51,7 +51,11 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 ### 2. Registering the Telerik Report Server for .NET Application
 
-1. If the steps from the previous section were completed successfully, the following green message should appear above the Captcha: `Tenant creation was successful. Click here to navigate to your new tenant: Report Server Tenant`. The text - `Report Server Tenant` will be your chosen organization name and there will be a link to the **Report Server Tenant Overview** page. 
+1. If the steps from the previous section were completed successfully, the following green message should appear above the Captcha:
+
+	`Tenant creation was successful. Click here to navigate to your new tenant: Report Server Tenant`.
+	
+	The text - `Report Server Tenant` will be your chosen organization name and there will be a link to the **Report Server Tenant Overview** page. 
 
 	> If you are not on the **Report Server Tenant Overview** page, then go to the top left `Menu` >> `Microsoft Entra ID` >> click `Add` >> `App Registration`.
 	
@@ -82,10 +86,10 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	````JSON
 "ExternalLogin":{
-	"EntraId":{
-		"ClientSecret":"mMr8Q~da2a55f0-1e7f-4f9d-bff0-dd193582218d"
+		"EntraId":{
+			"ClientSecret":"mMr8Q~da2a55f0-1e7f-4f9d-bff0-dd193582218d"
+		}
 	}
-}
 ````
 
 
