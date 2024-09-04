@@ -126,11 +126,11 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	![Creating an user with EntraID authentication in the Report Server for .NET Application.](../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
 
-1. Log out from the Login page:
+1. Log out of the Report Server to go to the Login page:
 
 	![The Report Server for .NET Login page with an enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
 
-1.  Click the blue `Microsoft Entra ID` button. You should be automatically logged in with your **EntraID**. 
+1. Click the blue `Microsoft Entra ID` button. You should be automatically logged in with your **EntraID**. 
 
 ## See Also
 
