@@ -1,5 +1,5 @@
 ---
-title: Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Windows
+title: Using Microsoft Entra ID on Windows
 page_title: Single Sign-On with Microsoft Entra ID on Windows
 description: "Learn how to set up the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance hosted on Windows IIS."
 slug: using-microsoft-entra-id
@@ -8,7 +8,7 @@ published: True
 position: 201
 ---
 
-# Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID
+# Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Windows
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET. 
 
