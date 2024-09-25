@@ -1,4 +1,4 @@
-[---
+---
 title: How to Create a Non-Privileged IIS User for Report Server and Service Agent
 description: "This tutorial shows how to use a low-privileged user to host the Report Server on IIS."
 type: how-to
