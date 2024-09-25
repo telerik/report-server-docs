@@ -72,4 +72,3 @@ This tutorial will show you how to change the Report Server's IIS application po
 	`netsh http delete urlacl url=http://+:82/ReportServer/ServiceAgent/`
 
 > Additional Actions: Consider adding the local user to databases used by Report Server data connections that utilize Windows Credentials login permissions.
-](http://desktop-k06elhv:82/ReportServer/ServiceAgent?wsdl)
