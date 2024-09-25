@@ -63,7 +63,7 @@ This tutorial will show you how to change the Report Server's IIS application po
 13. Right-click `Telerik.ReportServer.ServiceAgent` and select **Restart** to restart the service with the new user.
 14. Ensure it is working by running a **scheduled task** or a **data alert** from the Report Server Manager web UI, or on the URL `http://{MachineNameHere}:82/ReportServer/ServiceAgent?wsdl`:
 
-	If the Report Server Manager cannot connect to the Telerik.ReportServer.ServiceAgent, most probably the WCF service doesn't have a reservation for the corresponding port (the default one is `82`). Ensure reserving the port by running the proper [Netsh command](https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts) as an Administrator in the _command prompt_ or _terminal_. Here is a sample command that reserves port `82` for `ReportServer/ServiceAgent/` running under user `RSUser`:
+	If the Report Server Manager cannot connect to the Telerik.ReportServer.ServiceAgent, most probably the WCF service doesn't have a reservation for the corresponding port (the default one is `82`). Ensure reserving the port by running the proper [Netsh command](https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts) as an Administrator in the _command prompt_ or _terminal_. Here is a sample command that reserves port `82` for `ReportServer/ServiceAgent/` running under user `RSUser`:
 
 	`netsh http add urlacl url=http://+:82/ReportServer/ServiceAgent/ user=RSUser`
 
