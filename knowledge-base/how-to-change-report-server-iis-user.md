@@ -67,7 +67,7 @@ This tutorial will show you how to change the Report Server's IIS application po
 
 	`netsh http add urlacl url=http://+:82/ReportServer/ServiceAgent/ user=RSUser`
 
-	If the default port `82` is already reserved by another process, you may change the port and reserve the new port as above, or release port `82` with the `delete urlacl` command and then reserve it with the above command. Here is a sample code releasing port `82` from the Telerik.ReportServer.ServiceAgent:
+	If the default port `82` is already reserved by another application, you may change the port and reserve the new port as above, or release port `82` with the `delete urlacl` command and then reserve it with the above command. Here is a sample code releasing port `82` from the Telerik.ReportServer.ServiceAgent:
 
 	`netsh http delete urlacl url=http://+:82/ReportServer/ServiceAgent/`
 
