@@ -17,9 +17,9 @@ The Report Server for .NET uses [Serilog](https://serilog.net/) to allow  writin
 The configuration options for Serilog that would usually be set up through the C# API - [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics), can instead be
 defined in the `appsettings.json` configuration files of the Report Server for .NET.
 
-### Setup for the Server
+### Report Server Manager
 
-The `appsettings.json` file for the Report Server for .NET can be found in its installation directory e.g. - `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
+The `appsettings.json` file of the Report Server Manager for .NET resides in its installation directory, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET\`.
 The following configuration settings can be added to that file, at the top level:
 
 ````JSON
@@ -31,17 +31,15 @@ The following configuration settings can be added to that file, at the top level
       },
 	  {
         "Name": "File",
-        "Args": { "path": "Logs/logserverAll.txt" }
+        "Args": { "path": "Logs/logServerManagerAll.txt" }
       }
     ]
   }
 ````
 
-> For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
+### Service Agent
 
-### Setup for the Service Agent
-
-The `appsettings.json` file for the Report Server for .NET can be found in its installation directory e.g. - `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET`.
+The Report Server for .NET ServiceAgent's `appsettings.json` file can be found in its installation directory, by default - `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\`.
 The following configuration settings can be added to that file, at the top level:
 
 ````JSON
@@ -53,10 +51,16 @@ The following configuration settings can be added to that file, at the top level
       },
 	  {
         "Name": "File",
-        "Args": { "path": "Logs/logserverAll.txt" }
+        "Args": { "path": "Logs/logServiceAgentAll.txt" }
       }
     ]
   }
 ````
 
 > For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
+
+## See Also
+
+* [Report Server for .NET Introduction]({%slug coming-soon%})
+* [Report Server for .NET: Installation on Windows]({%slug dotnet-installation-on-windows%})
+* [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
