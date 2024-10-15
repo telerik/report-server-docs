@@ -55,10 +55,10 @@ services:
 	Save the modified file.
 
 1. Run the command `docker-compose up` in _Powershell_ to execute the above script to create and run the MsSqlServer Docker container we are going to use as Report Server Storage.
-1. Open `MSSQL Management Studio` and _Login_ with the following parameters:
+1. Open `MSSQL Management Studio` and _Login_ to the MSSQL database we just created in the Docker container with the following parameters:
 
-	* _Server_  : `localhost`
-	* _User_    : `sa`
+	* _Server_  : `localhost` (this is the name of the MSSQL server we just created in the Docker container)
+	* _User_    : `sa` (the default user of our Report Server Storage MSSQL server database)
 	* _Password_: `place_your_sa_password_here` (this is the argument _SA_PASSWORD_ from the above script file. You may change it as required.)
 
 1. Add the database named `reportserver`. After successfully creating the database, you may close the management studio.
