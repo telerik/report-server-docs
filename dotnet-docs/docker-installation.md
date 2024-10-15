@@ -19,9 +19,9 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Download the archive `Telerik_ReportServer_Net_NonWindows_{Report Server version}.zip` from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 1. Unzip the archive. The content gets deployed in two folders `ReportServer` and `ReportServiceAgent`.
 1. Open the `Powershell` and navigate to the subfolder `ReportServer`.
-1. Run the command `docker build -t telerik-report-server:local .` in _Powershell_ to build the Report Server Manager image.
+1. Run the command `docker build -t telerik-report-server:local .` in _Powershell_ to build the Report Server Manager image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServiceAgent`.
-1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image.
+1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
 1. Open the file `docker-compose.yml` in a text editor like _Notepad++_ and edit its content. Delete everything between the lines `services:` and `  storage:`. Before the line `    environments` include the next lines:
 
