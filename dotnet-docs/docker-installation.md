@@ -34,6 +34,7 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 	`reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false`
 
 1. Run the command `docker image pull mcr.microsoft.com/mssql/server:2019-latest`.
+1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
@@ -47,7 +48,6 @@ You may download and watch the whole process from our `reporting-samples` GitHub
 
 The above approach for starting the RS.NET from the container will stop it *each* time you restart the machine. To avoid this, execute the following commands in _Powershell_ from the folder _.\ReportServer\docker-configs\_ to start/stop the Report Server instead of using the commands `docker-compose up` and `docker-compose down`:
 
-1. (_optional_, use it only if it was not used before) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm:`docker swarm init`
 1. Start the RS.NET with `.\start-docker-server.bat`
 1. (_optional_) Stop the RS.NET with `.\stop-docker-server.bat`
 
