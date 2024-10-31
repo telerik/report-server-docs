@@ -29,7 +29,6 @@ This storage type uses the [Redis](http://redis.io/) key-value cache and store. 
 Examples: 
 ````
 localhost:6375
-YourPassword@localhost:6379
 localhost:6379, defaultdatabase=3
 ````
 
