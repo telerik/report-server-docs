@@ -26,6 +26,11 @@ To use this storage you should specify a connection string to the desired databa
 ### Redis
 
 This storage type uses the [Redis](http://redis.io/) key-value cache and store. The **Redis** storage is configured through a [configuration](https://stackexchange.github.io/StackExchange.Redis/Configuration.html) string.
+Examples: 
+````
+localhost:6375
+localhost:6379, defaultdatabase=3
+````
 
 ### File
 
