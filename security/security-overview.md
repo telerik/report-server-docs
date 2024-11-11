@@ -43,7 +43,7 @@ For more information, visit:
 
 ## What We Do to Mitigate Risk
 
-Our dedicated security team, comprised of experienced developers and security experts—our "Security Champions"—reviews all web, desktop, and mobile products technologies for potential vulnerabilities. These vulnerabilities may be internally identified, reported by third-party tools, or flagged externally.
+Our dedicated security team, comprised of experienced developers and security experts—our "Security Champions"—reviews all web, desktop, and mobile product technologies for potential vulnerabilities. These vulnerabilities may be internally identified, reported by third-party tools, or flagged externally.
 
 We actively manage the following strategies to mitigate risks:
 
@@ -58,7 +58,7 @@ Our primary goal is to prevent security issues before product delivery. We use t
 
 We leverage leading commercial tools to automatically monitor and update third-party dependencies in our Telerik and Kendo GitHub projects, ensuring they remain secure and up-to-date. Alerts are enabled for all GitHub-hosted products, and the identified vulnerable dependencies are addressed by the repository code owners and security champions.
 
->Note: Our definition of "Done" includes successful builds that are scanned using top security scanning tools, and the resolution of any security alerts.
+>Note: Our definition of "Done" includes successful builds that are scanned using top security scanning tools and the resolution of any security alerts.
 
 ## OWASP Top 10 Alignment
 
@@ -66,6 +66,6 @@ We closely monitor the [OWASP Top 10](https://owasp.org/www-project-top-ten/) li
 
 ## Redistributing Telerik Report Server
 
-[Telerik Report Server]({%slug introduction%}) is part of several Telerik bundles and is licensed under the conditions with which you've obtained the product. In the article you can find technical guidelines for protecting the Telerik Report Server application.
+[Telerik Report Server]({%slug introduction%}) is part of several Telerik bundles and is licensed under the conditions with which you've obtained the product. In the article, you can find technical guidelines for protecting the Telerik Report Server application.
 
 For more detailed answers to common security-related questions, please refer to our [Security FAQ page]({%slug security-faq%}).
