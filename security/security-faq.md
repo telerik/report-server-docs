@@ -1,7 +1,7 @@
 ---
 title: FAQ
 page_title: FAQ
-description: "Find answers to common questions about Telerik's Report Server best security practices and guidelines"
+description: "Find answers to common questions about Telerik's Report Server's best security practices and guidelines"
 slug: security-faq
 tags: telerik, security, report, server, faq
 published: True
@@ -36,7 +36,7 @@ Clients can open a support ticket through the [Technical Support Center](https:/
 
 Progress uses leading commercial tools to automatically monitor and update third-party dependencies in our Telerik and Kendo GitHub projects. Alerts are set up for all GitHub-hosted products, and any identified vulnerable dependencies are addressed by the repository owners and our dedicated security team.
 
-Note: Our definition of "done" includes successful builds that are scanned using top security scanning tools, and the resolution of any security alerts.
+Note: Our definition of "done" includes successful builds that are scanned using top security scanning tools and the resolution of any security alerts.
 
 ---
 
@@ -54,7 +54,7 @@ We prioritize security vulnerability reports with the highest urgency. When we r
 
 ## How are security fixes shipped?
 
-Security fixes are typically included in the next product release. Similar to the bugfixes policy, we maintain and commit to support the latest version of the product. That said, if you want to benefit from a security fix, you would need to upgrade to the version where the fix exists.
+Security fixes are typically included in the next product release. Similar to the bugfixes policy, we maintain and commit to supporting the latest version of the product. That said, if you want to benefit from a security fix, you would need to upgrade to the version where the fix exists.
 
 ---
 
