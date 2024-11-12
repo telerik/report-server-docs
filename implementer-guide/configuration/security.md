@@ -38,9 +38,17 @@ The maximum permitted number of requests that can be allowed in a time window. I
 
 Introduced with 2024 Q4 (10.3.24.112).
 
-With enabled encryption, the Report Server assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. The encryption algorithm uses a pair of keys created during the initial configuration of the Report Server:
+With enabled encryption, the Report Server assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. The encryption algorithm uses a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
 
 ![security-rate-limiter-configuration](../../images/report-server-images/security-configure-encryption.png)
+
+Starting with version 2024 Q4 (10.3.24.112), the encryption is forced upon each new installation of the Report Server.
+
+When upgrading an existing Report Server instance to 2024 Q4 (10.3.24.112) or newer, the administrator user of the Report Server may choose whether to encrypt the Storage (recommended), or keep up with the unencrypted Storage (not recommended). Once encrypted, the Storage cannot be reverted to its unencrypted state.
+
+If the Report Server administrator decides to preserve the Storage unencrypted, when logged in, the Report Server will show the following notification reminding to encrypt the Storage:
+
+![security-rate-limiter-configuration](../../images/report-server-images/security-enable-encryption-message.png)
 
 The operations below allow to generate new pair of encryption keys or uploading a specific pair of encryption keys.
 
