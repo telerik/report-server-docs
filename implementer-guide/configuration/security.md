@@ -38,17 +38,20 @@ The maximum permitted number of requests that can be allowed in a time window. I
 
 Introduced with 2024 Q4 (10.3.24.1112).
 
-With enabled encryption, the Report Server assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. The encryption algorithm uses a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
+The sensitive assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. Now the encryption functionality is leveraged to use industry-standard encryption routines. The encryption algorithms use a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
 
 ![The Encryption page of the Report Server Configuration with the buttons to download the encryption keys.](../../images/report-server-images/security-configure-encryption.png)
 
-The administrator should type `Confirm` (case insensitive) in the input field just above the __Complete__ button to validate that the keys are safely stored and complete the process.
+To enable the enhanced encryption functionality, the administrator must download both _Main_ and _Backup_ private keys and type `Confirm` (case insensitive) in the input field just above the __Complete__ button to validate that the keys are safely stored. We strongly recommend storing the encryption private keys securely, for example, in a key vault.
 
-The encryption keys are stored as environment variables for the user, who is used to run the Report Server and Report Server Service Agent.
+When the button _Complete_ is pressed, the existing sensitive assets will be securely encrypted and the encryption keys will be stored as environment variables for the user, who is used to run the Report Server and Report Server Service Agent.
 
 The administrator can generate a new pair of encryption keys through the `RESET ENCRYPTION KEYS` or upload a specific pair of encryption keys through the `OVERWRITE ENCRYPTION KEYS` buttons in the __Configuration__ page / __Security__ tab:
 
 ![Buttons to reset or upload the encryption keys in the Report Server Configuration page.](../../images/report-server-images/security-reset-upload-encryption-keys.png)
+
+* __Reset Encryption Keys__ may be used when the keys need to be changed periodically for security purposes, or in case of an information leak. In this scenario, the Report Server will decrypt the sensitive assets using the existing pair of keys, generate new ones, and encrypt the assets again.
+* __Overwrite Encryption Keys__ may be used when the Report Serve or Report Serve ServiceAgent is migrated to a new machine where the encryption keys are not present. This functionality registers the keys in the environment variables and encrypts the sensitive assets with them.
 
 In both cases, the security-sensitive assets will be re-encrypted and left in a working state.
 
@@ -58,9 +61,9 @@ Starting with version 2024 Q4 (10.3.24.1112), encryption is mandatory upon each 
 
 ### When Upgrading a Report Server Instance
 
-When upgrading an existing Report Server instance to 2024 Q4 (10.3.24.1112) or newer, the admin user of the Report Server may choose whether to encrypt the Storage (recommended) or keep up with the unencrypted Storage (not recommended). Once encrypted, the Storage cannot be reverted to its unencrypted state.
+When upgrading an existing Report Server instance to 2024 Q4 (10.3.24.1112) or newer, the admin user of the Report Server may choose to encrypt the Storage using the strengthened encryption algorithm (recommended).
 
-If the Report Server administrator decides to preserve the Storage unencrypted, when the admin user is logged in to the Report Server, it will show the following notification reminding to encrypt the Storage at the top of each [Report Server Manager]({%slug search%}) View:
+If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights is logged into the [Report Server Manager]({%slug search%}):
 
 ![The message reminding the administrator to enable encryption in the Report Server.](../../images/report-server-images/security-enable-encryption-message.png)
 
