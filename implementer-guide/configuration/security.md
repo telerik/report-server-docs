@@ -52,15 +52,15 @@ The administrator can generate a new pair of encryption keys through the `RESET 
 
 In both cases, the security-sensitive assets will be re-encrypted and left in a working state.
 
-### Install New Report Server Instance
+### When Installing a New Report Server Instance
 
 Starting with version 2024 Q4 (10.3.24.1112), encryption is mandatory upon each new installation of the Report Server. __Step 3/3 (Configure Encryption)__ should be completed during the installation process.
 
-### Upgrade an Existing Report Server Instance
+### When Upgrading a Report Server Instance
 
 When upgrading an existing Report Server instance to 2024 Q4 (10.3.24.1112) or newer, the admin user of the Report Server may choose whether to encrypt the Storage (recommended) or keep up with the unencrypted Storage (not recommended). Once encrypted, the Storage cannot be reverted to its unencrypted state.
 
-If the Report Server administrator decides to preserve the Storage unencrypted, when the admin user is logged in the Report Server will show the following notification reminding to encrypt the Storage at the top of each [Report Server Manager]({%slug search%}) View:
+If the Report Server administrator decides to preserve the Storage unencrypted, when the admin user is logged in to the Report Server, it will show the following notification reminding to encrypt the Storage at the top of each [Report Server Manager]({%slug search%}) View:
 
 ![The message reminding the administrator to enable encryption in the Report Server.](../../images/report-server-images/security-enable-encryption-message.png)
 
