@@ -10,13 +10,17 @@ position: 850
 
 # Security
 
+>caption The Security tab of the Report Server Configuration page:
+
+![security-rate-limiter-configuration](../../images/report-server-images/security-rate-limiter-configuration.png)
+
 ## Rate Limiter
+
+Introduced with [2024 Q3 (10.2.24.806)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q3-10-2-24-806).
 
 Rate limiting is a technique used to control the rate of incoming requests to an API. It sets limits on the number of requests that can be made by an IP address to a specific anonymous endpoint within a defined time period (window). The rate limiter is applied only to non-authenticated users. The Guest special account is not affected by the rate limiter.
 
 When the client has exhausted the number of requests allowed, a 409 "Conflict" response with "The endpoint "{endpointName}" is currently not accessible." message is returned from the server.
-
-![security-rate-limiter-configuration](../../images/report-server-images/security-rate-limiter-configuration.png)
 
 ### Enable rate limiter
 
@@ -32,4 +36,12 @@ The maximum permitted number of requests that can be allowed in a time window. I
 
 ## Encryption
 
-With 2024 Q4 (18.3.24.112) 
+Introduced with 2024 Q4 (10.3.24.112).
+
+With enabled encryption, the Report Server assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. The encryption algorithm uses a pair of keys created during the initial configuration of the Report Server:
+
+![security-rate-limiter-configuration](../../images/report-server-images/security-configure-encryption.png)
+
+The operations below allow to generate new pair of encryption keys or uploading a specific pair of encryption keys.
+
+In both cases the security-sensitive assets will be re-encrypted and left in a working state
