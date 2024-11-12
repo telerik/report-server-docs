@@ -10,9 +10,9 @@ position: 203
 
 # IIS Configuration
 
-The Report Server installer performs a basic setup of the new Report Server web app by adding an HTTP binding under port 83, if available, or under the first subsequent available port. We recommend setting up an HTTPS secured binding for the production deployment. We also recommend applying additional settings in IIS in order to compress resources sent from the Report Server to the clients and improve load times:
+The Report Server installer performs a basic setup of the new Report Server web app by adding an HTTP binding under port 83, if available, or under the first subsequent available port. We recommend setting up an HTTPS-secured binding for the production deployment. We also recommend applying additional settings in IIS to compress resources sent from the Report Server to the clients and improve load times:
 
-The first step is to enable static and dynamic HTTP compression for the Report Server website. A detailed guide is available in the Microsoft article [HTTP Compression](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/httpcompression/).
+The first step is to enable static and dynamic HTTP compression for the Report Server website. The Microsoft article [HTTP Compression](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/httpcompression/) provides a detailed guide.
 
 The second step is to allow dynamic HTTP compression to compress application/json responses. This step is recommended when the Web Report Designer is enabled in Report Server and the designer requests large reports from the server. Large reports are considered to be reports containing many report items or embedded resources, such as images or CSV/JSON data.
 Allowing this type of compression is done in [ApplicationHost.config](https://docs.microsoft.com/en-us/iis/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig). The location of the file is in the *%windir%\system32\inetsrv\config* directory. Add the following mime type to *httpCompression > dynamicTypes*:
@@ -38,11 +38,15 @@ It is recommended to stop IIS before applying changes to the [ApplicationHost.co
 
 ## Preserving IIS Settings
 
+>note The __Report Server for .NET Framework__ preserves IIS Settings only when installed with the __LocalSystem__ identity which uses elevated permissions. For technical reasons, the IIS Settings cannot be preserved with the limited __ReportServerUser__.
+
+>note The __Report Server for .NET__ preserves IIS Settings if it is installed with the __LocalSystem__ identity, or if it is installed with the __ReportServerUser__ and the .NET Framework version of the Report Server is not installed. For technical reasons, the IIS Settings cannot be preserved with the limited __ReportServerUser__ if the .NET Framework version of the server is installed on the same machine.
+
 The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version [R3 2023 SP1 (9.2.23.1114)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2023-sp1-9-2-23-1114) or later and upgrade to a newer version.
 
-When upgrading from _Telerik Report Server_ `9.2.23.1010 or older`, you need to reapply the IIS Settings after the upgrade.
+When upgrading from _Telerik Report Server_ `9.2.23.1010 or older`, you must reapply the IIS Settings after the upgrade.
 
-This means that if you need to automatically preserve the IIS Settings, first you need to upgrade to `9.2.23.1114 or later` and reapply the settings.
+This means that if you need to automatically preserve the IIS Settings, first you must upgrade to `9.2.23.1114 or later` and reapply the settings.
 
 __Example__:
 
