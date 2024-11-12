@@ -44,7 +44,7 @@ The sensitive assets are stored in the [Report Server Storage]({%slug storage-se
 
 To enable the enhanced encryption functionality, the administrator must download both _Main_ and _Backup_ private keys and type `Confirm` (case insensitive) in the input field just above the __Complete__ button to validate that the keys are safely stored. We strongly recommend storing the encryption private keys securely, for example, in a key vault.
 
-When the button _Complete_ is pressed, the existing sensitive assets will be securely encrypted and the encryption keys will be stored as environment variables for the user, who is used to run the Report Server and Report Server Service Agent.
+When the button _Complete_ is pressed, the existing sensitive assets will be securely encrypted and the encryption keys will be stored as environment variables for the user, who is used to run the Report Server and Report Server ServiceAgent.
 
 The administrator can generate a new pair of encryption keys through the `RESET ENCRYPTION KEYS` or upload a specific pair of encryption keys through the `OVERWRITE ENCRYPTION KEYS` buttons in the __Configuration__ page / __Security__ tab:
 
