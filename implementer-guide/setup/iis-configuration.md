@@ -38,7 +38,9 @@ It is recommended to stop IIS before applying changes to the [ApplicationHost.co
 
 ## Preserving IIS Settings
 
->note The __Report Server for .NET Framework__ preserves IIS Settings only when installed with the __LocalSystem__ identity which uses elevated permissions. The IIS Settings cannot be preserved for technical reasons with the limited _ReportServerUser_.
+>note The __Report Server for .NET Framework__ preserves IIS Settings only when installed with the __LocalSystem__ identity which uses elevated permissions. For technical reasons, the IIS Settings cannot be preserved with the limited __ReportServerUser__.
+
+>note The __Report Server for .NET__ preserves IIS Settings if it is installed with the __LocalSystem__ identity, or if it is installed with the __ReportServerUser__ and the .NET Framework version of the Report Server is not installed. For technical reasons, the IIS Settings cannot be preserved with the limited __ReportServerUser__ if the .NET Framework version of the server is installed too.
 
 The _Telerik Report Server_ settings applied in the IIS console, including the HTTPS bindings and AppPool identity, will be preserved if you are with version [R3 2023 SP1 (9.2.23.1114)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2023-sp1-9-2-23-1114) or later and upgrade to a newer version.
 
