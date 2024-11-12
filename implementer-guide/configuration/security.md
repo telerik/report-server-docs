@@ -44,7 +44,7 @@ With enabled encryption, the Report Server assets are stored in the [Report Serv
 
 The administrator should type `Confirm` (case insensitive) in the input field just above the __Complete__ button to validate that the keys are safely stored and complete the process.
 
-The administrator can generate a new pair of encryption keys or upload a specific pair of encryption keys from the Configuration page:
+The administrator can generate a new pair of encryption keys through the `RESET ENCRYPTION KEYS` or upload a specific pair of encryption keys through the `OVERWRITE ENCRYPTION KEYS` buttons in the __Configuration__ page > __Security__ tab:
 
 ![Buttons to reset or upload the encryption keys in the Report Server Configuration page.](../../images/report-server-images/security-reset-upload-encryption-keys.png)
 
