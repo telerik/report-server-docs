@@ -51,7 +51,7 @@ The administrator can generate a new pair of encryption keys through the `RESET 
 ![Buttons to reset or upload the encryption keys in the Report Server Configuration page.](../../images/report-server-images/security-reset-upload-encryption-keys.png)
 
 * __Reset Encryption Keys__ may be used when the keys need to be changed periodically for security purposes, or in case of an information leak. In this scenario, the Report Server will decrypt the sensitive assets using the existing pair of keys, generate new ones, and encrypt the assets again.
-* __Overwrite Encryption Keys__ may be used when the Report Serve or Report Serve ServiceAgent is migrated to a new machine where the encryption keys are not present. This functionality registers the keys in the environment variables and encrypts the sensitive assets with them.
+* __Overwrite Encryption Keys__ may be used when the Report Server or Report Server ServiceAgent is migrated to a new machine where the encryption keys are not present; or when provisioning multiple instances of the ServiceAgent to the same Report Server instance. This functionality registers the keys in the environment variables and encrypts the sensitive assets with them.
 
 In both cases, the security-sensitive assets will be re-encrypted and left in a working state.
 
