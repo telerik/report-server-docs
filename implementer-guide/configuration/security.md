@@ -14,26 +14,6 @@ position: 850
 
 ![The Report Server Configuration page.](../../images/report-server-images/security-rate-limiter-configuration.png)
 
-## Rate Limiter
-
-Introduced with [2024 Q3 (10.2.24.806)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q3-10-2-24-806).
-
-Rate limiting is a technique used to control the rate of incoming requests to an API. It sets limits on the number of requests that can be made by an IP address to a specific anonymous endpoint within a defined time period (window). The rate limiter is applied only to non-authenticated users. The Guest special account is not affected by the rate limiter.
-
-When the client has exhausted the number of requests allowed, a 409 "Conflict" response with "The endpoint "{endpointName}" is currently not accessible." message is returned from the server.
-
-### Enable rate limiter
-
-Enables/Disables the rate limiter. By default, the value is set to `enabled`.
-
-### Window
-
-Specifies the time window in milliseconds that takes in the requests. It must be set to a value greater than 0. By default, the value is set to `1000 milliseconds`.
-
-### Permit Limit
-
-The maximum permitted number of requests that can be allowed in a time window. It must be set to a value greater than 0. By default, the value is set to `1`.
-
 ## Encryption
 
 Introduced with 2024 Q4 (10.3.24.1112).
@@ -67,3 +47,22 @@ If the enhanced encryption is not applied, the following notification will be sh
 
 ![The message reminding the administrator to enable encryption in the Report Server.](../../images/report-server-images/security-enable-encryption-message.png)
 
+## Rate Limiter
+
+Introduced with [2024 Q3 (10.2.24.806)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q3-10-2-24-806).
+
+Rate limiting is a technique used to control the rate of incoming requests to an API. It sets limits on the number of requests that can be made by an IP address to a specific anonymous endpoint within a defined time period (window). The rate limiter is applied only to non-authenticated users. The Guest special account is not affected by the rate limiter.
+
+When the client has exhausted the number of requests allowed, a 409 "Conflict" response with "The endpoint "{endpointName}" is currently not accessible." message is returned from the server.
+
+### Enable rate limiter
+
+Enables/Disables the rate limiter. By default, the value is set to `enabled`.
+
+### Window
+
+Specifies the time window in milliseconds that takes in the requests. It must be set to a value greater than 0. By default, the value is set to `1000 milliseconds`.
+
+### Permit Limit
+
+The maximum permitted number of requests that can be allowed in a time window. It must be set to a value greater than 0. By default, the value is set to `1`.
