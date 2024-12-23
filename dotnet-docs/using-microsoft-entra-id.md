@@ -91,7 +91,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 		}
 	}
 ````
-
+1. Restart the application to apply the ClientSecret value to the configuration. If Report Server is hosted in IIS, use its management panel to restart the application and recycle the application pool.
 
 ### 3. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET 
 
