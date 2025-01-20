@@ -1,7 +1,7 @@
 ---
 title: Best Practices
-page_title: Best Security Practices when installing and using Telerik Report Server
-description: "Check the recommended security practices when installing Telerik Report Server and working with its reports, users and services."
+page_title: Best Security Practices when Installing and Using Telerik Report Server
+description: "Check the recommended security practices when installing the Telerik Report Server and working with its reports, users, and services."
 slug: rs-security-best-practices
 tags: telerik, reporting, report, server, security, best, practices
 published: True
@@ -17,20 +17,22 @@ The article discusses general and report server-specific security practices. Whi
 The suggestions in this section are the responsibility of the administrator deploying the Telerik Report Server.
 
 * Configure your Report Server instance to run under [HTTPS protocol](https://developer.mozilla.org/en-US/docs/Glossary/HTTPS). Consider the advice in the article [Configuring IIS Website to Work Over HTTPS]({%slug configuring-iis-website-to-work-over-https%}).
-* Consider the user with lowered permissions in IIS and Report Server ServiceAgent. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and create a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({%slug installation%}). 
+* Consider the user with lowered permissions in IIS and Report Server ServiceAgent. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and creating a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({%slug installation%}). 
 * Disable the [CORS]({%slug cors%}) if possible; or enable CORS only for trusted hosts.
 * Use the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your assets safer.
 * Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to limit network traffic and prevent bad agents from exhausting system resources.
 
 ## Working with Report Server Assets
 
-After successfully installing and configuring the Telerik Report Server, the user with sufficient rights may further enhance its security through the administration policy options provided by the server.
+After successfully installing and configuring the Telerik Report Server, the user with sufficient rights, for example, the admin user and those with granted permissions for the corresponding resources, may further enhance its security through the administration policy options provided by the server. Check the article section [Manage Permissions]({%slug users%}#manage-permissions) for the available access modes, scopes, and targets. The built-in user roles are listed in the article [User Roles]({%slug user-roles%}).
 
+The admin user and the users with sufficient permissions may control access to all or part of the following Report Server resources:
 
-
-user administration policy to enforce security
-
-list encrypted assets and restrict permissions for the rest of the RS assets if necessary
+* [Manage User Permissions]({%slug users%}#manage-user-permissions)
+* [Reports Management]({%slug reports-management%})
+* [Data Connections Management]({%slug data-connections-management%})
+* [Scheduled Tasks Management]({%slug tasks-management%})
+* [Data Alerts Management]({%slug alerts-management%})
 
 ## Extending the Reporting Engine
 
