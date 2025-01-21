@@ -10,11 +10,11 @@ position: 4
 
 # Security Best Practices
 
-The article discusses general and report server-specific security practices. While the recommendations may be necessary to keep your Telerik Report Server instance with all report definitions, data connections, etc. secure, they may not be sufficient. The article should not be regarded as a complete and comprehensive security guidance.
+This article covers security practices that are generally applicable to web applications, as well as those specific to Telerik Report Server. The recommendations below should be regarded as a security guidance that ensures your information stored in Telerik Report Server is protected and safe. We recommend consulting with a specialist to provide further assistance on web application safety.
 
 ## Configuration Settings
 
-The suggestions in this section are the responsibility of the administrator deploying the Telerik Report Server. They are general security settings of web applications deployed on the Windows IIS Servers. We have implemented most of them and let you switch them as configuration options when installing the Report Server:
+Following the recommendations in this section is a responsibility of the implementer who deploys and configures the Telerik Report Server. These recommendations pertain to general security settings for web applications deployed on Windows IIS Servers. Following the principle "safe-by-default", the product installer and the initial setup workflow will configure Telerik Report Server using the safest options where possible. All of the items listed below can be configured through the web application's registration in IIS, or through the product's Configuration page:
 
 * Configure your Report Server instance to run under [HTTPS protocol](https://developer.mozilla.org/en-US/docs/Glossary/HTTPS). Consider the advice in the article [Configuring IIS Website to Work Over HTTPS]({%slug configuring-iis-website-to-work-over-https%}).
 * Let the user with lowered permissions in IIS and Report Server ServiceAgent be your preferred choice. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and creating a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({%slug installation%}). 
