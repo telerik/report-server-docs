@@ -10,17 +10,17 @@ position: 4
 
 # Security Best Practices
 
-This article covers security practices that are generally applicable to web applications, as well as those specific to Telerik Report Server. The recommendations below should be regarded as a security guidance that ensures your information stored in Telerik Report Server is protected and safe. We recommend consulting with a specialist to provide further assistance on web application safety.
+This article covers security practices that are generally applicable to web applications, as well as those specific to Telerik Report Server. The recommendations below should be regarded as security guidance that ensures your information stored in the Telerik Report Server is protected and safe. We recommend consulting with a specialist to provide further assistance on web application safety.
 
 ## Configuration Settings
 
-Following the recommendations in this section is a responsibility of the implementer who deploys and configures the Telerik Report Server. These recommendations pertain to general security settings for web applications deployed on Windows IIS Servers. Following the principle "safe-by-default", the product installer and the initial setup workflow will configure Telerik Report Server using the safest options where possible. All of the items listed below can be configured through the web application's registration in IIS, or through the product's Configuration page:
+Following the recommendations in this section is the responsibility of the implementer who deploys and configures the Telerik Report Server. These recommendations pertain to general security settings for web applications deployed on Windows IIS Servers. Following the principle "safe-by-default", the product installer and the initial setup workflow will configure Telerik Report Server using the safest options where possible. All of the items listed below can be configured through the web application's registration in IIS or the product's Configuration page:
 
 * Configure your Report Server instance to run under [HTTPS protocol](https://developer.mozilla.org/en-US/docs/Glossary/HTTPS). Consider the advice in the article [Configuring IIS Website to Work Over HTTPS]({%slug configuring-iis-website-to-work-over-https%}).
 * Let the user with lowered permissions in IIS and Report Server ServiceAgent be your preferred choice. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and creating a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({%slug installation%}). 
-* Disable the [CORS]({%slug cors%}) if possible; or enable CORS only for trusted hosts.
-* Use the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your assets safer.
-* Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to restrict the network traffic and prevent bad agents from exhausting system resources.
+* CORS is disabled by default. Keep the [CORS]({%slug cors%}) disabled if possible; or enable CORS only for trusted hosts.
+* Configure the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your sensitive assets like connection strings and mail settings safer.
+* Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to restrict the network traffic and prevent malicious agents that can exhaust system resources by conducting Denial-of-Service attacks.
 
 ## Working with Report Server Assets
 
@@ -33,7 +33,7 @@ The admin user and the users with sufficient permissions may control access to a
 * [Reports Management]({%slug reports-management%})
   Grant users access only to the Reports/Categories they need. Ensure they are entitled to access the corresponding data sources.
 * [Data Connections Management]({%slug data-connections-management%})
-  Ensure the Data Connections do not contain credentials. The identity used to connect to the database or web service should be with limited permissions.
+  Try applying the principle of least privilege to the credentials provided in connection strings in the _Data Connections_ view. The identity used to connect to the database or the web service should be with the lowest permissions possible. Try using a dedicated user account with read-only permissions and access scope including only the tables needed for reporting purposes.
 * [Scheduled Tasks Management]({%slug tasks-management%})
 * [Data Alerts Management]({%slug alerts-management%})
 
