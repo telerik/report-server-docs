@@ -100,6 +100,12 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	`reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false`
 
+1. (_optional, recommended_) Set the **client secret** via an environment variable:
+
+	* Open the file `docker-compose.yml` in a text editor like Notepad++ and after *line 7*, inside the `environment` scope, add the following line:
+
+ 	`- ExternalLogin__EntraId__ClientSecret=yoursecretvalue`
+
 1. Run the command `docker image pull mcr.microsoft.com/mssql/server:2019-latest`.
 1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
