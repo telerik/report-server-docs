@@ -16,7 +16,8 @@ position: 850
 
 ## Encryption
 
-Introduced with 2024 Q4 (10.3.24.1112).
+Introduced with 2024 Q4 (10.3.24.1112) for Report Server for .NET Framework.
+Introduced with 2025 Q1 (11.0.25.211) for Report Server for .NET.
 
 The sensitive assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. Now the encryption functionality is leveraged to use industry-standard encryption routines. The encryption algorithms use a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
 
