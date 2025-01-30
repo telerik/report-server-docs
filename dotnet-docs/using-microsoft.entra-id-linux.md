@@ -102,7 +102,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 1. (_optional, recommended_) Set the **client secret** via an environment variable:
 
-	* Open the file `docker-compose.yml` in a text editor like Notepad++ and after *line 7*, inside the `environment` scope, add the following line:
+	* Open the file `docker-compose.yml` in a text editor like Notepad++ and after *line 7*, inside the `environment` element, add the following line:
 
  	`- ExternalLogin__EntraId__ClientSecret=yoursecretvalue`
 
