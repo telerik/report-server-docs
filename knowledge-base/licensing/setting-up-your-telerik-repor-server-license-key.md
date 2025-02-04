@@ -1,15 +1,15 @@
 ---
-title: Setting Up Telerik Reporting License Key
-page_title: "Learn how to set up the Telerik Reporting License Key."
+title: Setting Up Telerik Repor Server License Key
+page_title: "Learn how to set up the Telerik Report Server License Key."
 slug: license-key
-tags: license, key, telerik, reporting
+tags: license, key, telerik, report, server
 published: True
 position: 1
 ---
 
-# Setting Up Your Telerik Reporting License Key
+# Setting Up Your Telerik Report Server License Key
 
-Starting with the Q1 2025 release, Telerik Reporting requires activation through a license key (trial or commercial). This article describes how to download or update your personal license key and use it to activate the Telerik Reporting product.
+Starting with the Q1 2025 release, the Telerik Report Server requires activation through a license key (trial or commercial). This article describes how to download or update your personal license key and use it to activate the Telerik Report Server product.
 
 An invalid license results in [errors and warnings]({%slug license-errors-and-warnings%}) during build and run-time indicators such as watermarks and banners.
 
@@ -26,22 +26,22 @@ You need to install the package `<PackageReference Include="Telerik.Licensing" V
 
 We strongly recommend the above package for licensing. If adding the package is not an option in your scenario, you may [add a License Key without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
 
->tip We recommend using Telerik Reporting NuGet packages in your projects rather than direct assembly references. The main reason is that the packages add automatically all dependencies, whereas when using references you need to add them manually. The advice is not related to the licensing that will work with both approaches for adding Telerik Reporting to your projects.
+>tip We recommend using Telerik Report Server NuGet packages in your projects rather than direct assembly references. The main reason is that the packages add automatically all dependencies, whereas when using references you need to add them manually. The advice is not related to the licensing that will work with both approaches for adding the Telerik Report Server to your projects.
 
 ## Downloading the License Key
 
-To download a license key for Telerik Reporting, you must have either a developer license or a trial license. If you are new, you can sign up for a [free trial](https://www.telerik.com/account/trials) first, and then follow the steps below.
+To download a license key for the Telerik Report Server, you must have either a developer license or a trial license. If you are new, you can sign up for a [free trial](https://www.telerik.com/account/trials) first, and then follow the steps below.
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
 1. Click the **Download License Key** button.
 
 	![Download License Key](images/download-license-key.png)
 
-	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), automated MSI installer, and the Visual Studio Extensions of Telerik Reporting will automatically download and store your license key in your home directory. This makes it available for all projects you develop on your local machine.
+	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), automated MSI installer, and the Visual Studio Extensions of Telerik Report Server will automatically download and store your license key in your home directory. This makes it available for all projects you develop on your local machine.
 
-## Activating Telerik Reporting
+## Activating Telerik Report Server
 
-To activate Telerik Reporting:
+To activate the Telerik Report Server:
 
 * Copy the [downloaded](#downloading-the-license-key) `telerik-license.txt` license key file to your home directory. This makes the license key available to all projects that you develop on your computer.
 
@@ -50,7 +50,7 @@ To activate Telerik Reporting:
 
 * Alternatively, copy the `telerik-license.txt` license key file to the root folder of your project. This makes the license key available only to this project. Do not commit the file to source control as this is your personal license key.
 
-When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate Telerik Reporting.
+When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate the Telerik Report Server.
 
 > If your project doesn’t use NuGet packages, see [Adding a License Key to Projects without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
 
@@ -61,7 +61,7 @@ Telerik strongly recommends the use of NuGet packages whenever possible. Only in
 If you cannot use NuGet packages in your project, add the license as a code snippet:
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
-1. On the Telerik Reporting row, click the __View key__ link in the __SCRIPT KEY__ column. 
+1. On the Telerik Report Server row, click the __View key__ link in the __SCRIPT KEY__ column. 
 
 	![Download Product Key](images/download-product-key.png)
 
@@ -78,4 +78,4 @@ Whenever you purchase a new license or renew an existing one, always [download](
 
 * [License Activation Errors and Warnings]({%slug license-errors-and-warnings%})
 * [Adding the License Key to CI Services]({%slug license-key-ci-services%}))
-* [Frequently Asked Questions about Your Telerik Reporting License Key]({%slug license-frequently-asked-questions%})
+* [Frequently Asked Questions about Your Telerik Report Server License Key]({%slug license-frequently-asked-questions%})
