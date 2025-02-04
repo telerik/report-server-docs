@@ -93,6 +93,12 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 ````
 
 
+1. Restart the Report Server for .NET application. For example, if the application is hosted on IIS:
+
+	![An image demonstrating how the Report Server for .NET can be restarted from the IIS Manager](../images/rs-net-images/rs-net-restart-from-iismanager) 
+
+>important If you do not wish to store the client secret in the **appsettings.json** file, an alternative option is to set it via the `ExternalLogin__EntraId__ClientSecret` [environment variable](https://en.wikipedia.org/wiki/Environment_variable). The variable needs to be created for the respective user that hosts the Report Server for .NET application. If `IIS` is used, this is the application pool user, by default `ReportServerUser`. After setting the environment variable, restart the application(on IIS, you may use the `iisreset` command).
+
 ### 3. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET 
 
 1. Open the Telerik Report Server for .NET in the browser. The default URL is `http://localhost:81/`.
