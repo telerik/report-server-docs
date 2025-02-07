@@ -57,7 +57,6 @@ services:
   # template configuration of Report Server.
   telerik-report-server:
     environment:
-      - Telemetry__IsDisabled=true
       - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
       - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
 ````
@@ -96,6 +95,50 @@ services:
 ## Additional Resources
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.zip](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.zip).
+
+Addtionally, below is an example of how the final `docker-compose.yml` may look like. Note that the tabulation must be kept as shown in the snippet:
+
+````yml
+services:
+  # template configuration of Report Server.
+  telerik-report-server:
+    environment:
+      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+    env_file:
+      - mssql_storage.env
+    image: telerik-report-server:local
+    restart: always
+    ports:
+      - "82:80"
+    depends_on:
+      - storage
+
+  # template configuration of Report Server Agent.
+  # Uncomment the following lines when a new server agent is configured in Service Agents panel in the Configuration view of Report Server web application.
+  # Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
+  telerik-report-server-agent:
+    environment:
+      - Agent__ServerAddress=http://telerik-report-server
+      - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
+      - Agent__Id=PASTE_THE_AGENT_ID_HERE
+    image: telerik-report-server-agent:local
+    restart: always
+    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+
+  storage:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    restart: always
+    environment:
+      - SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+      - ACCEPT_EULA=Y
+    volumes:
+      - mssql-storage:/var/opt/mssql
+
+volumes:
+  mssql-storage:
+
+````
 
 ## Notes
 
