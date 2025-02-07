@@ -38,11 +38,12 @@ In both cases, the security-sensitive assets will be re-encrypted and left in a 
 
 ### When Installing a New Report Server Instance
 
-Starting with version 2024 Q4 (10.3.24.1112), encryption is mandatory upon each new installation of the Report Server. __Step 3/3 (Configure Encryption)__ should be completed during the installation process.
+
+Starting with version 2024 Q4 (10.3.24.1112) for Report Server for .NET Framework, and version 2025 Q1 (11.0.25.211) for Report Server for .NET, encryption is mandatory upon each new installation of the Report Server. __Step 3/3 (Configure Encryption)__ should be completed during the installation process.
 
 ### When Upgrading a Report Server Instance
 
-When upgrading an existing Report Server instance to 2024 Q4 (10.3.24.1112) or newer, the admin user of the Report Server may choose to encrypt the Storage using the strengthened encryption algorithm (recommended).
+When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin user of the Report Server may choose to encrypt the Storage using the strengthened encryption algorithm (recommended).
 
 If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights is logged into the [Report Server Manager]({%slug search%}):
 
