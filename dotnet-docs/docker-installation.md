@@ -47,7 +47,7 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 >note The Report Server Manager for .NET has to be fully set up before following the steps from this section.
 
 1. Navigate to the `\ReportServer\docker-configs` subfolder and open the `docker-compose.yml` file in a text editor of choice. Note that the text editor application may require administrator privileges to save the file after edit.
-1. Inside the `environment` element, add an entry for each encryption key so:
+1. Inside the `environment` element, add an entry for each encryption key, for example:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
