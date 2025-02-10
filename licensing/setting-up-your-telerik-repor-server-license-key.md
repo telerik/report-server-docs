@@ -56,5 +56,4 @@ Whenever you purchase a new license or renew an existing one, always [download](
 # See Also
 
 * [License Activation Errors and Warnings]({%slug license-errors-and-warnings%})
-* [Adding the License Key to CI Services]({%slug license-key-ci-services%}))
 * [Frequently Asked Questions about Your Telerik Report Server License Key]({%slug license-frequently-asked-questions%})
