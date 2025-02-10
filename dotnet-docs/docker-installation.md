@@ -42,7 +42,7 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 
 >important The first time you open the Report Server, you will to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
-### Creating new Service Agent
+### Creating new Server Agent
 
 >note The Report Server Manager for .NET has to be fully set up before following the steps from this section.
 
@@ -64,14 +64,14 @@ services:
 
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
-1. Click on the **SERVICE AGENT** tab and start the creation of a new Service Agent by pressing the **CONFIGURE NEW AGENT** button.
+1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
 
-	![Configuring a new Service Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
+	![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
 
 1. Press the **GENERATE CONFIGURATION** pop-up and copy the tokens from the **ENVIRONMENT VARIABLES** tab:
 
-	![Configuring a new Service Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
+	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
 
 1. Open the `\ReportServer\docker-configs\docker-compose.yml` file in a text editor again, and uncomment the section with the `telerik-report-server-agent` element. This section should be present by default in the file and it looks as follows:
 	````yml
@@ -89,7 +89,7 @@ services:
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 1. Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
 
-	![Service Agents Configuration page with one agent created](../images/rs-net-images/created-service-agent-view.png)
+	![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
 
 
 ## Additional Resources
