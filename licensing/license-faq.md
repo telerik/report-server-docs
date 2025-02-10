@@ -78,6 +78,12 @@ No, the license activation and validation are performed entirely offline.
 
 The license is not validated with our services at any point in the project lifecycle.
 
+## What happens if both the environment variable and the license key file are present?
+
+If both the `TELERIK_LICENSE` environment variable and the `telerik-license.txt` file are present, then the environment variable will be used.
+
+To enforce the use of the license key file, unset the environment variable.
+
 ## Are earlier versions of Telerik Report Server affected?
 
 No, versions released before __January 2025__ do not require a license key.
