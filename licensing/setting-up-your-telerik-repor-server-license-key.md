@@ -35,7 +35,7 @@ To download a license key for the Telerik Report Server, you must have either a 
 
 To activate the Telerik Report Server:
 
-* When deploying the Report Server on cloud environment, you may create an Environment Variable named `TELERIK_LICENSE` and add your Telerik Reporting license key as a value.
+* When deploying the Report Server on a cloud environment, you may create an Environment Variable named `TELERIK_LICENSE` and add your Telerik Reporting license key as a value.
 
 * On a local environment, copy the `telerik-license.txt` license key file to the installation folder of the Telerik Report Server, by default, `C:\Program Files (x86)\Progress\Telerik Report Server\` or any parent folder. This makes the license key available to both the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}).
 
@@ -44,12 +44,7 @@ To activate the Telerik Report Server:
 	* for __Report Server Manager__, the default folder is `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\`
 	* for __Report Server Agent__, the default folder is `C:\Program Files (x86)\Progress\Telerik Report Server\Services\`;
 
-* Alternatively, you may copy the [downloaded](#downloading-the-license-key) `telerik-license.txt` license key file to your home directory. This makes the license key available to the Telerik Report Server and all projects that you develop on your computer.
-
-	+ For Windows: `%AppData%\Telerik\telerik.license.txt`
-	+ For Mac/Linux: `~/.telerik/telerik.license.txt`
-
-When you run Telerik Report Server, it automatically locates the license file and activates itself.
+When you run Telerik Report Server, it automatically locates the license environment variable or license file and activates itself.
 
 ## Updating Your License Key
 
