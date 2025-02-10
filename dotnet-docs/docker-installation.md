@@ -54,11 +54,11 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 	
 	````yml
 services:
-  # template configuration of Report Server.
-  telerik-report-server:
-    environment:
-      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
-      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+	  # template configuration of Report Server.
+	  telerik-report-server:
+	  	environment:
+	  	- RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+	  	- RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
 ````
 
 
@@ -74,15 +74,16 @@ services:
 	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
 
 1. Open the `\ReportServer\docker-configs\docker-compose.yml` file in a text editor again, and uncomment the section with the `telerik-report-server-agent` element. This section should be present by default in the file and it looks as follows:
+
 	````yml
-  telerik-report-server-agent:
-    environment:
-      - Agent__ServerAddress=http://telerik-report-server
-      - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
-      - Agent__Id=PASTE_THE_AGENT_ID_HERE
-    image: telerik-report-server-agent:local
-    restart: always
-    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+telerik-report-server-agent:
+      environment:
+        - Agent__ServerAddress=http://telerik-report-server
+        - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
+        - Agent__Id=PASTE_THE_AGENT_ID_HERE
+      image: telerik-report-server-agent:local
+      restart: always
+      command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 ````
 
 
@@ -91,12 +92,11 @@ services:
 
 	![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
 
-
 ## Additional Resources
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.zip](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.zip).
 
-Addtionally, below is an example of how the final `docker-compose.yml` may look like. Note that the tabulation must be kept as shown in the snippet:
+Additionally, below is an example of how the final `docker-compose.yml` may look like. Note that the tabulation must be kept as shown in the snippet:
 
 ````yml
 services:
