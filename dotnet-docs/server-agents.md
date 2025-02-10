@@ -37,7 +37,7 @@ The grid displays the name of the machine and worker thread which started the ex
 	
 1. Press the **GENERATE CONFIGURATION** pop-up and copy the JSON-based configuration from the **APPSETTINGS.JSON** tab:
 
-	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
+	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2-json.png)
 	
 	The Report Server has generated a configuration containing the server address, authentication token and ID of the new Server Agent.
 
