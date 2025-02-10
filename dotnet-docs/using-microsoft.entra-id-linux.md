@@ -109,7 +109,54 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 1. Run the command `docker image pull mcr.microsoft.com/mssql/server:2019-latest`.
 1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
-1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
+1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET to begin configuring the application.
+1. After setting up the storage configuration and creating an administrator user, the **Configure Encryption** page will be displayed. Download the *Main* and *Backup* encryption keys as we will need to use them soon.
+1. Navigate to the `\ReportServer\docker-configs` subfolder again and open the `docker-compose.yml` file in a text editor of choice. Note that the text editor application may require administrator privileges to save the file after edit.
+1. Inside the `environment` element, add an entry for each encryption key, for example:
+
+	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
+	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
+	
+	````yml
+services:
+	  # template configuration of Report Server.
+	  telerik-report-server:
+	 	 environment:
+	 	 - Telemetry__IsDisabled=true
+	 	 - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+	 	 - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+````
+
+
+1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
+1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
+1. Click on the **SERVER AGENT** tab and start the creation of a new Service Agent by pressing the **CONFIGURE NEW AGENT** button.
+1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
+
+	![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
+
+1. Press the **GENERATE CONFIGURATION** pop-up and copy the tokens from the **ENVIRONMENT VARIABLES** tab:
+
+	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
+
+1. Open the `\ReportServer\docker-configs\docker-compose.yml` file in a text editor again, and uncomment the section with the `telerik-report-server-agent` element. This section should be present by default in the file and it looks as follows:
+
+	````yml
+telerik-report-server-agent:
+      environment:
+        - Agent__ServerAddress=http://telerik-report-server
+        - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
+        - Agent__Id=PASTE_THE_AGENT_ID_HERE
+      image: telerik-report-server-agent:local
+      restart: always
+      command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+````
+
+
+1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
+1. Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
+
+	![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
 
 ### 4. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET 
 
