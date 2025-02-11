@@ -66,7 +66,7 @@ Using the Telerik Report Server with an expired or missing license, the `Telerik
 |`Your subscription license has expired.`|TKL103; TKL104|Renew your subscription and [download a new license key]({%slug license-key%}#downloading-the-license-key).|
 |`Your perpetual license is invalid.`|TKL102||You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following: <ul><li>Renew your subscription and [download a new license key]({%slug license-key%}#downloading-the-license-key)</li><li>Downgrade to a Telerik Report Server version covered by your perpetual license, as specified in the message.</li></ul>|
 |`Your trial license has expired.`|TKL105|Purchase a commercial license to continue using the product.|
-|`Your license is not valid for the detected product(s).`|TKL101|Review the purchase options for the listed products.<br />Alternatively, remove the references to the listed packages from `package.json`.|
+|`Your license is not valid for the detected product(s).`|TKL101|Review the purchase options for the listed products.|
 
 Starting with the 2025 Q2 release of Telerik Report Server, all conditions above will be treated as errors.
 
