@@ -26,13 +26,12 @@ You will need to obtain and install a new license key after starting a trial, re
 
 This depends on your license type.
 
-* __Perpetual licenses__ will continue to function normally with an expired license key. However, the following will happen if you update or install a Report Server version that is released after the expiration date of the license:
+* __Perpetual licenses__ and __Subscription licenses__ will continue to function normally with an expired license key. However, the following will happen if you update or install a Report Server version that is released after the expiration date of the license:
 
 	- A watermark appears on each report document page
 	- A warning message similar to the one shown below is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%})
 
-* __Subscription licenses__ will prevent you from installing the Report Server application with an expired license key. Deployed instances will continue to function normally.
-* __Trial licenses__ will prevent you from running the Report Server. The following will happen if you try to run the application:
+* __Trial licenses__. The following will happen if you try to run the application:
 
 	- A watermark appears on each report document page.
 	- A warning message similar to the following is logged in the build log after attaching a Trace Listener to the Report Server Manager and Report Server Agent:
@@ -70,7 +69,7 @@ Note that future updates of Telerik Report Server may restrict or disable some f
 If this happens, the possible reason is that the end date of the license activated in your application is before the release date of the newly installed product. To fix this issue:
 
 1. [Download a new license key]({%slug license-key%}#downloading-the-license-key).
-1. [Activate the new license key]({%slug license-key%}#activating-telerik-reporting) in your project.
+1. [Activate the new license key]({%slug license-key%}#activating-telerik-report-server) in your project.
 
 ## Do I need an Internet connection to activate the license?
 
