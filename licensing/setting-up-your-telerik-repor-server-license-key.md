@@ -29,7 +29,7 @@ To download a license key for the Telerik Report Server, you must have either a 
 
 	![Download License Key](images/download-license-key.png)
 
-	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), automated MSI installer, and the Visual Studio Extensions of Telerik Report Server will automatically download and store your license key in your home directory. This makes it available for all projects you develop on your local machine.
+	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), and the automated MSI installer of Telerik Report Server will automatically download and store your license key in your home directory. This makes it available for all projects you develop on your local machine.
 
 ## Activating Telerik Report Server
 
