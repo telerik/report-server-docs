@@ -29,7 +29,7 @@ To download a license key for the Telerik Report Server, you must have either a 
 
 	![Download License Key](images/download-license-key.png)
 
-	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), and the automated MSI installer of Telerik Report Server will automatically download and store your license key in your home directory. You may use this file to [activate the Report Server](#activating-telerik-repor-server).
+	The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), and the automated MSI installer of Telerik Report Server will automatically download and store your license key in your home directory. You may use this file to [activate the Report Server](#activating-telerik-report-server).
 
 ## Activating Telerik Report Server
 
@@ -47,7 +47,7 @@ When you run Telerik Report Server, it automatically locates the license environ
 
 ## Updating Your License Key
 
-Whenever you purchase a new license or renew an existing one, always [download](#downloading-the-license-key) and install a new license key. The new license key includes information about all previous license purchases. This process is referred to as a license key update. Once you have the new license key, use it to [activate Telerik Report](#activating-telerik-repor-server).
+Whenever you purchase a new license or renew an existing one, always [download](#downloading-the-license-key) and install a new license key. The new license key includes information about all previous license purchases. This process is referred to as a license key update. Once you have the new license key, use it to [activate Telerik Report](#activating-telerik-report-server).
 
 # See Also
 
