@@ -16,7 +16,7 @@ An invalid license results in [errors and warnings]({%slug license-errors-and-wa
 The implementation of the 2025 licensing requirements will occur in two phases:
 
 - Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license causes [warnings during build]({%slug license-errors-and-warnings%}). The commercial distributions of the product do not exhibit any functional restrictions.
-- Phase 2 - Starting with the 2025 Q2 release, a missing or invalid license will result in [build errors and run-time indicators]({%slug license-errors-and-warnings%}), such as watermarks and banners.
+- Phase 2 - Starting with the 2025 Q2 release, a missing or invalid license will result in [run-time indicators]({%slug license-errors-and-warnings%}), such as watermarks and banners.
 
 Note that future updates of the product may restrict or disable some features when no valid license is present. You can send us feedback through the _Contact Us_ form or by [opening a support ticket](https://www.telerik.com/account/support-center/contact-us?utm_source=licensing&utm_medium=console&utm_campaign=no_references).
 
