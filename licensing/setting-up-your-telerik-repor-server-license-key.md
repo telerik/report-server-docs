@@ -4,6 +4,7 @@ page_title: "Learn how to set up the Telerik Report Server License Key."
 slug: license-key
 tags: license, key, telerik, report, server
 published: True
+previous_url: /licensing
 position: 1
 ---
 
