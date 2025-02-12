@@ -48,7 +48,7 @@ Similar to the **redis** option, when **mssqlServer** type is used, the value of
 
 ### Graphical User Interface
 
-The migration tool can also be used via **Telerik.ReportServer.Migration.UI.exe**. It is a Windows desktop application that provides convenient graphical migration experience and an option to log the migration process output. The form requires setting type and connection information for **source** and **destination** storages - the same way it is done with the CLI tool. An events log text box will display the results of the migration process and its content can be copied to the clipboard via a context menu. If needed, the same log can be saved to a file for further examination - in this case make sure your user has the necessary privileges for writing a file into the log directory.
+The migration tool can also be used via **Telerik.ReportServer.Migration.UI.exe**. It is a Windows desktop application that provides a convenient graphical migration experience and an option to log the migration process output. The form requires setting type and connection information for **source** and **destination** storages - the same way it is done with the CLI tool. An events log text box will display the results of the migration process and its content can be copied to the clipboard via a context menu. If needed, the same log can be saved to a file for further examination - in this case, make sure your user has the necessary privileges for writing a file into the log directory.
 
 ## Automating the Migration Process
 Some scenarios require deploying a pre-configured Report Server instance to the clients. The Report Server installation distributes two PowerShell scripts, named **rs-export.ps1** and **rs-import.ps1**, that help automate this process. Although the scripts can be used out of the box, their purpose is to demonstrate an example workflow, and they should be modified according to the current use case.
@@ -99,7 +99,7 @@ The configuration file describes which assets will be migrated, applying the rul
   
   * **Assets** - defines the assets that will be migrated as follows:
   
-    + **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by the combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as a last revision in the target storage. If a report has specific permission that does not exist on the target storage, the permission will be migrated as well. The permissions assignment depends on whether the user exists in the destination storage and the **"users"** flag is used in the assets' configuration, as explained below:
+    + **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by the combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as the last revision in the target storage. If a report has specific permission that does not exist on the target storage, the permission will be migrated as well. The permissions assignment depends on whether the user exists in the destination storage and the **"users"** flag is used in the assets' configuration, as explained below:
       - if the permission is assigned to a user that exists in destination storage, it will be migrated and assigned to that user. 
       - if the permission is assigned to a user that does not exist in destination storage and **users** flag is included in the assets' configuration, the user will be migrated and the permission will be migrated and assigned to this new user.
       - if the permission is assigned to a user that does not exist in destination storage and **users** flag is **not** included in the assets' configuration, then the permission will be migrated and assigned to the migration user.
@@ -111,3 +111,27 @@ The configuration file describes which assets will be migrated, applying the rul
     + **Users** – The users that do not exist in the target storage, will be inserted along with their roles. Existing users' data will not be updated. The permissions are migrated the same way as with the **Report Permissions** collection.
 
 The application outputs a detailed log in the console so the migration process can be easily tracked. In case an error occurs, the stack trace will be logged as well. The migration process cannot be rolled back, so it is recommended to create a backup of the storage before migrating. This can be done manually, using batch files, or through scripts, as explained above.
+
+## Storage Migration Tool for Report Server for .NET
+
+The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1, we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in the *Tools\\.NET\\* subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
+
+  * The *Destination Storage* configuration now accepts a new argument: **serverType** with the following options:
+  
+    + **netFramework** -  the migrated assets will be compatible with the classic Report Server for .NET Framework.
+    + **net** -  the migrated assets will be compatible with the new Report Server for .NET.
+    + **notSet** -  the migrated assets will use the same serialization mechanism used in the *source storage*.
+
+The **serverType** option can be selected when using either the CLI tool or the WinForms application. The server type of the source storage will be automatically detected.
+
+![Migration Tool for Report Server for .NET - WinForms application](../images/rs-net-images/migration-tool-winforms.png)
+
+> The migration process copies the assets "as-is" without applying decryption or encryption on them. This means that the destination storage will have its sensitive assets stored with the same encryption keys that were used in the source storage. It is important to set the same encryption keys in the Report Server application that will use the destination storage assets. The Migration Tool will display a reminder message upon successfully completing the migration process.
+
+### Known Limitations
+
+  The Report Server for .NET Migration Tool is in the *development phase* and does not support all the functionalities provided by the classic Migration tool. Here's a short list of what's not supported yet:
+
+  - Redis database as destination storage. You can migrate storage assets from a **Redis** database to **File or MSSQLServer** storage.
+  - Migration rules - currently the supported migration mode allows to transfer the whole storage.
+  - Backwards migration - migrating from Report Server for .NET storage to Report Server for .NET Framework storage is not supported.
