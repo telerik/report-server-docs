@@ -12,6 +12,9 @@ exclude: [README.md,Gemfile,Gemfile.lock,api_sort.rb,build_kb.rb,switch-ruby.cmd
 exclude_navigation: [knowledge-base/*]
 navigation:
 ## List your directory names and order here, like this:
+    licensing:
+        position: 101
+        title: "Licensing"
     user-guide:
         position: 110
         title: "User Guide"
