@@ -124,7 +124,7 @@ The assets storage of Report Server for .NET utilizes a different serialization 
 
 The **serverType** option can be selected when using either the CLI tool or the WinForms application. The server type of the source storage will be automatically detected.
 
-![Migration Tool for Report Server for .NET - WinForms application](../images/rs-net-images/migration-tool-winforms.png)
+![Migration Tool for Report Server for .NET - WinForms application](../../images/rs-net-images/migration-tool-winforms.png)
 
 > The migration process copies the assets "as-is" without applying decryption or encryption on them. This means that the destination storage will have its sensitive assets stored with the same encryption keys that were used in the source storage. It is important to set the same encryption keys in the Report Server application that will use the destination storage assets. The Migration Tool will display a reminder message upon successfully completing the migration process.
 
