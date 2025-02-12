@@ -9,15 +9,15 @@ position: 7
 
 # License Activation Errors and Warnings
 
-Starting with the 2025 Q1 release, using Telerik Report Server without a license or with an invalid license causes specific license warnings and errors. This article defines what an invalid license is, explains what is causing it, and describes the related license warnings and errors.
+Starting with the 2025 Q1 release, using the Telerik Report Server without a license or with an invalid license causes specific license warnings and errors. This article defines what an invalid license is, explains what is causing it, and describes the related license warnings and errors.
 
 The implementation of the 2025 product licensing requirements will occur in two phases:
 
-* Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license logs a warning in the build log.
-* Phase 2 - Starting with the 2025 Q2 release, a missing, expired, or invalid license will result in:
+* Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license for the trial distributions causes [trial message watermark in the reports]({%slug license-errors-and-warnings%}). The commercial distributions of the product do not exhibit any functional restrictions.
+* Phase 2 - Starting with the 2025 Q2 release, there will be only one distribution of the product with different licenses. A missing or invalid license will result in the following [indicators]({%slug license-errors-and-warnings%}):
 
   - A watermark appears on each report document page.
-  - A warning message appearing in the log file generating after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}):
+  - A warning message appearing in the log file generated after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}):
 
     ````
 Telerik and Kendo UI Licensing warning TKL002: No Telerik and Kendo UI License file found.
