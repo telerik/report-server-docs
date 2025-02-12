@@ -26,15 +26,22 @@ You will need to obtain and install a new license key after starting a trial, re
 
 This depends on your license type.
 
-* __Perpetual licenses__ and __Subscription licenses__ will continue to function normally with an expired license key. However, the following will happen if you update or install a Report Server version that is released after the expiration date of the license:
+* __Perpetual licenses__ will continue to function normally with an expired license key.
+
+  	The following will happen only if you update or install a Report Server version that is released after the expiration date of the license:
 
 	- A watermark appears on each report document page
 	- A warning message similar to the one shown below is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%})
 
+* __Subscription licenses__. The following will happen if you try to run the application:
+
+	- A watermark appears on each report document page.
+	- A warning message similar to the one shown below is logged in the trace log after attaching a Trace Listener to the Report Server Manager and Report Server Agent:
+
 * __Trial licenses__. The following will happen if you try to run the application:
 
 	- A watermark appears on each report document page.
-	- A warning message similar to the following is logged in the build log after attaching a Trace Listener to the Report Server Manager and Report Server Agent:
+	- A warning message similar to the following is logged in the trace log after attaching a Trace Listener to the Report Server Manager and Report Server Agent:
 
 ````
 Telerik and Kendo UI Licensing warning TKL002: No Telerik and Kendo UI License file found.
