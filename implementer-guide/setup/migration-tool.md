@@ -111,3 +111,26 @@ The configuration file describes which assets will be migrated, applying the rul
     + **Users** – The users that do not exist in the target storage, will be inserted along with their roles. Existing users' data will not be updated. The permissions are migrated the same way as with the **Report Permissions** collection.
 
 The application outputs a detailed log in the console so the migration process can be easily tracked. In case an error occurs, the stack trace will be logged as well. The migration process cannot be rolled back, so it is recommended to create a backup of the storage before migrating. This can be done manually, using batch files, or through scripts, as explained above.
+
+## Storage Migration Tool for Report Server for .NET
+
+The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1 we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in *Tools\\.NET\\* subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
+
+  * The *Destination Storage* configuration now accepts a new argument: **serverType** with the following options:
+  
+    + **netFramework** -  the migrated assets will be compatible with the classis Report Server for .NET Framework.
+    + **net** -  the migrated assets will be compatible with the new Report Server for .NET.
+    + **notSet** -  the migrated assets will use the same serialization mechanism used in the *source storage*.
+
+The **serverType** option can be selected when using either the CLI tool or the WinForms application. The server type of the source storage will be automatically detected.
+
+![Migration Tool for Report Server for .NET - WinForms application](../images/rs-net-images/migration-tool-winforms.png)
+
+> The migration process copies the assets "as-is" without applying decryption or encryption on them. This means the destination storage will have its sensitive assets stored with the same encryption keys that were used in the source storage. It is important to set the same encryption keys in the Report Server application that will use the destination storage assets. The Migration Tool will display a reminder message upon successfully completed migration process.
+
+### Known Limitations
+  The Report Server for .NET Migration Tool is in development phase and does not support all the functionalities provided by the classic Migration tool. Here's what's not supported yet:
+
+  - Redis database as destination storage. You can migrate storage assets from Redis database to File or MSSQLServer storage.
+  - Migration rules - currently the supported migration mode allows to transfer the whole storage.
+  - Backwards migration - migrating from Report Server for .NET storage to Report Server for .NET Framework storage is not supported.
