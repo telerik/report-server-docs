@@ -24,7 +24,7 @@ This is the total number of threads that will be used when executing scheduled t
 
 A queued task represents a Scheduled task or Data alert that is currently being executed by any Server Agent. It allows canceling the execution of a selected task. 
 
-The table displays the name of the Sheduled task or Data Alert, the target Server Agent, and when was the time scheduled for execution.
+The table displays the name of the Sheduled task or Data Alert, the target Server Agent, and when was the task scheduled for execution.
 
 ![The Queued Tasks Grid with one taks scheduled for execution.](../images/rs-net-images/queued-tasks-grid-server-agent.png)
 
