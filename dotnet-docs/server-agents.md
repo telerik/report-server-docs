@@ -12,19 +12,19 @@ position: 303
 
 The **Server Agent** is responsible for the execution of scheduled tasks and data alerts, as well as sending e-mail messages. 
 
-It runs its tasks on multiple worker threads to optimize execution performance. The **Server Agent** communicates with the Report Server Manager through the [SignalR](https://en.wikipedia.org/wiki/SignalR) technology making it a fast and secure solution.
+It runs its tasks on multiple worker threads to optimize execution performance. The **Server Agent** communicates with the Report Server Manager through the [SignalR](https://en.wikipedia.org/wiki/SignalR) technology to allow fast and reliable two-way communication.
 
 ![Server Agents Configuration page with one agent created.](../images/rs-net-images/created-server-agent-view.png)
 
 ## Worker Count
 
-This is the total number of threads that will be used when executing scheduled tasks and data alerts. By default, the worker thread count is equal to 0. This value means that *all of the available* logical processors on the machine will be used.
+This is the total number of threads that will be used when executing scheduled tasks and data alerts. By default, the worker thread count is equal to 0. This value means that the Worker Count will match the count of the *available* logical processors on the agent machine.
 
 ## Queued Tasks
 
-The queued tasks grid shows all tasks that are currently queued for execution. It allows canceling a selected task execution. 
+A queued task represents a Scheduled task or Data alert that is currently being executed by any Server Agent. It allows canceling the execution of a selected task. 
 
-The grid displays the name of the machine and worker thread that started the execution and the start date and time.
+The table displays the name of the Scheduled task or Data Alert, the target Server Agent, and when was the task scheduled for execution.
 
 ![The Queued Tasks Grid with one taks scheduled for execution.](../images/rs-net-images/queued-tasks-grid-server-agent.png)
 
@@ -40,7 +40,7 @@ The grid displays the name of the machine and worker thread that started the exe
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2-json.png)
 	
-	The Report Server has generated a configuration containing the server address, authentication token and ID of the new Server Agent.
+	The Report Server has generated a configuration containing the server address, authentication token, and ID of the new Server Agent.
 
 1. Navigate to the `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\` folder and open the `appsettings.json` file in a text editor of choice.
 1. Paste the JSON-based Server Agent configuration in the file:
