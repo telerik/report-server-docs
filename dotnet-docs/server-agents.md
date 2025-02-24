@@ -24,7 +24,7 @@ This is the total number of threads that will be used when executing scheduled t
 
 A queued task represents a Scheduled task or Data alert that is currently being executed by any Server Agent. It allows canceling the execution of a selected task. 
 
-The table displays the name of the Sheduled task or Data Alert, the target Server Agent, and when was the task scheduled for execution.
+The table displays the name of the Scheduled task or Data Alert, the target Server Agent, and when was the task scheduled for execution.
 
 ![The Queued Tasks Grid with one taks scheduled for execution.](../images/rs-net-images/queued-tasks-grid-server-agent.png)
 
@@ -40,7 +40,7 @@ The table displays the name of the Sheduled task or Data Alert, the target Serve
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2-json.png)
 	
-	The Report Server has generated a configuration containing the server address, authentication token and ID of the new Server Agent.
+	The Report Server has generated a configuration containing the server address, authentication token, and ID of the new Server Agent.
 
 1. Navigate to the `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\` folder and open the `appsettings.json` file in a text editor of choice.
 1. Paste the JSON-based Server Agent configuration in the file:
