@@ -10,6 +10,8 @@ position: 301
 
 # Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Linux/Container
 
+>important With the current version of the [Report Server for .NET](https://www.telerik.com/report-server) product - [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
+
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET. 
 
 In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into Report Server Manager UI without entering their login credentials each time.
