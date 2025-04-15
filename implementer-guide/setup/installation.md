@@ -3,28 +3,28 @@ title: Installation
 page_title: Installing the Report Server
 description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server on your Windows IIS server."
 slug: installation
-tags: installation
+tags: installation,report,server
 published: True
 position: 200
 ---
 
 # Report Server Installation
 
-The Report Server web application is installed by a Windows MSI installer which deploys two applications: a web site named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application by default is accessible on HTTP port 83, and the Service Agent - on HTTP port 82. 
+The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82. 
 
-When deploying a new instance of Report Server, the default behavior of the MSI installer is to suggest applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and create a dedicated Windows user named **ReportServerUser** whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server. The MSI installer allows to opt-out of the safe workflow and install the applications under the **LocalSystem** identity which uses elevated permissions. The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions]({%slug how-to-change-report-server-iis-user%}). 
+When deploying a new instance of Report Server, the default behavior of the MSI installer is to suggest applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and create a dedicated Windows user named **ReportServerUser** whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server. The **ReportServerUser** is created with a strong random password, which is not saved, as this user is dedicated to running only the Telerik Report Server and its agent. The MSI installer allows opting out of the safe workflow and installing the applications under the **LocalSystem** identity, which uses elevated permissions. The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions]({%slug how-to-change-report-server-iis-user%}). 
 
-Generally, it is possible to deploy multiple Report Server instances on the same IIS if they have different web site names, ports and application folders. However, the Scheduler Windows service cannot be duplicated and will always point to the Storage of the last installed Report Server instance. Installing multiple instances of Report Server will also affect the retrieval of the encryption keys stored in user's environment variables. For those reasons only one fully functional Telerik Report Server can be installed on a single machine.
+Generally, it is possible to deploy multiple Report Server instances on the same IIS if they have different website names, ports, and application folders. However, the Scheduler Windows service cannot be duplicated and will always point to the Storage of the last installed Report Server instance. Installing multiple instances of Report Server will also affect the retrieval of the encryption keys stored in the user's environment variables. For those reasons, only one fully functional Telerik Report Server can be installed on a single machine.
 
 ## Downloading and Installing
 
-You can download the licensed product version from the **Telerik Control Panel** which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility which will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
+You can download the licensed product version from the **Telerik Control Panel**, which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility that will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
 
 ## Installation Options
 
-* The installation can be customized to include SDK examples in the installation folder and enable JSON dynamic compression for Report Server web site in IIS. These options can be selected from the *Customization* installer page when clicking the **Customize** button.
+* The installation can be customized to include SDK examples in the installation folder and enable JSON dynamic compression for the Report Server web site in IIS. These options can be selected from the *Customization* installer page when clicking the **Customize** button.
 The SDK examples show how to implement a [custom login provider]({%slug custom-login-provider%}) and how to use the [Telerik.ReportServer.HttpClient]({%slug report-server-api-client%}) library to programmatically access Report Server assets and control the Report Server engine. The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration]({%slug iis-configuration%}) article for more details or if you plan to do it manually later.
-* The installer provides an option to choose whether the web site and the Windows service will be installed in 32-bit or 64-bit mode. The option is available only on 64-bit OS. It sets the option *Enable 32-Bit Applications* in the web site's application pool and registers the corresponding version of the **ServiceAgent** in Windows Services list. This configuraion option is useful when the Report Server and its Scheduling service need to work with a specific version of external entities like ODBC drivers without architecture mismatch between the driver and the application.
+* The installer provides an option to choose whether the website and the Windows service will be installed in 32-bit or 64-bit mode. The option is available only on 64-bit OS. It sets the option *Enable 32-Bit Applications* in the website's application pool and registers the corresponding version of the **ServiceAgent** in the Windows Services list. This configuration option is useful when the Report Server and its Scheduling service need to work with a specific version of external entities like ODBC drivers without architecture mismatch between the driver and the application.
 * Use powershell command [Start-Process](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.3) to install the Report Server silently:
 
 	````powershell
@@ -44,11 +44,16 @@ It automatically detects the latest version and lets you install it for the prod
 ## Other Product Files and Latest Internal Builds
 
 1. From [Your Account page](http://www.telerik.com/account/), go to “Products & Subscriptions” and select the product:
-![latest internal build step 1](../../images/report-server-images/latest-internal-build.png)
-2. Hit the "Download" button:
-![latest internal build step 2](../../images/report-server-images/latest-internal-build-2.png)
-3. From there select the product file you want to download:
-![latest internal build step 3](../../images/report-server-images/latest-internal-build-3.png)
+
+	![latest internal build step 1](../../images/report-server-images/latest-internal-build.png)
+
+1. Hit the "Download" button:
+
+	![latest internal build step 2](../../images/report-server-images/latest-internal-build-2.png)
+
+1. From there, select the product file you want to download:
+
+	![latest internal build step 3](../../images/report-server-images/latest-internal-build-3.png)
 
 ## See Also
 
