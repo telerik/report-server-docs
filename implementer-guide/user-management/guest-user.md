@@ -53,8 +53,8 @@ More information and how-to recipes on displaying server reports in client appli
 
 When you authenticate with the Guest user, you grant access to the reports allowed to be read by it to anyone who may use your application/report viewer. The users don't need credentials for your Report Server in this scenario. This makes the Report Server potentially vulnerable to:
 
-* [_Distributed denial-of-service (DDoS) attack_](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack) 
-	A bad agent may use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in short time.
+* [__Distributed denial-of-service (DDoS) attack__](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack) 
+	The [rate limiter]({%slug security%}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in short time.
 
-* _Information disclosure_ 
+* __Information disclosure__ 
 	By letting users access reports from the Report Server without authentication, you grant them access to all the information in these reports.
