@@ -24,7 +24,7 @@ By default, the Guest user has `Read` permission on all reports in all report ca
 
 Use the Guest user to generate report documents in different scenarios. The Guest user needs `Read` permissions on the target report for this to work.
 
-###	Share a report that resides on the Report Server with a URL
+### Share a report that resides on the Report Server with a URL
 
 Report Server's API provides a method that serves a report by specified category, report name, and report revision. 
 The format is _`serverUrl`/report/share/`category`/`reportName`/`revision`_. 
@@ -32,7 +32,7 @@ Omit the _`revision`_ parameter to display the last revision of the specified re
 The Report Server processes such a request using the Guest account.
 If the Guest account is disabled, the server will return a response with error code 403- Forbidden.
 
-###	Display a server report in an embedded Report Viewer control
+### Display a server report in an embedded Report Viewer control
 
 Use the Guest account to display reports to the users of a client application.
 To do this, embed a suitable report viewer control according to the UI technology without setting up user credentials in the viewer's configuration.
@@ -53,8 +53,10 @@ More information and how-to recipes on displaying server reports in client appli
 
 When you authenticate with the Guest user, you grant access to the reports allowed to be read by it to anyone who may use your application/report viewer. The users don't need credentials for your Report Server in this scenario. This makes the Report Server potentially vulnerable to:
 
-* [__Distributed denial-of-service (DDoS) attack__](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack) 
-	The [rate limiter]({%slug security%}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in short time.
+* [__Distributed denial-of-service (DDoS) attack__](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack)
+  
+	The [rate limiter]({%slug security%}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in a short time.
 
-* __Information disclosure__ 
+* __Information disclosure__
+  
 	By letting users access reports from the Report Server without authentication, you grant them access to all the information in these reports.
