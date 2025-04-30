@@ -8,7 +8,7 @@ published: True
 position: 302
 ---
 
-# Overview
+# Creating Logs in the Report Server.NET
 
 The Report Server for .NET uses [Serilog](https://serilog.net/) to allow  writing diagnostic logging information from the server onto a file for easier troubleshooting.
 
