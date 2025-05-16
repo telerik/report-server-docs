@@ -24,22 +24,16 @@ An expired perpetual license key is valid for all Telerik Report Server versions
 
 ## Will the product function with an expired license key?
 
-This depends on your license type.
+This depends on the [Telerik Reporting license type (perpetual, subscription, or trial)](https://www.telerik.com/purchase/faq/licensing-purchasing#licensing):
 
-* _Perpetual licenses_ will continue to function normally with an expired license key. The following will happen only if you update or install a Report Server version that is released after the expiration date of the license:
+* *Perpetual licenses* function normally with an expired license key, as long as the application is using a Telerik Reporting version that was released before the expiration date of the license.
+* *Subscription licenses* function normally in already deployed applications, but you cannot rebuild and republish the app.
+* *Trial licenses* function normally only within the 30-day trial period.
 
-	- A watermark appears on each report document page.
-	- A [warning message]({%slug license-errors-and-warnings%}) is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}).
+If none of the above conditions are met, the following behaviors occur:
 
-* _Subscription licenses_ exhibit the following when running the application with an expired license key:
-
-	- A watermark appears on each report document page.
-	- A [warning message]({%slug license-errors-and-warnings%}) is logged in the trace log after attaching a Trace Listener to the Report Server Manager and Report Server Agent.
-
-* _Trial licenses_ exhibit the following when running the application with an expired license key:
-
-	- A watermark appears on each report document page.
-	- A [warning message]({%slug license-errors-and-warnings%}) is logged in the trace log after attaching a Trace Listener to the Report Server Manager and Report Server Agent.
+* A watermark appears on each report document page.
+* A [warning message]({%slug license-errors-and-warnings%}) is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}).
 
 ## I updated the Telerik Report Server and the invalid license errors have appeared. What is the cause of this behavior?
 
