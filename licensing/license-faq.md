@@ -24,9 +24,9 @@ An expired perpetual license key is valid for all Telerik Report Server versions
 
 ## Will the product function with an expired license key?
 
-This depends on the [Telerik Reporting license type (perpetual, subscription, or trial)](https://www.telerik.com/purchase/faq/licensing-purchasing#licensing):
+This depends on the [Telerik Report Server license type (perpetual, subscription, or trial)](https://www.telerik.com/purchase/faq/licensing-purchasing#licensing):
 
-* *Perpetual licenses* function normally with an expired license key, as long as the application is using a Telerik Reporting version that was released before the expiration date of the license.
+* *Perpetual licenses* function normally with an expired license key, as long as the application is using a Telerik Report Server version that was released before the expiration date of the license.
 * *Subscription licenses* function normally in already deployed applications, but you cannot rebuild and republish the app.
 * *Trial licenses* function normally only within the 30-day trial period.
 
