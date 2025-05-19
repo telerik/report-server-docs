@@ -65,7 +65,9 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-deployment-in-progress.png)
 
-	When all the items under the _Resource_ are marked with green ticks, the deployment has finished successfully.
+	When all the items under the _Resource_ are marked with green ticks, the deployment has finished successfully, and you will see the next screen:
+
+	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-deployment-complete.png)
 
 
 
