@@ -40,7 +40,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	Note that you may use an existing IP Address, or create a new one with the button at the bottom of the 'Public IP Address for the VM' setting.
 
-	The __DNS Prefix for the public IP Address__ will be concatedated with string below it to form the Report Server URL where you will be able to access the Report Server Manager.
+	The __DNS Prefix for the public IP Address__ will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
 1. Add the __License__ token for your Telerik Report Server product:
 
@@ -55,6 +55,8 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 1. In __HTTPS__, you may choose a Free HTTPS Certificate.
 1. The last section __Review + create__ validates the above settings.
 
+	>note Please ensure you have fulfilled all the setting fields marked with an asterisk (*).
+
 	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-review.png)
 
 	After the validation passes, you need to click on the `Create` button to start the deployment of your Report Server .NET.
@@ -63,7 +65,8 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-deployment-in-progress.png)
 
->note Please ensure you have fulfilled all the fields marked with an asterisk (*).
+	When all the items under the _Resource_ are marked with green ticks, the deployment has finished successfully.
+
 
 
 ## See Also
