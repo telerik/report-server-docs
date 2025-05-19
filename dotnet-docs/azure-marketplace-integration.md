@@ -52,7 +52,13 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 1. The __Mail__ settings are optional. You may configure the SMTP in the Report Server configuration after the deployment.
 1. The __Storage__ section lets you select the MSSQL Database storage. The default Storage type is File Storage.
-1. In __HTTPS__ section lets you select the MSSQL Database storage. The default Storage type is File Storage.
+1. In __HTTPS__, you may choose a Free HTTPS Certificate.
+1. The last section __Review + create__ validates the above settings.
+
+	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-review.png)
+
+	After the validation passes, you need to click on the `Create` button to start the deployment of your Report Server .NET.
+
 
 >note Please ensure you have fulfilled all the fields marked with an asterisk (*).
 
