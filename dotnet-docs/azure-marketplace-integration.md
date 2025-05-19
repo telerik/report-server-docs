@@ -44,6 +44,11 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-license.png)
 
+1. Configure the __Administrator__ settings:
+
+	![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-administrator.png)
+
+	Note that you may use an existing IP Address, or create a new one with the button at the bottom of the 'Public IP Address for the VM' setting.
 ## See Also
 
 * [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
