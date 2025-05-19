@@ -1,0 +1,39 @@
+---
+title: Azure Marketplace Deployment
+page_title: Report Server for .NET in Azure Marketplace
+description: "Learn how to deploy the Telerik Report Server for .NET directly from the Microsoft Azure Marketplace."
+slug: azure-marketplace-integration
+tags: report,server,dotnet,azure,marketplace
+published: true
+position: 10
+---
+
+# Using Telerik Report Server .NET from the Azure Marketplace
+
+You may deploy Telerik Report Server .NET directly from the Microsoft Azure Marketplace. It installs for you the public Report Server .NET Docker images with the specified settings on a new Azure Virtual Machine:
+
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-setup
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-app
+
+## Prerequisites
+
+* A Microsoft Azure subscription
+* A valid [Telerik Report Server License]({%slug license-key%})
+
+>note The current state of the Report Server is in `Preview` and will soon be made the officially (and only) supported version of the Telerik Report Server product.
+
+## Configuration Steps
+
+1. Log in to your Azure account and go to the Marketplace
+1. Select the `Progress ReportServer .NET (preview)` and create a new Subscription Plan for it:
+
+	![The reports view of the Report Server for .NET](../images/rs-net-images/create-rs-net-subscription-plan.png)
+
+1. 
+
+
+
+## See Also
+
+* [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
