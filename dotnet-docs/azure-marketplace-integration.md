@@ -69,7 +69,9 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-deployment-complete.png)
 
+1. Access your Report Server on the URL specified in the _Virtual Machine_ setting:
 
+	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-access-rs.png)
 
 ## See Also
 
