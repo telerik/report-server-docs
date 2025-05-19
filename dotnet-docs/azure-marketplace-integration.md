@@ -59,6 +59,9 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	After the validation passes, you need to click on the `Create` button to start the deployment of your Report Server .NET.
 
+1. Wait for the deployment to finish. You will see a screen like below during the process that may take several minutes:
+
+	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-deployment-in-progress.png)
 
 >note Please ensure you have fulfilled all the fields marked with an asterisk (*).
 
