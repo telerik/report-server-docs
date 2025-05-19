@@ -28,11 +28,21 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 1. Log in to your Azure account and go to the Marketplace
 1. Select the `Progress ReportServer .NET (preview)` and create a new Subscription Plan for it:
 
-	![The reports view of the Report Server for .NET](../images/rs-net-images/create-rs-net-subscription-plan.png)
+	![Creating resource for Report Server .NET on Azure Marketplace.](../images/rs-net-images/create-rs-net-subscription-plan.png)
 
-1. 
+1. Configure the __Basics__ by selecting the proper Subscription/Resource Group and the preferred Region:
 
+	   ![Configuring the Basics section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-basics.png)
 
+1. Configure the __Virtual Machine__ with the recommended Ubuntu OS Version, CPU Architecture, and VM size:
+
+	   ![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-virtual-machine.png)
+
+	Note that you may use an existing IP Address, or create a new one with the button at the bottom of the 'Public IP Address for the VM' setting.
+
+1. Configure the __Virtual Machine__ by selecting the proper Subscription/Resource Group and the preferred Region:
+
+	   ![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-virtual-machine.png)
 
 ## See Also
 
