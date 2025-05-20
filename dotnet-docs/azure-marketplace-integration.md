@@ -71,7 +71,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
  
 	![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
 
-	The HTTPS Certificate is expected to be renewed automatically before expiring through a _cron job_ set up during installation.
+	The Free Let's Encrypt HTTPS Certificate is expected to be renewed automatically before expiring through a _cron job_ set up during installation.
 
 1. The last section __Review + create__ validates the above settings.
 
