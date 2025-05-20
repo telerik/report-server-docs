@@ -34,9 +34,9 @@ All report viewers of Telerik Reporting for HTML5, ASP.NET WebForms, ASP.NET MVC
 
 To read more about the benefits of using Telerik Report Server, please visit the [product overview page](https://www.telerik.com/report-server).
 
-## Trial Version and Commercial License
+## Trial and Commercial License
 
-Telerik Report Server is a commercial product. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase/report-server). Feel free to review the Telerik Report Server [License Agreement](https://www.telerik.com/purchase/license-agreement/report-server) to get acquainted with the full terms of use.
+Telerik Report Server is a commercial product. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a commercial license](https://www.telerik.com/purchase/report-server). Feel free to review the Telerik Report Server [License Agreement](https://www.telerik.com/purchase/license-agreement/report-server) to get acquainted with the full terms of use.
 
 ## Telerik Report Server Support and Learning Resources
 
