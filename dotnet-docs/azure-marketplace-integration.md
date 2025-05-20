@@ -12,16 +12,14 @@ position: 125
 
 You may deploy Telerik Report Server .NET directly from the Microsoft Azure Marketplace. It installs the public Report Server .NET Docker images with the specified settings on a new Azure Virtual Machine. Here are links to the necessary Docker images we provide publicly:
 
-* https://hub.docker.com/r/progressofficial/telerik-reportserver-setup
-* https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-app
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-setup
 
 ## Prerequisites
 
 * A Microsoft Azure subscription
 * A valid [Telerik Report Server License]({%slug license-key%})
-
->note The current state of the Report Server is in `Preview` and will soon be made the officially (and only) supported version of the Telerik Report Server product.
 
 ## Configuration Steps
 
@@ -44,7 +42,9 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-virtual-machine.png)
 
-	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting. If you choose an existing IP Address
+	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting.
+
+	If you choose an existing IP Address, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. Then, you can pick the Public IP address to which you have connected the Domain name. You may use this domain name in the _HTTPS_ section to choose a Free Let's Encrypt HTTPS Certificate.
 
 	>important The __DNS Prefix for the public IP Address__ will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
@@ -60,11 +60,13 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the optional Mail section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-mail.png)
 
-1. The __Storage__ section lets you select the MSSQL Database storage. The default Storage type is File Storage.
+1. The __Storage__ section lets you provide a connection string to an external MSSQL Database. Otherwise, the default storage will be an MSSQL Express database deployed in a Docker container in the VM.
 
  	![Configuring the optional Storage section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-storage.png)
 
-1. In __HTTPS__, you may choose a Free HTTPS Certificate.
+1. In __HTTPS__, you may choose a Free Let's Encrypt HTTPS Certificate.
+
+	If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section. Enter here your domain name created in the _Virtual Machine_ section.
  
 	![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
 
