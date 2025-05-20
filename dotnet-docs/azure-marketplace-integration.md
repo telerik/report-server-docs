@@ -44,7 +44,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting.
 
-	If you choose an existing IP Address, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. Then, you can pick the Public IP address to which you have connected the Domain name. You may use this domain name in the _HTTPS_ section to choose a Free Let's Encrypt HTTPS Certificate.
+	If you choose an existing IP Address, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. The DNS Zone and the Public IP address must be in a separate Resource group, because deploying the Report Server needs to happen in an empty resource group. Then, you can pick the Public IP address to which you have connected the Domain name. You may use this domain name in the _HTTPS_ section to choose a Free Let's Encrypt HTTPS Certificate.
 
 	>important The __DNS Prefix for the public IP Address__ will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
@@ -69,6 +69,8 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 	If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section. Enter here your domain name created in the _Virtual Machine_ section.
  
 	![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
+
+	The HTTPS Certificate is expected to be renewed automatically before expiring through a _cron job_ set up during installation.
 
 1. The last section __Review + create__ validates the above settings.
 
