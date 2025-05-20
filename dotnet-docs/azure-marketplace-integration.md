@@ -44,7 +44,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting.
 
-	If you choose an existing IP Address, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. The DNS Zone and the Public IP address must be in a separate Resource group, because deploying the Report Server needs to happen in an empty resource group. Then, you can pick the Public IP address to which you have connected the Domain name. You may use this domain name in the _HTTPS_ section to choose a Free Let's Encrypt HTTPS Certificate.
+	If you would like to use a Free Let's Encrypt HTTPS Certificate later in the _HTTPS_ section, choose an existing IP Address. Before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. The DNS Zone and the Public IP address must be in a separate Resource group, because deploying the Report Server needs to happen in an empty resource group. Then, you can pick the Public IP address to which you have connected the Domain name.
 
 	>important The __DNS Prefix for the public IP Address__ will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
@@ -66,7 +66,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 1. In __HTTPS__, you may choose a Free Let's Encrypt HTTPS Certificate.
 
-	If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section. Enter here your domain name created in the _Virtual Machine_ section.
+	If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section. Enter here your domain name created in the _Virtual Machine_ section. It will be the domain name you bought for yourselves, and you never used it in the setup process before this step.
  
 	![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
 
