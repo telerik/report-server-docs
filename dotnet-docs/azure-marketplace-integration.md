@@ -28,6 +28,10 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 >note Please ensure you have fulfilled all the setting fields marked with an asterisk (*) in each section below.
 
 1. [Log in to your Azure account](https://portal.azure.com/#home) and go to the Marketplace
+1. Start the deployment process:
+
+	![Start the deployment of Report Server .NET on Azure Marketplace.](../images/rs-net-images/create-rs-net-start-deployment.png)
+
 1. Select the `Progress ReportServer .NET (preview)` product and create a new Subscription Plan for it:
 
 	![Creating resource for Report Server .NET on Azure Marketplace.](../images/rs-net-images/create-rs-net-subscription-plan.png)
@@ -40,7 +44,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Configuring the Virtual Machine section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-virtual-machine.png)
 
-	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting.
+	You may use an existing IP Address, or create a new one with the button at the bottom of the _Public IP Address for the VM_ setting. If you choose an existing IP Address
 
 	>important The __DNS Prefix for the public IP Address__ will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
@@ -53,8 +57,17 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 	![Configuring the Administrator section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-administrator.png)
 
 1. The __Mail__ settings are optional. You may configure the SMTP in the Report Server configuration after the deployment.
+
+	![Configuring the optional Mail section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-mail.png)
+
 1. The __Storage__ section lets you select the MSSQL Database storage. The default Storage type is File Storage.
+
+ 	![Configuring the optional Storage section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-storage.png)
+
 1. In __HTTPS__, you may choose a Free HTTPS Certificate.
+ 
+	![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
+
 1. The last section __Review + create__ validates the above settings.
 
 	![Review the Report Server .NET resource settings on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-review.png)
