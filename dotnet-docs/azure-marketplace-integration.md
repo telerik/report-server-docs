@@ -90,6 +90,8 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Report Server .NET Manager log in screen after successful deployment from the Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-access-rs.png)
 
+>note The user who created the Virtual Machine is fully responsible for managing it. The user can access it through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section.
+
 ## See Also
 
 * [Report Server for .NET Introduction]({%slug coming-soon%})
