@@ -26,7 +26,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 >note Please ensure you have fulfilled all the setting fields marked with an asterisk (*) in each section below.
 
-1. Access the [Progress Telerik Report Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/progresssoftwarecorporation.progress-telerik-report-server) on the Azure Marketplace through the __Get it now_ button. You may need to log in to your Azure account.
+1. Access the [Progress Telerik Report Server](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/progresssoftwarecorporation.progress-telerik-report-server) on the Azure Marketplace through the __Get It Now_ button. You may need to log in to your Azure account.
 
 	![Access Progress Telerik Report Server on the Azure Marketplace.](../images/rs-net-images/get-rs-net-on-azure-marketplace.png)
 
