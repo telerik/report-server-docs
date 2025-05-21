@@ -91,7 +91,17 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Report Server .NET Manager log in screen after successful deployment from the Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-access-rs.png)
 
->note The user who created the Virtual Machine is fully responsible for managing it. The user can access it through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section.
+>note The user who created the Virtual Machine is fully responsible for managing it.
+
+The user can access the Virtual Machine through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section. In this scenario, port 22 should be opened explicitly:
+
+* Select the _Network Settings_ to open the configuration page of the Virtual Machine:
+
+	![Select the configuration page for the Network Settings of the Virtual Machine.](../images/rs-net-images/create-rs-net-network.png)
+
+* Add the row that opens port 22 of the Virtual Machine:
+
+	![Add the setting for opening port 22 of the Virtual Machine.](../images/rs-net-images/create-rs-net-network-settings.png)
 
 ## See Also
 
