@@ -39,15 +39,15 @@ You may also see 404 errors for script and asset links in the Networking tab.
 
 ## Possible Cause
 
-If the server's IIS setting were reset, either through Windows Update or other OS operations, which stops allowing access to static content inside the application folder. Some of those assets are image files and javascript resources, which results in client-side issues as describe above.
+If the server's IIS setting were reset, either through Windows Update or other OS operations, which stops allowing access to static content inside the application folder. Some of those assets are image files and javascript resources, which results in client-side issues as described above.
 
 ## Solution
 
-Reenable IIS and re-selecting all relevant features, especially `Internet Information Services` > `World Wide Web Features` > `Common HTTP Features` > `Static Content`. Use the following screenshot for guidance:
+Reenable IIS and reselect all relevant features, especially `Internet Information Services` > `World Wide Web Features` > `Common HTTP Features` > `Static Content`. Use the following screenshot for guidance:
 
 ![](./images/iis-settings.png)
 
-> After fixing IIS settings, if your whitelabeling customizations are still missing, diable the whitelabeling, then reenable it (and re-applying customizations).
+> After fixing IIS settings, if your whitelabeling customizations are still missing, disable the whitelabeling, then reenable it (and reapply customizations).
 
 ## See Also
 
