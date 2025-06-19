@@ -10,13 +10,20 @@ position: 300
 
 # Report Server for .NET: Installation on Docker Container
 
->important With the current version of the [Report Server for .NET](https://www.telerik.com/report-server) product - [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
+>important With the [Report Server for .NET](https://www.telerik.com/report-server) product, version [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container; however, the above error message will be shown in the terminal.
 
 The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers. The assets for non-Windows platforms are available as separate resources downloadable from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 
-This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
+## Installation Process with Custom Images
 
-## Installation Process
+In [2025 Q2 (11.1.25.521)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-521), we released public Docker images of the RS.NET:
+
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-app
+* https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
+
+## Installation Process with Custom Images
+
+This section is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
 
 ### Installing Report Server for .NET
 
