@@ -14,7 +14,7 @@ position: 300
 
 The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers. The assets for non-Windows platforms are available as separate resources downloadable from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 
-## Installation Process with Custom Images
+## Installation Process with Ready-to-Use Images
 
 In [2025 Q2 (11.1.25.521)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-521), we released public Docker images of the RS.NET:
 
