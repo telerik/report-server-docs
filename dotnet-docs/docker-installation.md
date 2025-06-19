@@ -14,21 +14,28 @@ position: 300
 
 The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers. The assets for non-Windows platforms are available as separate resources downloadable from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 
-## Installation Process with Ready-to-Use Images
+This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
+
+## Installing Report Server for .NET
+
+### Installation Process with Ready-to-Use Images
 
 In [2025 Q2 (11.1.25.521)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-521), we released public Docker images of the RS.NET:
 
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-app
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
 
-## Installation Process with Custom Images
+1. Download the archive `Telerik_ReportServer_Net_NonWindows_{Report Server version}.zip` from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
+1. Unzip the archive. The content gets deployed in two folders, `ReportServer` and `ReportServiceAgent`.
+1. Open the `Powershell` and navigate to the subfolder `ReportServer`.
+1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
+1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
+1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
-This section is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
-
-### Installing Report Server for .NET
+### Installation Process with Custom Images
 
 1. Download the archive `Telerik_ReportServer_Net_NonWindows_{Report Server version}.zip` from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
-1. Unzip the archive. The content gets deployed in two folders `ReportServer` and `ReportServiceAgent`.
+1. Unzip the archive. The content gets deployed in two folders, `ReportServer` and `ReportServiceAgent`.
 1. Open the `Powershell` and navigate to the subfolder `ReportServer`.
 1. Run the command `docker build -t telerik-report-server:local .` in _Powershell_ to build the Report Server Manager image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServiceAgent`.
@@ -49,13 +56,19 @@ This section is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
->important The first time you open the Report Server, you will to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
-### Creating new Server Agent
+>important The first time you open the Report Server, you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
+
+We recommend using the images we provide instead of building custom ones. The sample code in the following sections assumes you use the images we provide. If you prefer custom images, change the code as follows:
+
+* `image: progressofficial/telerik-reportserver-app:latest` to `image: telerik-report-server:local`
+* `image: progressofficial/telerik-reportserver-agent:latest` to `image: telerik-report-server-agent:local`
+
+## Creating a new Server Agent
 
 >note The Report Server Manager for .NET has to be fully set up before following the steps from this section.
 
-1. Navigate to the `\ReportServer\docker-configs` subfolder and open the `docker-compose.yml` file in a text editor of choice. Note that the text editor application may require administrator privileges to save the file after edit.
+1. Navigate to the `\ReportServer\docker-configs` subfolder and open the `docker-compose.yml` file in a text editor of choice. Note that the text editor application may require administrator privileges to save the file after editing.
 1. Inside the `environment` element, add an entry for each encryption key, for example:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
@@ -90,7 +103,7 @@ telerik-report-server-agent:
         - Agent__ServerAddress=http://telerik-report-server
         - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
         - Agent__Id=PASTE_THE_AGENT_ID_HERE
-      image: telerik-report-server-agent:local
+      image: progressofficial/telerik-reportserver-agent:latest
       restart: always
       command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 ````
@@ -105,7 +118,7 @@ telerik-report-server-agent:
 
 You may download and watch the whole process from our `reporting-samples` GitHub repository: [SetupRS.NET-Docker.zip](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.zip).
 
-Additionally, below is an example of how the final `docker-compose.yml` may look like. Note that the tabulation must be kept as shown in the snippet:
+Additionally, below is an example of how the final `docker-compose.yml` may look. Note that the tabulation must be kept as shown in the snippet:
 
 ````yml
 services:
@@ -116,7 +129,7 @@ services:
       - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
     env_file:
       - mssql_storage.env
-    image: telerik-report-server:local
+    image: progressofficial/telerik-reportserver-app:latest
     restart: always
     ports:
       - "82:80"
@@ -124,14 +137,14 @@ services:
       - storage
 
   # template configuration of Report Server Agent.
-  # Uncomment the following lines when a new server agent is configured in Service Agents panel in the Configuration view of Report Server web application.
+  # Uncomment the following lines when a new server agent is configured in the Service Agents panel in the Configuration view of the Report Server web application.
   # Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
   telerik-report-server-agent:
     environment:
       - Agent__ServerAddress=http://telerik-report-server
       - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
       - Agent__Id=PASTE_THE_AGENT_ID_HERE
-    image: telerik-report-server-agent:local
+    image: progressofficial/telerik-reportserver-agent:latest
     restart: always
     command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 
