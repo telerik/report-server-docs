@@ -146,7 +146,7 @@ services:
 
 ````
 
-	Inside the `environment` element, tere are entries for each encryption key:
+	Inside the `environment` element, there are entries for each encryption key:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
