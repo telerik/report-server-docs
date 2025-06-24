@@ -15,7 +15,13 @@ The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containe
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-app
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
 
-The above images would be downloaded automatically when using the `docker-compose.yml` following the [Microsoft Docker Compose concept](https://docs.docker.com/compose/).
+The above images would be downloaded automatically when using the `docker-compose.yml` following the [Microsoft Docker Compose](https://docs.docker.com/compose/) concept.
+
+The setup process described in this article consists of several steps that should be executed in the proposed order:
+
+1. First, we configure the Report Server for .NET Manager application. This lets us, as administrators, configure the Report Server by adding the required Encryption.
+1. As a second step, we redeploy the Report Server for .NET Manager with the known Encryption keys. This lets us add a Report Server Agent. Generally, you may add more than one Report Server Agent for each Report Server for .NET Manager.
+1. Finally, with the known Report Server Agent identifiers, we may also deploy the latter.
 
 ## Compose the Docker Container
 
@@ -149,6 +155,7 @@ services:
 	Inside the `environment` element, there are entries for each encryption key:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
+ 
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
 
 	The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration of the Report Server Manager.
