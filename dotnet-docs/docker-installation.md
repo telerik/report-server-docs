@@ -78,7 +78,9 @@ volumes:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
-	
+
+	The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration of the Report Server Manager.
+
 	````yml
 services:
 	  # template configuration of Report Server.
