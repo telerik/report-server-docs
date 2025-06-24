@@ -1,7 +1,7 @@
 ---
 title: Installing RS.NET on Docker Container with Custom Image
 page_title: Install ReportServer.NET on Docker Container through Custom Image
-description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Docker Container with custom image."
+description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Docker Container with a custom image."
 type: how-to
 slug: custom-image-dotnet-installation-on-docker-container
 tags: installation,dotnet,docker,linux,container,custom,image
@@ -66,7 +66,9 @@ We recommend using the images we provide instead of building custom ones. The sa
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
-	
+
+ 	The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration of the Report Server Manager.
+
 	````yml
 services:
 	  # template configuration of Report Server.
