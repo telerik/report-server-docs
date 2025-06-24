@@ -19,7 +19,7 @@ The above images would be downloaded automatically when using the `docker-compos
 
 ## Compose the Docker Container
 
-Below is an example of a `docker-compose.yml` that may be used for installing the Report Server Manager, Report Server Agent and the MSSQL Server Storage for the complete Report Server for .NET suite. Note that the tabulation must be kept as shown in the snippet:
+Below is an example of a `docker-compose.yml` that may be used for installing the Report Server Manager, Report Server Agent, and the MSSQL Server Storage for the complete Report Server for .NET suite. Note that the tabulation must be kept as shown in the snippet:
 
 ````yml
 services:
@@ -63,7 +63,9 @@ volumes:
 
 ````
 
-> We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your strong password in the above `docker-compose.yml`:
+> We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your strong password in the above `docker-compose.yml`.
+
+The above `docker-compose.yml` is used as a base in the steps below. Each step, though, requires uncommenting part of the code, updating part of it, or adding new pieces.
 
 ## Steps to install the RS.NET on the Docker Container
 
