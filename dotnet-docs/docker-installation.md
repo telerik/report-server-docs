@@ -61,7 +61,7 @@ volumes:
 
 ````
 
-> We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your own strong password in the above `docker-compose.yml`:
+> We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your strong password in the above `docker-compose.yml`:
 
 ## Steps to install the RS.NET on the Docker Container
 
@@ -73,7 +73,7 @@ volumes:
 
 >note The Report Server Manager for .NET has to be fully set up before following the steps from this section.
 
-1. Edit the above `docker-compose.yml` file in a text editor of choice. Note that the text editor application may require administrator privileges to save the file after edit.
+1. Edit the above `docker-compose.yml` file in a text editor of your choice. Note that the text editor application may require administrator privileges to save the file after editing.
 1. Inside the `environment` element, add an entry for each encryption key, for example:
 
 	RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
