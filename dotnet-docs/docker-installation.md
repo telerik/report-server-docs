@@ -15,17 +15,17 @@ The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containe
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-app
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
 
-The above images would be downloaded automatically when using the `docker-compose.yml` following the [Microsoft Docker Compose](https://docs.docker.com/compose/) concept.
+The above images would be downloaded automatically when using the `docker-compose.yml` files suggested in the workflow below, following the [Microsoft Docker Compose](https://docs.docker.com/compose/) concept.
 
-The setup process described in this article consists of several steps that should be executed in the proposed order:
+The setup process described in this article consists of the following steps that should be executed in the proposed order:
 
-1. First, we configure the Report Server for .NET Manager application. This lets us, as administrators, configure the Report Server by adding the required Encryption.
-1. As a second step, we redeploy the Report Server for .NET Manager with the known Encryption keys. This lets us add a Report Server Agent. Generally, you may add more than one Report Server Agent for each Report Server for .NET Manager.
+1. First, we configure the Report Server Manager application for .NET. This lets you, as an administrator, configure the Report Server by adding the required Encryption.
+1. As a second step, we redeploy the Report Server Manager for .NET with the known Encryption keys. This lets you add a Report Server Agent. Generally, you may add more than one Report Server Agent for each Report Server Manager.
 1. Finally, with the known Report Server Agent identifiers, we may also deploy the latter.
 
 ## Compose the Docker Container
 
-Below is an example of a `docker-compose.yml` that may be used for installing the Report Server Manager, Report Server Agent, and the MSSQL Server Storage for the complete Report Server for .NET suite. Note that the tabulation must be kept as shown in the snippet:
+Below is an example of a `docker-compose.yml` that may be used for installing the Report Server Manager, Report Server Agent, and the MSSQL Server Storage for the complete Report Server for .NET suite. The same `docker-compose.yml` is used as a base in the steps below. Each step, though, requires uncommenting part of the code, updating part of it, or adding new pieces as explained in the corresponding step. Note that the tabulation must be kept as shown in the snippet:
 
 ````yml
 services:
@@ -70,8 +70,6 @@ volumes:
 ````
 
 > We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your strong password in the above `docker-compose.yml`.
-
-The above `docker-compose.yml` is used as a base in the steps below. Each step, though, requires uncommenting part of the code, updating part of it, or adding new pieces.
 
 ## Steps to install the RS.NET on the Docker Container
 
@@ -158,10 +156,10 @@ services:
  
 	RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
 
-	The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration of the Report Server Manager.
+	The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration after successfully [Installing the Report Server Manager](#installing-the-report-server-manager).
 
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
-1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
+1. Open the Report Server Manager (by default - http://localhost:82), and then open the **Configuration** page.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
 
@@ -217,6 +215,7 @@ services:
 ````
 
 
+1. Update the _Agent__AuthenticationToken_ and _Agent__Id_ environment variables with the values from the newly created agent configuration.
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 1. Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
 
