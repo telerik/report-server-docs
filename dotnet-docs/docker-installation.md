@@ -82,26 +82,26 @@ volumes:
 services:
 
 	  telerik-report-server:
-		environment:
-		  - Telemetry__IsDisabled=true
-		env_file:
-		  - mssql_storage.env
-		image: progressofficial/telerik-reportserver-app:latest
-		restart: always
-		ports:
-		  - "82:80"
-		depends_on: 
-		  - storage
+	    environment:
+	      - Telemetry__IsDisabled=true
+	    env_file:
+	      - mssql_storage.env
+	    image: progressofficial/telerik-reportserver-app:latest
+	    restart: always
+	    ports:
+	      - "82:80"
+	    depends_on: 
+	      - storage
 
 	  storage:
-		image: "mcr.microsoft.com/mssql/server:2022-latest"
-		restart: always
-		environment:
-		  - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-		  - ACCEPT_EULA=Y
-		volumes: 
-		  - mssql-storage:/var/opt/mssql
-					  
+	    image: "mcr.microsoft.com/mssql/server:2022-latest"
+	    restart: always
+	    environment:
+	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+	      - ACCEPT_EULA=Y
+	    volumes: 
+	      - mssql-storage:/var/opt/mssql
+
 	volumes:
 	  mssql-storage:
 
@@ -121,28 +121,28 @@ services:
 services:
 
 	  telerik-report-server:
-		environment:
-		  - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
-		  - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-		  - Telemetry__IsDisabled=true
-		env_file:
-		  - mssql_storage.env
-		image: progressofficial/telerik-reportserver-app:latest
-		restart: always
-		ports:
-		  - "82:80"
-		depends_on: 
-		  - storage
+	    environment:
+	      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+	      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+	      - Telemetry__IsDisabled=true
+	    env_file:
+	      - mssql_storage.env
+	    image: progressofficial/telerik-reportserver-app:latest
+	    restart: always
+	    ports:
+	      - "82:80"
+	    depends_on: 
+	      - storage
 
 	  storage:
-		image: "mcr.microsoft.com/mssql/server:2022-latest"
-		restart: always
-		environment:
-		  - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-		  - ACCEPT_EULA=Y
-		volumes: 
-		  - mssql-storage:/var/opt/mssql
-					  
+	    image: "mcr.microsoft.com/mssql/server:2022-latest"
+	    restart: always
+	    environment:
+	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+	      - ACCEPT_EULA=Y
+	    volumes: 
+	      - mssql-storage:/var/opt/mssql
+
 	volumes:
 	  mssql-storage:
 
@@ -170,18 +170,18 @@ services:
 services:
 
 	  telerik-report-server:
-		environment:
-		  - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
-		  - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-		  - Telemetry__IsDisabled=true
-		env_file:
-		  - mssql_storage.env
-		image: progressofficial/telerik-reportserver-app:latest
-		restart: always
-		ports:
-		  - "82:80"
-		depends_on: 
-		  - storage
+	    environment:
+	      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+	      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+	      - Telemetry__IsDisabled=true
+	    env_file:
+	      - mssql_storage.env
+	    image: progressofficial/telerik-reportserver-app:latest
+	    restart: always
+	    ports:
+	      - "82:80"
+	    depends_on: 
+	      - storage
 
 	  telerik-report-server-agent:
 	    environment:
@@ -193,14 +193,14 @@ services:
 	    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 
 	  storage:
-		image: "mcr.microsoft.com/mssql/server:2022-latest"
-		restart: always
-		environment:
-		  - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-		  - ACCEPT_EULA=Y
-		volumes: 
-		  - mssql-storage:/var/opt/mssql
-					  
+	    image: "mcr.microsoft.com/mssql/server:2022-latest"
+	    restart: always
+	    environment:
+	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+	      - ACCEPT_EULA=Y
+	    volumes: 
+	      - mssql-storage:/var/opt/mssql
+
 	volumes:
 	  mssql-storage:
 
