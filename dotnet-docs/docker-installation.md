@@ -81,7 +81,6 @@ volumes:
 	````yml
 services:
 
-	# template configuration of Report Server.      
 	  telerik-report-server:
 		environment:
 		  - Telemetry__IsDisabled=true
@@ -121,7 +120,6 @@ services:
 	````yml
 services:
 
-	# template configuration of Report Server.      
 	  telerik-report-server:
 		environment:
 		  - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
@@ -174,7 +172,6 @@ services:
 	````yml
 services:
 
-	# template configuration of Report Server.      
 	  telerik-report-server:
 		environment:
 		  - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
@@ -189,8 +186,6 @@ services:
 		depends_on: 
 		  - storage
 
-	# template configuration of Report Server Agent.
-	# Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
 	  telerik-report-server-agent:
 	    environment:
 	      - Agent__ServerAddress=http://telerik-report-server
