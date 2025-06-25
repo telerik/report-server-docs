@@ -148,13 +148,10 @@ services:
 
 ````
 
-Inside the `environment` element, there are entries for each encryption key:
+	Inside the `environment` element, there are entries for each encryption key. They should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration after successfully [Installing the Report Server Manager](#installing-the-report-server-manager):
 
-`RS_NET_MainPrivateKey` - Environment variable holding the main private key for the encryption.
- 
-`RS_NET_BackupPrivateKey` - Environment variable holding the main backup key for the encryption.
-
-The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration after successfully [Installing the Report Server Manager](#installing-the-report-server-manager).
+	* `RS_NET_MainPrivateKey` - Environment variable holding the main private key for the encryption. 
+	* `RS_NET_BackupPrivateKey` - Environment variable holding the main backup key for the encryption.
 
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 1. Open the Report Server Manager (by default - http://localhost:82), and then open the **Configuration** page.
