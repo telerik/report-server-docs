@@ -30,7 +30,7 @@ Below is an example of a `docker-compose.yml` that may be used for installing th
 ````yml
 services:
 
-# template configuration of Report Server.      
+# template configuration of Report Server.
   telerik-report-server:
     environment:
       - Telemetry__IsDisabled=true
@@ -63,10 +63,9 @@ services:
       - ACCEPT_EULA=Y
     volumes: 
       - mssql-storage:/var/opt/mssql
-                  
+
 volumes:
   mssql-storage:
-
 ````
 
 > We strongly recommend changing the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your strong password in the above `docker-compose.yml`.
@@ -75,139 +74,142 @@ volumes:
 
 ### Installing the Report Server Manager
 
-1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
-1. Use the following `docker-compose.yml`:
++ (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
++ Use the following `docker-compose.yml`:
 
-	````yml
-	services:
+````yml
+services:
 
-	  telerik-report-server:
-	    environment:
-	      - Telemetry__IsDisabled=true
-	    env_file:
-	      - mssql_storage.env
-	    image: progressofficial/telerik-reportserver-app:latest
-	    restart: always
-	    ports:
-	      - "82:80"
-	    depends_on: 
-	      - storage
+# template configuration of Report Server.
+  telerik-report-server:
+    environment:
+      - Telemetry__IsDisabled=true
+    env_file:
+      - mssql_storage.env
+    image: progressofficial/telerik-reportserver-app:latest
+    restart: always
+    ports:
+      - "82:80"
+    depends_on: 
+      - storage
 
-	  storage:
-	    image: "mcr.microsoft.com/mssql/server:2022-latest"
-	    restart: always
-	    environment:
-	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-	      - ACCEPT_EULA=Y
-	    volumes: 
-	      - mssql-storage:/var/opt/mssql
+  storage:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    restart: always
+    environment:
+      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+      - ACCEPT_EULA=Y
+    volumes: 
+      - mssql-storage:/var/opt/mssql
 
-	volumes:
-	  mssql-storage:
+volumes:
+  mssql-storage:
+````
 
-	````
-
-
-1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
-1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
++ Run the command `docker stack deploy -c docker-compose.yml report-server`.
++ Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
 ### Creating a New Server Agent
 
 >note The Report Server Manager for .NET has to be fully set up before following the steps from this section.
 
-1. Use the following `docker-compose.yml`:
++ Use the following `docker-compose.yml`:
 
-	services:
+````yml
+services:
 
-	  telerik-report-server:
-	    environment:
-	      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
-	      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-	      - Telemetry__IsDisabled=true
-	    env_file:
-	      - mssql_storage.env
-	    image: progressofficial/telerik-reportserver-app:latest
-	    restart: always
-	    ports:
-	      - "82:80"
-	    depends_on: 
-	      - storage
+# template configuration of Report Server.
+  telerik-report-server:
+    environment:
+      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+      - Telemetry__IsDisabled=true
+    env_file:
+      - mssql_storage.env
+    image: progressofficial/telerik-reportserver-app:latest
+    restart: always
+    ports:
+      - "82:80"
+    depends_on: 
+      - storage
 
-	  storage:
-	    image: "mcr.microsoft.com/mssql/server:2022-latest"
-	    restart: always
-	    environment:
-	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-	      - ACCEPT_EULA=Y
-	    volumes: 
-	      - mssql-storage:/var/opt/mssql
+  storage:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    restart: always
+    environment:
+      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+      - ACCEPT_EULA=Y
+    volumes: 
+      - mssql-storage:/var/opt/mssql
 
-	volumes:
-	  mssql-storage:
+volumes:
+  mssql-storage:
+````
 
+  Inside the `environment` element, there are entries for each encryption key. They should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration after successfully [Installing the Report Server Manager](#installing-the-report-server-manager):
 
-	Inside the `environment` element, there are entries for each encryption key. They should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration after successfully [Installing the Report Server Manager](#installing-the-report-server-manager):
+  * `RS_NET_MainPrivateKey` - Environment variable holding the main private key for the encryption. 
+  * `RS_NET_BackupPrivateKey` - Environment variable holding the main backup key for the encryption.
 
-* `RS_NET_MainPrivateKey` - Environment variable holding the main private key for the encryption. 
-* `RS_NET_BackupPrivateKey` - Environment variable holding the main backup key for the encryption.
-
-1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
-1. Open the Report Server Manager (by default - http://localhost:82), and then open the **Configuration** page.
-1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
-1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
++ Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
++ Open the Report Server Manager (by default - http://localhost:82), and then open the **Configuration** page.
++ Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
++ In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
 
-1. Press the **GENERATE CONFIGURATION** pop-up and copy the tokens from the **ENVIRONMENT VARIABLES** tab:
++ Press the **GENERATE CONFIGURATION** pop-up and copy the tokens from the **ENVIRONMENT VARIABLES** tab:
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
 
-1. Use the following `docker-compose.yml` file:
++ Use the following `docker-compose.yml` file:
 
-	````yml
+````yml
 services:
 
-	  telerik-report-server:
-	    environment:
-	      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
-	      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-	      - Telemetry__IsDisabled=true
-	    env_file:
-	      - mssql_storage.env
-	    image: progressofficial/telerik-reportserver-app:latest
-	    restart: always
-	    ports:
-	      - "82:80"
-	    depends_on: 
-	      - storage
+# template configuration of Report Server.
+  telerik-report-server:
+    environment:
+      - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
+      - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
+      - Telemetry__IsDisabled=true
+    env_file:
+      - mssql_storage.env
+    image: progressofficial/telerik-reportserver-app:latest
+    restart: always
+    ports:
+      - "82:80"
+    depends_on: 
+      - storage
 
-	  telerik-report-server-agent:
-	    environment:
-	      - Agent__ServerAddress=http://telerik-report-server
-	      - Agent__AuthenticationToken=YOUR_AGENT_AUTHENTICATION_TOKEN_HERE
-	      - Agent__Id=YOUR_AGENT_ID_HERE
-	    image: progressofficial/telerik-reportserver-agent:latest
-	    restart: always
-	    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+# template configuration of Report Server Agent.
+# Uncomment the following lines when a new server agent is configured in the Service Agents panel in the Configuration view of the Report Server web application.
+# Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
+  telerik-report-server-agent:
+    environment:
+      - Agent__ServerAddress=http://telerik-report-server
+      - Agent__AuthenticationToken=YOUR_AGENT_AUTHENTICATION_TOKEN_HERE
+      - Agent__Id=YOUR_AGENT_ID_HERE
+    image: progressofficial/telerik-reportserver-agent:latest
+    restart: always
+    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 
-	  storage:
-	    image: "mcr.microsoft.com/mssql/server:2022-latest"
-	    restart: always
-	    environment:
-	      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
-	      - ACCEPT_EULA=Y
-	    volumes: 
-	      - mssql-storage:/var/opt/mssql
+  storage:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    restart: always
+    environment:
+      - MSSQL_SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3
+      - ACCEPT_EULA=Y
+    volumes: 
+      - mssql-storage:/var/opt/mssql
 
-	volumes:
-	  mssql-storage:
-
+volumes:
+  mssql-storage:
 ````
 
-
-1. Update the _Agent__AuthenticationToken_ and _Agent__Id_ environment variables with the values from the newly created agent configuration.
-1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
-1. Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
++ Update the _Agent__AuthenticationToken_ and _Agent__Id_ environment variables with the values from the newly created agent configuration.
++ Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
++ Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
 
 	![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
 
