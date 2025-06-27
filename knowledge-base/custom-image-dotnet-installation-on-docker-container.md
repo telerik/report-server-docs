@@ -34,21 +34,18 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Navigate to the subfolder `ReportServiceAgent`.
 1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
-1. (_optional, recommended_) Change the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your own strong password in the files `docker-compose.yml` and `mssql_storage.env`:
+1. (_optional, recommended_) Change the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your own strong password in the file `docker-compose.yml`:
 
-	* Open the file `docker-compose.yml` in a text editor like Notepad++ and change the password on line 31. The tabulation is essential and should be preserved:
+	* Open the file `docker-compose.yml` in a text editor like Notepad++ and change the password. The tabulation is essential and should be preserved:
 
 	`      - SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3`
 
-	* Open the file `mssql_storage.env` in a text editor like Notepad++ and change the password with your own password you used above:
-
-	`reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false`
+	`      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false`
 
 1. Run the command `docker image pull mcr.microsoft.com/mssql/server:2019-latest`.
 1. (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
-
 
 >important The first time you open the Report Server, you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
 
@@ -98,6 +95,7 @@ telerik-report-server-agent:
         - Agent__ServerAddress=http://telerik-report-server
         - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
         - Agent__Id=PASTE_THE_AGENT_ID_HERE
+        - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
       image: telerik-report-server-agent:local
       restart: always
       command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
@@ -122,8 +120,11 @@ services:
     environment:
       - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
       - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-    env_file:
-      - mssql_storage.env
+      - reportServer__storage__provider=MsSqlServer
+      - reportServer__storage__parameters__0__name=ConnectionString
+      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false
+      - reportServer__storage__isDefault=false
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: telerik-report-server:local
     restart: always
     ports:
@@ -139,6 +140,7 @@ services:
       - Agent__ServerAddress=http://telerik-report-server
       - Agent__AuthenticationToken=PASTE_THE_AGENT_AUTH_TOKEN_HERE
       - Agent__Id=PASTE_THE_AGENT_ID_HERE
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: telerik-report-server-agent:local
     restart: always
     command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
@@ -154,7 +156,6 @@ services:
 
 volumes:
   mssql-storage:
-
 ````
 
 ## Notes
