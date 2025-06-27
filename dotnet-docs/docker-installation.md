@@ -31,11 +31,14 @@ Below is an example of a `docker-compose.yml` that may be used for installing th
 services:
 
 # template configuration of Report Server.
+# Please update the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key.
   telerik-report-server:
     environment:
-      - Telemetry__IsDisabled=true
-    env_file:
-      - mssql_storage.env
+      - reportServer__storage__provider=MsSqlServer
+      - reportServer__storage__parameters__0__name=ConnectionString
+      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false
+      - reportServer__storage__isDefault=false
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: progressofficial/telerik-reportserver-app:latest
     restart: always
     ports:
@@ -46,11 +49,13 @@ services:
 # template configuration of Report Server Agent.
 # Uncomment the following lines when a new server agent is configured in the Service Agents panel in the Configuration view of the Report Server web application.
 # Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
+# Please update the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key.
   # telerik-report-server-agent:
   #   environment:
   #   - Agent__ServerAddress=http://telerik-report-server
   #   - Agent__AuthenticationToken=YOUR_AGENT_AUTHENTICATION_TOKEN_HERE
   #   - Agent__Id=YOUR_AGENT_ID_HERE
+  #   - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
   #   image: progressofficial/telerik-reportserver-agent:latest
   #   restart: always
   #   command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
@@ -75,7 +80,7 @@ volumes:
 ### Installing the Report Server Manager
 
 + (_optional, use it only if it was not used before_) Initialize a swarm to make the Docker Engine hosting the RS.NET a manager in the newly created single-node swarm by running the command `docker swarm init`.
-+ Use the following `docker-compose.yml`:
++ Use the following `docker-compose.yml`. Replace the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key:
 
 ````yml
 services:
@@ -83,9 +88,11 @@ services:
 # template configuration of Report Server.
   telerik-report-server:
     environment:
-      - Telemetry__IsDisabled=true
-    env_file:
-      - mssql_storage.env
+      - reportServer__storage__provider=MsSqlServer
+      - reportServer__storage__parameters__0__name=ConnectionString
+      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false
+      - reportServer__storage__isDefault=false
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: progressofficial/telerik-reportserver-app:latest
     restart: always
     ports:
@@ -118,6 +125,8 @@ volumes:
 	* `RS_NET_MainPrivateKey` - Environment variable holding the main private key for the encryption.
 	* `RS_NET_BackupPrivateKey` - Environment variable holding the main backup key for the encryption.
 
+	Don't forget to replace also the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key.
+
 ````yml
 services:
 
@@ -126,9 +135,11 @@ services:
     environment:
       - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
       - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-      - Telemetry__IsDisabled=true
-    env_file:
-      - mssql_storage.env
+      - reportServer__storage__provider=MsSqlServer
+      - reportServer__storage__parameters__0__name=ConnectionString
+      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false
+      - reportServer__storage__isDefault=false
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: progressofficial/telerik-reportserver-app:latest
     restart: always
     ports:
@@ -170,9 +181,11 @@ services:
     environment:
       - RS_NET_MainPrivateKey=PASTE_THE_MAIN_ENCRYPTION_KEY_HERE
       - RS_NET_BackupPrivateKey=PASTE_THE_BACKUP_ENCRYPTION_KEY_HERE
-      - Telemetry__IsDisabled=true
-    env_file:
-      - mssql_storage.env
+      - reportServer__storage__provider=MsSqlServer
+      - reportServer__storage__parameters__0__name=ConnectionString
+      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false
+      - reportServer__storage__isDefault=false
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: progressofficial/telerik-reportserver-app:latest
     restart: always
     ports:
@@ -183,11 +196,13 @@ services:
 # template configuration of Report Server Agent.
 # Uncomment the following lines when a new server agent is configured in the Service Agents panel in the Configuration view of the Report Server web application.
 # Please update the Agent__AuthenticationToken and Agent__Id environment variables with the values from the newly created agent configuration.
+# Please update the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key.
   telerik-report-server-agent:
     environment:
       - Agent__ServerAddress=http://telerik-report-server
       - Agent__AuthenticationToken=YOUR_AGENT_AUTHENTICATION_TOKEN_HERE
       - Agent__Id=YOUR_AGENT_ID_HERE
+      - TELERIK_LICENSE=YOUR_LICENSE_KEY_HERE
     image: progressofficial/telerik-reportserver-agent:latest
     restart: always
     command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
@@ -206,6 +221,7 @@ volumes:
 ````
 
 + Update the _Agent__AuthenticationToken_ and _Agent__Id_ environment variables with the values from the newly created agent configuration.
++ Update the YOUR_LICENSE_KEY_HERE environment variable with the value of your Telerik License Key.
 + Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 + Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
 
