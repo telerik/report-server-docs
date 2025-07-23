@@ -10,7 +10,7 @@ position: 1
 
 # Setting Up Your Telerik Report Server License Key
 
-Starting with the Q1 2025 release, the Telerik Report Server requires activation through a license key (trial or commercial). This article describes how to download or update your personal license key and use it to activate the Telerik Report Server product.
+Starting with the Q1 2025 release, the Telerik Report Server requires activation using a license key — this applies to both the trial and commercial versions of the product. This article describes how to download or update your personal license key and use it to activate the Telerik Report Server product.
 
 An invalid license results in [error and warning]({%slug license-errors-and-warnings%}) indicators such as watermarks and banners.
 
