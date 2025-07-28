@@ -10,15 +10,37 @@ position: 200
 
 # Report Server Installation
 
-The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82. 
+The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82.
 
-When deploying a new instance of Report Server, the default behavior of the MSI installer is to suggest applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and create a dedicated Windows user named **ReportServerUser** whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server. The **ReportServerUser** is created with a strong random password, which is not saved, as this user is dedicated to running only the Telerik Report Server and its agent. The MSI installer allows opting out of the safe workflow and installing the applications under the **LocalSystem** identity, which uses elevated permissions. The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions]({%slug how-to-change-report-server-iis-user%}). 
+## ReportServerUser, LocalSystem Indentity and Dedicated Users
 
-Generally, it is possible to deploy multiple Report Server instances on the same IIS if they have different website names, ports, and application folders. However, the Scheduler Windows service cannot be duplicated and will always point to the Storage of the last installed Report Server instance. Installing multiple instances of Report Server will also affect the retrieval of the encryption keys stored in the user's environment variables. For those reasons, only one fully functional Telerik Report Server can be installed on a single machine.
+### ReportServerUser 
+
+When deploying a new instance of Report Server, the default behavior of the MSI installer is to suggest applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and create a dedicated Windows user named **ReportServerUser** whose identity will be used by both applications. The user is granted with the minimum necessary permissions to operate within the installation folder of Telerik Report Server. The **ReportServerUser** is created with a strong random password, which is not saved, as this user is dedicated to running only the Telerik Report Server and its agent. 
+
+### LocalSystem Identity
+
+The MSI installer allows opting out of the safe workflow and installing the applications under the **LocalSystem** identity, which uses elevated permissions. The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions]({%slug how-to-change-report-server-iis-user%}). 
+
+### Using Dedicated Users After Installation
+
+After installing the Telerik Report Server product, one may want to assign a custom dedicated user be used by the Report Server and the Service Agent. This is supported as well, and you can find a step-by-step tutorial on how to do it in the [How to Run Report Server and Service Agent with Limited Permissions]({%slug how-to-change-report-server-iis-user%}) article.
+
+Any custom Windows user must have the following permissions/policies for the Report Server, and it Service Agent, to function properly with all of the functionalities being supported:
+
+- [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the Report Server installation directory(`C:\Program Files (x86)\Progress\Telerik Report Server`), and all subdirectories
+- [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the `%ProgramData%\Telerik\Reporting` directory - This is the place where the cache of the [Map](https://docs.telerik.com/reporting/report-items/map/overview) report item is stored.
+- [Log on as a service](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/log-on-as-a-service) must be **enabled** for the user, or one of the user groups where it is included.
+
+## Multiple Report Server Installations
+
+Generally, it is possible to deploy multiple Report Server instances on the same IIS if they have different website names, ports, and application folders. However, the Scheduler Windows service cannot be duplicated and will always point to the Storage of the last installed Report Server instance. 
+
+Installing multiple instances of Report Server will also affect the retrieval of the encryption keys stored in the user's environment variables. For those reasons, only one fully functional Telerik Report Server can be installed on a single machine.
 
 ## Downloading and Installing
 
-You can download the licensed product version from the **Telerik Control Panel**, which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility that will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
+You can download the licensed product version from the [Telerik Control Panel](https://docs.telerik.com/controlpanel/introduction), which you can get from [Your Account](http://www.telerik.com/account). The Control Panel is a small Windows utility that will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
 
 ## Installation Options
 
