@@ -12,6 +12,10 @@ position: 50
 
 Beginning with the 2025 Q3 release, we are introducing the new AI Settings to our Report Server. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report Document Insights__.
 
+During the report preview phase, AI-generated insights offer an extensive suite of functionalities, including the formulation of responses, the construction of prompts, engagement with AI-generated content, and the execution of predefined instructions.
+
+![](images/)
+
 ## AI Integration
 
 The AI settings view allows you to configure exactly how you want to use our AI feature and its options through the user interface. By default, the `Enable AI` checkbox is set to false, which disables the entire page. You will still be able to copy any content you need, but dropdown selections and checkbox changes will be unavailable.
@@ -47,5 +51,27 @@ From this panel, you can choose whether to display a content message by setting 
 You can create as many Predefined Prompts as needed. You can also delete any prompts that are no longer required. However, if there is only one Predefined Prompt, it cannot be deleted.
 
 The `Allow custom prompts` checkbox enables or disables the ability for end users to send custom requests to the AI.
+
+![](images/)
+
+If all settings have been configured correctly and the changes have been saved, the following message will appear on the screen.
+
+![](images/)
+
+### Consent
+
+Before any user can use this feature, upon opening the AI Prompt Dialog, they will be asked to give consent to the AI to process the provided text.
+
+![](images/)
+
+### Ask AI Prompt
+
+After consent is given, the prompt for asking the AI questions will appear in the top-right corner of the report viewer. The UI will change depending on whether custom questions are allowed.
+
+![](images/)
+
+### Output
+
+The Output of the AI processor will be displayed in the Output tab of the Ask AI Prompt after the result has been generated:
 
 ![](images/)
