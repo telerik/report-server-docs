@@ -71,7 +71,7 @@ Internally, the installer uses the ready-to-use Docker Images introduced in [202
 * https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
 
 The above images are downloaded automatically during the installation. If [Docker](https://www.docker.com/) is not present on the system, it will be automatically installed, as the installer uses **Docker** to host the application.
-In the installation directory, you will be able to find the `docker-compose.yml` file, which will contain valuable information such as the **main and backup** [encryption keys]({%slug security%}#encryption).
+In the installation directory, you will find the `docker-compose.yml` file, which contains valuable information such as the **main and backup** [encryption keys]({%slug security%}#encryption).
 
 The installator will also automatically create a single [Report Server Agent]({%slug dotnet-server-agents%}), the configuration for which can also be found in the `docker-compose.yml` file.
 
