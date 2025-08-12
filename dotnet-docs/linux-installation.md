@@ -10,7 +10,7 @@ position: 201
 
 # Report Server for .NET: Installation on Linux
 
-Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-812) of the Telerik Report Server, you can now download a separate installer for Linux operating systems.
+Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-812) of the Telerik Report Server, you can download a separate installer for Linux operating systems.
 
 ## Installation Process
 
@@ -25,7 +25,7 @@ sudo apt-get install unzip
 ````
 
 
-1. After installing the unzip utility, use the following command to extract the installer in a new directory:
+1. After installing the unzip utility, use the following command to extract the installer into a new directory:
 
 	````bash
 unzip Telerik_ReportServer_Net_NonWindows_Installer_11_2_25_812.zip -d reportserver
@@ -73,7 +73,7 @@ Internally, the installer uses the ready-to-use Docker Images introduced in [202
 The above images are downloaded automatically during the installation. If [Docker](https://www.docker.com/) is not present on the system, it will be automatically installed, as the installer uses **Docker** to host the application.
 In the installation directory, you will find the `docker-compose.yml` file, which contains valuable information such as the **main and backup** [encryption keys]({%slug security%}#encryption).
 
-The installator will also automatically create a single [Report Server Agent]({%slug dotnet-server-agents%}), the configuration for which can also be found in the `docker-compose.yml` file.
+The installer will also automatically create a single [Report Server Agent]({%slug dotnet-server-agents%}), the configuration for which can also be found in the `docker-compose.yml` file.
 
 ## See Also
 
