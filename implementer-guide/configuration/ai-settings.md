@@ -12,7 +12,7 @@ position: 50
 
 Beginning with the 2025 Q3 release, we are introducing the new AI Settings to our Report Server. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report Document Insights__.
 
-During the report preview phase, [AI-Powered Insights]({%slug telerikreporting/designing-reports/adding-interactivity-to-reports/ai-powered-insights%}) offer an extensive suite of functionalities, including the formulation of responses, the construction of prompts, engagement with AI-generated content, and the execution of predefined instructions.
+During the report preview phase, [AI-Powered Insights](https://docs.telerik.com/reporting/interactivity/ai-powered-insights) offer an extensive suite of functionalities, including the formulation of responses, the construction of prompts, engagement with AI-generated content, and the execution of predefined instructions.
 
 ![An image of the Report Server with the AI Dialog being opened](../../images/AIPromptReportServer.png)
 
