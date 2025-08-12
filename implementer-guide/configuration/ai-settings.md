@@ -18,9 +18,13 @@ During the report preview phase, AI-generated insights offer an extensive suite 
 
 ## AI Integration
 
-The AI settings view allows you to configure exactly how you want to use our AI feature and its options through the user interface. By default, the `Enable AI` checkbox is set to false, which disables the entire page. You will still be able to copy any content you need, but dropdown selections and checkbox changes will be unavailable.
+The AI configuration panel is always visible in the user interface, regardless of the current AI enablement status. When the Enable AI checkbox is set to false (which is the default state), the panel enters read-only mode. In this mode:
 
-> If `Enable AI` is set to false and the Kendo AI prompt is not present in the report viewers, the AI configuration section will not be displayed in the Report Server.
+* All dropdowns and checkboxes are disabled and cannot be modified
+* Users can still view and copy existing configuration values.
+* No changes to AI-related settings can be made until the Enable AI option is activated.
+
+> If `Enable AI` is set to false, the AI configuration section will not be displayed in the Report Server
 
 If `Enable AI` is set to true, you will be able to configure the AI by following these steps:
 
@@ -32,23 +36,25 @@ If `Enable AI` is set to true, you will be able to configure the AI by following
 
   ![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
 
-1. If all fields are filled in, you can test the integration using the `Test Integration` button. This will ping the selected provider with the specified information and send a request using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`. If there is a problem, a pop-up will appear with detailed error information.
+> While Provider and Model are required for all AI providers, the remaining fields(Endpoint and API Key) depend on the specific provider's requirements.
 
-  ![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
+If all required fields are filled in, you can test the integration using the `Test Integration` button. This will send a request to the selected provider with the specified information using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`. If there is a problem, a pop-up will appear with detailed error information.
 
-  ![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
+![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
+
+![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
 
 ## AI-Powered Report Document Insights
 
-From this panel, you can choose whether to display a content message by setting the `Show content message` checkbox to true.
+From this panel, you can choose whether to display a content message by setting the `Show consent message` checkbox to true.
 
-![An image of the Content Message](../../images/showConsentMessageButton.png)
+![An image of the Consent Message](../../images/showConsentMessageButton.png)
 
-> If `Show content message` is set to true and the content message field is empty, you will not be able to save the changes.
+> If `Show consent message` is set to true and the content message field is empty, you will not be able to save the changes.
 
 ### Prompts Settings
 
-You can create as many Predefined Prompts as needed. You can also delete any prompts that are no longer required. However, if there is only one Predefined Prompt, it cannot be deleted.
+You can create as many Predefined Prompts as needed. You can also delete any prompts that are no longer required. However, if there is only one Predefined Prompt, it cannot be deleted. If you would like to enable 'custom prompts' for the end-users and NOT give them any predefined prompts, leave the prompts blank and save.
 
 ![Image of the Predefined Prompts in the Report Server](../../images/PredefinedPromptsReportServer.png)
 
