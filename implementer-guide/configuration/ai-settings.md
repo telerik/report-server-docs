@@ -1,8 +1,8 @@
 ---
-title: AI 
-page_title: AI
-description: AI Settings
-slug: designer
+title: AI Settings
+page_title: AI Settings for Report Server
+description: "Learn more about the AI Settings available in the Telerik Report Server, how to define and use them."
+slug: ai-settings
 tags: AI,settings
 published: True
 position: 50
@@ -26,17 +26,17 @@ If `Enable AI` is set to true, you will be able to configure the AI by following
 
 1. Choose one of the following providers:
 
-![An image of the providers supported by the Report Server ](../../images/AIProvidersReportServer.png)
+  ![An image of the providers supported by the Report Server ](../../images/AIProvidersReportServer.png)
 
 1. Select a `Model Name`, specify the `Server Endpoint` and the `API Key`
 
-![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
+  ![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
 
 1. If all fields are filled in, you can test the integration using the `Test Integration` button. This will ping the selected provider with the specified information and send a request using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`. If there is a problem, a pop-up will appear with detailed error information.
 
-![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
+  ![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
 
-![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
+  ![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
 
 ## AI-Powered Report Document Insights
 
