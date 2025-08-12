@@ -14,7 +14,7 @@ Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/re
 
 ## Installation Process
 
-1. Navigate to the [Progress® Telerik® Report Server](https://www.telerik.com/account/downloads/product-download?product=REPSERVER) download page where you should find the zipped installer file.
+1. Navigate to the [Progress® Telerik® Report Server download page](https://www.telerik.com/account/downloads/product-download?product=REPSERVER), where you should find the zipped installer file.
 
 	![The Linux Installer for Report Server available for download from the Telerik downloads page](../images/rs-net-images/rs-net-download-linux-cli-installer.png)
 
