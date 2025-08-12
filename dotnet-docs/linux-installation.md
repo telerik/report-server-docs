@@ -3,7 +3,7 @@ title: Installation on Linux
 page_title: Installing ReportServer.NET on Linux
 description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Linux."
 slug: dotnet-installation-on-linux
-tags: installation,dotnet,linux,ubuntu,fedora,arch,debian
+tags: installation,dotnet,linux,ubuntu,debian
 published: True
 position: 201
 ---
@@ -11,6 +11,8 @@ position: 201
 # Report Server for .NET: Installation on Linux
 
 Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-812) of the Telerik Report Server, you can download a separate installer for Linux operating systems.
+
+>note The CLI installer is configured for [Ubuntu](https://ubuntu.com/) and Ubuntu-based distributions.
 
 ## Installation Process
 
