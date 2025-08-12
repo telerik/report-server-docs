@@ -54,7 +54,7 @@ sudo ./Telerik.ReportServer.Installer
 ````
 
 
-1. If the previous steps were executed successfully, the installer will begin and during the rest of the installation process, you will be asked to configure the Telerik Report Server for .NET via the CLI. This includes providing the operating system account that should be used by the installer, credentials for the admin user in the Report Server and so on.
+1. If the previous steps were executed successfully, the installer will begin, and during the rest of the installation process, you will be asked to configure the Telerik Report Server for .NET via the CLI. This includes providing the operating system account that should be used by the installer, credentials for the admin user in the Report Server, and so on.
 
 	![A Preview of a Successful Start of the Report Server Linux CLI Installer](../images/rs-net-images/rs-net-linux-installer-preview.png)
 
