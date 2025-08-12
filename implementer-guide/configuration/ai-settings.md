@@ -36,11 +36,11 @@ If `Enable AI` is set to true, you will be able to configure the AI by following
 
   ![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
 
-> While Provider and Model are required for all AI providers, the remaining fields(Endpoint and API Key) depend on the specific provider's requirements.
+> While Provider and Model are required for all AI providers, the remaining fields (Endpoint and API Key) depend on the specific provider's requirements.
 
 If all required fields are filled in, you can test the integration using the `Test Integration` button. This will send a request to the selected provider with the specified information using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`. If there is a problem, a pop-up will appear with detailed error information.
 
-![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
+![An image of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
 
 ![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
 
