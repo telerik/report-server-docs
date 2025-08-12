@@ -61,7 +61,7 @@ sudo ./Telerik.ReportServer.Installer
 
 ## Post-Installation
 
-After the installation completes, you may navigate to the `/Account/Login` page of the Report Server for .NET to verify that the application is up and running.
+Once the installation is complete, navigate to the `/Account/Login` page of the Report Server for .NET in your browser to verify that the application is up and running.
 
 Any configuration settings skipped during the CLI installation can be completed post-installation from the `/Configuration` page.
 
