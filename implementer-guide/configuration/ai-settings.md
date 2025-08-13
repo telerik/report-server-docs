@@ -31,12 +31,12 @@ Depending on the state of the `Enable AI` setting:
 
 1. Choose one of the following providers:
 
-| Provider |
-| ------ |
-|`MicrosoftExtensionsAzureAIInference`|
-|`MicrosoftExtensionsAzureOpenAI`|
-|`MicrosoftExtensionsOllama`|
-|`MicrosoftExtensionsOpenAI`|
+  | Provider |
+  | ------ |
+  |`MicrosoftExtensionsAzureAIInference`|
+  |`MicrosoftExtensionsAzureOpenAI`|
+  |`MicrosoftExtensionsOllama`|
+  |`MicrosoftExtensionsOpenAI`|
 
   ![An image of the providers supported by the Report Server ](../../images/AIProvidersReportServer.png)
 
