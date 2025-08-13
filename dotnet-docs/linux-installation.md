@@ -10,7 +10,7 @@ position: 201
 
 # Report Server for .NET: Installation on Linux
 
-Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-812) of the Telerik Report Server, you can download a separate installer for Linux operating systems.
+Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-813) of the Telerik Report Server, you can download a separate installer for Linux operating systems.
 
 >note The CLI installer is configured for [Ubuntu](https://ubuntu.com/) and Ubuntu-based distributions.
 
@@ -30,7 +30,7 @@ sudo apt-get install unzip
 1. After installing the unzip utility, use the following command to extract the installer into a new directory:
 
 	````bash
-unzip Telerik_ReportServer_Net_NonWindows_Installer_11_2_25_812.zip -d reportserver
+unzip Telerik_ReportServer_Net_NonWindows_Installer_11_2_25_813.zip -d reportserver
 ````
 
 
