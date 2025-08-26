@@ -10,6 +10,8 @@ position: 600
 
 # Whitelabeling
 
+>note Starting from 2025 Q3, the whitelabeling functionality is now also available for Report Server for .NET.
+
 Whitelabeling enables Report Server customers to remove branding elements in the Report Server web application and [Standalone Report Designer]({%slug report-designer%}) application and replace them with branding from the customer enterprise.
 
 The following elements can be rebranded:

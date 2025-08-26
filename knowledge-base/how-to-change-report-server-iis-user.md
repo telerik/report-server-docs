@@ -71,4 +71,15 @@ This tutorial will show you how to change the Report Server's IIS application po
 
 	`netsh http delete urlacl url=http://+:82/ReportServer/ServiceAgent/`
 
+15. Ensure that the newly created Windows user has all of the required permissions for running the Report Server and its Service Agent:
+
+	- [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the Report Server installation directory(`C:\Program Files (x86)\Progress\Telerik Report Server`), and all subdirectories
+	- [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the `%ProgramData%\Telerik\Reporting` directory - This is the place where the cache of the [Map](https://docs.telerik.com/reporting/report-items/map/overview) report item is stored.
+	- [Log on as a service](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/log-on-as-a-service) must be **enabled** for the user, or one of the user groups where it is included.
+
 > Additional Actions: Consider adding the local user to databases used by Report Server data connections that utilize Windows Credentials login permissions.
+
+## See Also
+
+* [System Requirements for Telerik Report Server]({%slug system-requirements%})
+* [Report Server Installation]({%slug installation%})
