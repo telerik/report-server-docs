@@ -10,9 +10,9 @@ position: 600
 
 # Whitelabeling
 
->note Starting from 2025 Q3, the whitelabeling functionality is now also available for Report Server for .NET.
+>note Starting with the [2025 Q3](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-813) release, the whitelabeling functionality is now also available in the [Report Server for .NET]({%slug coming-soon%}).
 
-Whitelabeling enables Report Server customers to remove branding elements in the Report Server web application and [Standalone Report Designer]({%slug report-designer%}) application and replace them with branding from the customer enterprise.
+Whitelabeling enables Report Server customers to remove branding elements in the Report Server web application and [Standalone Report Designer]({%slug report-designer%}) application and replace them with branding from the customer's enterprise.
 
 The following elements can be rebranded:
 
