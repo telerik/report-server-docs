@@ -5,7 +5,7 @@ description: "Learn how to enable SeriLog logging in the Telerik Report Server f
 slug: logging-rs-net
 tags: SeriLog,Logging,Troubleshooting,Error,RS.NET
 published: True
-position: 302
+position: 10
 ---
 
 # Creating Logs in the Report Server for .NET

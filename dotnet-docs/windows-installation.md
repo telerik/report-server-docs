@@ -5,7 +5,7 @@ description: "Learn about the specifics, recommendations, and available approach
 slug: dotnet-installation-on-windows
 tags: installation,dotnet,windows
 published: True
-position: 200
+position: 2
 ---
 
 # Report Server for .NET: Installation on Windows
