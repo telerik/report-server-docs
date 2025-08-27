@@ -5,7 +5,7 @@ description: "Learn about the specifics, recommendations, and available approach
 slug: dotnet-installation-on-linux
 tags: installation,dotnet,linux,ubuntu,debian
 published: True
-position: 201
+position: 3
 ---
 
 # Report Server for .NET: Installation on Linux

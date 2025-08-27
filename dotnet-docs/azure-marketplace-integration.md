@@ -5,7 +5,7 @@ description: "Learn how to deploy the Telerik Report Server for .NET directly fr
 slug: azure-marketplace-integration
 tags: report,server,dotnet,azure,marketplace
 published: true
-position: 125
+position: 5
 ---
 
 # Using Telerik Report Server .NET from the Azure Marketplace

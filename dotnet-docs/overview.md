@@ -5,7 +5,7 @@ description: "The Telerik Report Server for .NET is a server-based reporting pla
 slug: coming-soon
 tags: report,server,dotnet,overview
 published: true
-position: 120
+position: 1
 ---
 
 # Report Server for .NET Introduction

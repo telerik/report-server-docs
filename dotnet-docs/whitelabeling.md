@@ -5,7 +5,7 @@ description: "Learn about the specifics of what is supported in the new Whitelab
 slug: dotnet-server-whitelabeling
 tags: whitelabeling,report,server,.net,color,logo,favicon
 published: True
-position: 2
+position: 6
 ---
 
 # Overview
@@ -44,9 +44,10 @@ The following elements can be rebranded:
 
 ### Configuration
 
-The whitelabeling feature can be found under **Configuration > Whitelabeling**. Administrator rights are required to access the Report Server Configuration page.
+The whitelabeling feature can be found under **Configuration > Whitelabeling**. 
+Administrator rights are required to access the Report Server Configuration page.
 
-![All of the available Whitelabeling settings in the Report Server for .NET Configuration]()
+![All of the available Whitelabeling settings in the Report Server for .NET Configuration](../images/rs-net-images/rs-net-whitelabeling-all-settings.png
 
 ## See Also
 

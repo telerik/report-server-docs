@@ -5,7 +5,7 @@ description: "Learn how to set up the Single Sign-On (SSO) functionality in Micr
 slug: using-microsoft-entra-id-linux
 tags: azure,microsoft,entra,id,linux
 published: True
-position: 301
+position: 9
 ---
 
 # Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Linux/Container

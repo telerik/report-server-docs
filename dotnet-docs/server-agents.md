@@ -5,7 +5,7 @@ description: "Learn about the specifics of what are the Server Agents in the Rep
 slug: dotnet-server-agents
 tags: server-agents,server,agent,report,server,.net,scheduling,data,alerts
 published: True
-position: 303
+position: 7
 ---
 
 # Server Agent
