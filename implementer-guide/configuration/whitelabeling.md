@@ -10,7 +10,7 @@ position: 600
 
 # Whitelabeling
 
->note Starting with the [2025 Q3](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-813) release, the whitelabeling functionality is now also available in the [Report Server for .NET]({%slug coming-soon%}).
+>note Starting with the [2025 Q3](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-813) release, the whitelabeling functionality is now also available in the [Report Server for .NET]({%slug coming-soon%}) - [Whitelabeling in the Report Server for .NET]({%slug dotnet-server-whitelabeling%}).
 
 Whitelabeling enables Report Server customers to remove branding elements in the Report Server web application and [Standalone Report Designer]({%slug report-designer%}) application and replace them with branding from the customer's enterprise.
 
@@ -22,8 +22,14 @@ The following elements can be rebranded:
 
 The whitelabeling feature can be found under _Configuration_ > _Whitelabeling_. Administrator rights are required to access the Report Server Configuration page.
 
-## Report Server ##
+## Report Server
+
 ![rs-whitelabeling](../../images/report-server-images/whitelabeling/report-server-whitelabeling.png)
 
-## Standalone Report Designer ##
+## Standalone Report Designer
+
 ![eud-whitelabeling](../../images/report-server-images/whitelabeling/designer-whitelabeling.png)
+
+## See Also
+
+* [Whitelabeling in the Report Server for .NET]({%slug dotnet-server-whitelabeling%})
