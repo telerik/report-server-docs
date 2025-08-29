@@ -8,6 +8,58 @@ published: True
 position: 50
 ---
 
+
+<style>
+  img[alt="An image of the providers supported by the Report Server"] {
+  width: 600px;
+}
+  
+  img[alt="An image of the Model Name, Server Endpoint, and API Key fields"] {
+  width: 600px;
+}
+
+  img[alt="An image of the of the message that will appear if the fields are filled in correctly"] {
+  width: 600px;
+}
+
+  img[alt="An image of the message that will appear if the fields are filled in incorrectly"] {
+  width: 750px;
+}
+
+   img[alt="An image of the Consent Message"] {
+  width: 700px;
+}
+
+   img[alt="Image of the Predefined Prompts in the Report Server"] {
+  width: 600px;
+}
+
+   img[alt="Image of the 'Allow custom prompts' checkbox"] {
+  width: 700px;
+}
+
+   img[alt="An image of the message that will appear if the fields are filled in incorrectly"] {
+  width: 700px;
+}
+
+   img[alt="Image of the message 'The new settings have been saved successfully' in the Report Server Configuration"] {
+  width: 500px;
+}
+
+    img[alt="An Image of how the AI Prompt Consent Dialog Appears in the Report Server"] {
+  width: 900px;
+}
+
+    img[alt="An Image of how the Ask AI Prompt will look with custom questions in the Report Server"] {
+  width: 600px;
+}
+
+    img[alt="An Image of how the Ask AI Prompt will look when the output has been generated in the Report Server"] {
+  width: 600px;
+}
+</style>
+
+
 # AI-Powered Features Settings
 
 With the **2025 Q3** release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report__ Document Insights.
@@ -17,12 +69,6 @@ During the report preview phase, the [AI-Powered Insights](https://docs.telerik.
 > Report Server does not provide a built-in REST API or include any embedded LLMs/SLMs. To use any AI-powered feature, you must have an active subscription to a third-party LLM provider. This subscription must give you access to a valid REST API endpoint and key, which must be configured in the AI Setup page.
 
 ![An image of the Report Server with the AI Dialog being opened](../../images/AIPromptReportServer.png)
-
-## Differences between Report Server for .NET and .NET Framework
-
-In RS.NET, the third-party dependency required for Retrieval-Augmented Generation (RAG) is included by default. Users can disable it either through the appsettings.json configuration file or, if running in Docker, by passing the configuration externally.
-
-In contrast, this dependency is not available in RS.462 or applications targeting .NET Framework, because it is not supported in .NET Standard. As a result, RAG functionality is not included in those environments.
 
 ## AI Integration
 
@@ -46,7 +92,7 @@ Depending on the state of the `Enable AI` setting:
   |`MicrosoftExtensionsOllama`|
   |`MicrosoftExtensionsOpenAI`|
 
-  ![An image of the providers supported by the Report Server ](../../images/AIProvidersReportServer.png)
+  ![An image of the providers supported by the Report Server](../../images/AIProvidersReportServer.png)
 
 1. Select a `Model Name`, specify the `Server Endpoint` and the `API Key`
 
@@ -56,9 +102,9 @@ Depending on the state of the `Enable AI` setting:
 
 If all required fields are filled in, you can test the integration using the `Test Integration` button. This will send a request to the selected provider with the specified information using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`. If there is a problem, a pop-up will appear with detailed error information.
 
-![An image of the of the message that will appear if the fields are filled in correctly.](../../images/testIntegrationSuccessfulMessage.png)
+![An image of the of the message that will appear if the fields are filled in correctly](../../images/testIntegrationSuccessfulMessage.png)
 
-![An image of the message that will appear if the fields are filled in incorrectly.](../../images/testIntegrationFailedMessage.png)
+![An image of the message that will appear if the fields are filled in incorrectly](../../images/testIntegrationFailedMessage.png)
 
 ## AI-Powered Report Document Insights
 
@@ -99,3 +145,9 @@ After consent is given, the prompt for asking the AI questions will appear in th
 The **Output** of the AI processor will be displayed in the Output tab of the Ask AI Prompt after the result has been generated:
 
 ![An Image of how the Ask AI Prompt will look when the output has been generated in the Report Server](../../images/OutputPromptReportServer.png)
+
+## Differences between Report Server for .NET and .NET Framework
+
+In RS.NET, the third-party dependency required for Retrieval-Augmented Generation (RAG) is included by default. Users can disable it either through the appsettings.json configuration file or, if running in Docker, by passing the configuration externally.
+
+In contrast, this dependency is not available in RS.462 or applications targeting .NET Framework, because it is not supported in .NET Standard. As a result, RAG functionality is not included in those environments.
