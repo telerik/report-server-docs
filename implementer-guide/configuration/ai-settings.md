@@ -8,7 +8,6 @@ published: True
 position: 50
 ---
 
-
 <style>
   img[alt="An image of the providers supported by the Report Server"] {
   width: 600px;
@@ -62,7 +61,7 @@ position: 50
 
 # AI-Powered Features Settings
 
-With the **2025 Q3** release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report__ Document Insights.
+With the [**2025 Q3**](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-716) release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report__ Document Insights.
 
 During the report preview phase, the [AI-Powered Insights](https://docs.telerik.com/reporting/interactivity/ai-powered-insights)feature provides a rich set of capabilities, including generating responses, building prompts, interacting with AI-generated content, and executing predefined instructions. One of the configurable options in this panel is the ability to display a consent message to end users.
 
@@ -80,8 +79,8 @@ The AI configuration panel is always visible in the user interface, regardless o
 
 Depending on the state of the `Enable AI` setting:
 
-* If `Enable AI` checkbox is unchecked, the AI configuration section will not be displayed in the Report Server
-* If `Enable AI` checkbox is checked, you will be able to configure the AI by following these steps:
+* If the `Enable AI` checkbox is unchecked, the AI configuration section will not be displayed in the Report Server
+* If the `Enable AI` checkbox is checked, you will be able to configure the AI by following these steps:
 
 1. Choose one of the following providers:
 
@@ -112,7 +111,7 @@ From this panel, you can choose whether to display a consent message by setting 
 
 ![An image of the Consent Message](../../images/showConsentMessageButton.png)
 
-> If `Show consent message` checkbox is checked, and the consent message field is empty, you will not be able to save the changes.
+> If the `Show consent message` checkbox is checked, and the consent message field is empty, you will not be able to save the changes.
 
 ### Prompts Settings
 
@@ -148,6 +147,6 @@ The **Output** of the AI processor will be displayed in the Output tab of the As
 
 ## Differences between Report Server for .NET and .NET Framework
 
-In RS.NET, the third-party dependency required for Retrieval-Augmented Generation (RAG) is included by default. Users can disable it either through the appsettings.json configuration file or, if running in Docker, by passing the configuration externally.
+In the [Report Server for .NET]({%slug coming-soon%}), the third-party dependency required for *Retrieval-Augmented Generation* (RAG) is included by default. However, it can be disabled through the `appsettings.json` configuration file or, if running in [Docker](https://www.docker.com/), by passing the configuration externally.
 
-In contrast, this dependency is not available in RS.462 or applications targeting .NET Framework, because it is not supported in .NET Standard. As a result, RAG functionality is not included in those environments.
+In contrast, this dependency is not available in the Report Server for .NET Framework, because it is not supported in [.NET Standard](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-1-0). As a result, RAG functionality is not included in those environments.
