@@ -8,13 +8,21 @@ published: True
 position: 50
 ---
 
-# AI Overview
+# AI-Powered Features Settings
 
-Beginning with the **2025 Q3** release, we are introducing the new AI Settings to our Report Server. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report Document Insights__.
+With the **2025 Q3** release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report__ Document Insights.
 
-During the report preview phase, the [AI-Powered Insights](https://docs.telerik.com/reporting/interactivity/ai-powered-insights) offer an extensive suite of functionalities, including the formulation of responses, the construction of prompts, engagement with AI-generated content, and the execution of predefined instructions.
+During the report preview phase, the [AI-Powered Insights](https://docs.telerik.com/reporting/interactivity/ai-powered-insights)feature provides a rich set of capabilities, including generating responses, building prompts, interacting with AI-generated content, and executing predefined instructions. One of the configurable options in this panel is the ability to display a consent message to end users.
+
+> Report Server does not provide a built-in REST API or include any embedded LLMs/SLMs. To use any AI-powered feature, you must have an active subscription to a third-party LLM provider. This subscription must give you access to a valid REST API endpoint and key, which must be configured in the AI Setup page.
 
 ![An image of the Report Server with the AI Dialog being opened](../../images/AIPromptReportServer.png)
+
+## Differences between Report Server for .NET and .NET Framework
+
+In RS.NET, the third-party dependency required for Retrieval-Augmented Generation (RAG) is included by default. Users can disable it either through the appsettings.json configuration file or, if running in Docker, by passing the configuration externally.
+
+In contrast, this dependency is not available in RS.462 or applications targeting .NET Framework, because it is not supported in .NET Standard. As a result, RAG functionality is not included in those environments.
 
 ## AI Integration
 
@@ -54,11 +62,11 @@ If all required fields are filled in, you can test the integration using the `Te
 
 ## AI-Powered Report Document Insights
 
-From this panel, you can choose whether to display a content message by setting the `Show consent message` checkbox to true.
+From this panel, you can choose whether to display a consent message by setting the `Show consent message` checkbox to true. When this option is activated, a predefined message will be shown to users before they interact with AI-generated consent.
 
 ![An image of the Consent Message](../../images/showConsentMessageButton.png)
 
-> If `Show consent message` checkbox is checked, and the content message field is empty, you will not be able to save the changes.
+> If `Show consent message` checkbox is checked, and the consent message field is empty, you will not be able to save the changes.
 
 ### Prompts Settings
 
