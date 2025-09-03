@@ -109,11 +109,15 @@ If all required fields are filled in, you can test the integration using the `Te
 
 ## AI-Powered Report Document Insights
 
+This section contains the options that enable you to customize the feature ["AI Insights"](https://docs.telerik.com/reporting/interactivity/ai-powered-insights) available during report preview. The customizations will be applied to both embedded and external report viewers that are connected to this Report Server instance.
+
+### Consent Message Settings
+
 The **Consent Message Setting** is part of the panel that allows you to configure the AI prompt displayed in the Report Viewer. It plays an important role in ensuring transparency and user awareness when interacting with AI features.
 
-From this panel, you can choose whether to display a consent message by setting the `Show consent message` checkbox to true. When this option is activated, a predefined message will be shown to users before they interact with AI-generated content.
+From this panel, you can choose whether to display a consent message by setting the `Show consent message` checkbox to true. When this option is activated, a predefined message will be shown to users before they interact with AI-generated content. Once users confirm their consent, the confirmation is preserved in the browser's session storage, ensuring the consent dialog won't be shown again during the same session.
 
-The `Consent Message` is a notification shown to users before they interact with AI features. When enabled, the message informs users that by using the AI functionality, they agree to the processing of any data they provide—such as their prompts—for the purpose of delivering the service. It also includes a link to the applicable privacy policy, helping users understand how their data will be handled. You can customize the content of the consent message to better align with your organization’s tone, legal requirements, or user expectations.
+The `Consent Message` is a notification shown to users before they interact with AI features. When enabled, the message informs users that by using the AI functionality, they agree to the processing of any data they provide—such as their prompts—for the purpose of delivering the service. It may include a link to the applicable privacy policy, helping users understand how their data will be handled. You can customize the content of the consent message to better align with your organization’s tone, legal requirements, or user expectations.
 
 ![An image of the Consent Message Settings](../../images/showConsentMessage.png)
 
@@ -135,15 +139,18 @@ If all settings have been configured correctly and the changes have been saved, 
 
 ![Image of the message 'The new settings have been saved successfully' in the Report Server Configuration](../../images/SavedSuccessfullyMessage.png)
 
+## Workflow
+This section describes the workflow of displaying the AI prompt during report preview.
+
 ### Consent
 
 Before any user can use this feature, upon opening the **AI Prompt Dialog**, they will be asked to give consent to the AI to process the provided text.
 
 ![An Image of how the AI Prompt Consent Dialog Appears in the Report Server](../../images/ConsentMessage.png)
 
-### Ask AI Prompt
+### AI Prompt
 
-After consent is given, the prompt for asking the AI questions will appear in the top-right corner of the report viewer. The UI will change depending on whether custom questions are allowed.
+Once consent is provided, a prompt for submitting questions to the AI will appear in the top-right corner of the report viewer. The UI will change depending on whether custom questions are allowed.
 
 ![An Image of how the Ask AI Prompt will look with custom questions in the Report Server](../../images/AskAIPromptReportServer.png)
 
