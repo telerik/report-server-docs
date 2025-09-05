@@ -8,6 +8,12 @@ published: True
 position: 6
 ---
 
+<style>
+	li img {
+      width: 75% !important;
+	}
+</style>
+
 # Overview
 
 Our product supports white-labeling, allowing customers to personalize the visual identity of their instance. This feature enables organizations to align the product's appearance with their brand guidelines.
