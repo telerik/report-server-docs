@@ -9,7 +9,7 @@ position: 6
 ---
 
 <style>
-	li img {
+	li > p > img {
       width: 75% !important;
 	}
 </style>
