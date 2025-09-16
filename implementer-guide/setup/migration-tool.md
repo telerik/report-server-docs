@@ -3,7 +3,7 @@ title: Storage Migration Tool
 page_title: Storage Migration Tool
 description: Telerik Report Server Storage Migration Tool
 slug: migration-tool
-tags: migration,export
+tags: migration, export
 published: True
 position: 720
 ---
@@ -20,7 +20,7 @@ The **Telerik Report Server Storage Migration Tool** is a standalone module ship
 
 ### Command-Line Interface
 
-The executable **migrate.exe** operates in two modes - *simple* and *configurable* migration. The simple mode copies all the entries from the source storage to the destination storage. The configurable mode allows selecting which assets will be migrated along with their related entities (see the *Storage assets upgrade mechanism* section below). The migration mode is determined by the arguments, provided to the executable. For simple migration mode, the executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by connection information for each storage type. Example commands that perform a copy of file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* or to an MS SQL Server instance would look like this:
+The executable **migrate.exe** operates in two modes - *simple* and *configurable* migration. The simple mode copies all the entries from the source storage to the destination storage. The configurable mode allows selecting which assets will be migrated along with their related entities (see the *Storage assets upgrade mechanism* section below). The migration mode is determined by the arguments provided to the executable. For the simple migration mode, the executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by connection information for each storage type. Example commands that perform a copy of file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* or to an MS SQL Server instance would look like this:
 
 <code>migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1</code>
 
@@ -44,18 +44,18 @@ The migration tool uses *StackExchange.Redis.StrongName v.1.0.479* library as a 
 
 ### MS SQL Storage Connection Parameters
 
-Similar to the **redis** option, when **mssqlServer** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples of constructing the connection string can be found [here](https://www.connectionstrings.com/sql-server/). Note that if you do not specify a table name the data will be stored using the *master* schema.
+Similar to the **redis** option, when **mssqlServer** type is used, the value of the connection parameter is passed as a connection string to the MSSQL client. Make sure the MSSQL server is active and accepts connections before commencing a migration. Examples of constructing the connection string can be found [here](https://www.connectionstrings.com/sql-server/). Note that if you do not specify a table name, the data will be stored using the *master* schema.
 
 ### Graphical User Interface
 
-The migration tool can also be used via **Telerik.ReportServer.Migration.UI.exe**. It is a Windows desktop application that provides a convenient graphical migration experience and an option to log the migration process output. The form requires setting type and connection information for **source** and **destination** storages - the same way it is done with the CLI tool. An events log text box will display the results of the migration process and its content can be copied to the clipboard via a context menu. If needed, the same log can be saved to a file for further examination - in this case, make sure your user has the necessary privileges for writing a file into the log directory.
+The migration tool can also be used via **Telerik.ReportServer.Migration.UI.exe**. It is a Windows desktop application that provides a convenient graphical migration experience and an option to log the migration process output. The form requires setting type and connection information for **source** and **destination** storages - the same way it is done with the CLI tool. An events log text box will display the results of the migration process, and its content can be copied to the clipboard via a context menu. If needed, the same log can be saved to a file for further examination - in this case, make sure your user has the necessary privileges for writing a file into the log directory.
 
 ## Automating the Migration Process
 Some scenarios require deploying a pre-configured Report Server instance to the clients. The Report Server installation distributes two PowerShell scripts, named **rs-export.ps1** and **rs-import.ps1**, that help automate this process. Although the scripts can be used out of the box, their purpose is to demonstrate an example workflow, and they should be modified according to the current use case.
 
 The **rs-export.ps1** script starts a Report Server installation in silent mode and, when finished, opens the server's management console and waits for the server configuration to complete. When the administrator finishes configuring the report server (users, reports, whitelabeling, etc.), the script continues with exporting the server's assets storage into a .zip file and then exits.
 
-The **rs-import.ps1** script starts a Report Server installation and unpacks the produced by the first script .zip file as its storage. In case changing the ReportServer storage type is required, the script determines (via a parameter) the connection to the target storage and migrates the contents of the .zip file to MSSQL or REDIS if needed. The script also modifies the .config file in the Report Server directory so it will match the target storage type. Finally, the scripts start the Report Server Manager and exit.
+The **rs-import.ps1** script starts a Report Server installation and unpacks the .zip file produced by the first script as its storage. In case changing the ReportServer storage type is required, the script determines (via a parameter) the connection to the target storage and migrates the contents of the .zip file to MSSQL or REDIS if needed. The script also modifies the .config file in the Report Server directory so it will match the target storage type. Finally, the scripts start the Report Server Manager and exit.
 
 Both scripts accept startup parameters, defining the installation directory and path to the produced .zip file, so they would work even without modification for most common migration scenarios.
 
@@ -93,22 +93,22 @@ The configuration file that determines the rules for the migration is in JSON fo
 ### Configuration file rules
 The configuration file describes which assets will be migrated, applying the rules for each asset or collection as shown below: 
 
-  * **User** – the JSON file must contain a single user. If the username exists in the target storage, its data will not be updated, just its ID will be retrieved and will be used when migrating the reports asset. If the user is new to the target storage, it will be inserted as administrator. If the user exists on the target storage and has NO administrator rights, the migration process will abort with an explanatory message.
+  * **User** – the JSON file must contain a single user. If the username exists in the target storage, its data will not be updated; just its ID will be retrieved and will be used when migrating the reports asset. If the user is new to the target storage, it will be inserted as an administrator. If the user exists on the target storage and has NO administrator rights, the migration process will abort with an explanatory message.
   
   * **Mail Server** – this entry is optional. If provided, it will insert or update the mail server settings on the target storage. 
   
   * **Assets** - defines the assets that will be migrated as follows:
   
     + **Reports** – when migrating the stock set of reports, the new reports (the ones that do not exist in the target, compared by the combination of category and report name) will be inserted, and the existing ones will be updated. When the report is new, only its last revision from the source storage will be inserted in the target storage. When the report already exists, the last revision from the source storage will be inserted as the last revision in the target storage. If a report has specific permission that does not exist on the target storage, the permission will be migrated as well. The permissions assignment depends on whether the user exists in the destination storage and the **"users"** flag is used in the assets' configuration, as explained below:
-      - if the permission is assigned to a user that exists in destination storage, it will be migrated and assigned to that user. 
-      - if the permission is assigned to a user that does not exist in destination storage and **users** flag is included in the assets' configuration, the user will be migrated and the permission will be migrated and assigned to this new user.
-      - if the permission is assigned to a user that does not exist in destination storage and **users** flag is **not** included in the assets' configuration, then the permission will be migrated and assigned to the migration user.
+      - If the permission is assigned to a user that exists in the destination storage, it will be migrated and assigned to that user. 
+      - If the permission is assigned to a user that does not exist in destination storage and the **users** flag is included in the assets' configuration, the user will be migrated and the permission will be migrated and assigned to this new user.
+      - If the permission is assigned to a user that does not exist in destination storage and the **users** flag is **not** included in the assets' configuration, then the permission will be migrated and assigned to the migration user.
   
-    + **Data connections** – the data connections that do not exist in the target storage, will be inserted. Existing data connections will not be updated, because this could break the currently working reports. The permissions are migrated the same way as with the **Report Permissions** collection.
+    + **Data connections** – the data connections that do not exist in the target storage will be inserted. Existing data connections will not be updated, because this could break the currently working reports. The permissions are migrated the same way as with the **Report Permissions** collection.
   
     + **Scheduled Tasks** and **Data Alerts** – their migration follow the same rules as with the **Data connections**. If a task or alert is related to a report that does not exist on the target storage, that relation will be preserved, changing the report ID when the report is migrated. The permissions are migrated the same way as with the **Report Permissions** collection.
 
-    + **Users** – The users that do not exist in the target storage, will be inserted along with their roles. Existing users' data will not be updated. The permissions are migrated the same way as with the **Report Permissions** collection.
+    + **Users** – The users that do not exist in the target storage will be inserted along with their roles. Existing users' data will not be updated. The permissions are migrated the same way as with the **Report Permissions** collection.
 
 The application outputs a detailed log in the console so the migration process can be easily tracked. In case an error occurs, the stack trace will be logged as well. The migration process cannot be rolled back, so it is recommended to create a backup of the storage before migrating. This can be done manually, using batch files, or through scripts, as explained above.
 
@@ -126,12 +126,13 @@ The **serverType** option can be selected when using either the CLI tool or the 
 
 ![Migration Tool for Report Server for .NET - WinForms application](../../images/rs-net-images/migration-tool-winforms.png)
 
-> The migration process copies the assets "as-is" without applying decryption or encryption on them. This means that the destination storage will have its sensitive assets stored with the same encryption keys that were used in the source storage. It is important to set the same encryption keys in the Report Server application that will use the destination storage assets. The Migration Tool will display a reminder message upon successfully completing the migration process.
+> The migration process copies the assets "as-is" without applying decryption or encryption to them. This means that the destination storage will have its sensitive assets stored with the same encryption keys that were used in the source storage. It is important to set the same encryption keys in the Report Server application that will use the destination storage assets. The Migration Tool will display a reminder message upon successfully completing the migration process.
 
 ### Known Limitations
 
   The Report Server for .NET Migration Tool is in the *development phase* and does not support all the functionalities provided by the classic Migration tool. Here's a short list of what's not supported yet:
 
   - Redis database as destination storage. You can migrate storage assets from a **Redis** database to **File or MSSQLServer** storage.
-  - Migration rules - currently the supported migration mode allows to transfer the whole storage.
+  - Migration rules - currently, the supported migration mode allows the transfer of the whole storage.
+  - Changing storage type - currently, the migration from File to MSSQL storage or vice versa is not supported.
   - Backwards migration - migrating from Report Server for .NET storage to Report Server for .NET Framework storage is not supported.
