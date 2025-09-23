@@ -39,15 +39,15 @@ To resolve the issue, follow these steps:
    * Go to Advanced Settings -> Process Model -> Identity.
    * Set the password to the new one
   
-   ![ApplicationPoolIdentity.png](images/)
+   ![ApplicationPoolIdentity](../images/report-server-images/kb/ApplicationPoolIdentity.png)
 
 1. Ensure that the `ReportServerUser` account has __'Log on as a batch job'__ and __'Log on as a service'__ required user rights:
    * Open Local Security Policy.
    * Navigate to Computer Configuration -> Windows Settings -> Local Policies -> User Rights Assignment.
 
-   ![UserRightsAssignment1.png](images/)
+   ![UserRightsAssignment1](../images/report-server-images/kb/UserRightsAssignment1.png)
 
-   ![UserRightsAssignment2.png](images/)
+   ![UserRightsAssignment2](../images/report-server-images/kb/UserRightsAssignment2.png)
 
 1. If the issue persists even after you have confirmed that the username and password are correct, troubleshoot further by generating logs:
    * Refer to [Troubleshoot Report Server Manager]({%slug troubleshoot-report-server%}).
@@ -60,4 +60,5 @@ To resolve the issue, follow these steps:
 * [Welcome to Telerik® Report Server!]({%slug introduction%})
 * [Weak Password Requirement]({%slug weak-password-requirement-cve-2024-7293%})
 * [Login]({%slug rest-api-login-v2%})
+
 
