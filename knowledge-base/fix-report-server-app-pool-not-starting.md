@@ -45,9 +45,9 @@ To resolve the issue, follow these steps:
    * Open Local Security Policy.
    * Navigate to Computer Configuration -> Windows Settings -> Local Policies -> User Rights Assignment.
 
-   ![UserRightsAssignment1](/images/UserRightsAssignment1.png)
+   ![UserRightsAssignment1](images/UserRightsAssignment1.png)
 
-   ![UserRightsAssignment2](/images/UserRightsAssignment2.png)
+   ![UserRightsAssignment2](images/UserRightsAssignment2.png)
 
 1. If the issue persists even after you have confirmed that the username and password are correct, troubleshoot further by generating logs:
    * Refer to [Troubleshoot Report Server Manager]({%slug troubleshoot-report-server%}).
@@ -60,6 +60,7 @@ To resolve the issue, follow these steps:
 * [Welcome to Telerik® Report Server!]({%slug introduction%})
 * [Weak Password Requirement]({%slug weak-password-requirement-cve-2024-7293%})
 * [Login]({%slug rest-api-login-v2%})
+
 
 
 
