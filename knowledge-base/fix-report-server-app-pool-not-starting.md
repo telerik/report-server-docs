@@ -13,54 +13,50 @@ ticketid: 1682185
 ## Environment
 
 <table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>Report Server</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>10.2.24.924</td>
-</tr>
-</tbody>
+   <tbody>
+      <tr>
+         <td>Product</td>
+         <td>Report Server</td>
+      </tr>
+      <tr>
+         <td>Version</td>
+         <td>10.2.24.924</td>
+      </tr>
+   </tbody>
 </table>
 
 ## Description
 
 I cannot start the Report Server application pool in IIS. Attempting to log in results in a 503 error stating "The Service is unavailable." The Windows log shows that the identity of the application pool is invalid, possibly due to incorrect username/password or missing batch logon rights. Restarting the application pool leads to immediate failure.
 
-This knowledge base article also answers the following questions:
-- How to fix the Report Server application pool failing to start?
-- Why does the Report Server application pool show invalid identity?
-- How to assign proper user rights for the Report Server application pool?
-
 ## Solution
 
 To resolve the issue, follow these steps:
 
 1. Verify whether the password for the `ReportServerUser` account has been changed since installation. If yes:
-   - Open IIS Manager.
-   - Navigate to Application Pools.
-   - Select the `TelerikReportServer` application pool.
-   - Go to Advanced Settings -> Process Model -> Identity.
-   - Re-enter the updated username and password.
+   * Open IIS Manager.
+   * Navigate to Application Pools.
+   * Go to Advanced Settings -> Process Model -> Identity.
+   * Set the password to the new one
+  
+   ![](images/)
 
-2. Ensure that the `ReportServerUser` account has required user rights:
-   - Open Local Security Policy (Search for `secpol.msc` in the Start menu).
-   - Navigate to Computer Configuration > Windows Settings > Local Policies > User Rights Assignment.
-   - Confirm that the `ReportServerUser` or its user group has the following rights:
-     - "Log on as a batch job."
-     - "Log on as a service."
+1. Ensure that the `ReportServerUser` account has __'Log on as a batch job'__ and __'Log on as a service'__ required user rights:
+   * Open Local Security Policy.
+   * Navigate to Computer Configuration -> Windows Settings -> Local Policies -> User Rights Assignment.
 
-3. If the issue persists, troubleshoot further by generating logs:
-   - Refer to [Troubleshoot Report Server Manager](https://docs.telerik.com/report-server/knowledge-base/troubleshoot-report-server).
-   - Follow the instructions to collect the necessary logs.
+   ![](images/)
 
-4. Before making any changes, create a backup for safety:
-   - Refer to [Storage Backup - Telerik Report Server](https://docs.telerik.com/report-server/implementer-guide/setup/storage-backup).
+   ![](images/)
+
+1. If the issue persists even after you have confirmed that the username and password are correct, troubleshoot further by generating logs:
+   * Refer to [Troubleshoot Report Server Manager]({%slug troubleshoot-report-server%}).
+   * Follow the instructions to collect the necessary logs.
+
+> Before making any changes, ensure you create a backup to prevent data loss. For detailed instructions, refer to [Storage Backup - Telerik Report Server]({%slug storage-backup%})
 
 ## See Also
 
-- [Report Server Release History](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q3-(10-2-24-924))
-- [Troubleshoot Report Server Manager](https://docs.telerik.com/report-server/knowledge-base/troubleshoot-report-server)
-- [Storage Backup - Telerik Report Server](https://docs.telerik.com/report-server/implementer-guide/setup/storage-backup)
+* [Welcome to Telerik® Report Server!]({%slug introduction%})
+* [Weak Password Requirement]({%slug weak-password-requirement-cve-2024-7293%})
+* [Login]({%slug rest-api-login-v2%})
