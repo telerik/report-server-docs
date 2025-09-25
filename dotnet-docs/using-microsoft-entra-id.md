@@ -12,7 +12,7 @@ position: 8
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET. 
 
-In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into Report Server Manager UI without entering their login credentials each time.
+In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into the Report Server Manager UI without entering their login credentials each time.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	![The Create a tenant page with Microsoft Entra ID as the selected type.](../images/rs-net-images/microsoft-entra-id-select-tenant-type-step.png)
 
-1. Click **Next: Configuration >** and type Organization name (for example, `Report Server Tenant`) and Initial Domain Name (e.g. `ReportServerNetDomain`):
+1. Click **Next: Configuration >** and type Organization name (for example, `Report Server Tenant`) and Initial Domain Name (e.g., `ReportServerNetDomain`):
 
 	![The configuration step of creating a tenant with sample directory details.](../images/rs-net-images/microsoft-entra-id-tenant-configuration-step.png)
 
@@ -55,13 +55,13 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	`Tenant creation was successful. Click here to navigate to your new tenant: Report Server Tenant`.
 	
-	The text - `Report Server Tenant` will be your chosen organization name and there will be a link to the **Report Server Tenant Overview** page. 
+	The text - `Report Server Tenant` will be your chosen organization name, and there will be a link to the **Report Server Tenant Overview** page. 
 
 	> If you are not on the **Report Server Tenant Overview** page, then go to the top left `Menu` >> `Microsoft Entra ID` >> click `Add` >> `App Registration`.
 	
 1. Register the application by choosing `Add` > `App registration`.
 
-	> Add **Report Server Application**, for example, as a name, leave the rest options to be the default, and click `Register`.
+	> Add **Report Server Application**, for example, as a name, leave the rest of the options to be the default, and click `Register`.
  
 	![The step where the Report Server for .NET application is registered in Azure.](../images/rs-net-images/microsoft-entra-id-app-registration-step.png)
 
@@ -79,9 +79,9 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	![Triggering the creation of new client secret in the Azure portal.](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
 
-	> Once the secret is created, copy and save the secret value as it will be used in the Report Server later. You can do this only at this stage. Upon failure, you need to create, copy and use another secret.
+	> Once the secret is created, copy and save the secret value, as it will be used in the Report Server later. You can do this only at this stage. Upon failure, you need to create, copy, and use another secret.
 
-1. Go to the installation folder of the Telerik Report Server for .NET e.g. `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
+1. Go to the installation folder of the Telerik Report Server for .NET, e.g., `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
 1. Open the `appsettings.json` file in a text editor and add the following (replacing the secret from the example below with your secret):
 
 	````JSON
@@ -93,11 +93,11 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 ````
 
 
-1. Restart the Report Server for .NET application. For example, if the application is hosted on IIS:
+1. Restart the Report Server for the .NET application. For example, if the application is hosted on IIS:
 
-	![An image demonstrating how the Report Server for .NET can be restarted from the IIS Manager](../images/rs-net-images/rs-net-restart-from-iismanager) 
+	![An image demonstrating how the Report Server for .NET can be restarted from the IIS Manager](../images/rs-net-images/rs-net-restart-from-iismanager.png) 
 
->important If you do not wish to store the client secret in the **appsettings.json** file, an alternative option is to set it via the `ExternalLogin__EntraId__ClientSecret` [environment variable](https://en.wikipedia.org/wiki/Environment_variable). The variable needs to be created for the respective user that hosts the Report Server for .NET application. If `IIS` is used, this is the application pool user, by default `ReportServerUser`. After setting the environment variable, restart the application(on IIS, you may use the `iisreset` command).
+>important If you do not wish to store the client secret in the **appsettings.json** file, an alternative option is to set it via the `ExternalLogin__EntraId__ClientSecret` [environment variable](https://en.wikipedia.org/wiki/Environment_variable). The variable needs to be created for the respective user who hosts the Report Server for the .NET application. If `IIS` is used, this is the application pool user, by default `ReportServerUser`. After setting the environment variable, restart the application(on IIS, you may use the `iisreset` command).
 
 ### 3. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET 
 
@@ -118,7 +118,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	* From the menu in the top left corner of the page, select **Microsoft Entra ID**.
 	* Expand the `Manage` dropdown >> `App Registrations` >> `All Applications`.
-	* Click the application name e.g. `Report Server Application` (defined in the previous section).
+	* Click the application name, e.g., `Report Server Application` (defined in the previous section).
 	* Copy the Application (client) ID and add it to the Report Server in the Client ID field:
 
 		![The Report Server Application page in the Azure portal where the application (client) ID is located.](../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png)
@@ -131,7 +131,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
 
 	* Select the `Authentication Provider` to be `EntraId`.
 	* Add a username.
-	* Add the domain name login email e.g. `username@mycompany.com.`
+	* Add the domain name login email, e.g. `username@mycompany.com.`
 	* Choose a User Role and save the changes.
 
 	![Creating an user with EntraID authentication in the Report Server for .NET Application.](../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
