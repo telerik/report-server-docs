@@ -1,6 +1,6 @@
 ---
 title: Fixing Report Server App Pool That Won't Start
-description: Resolving issues related to the Report Server application pool failing to start due to invalid identity or missing user rights.
+description: Resolving issues related to the Report Server application pool failing to start due to an invalid identity or missing user rights.
 type: how-to
 page_title: Resolving Report Server Application Pool Not Starting Issue
 meta_title: Resolving Report Server Application Pool Not Starting Issue
@@ -18,16 +18,12 @@ ticketid: 1682185
          <td>Product</td>
          <td>Report Server</td>
       </tr>
-      <tr>
-         <td>Version</td>
-         <td>10.2.24.924</td>
-      </tr>
    </tbody>
 </table>
 
 ## Description
 
-I cannot start the Report Server application pool in IIS. Attempting to log in results in a 503 error stating "The Service is unavailable." The Windows log shows that the identity of the application pool is invalid, possibly due to incorrect username/password or missing batch logon rights. Restarting the application pool leads to immediate failure.
+I cannot start the Report Server application pool in IIS. Attempting to log in results in a 503 error stating "The Service is unavailable." The Windows log shows that the identity of the application pool is invalid, possibly due to an incorrect username/password or missing batch logon rights. Restarting the application pool leads to immediate failure.
 
 ## Solution
 
@@ -60,6 +56,7 @@ To resolve the issue, follow these steps:
 * [Welcome to Telerik® Report Server!]({%slug introduction%})
 * [Weak Password Requirement]({%slug weak-password-requirement-cve-2024-7293%})
 * [Login]({%slug rest-api-login-v2%})
+
 
 
 
