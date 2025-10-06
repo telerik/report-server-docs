@@ -10,15 +10,17 @@ position: 2
 
 # Report Server for .NET: Installation on Windows
 
-The Report Server for .NET (`RS.NET`) is currently distributed along with the installer for the .NET Framework 4.6.2. By default, the installer does not install RS.NET. Users must click `Customize` to install RS.NET.
+Starting from **2025 Q4**, a dedicated Report Server for .NET (RS.NET) installer is introduced. This article explains the installation steps and the differences from the Report Server for .NET Framework installer.
+
+## Prerequisites
+
+RS.NET is an ASP.NET Core web application that requires the [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment. Install this module following the [Install the ASP.NET Core Module/Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0#install-the-aspnet-core-modulehosting-bundle) instructions before proceeding. The installation wizard will display a warning if this module is not available.
 
 ## Installation Process
 
-The RS.NET is an ASP.NET Core web application and its installation on the IIS requires the `ASP.NET Core Hosting Bundle` as explained in the Microsoft article [Host ASP.NET Core on Windows with IIS](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0). The installation wizard will show a warning if the module is not installed. The user can continue the installation even when the module is not found.
+TODO: mention what the msi is called and guide the user through the installation steps (go to downloads, etc.). while guiding, mention that currently there is no examples/migration tool (possibly in a note)
 
->note Known issue: the detection returns false negative results on machines having `Windows 11`, `Windows Server 2016` and `Windows Server 2022`. This is fixed and will be included in our next release.
-
-The installer will configure the ports for installing the RS.NET and RS.NET Service Agent, taking the available ports from 80 upwards:
+The installer automatically assigns available ports for RS.NET and RS.NET Service Agent. By default, these are ports 81 and 84 respectively, but it can assign the next available ones if these are already in use.
 
 ![Use the button Customize to allow installing the Report Server for .NET](../images/rs-net-images/rs-customize.png)
 
@@ -26,17 +28,21 @@ The installer will configure the ports for installing the RS.NET and RS.NET Serv
 
 The __RS.NET__ is installed in `{Installation Folder}\Telerik Report Server\Telerik.ReportServer.Web.NET`. The cross-platform distribution of RS.NET is in the `_non-windows` subfolder.
 
-The __RS.NET Service Agent__ is installed in `{Installation Folder}\Telerik Report Server\Services\.NET`. The cross-platform distribution of RS.NET Service Agent is in the '_non-windows' subfolder.
+The __RS.NET Service Agent__ is installed in `{Installation Folder}\Telerik Report Server\Services\.NET`. The cross-platform distribution of RS.NET Service Agent is in the `_non-windows` subfolder.
+
+TODO: explain this further? what is the purpose of the cross-platform distribution now that RS.NET can be installed on Linux through the dedicated installer? there doesn't seem to be such a folder anymore. maybe move this whole section at the end of the article to keep the correct flow of actions (installation > configuration > additional details)
 
 ## Configuration
 
 ### Automatic Configuration on Windows
 
-The installation wizard will do the initial configuration of _RS.NET_ and _RS.NET Service Agent_ on Windows, making them ready-to-run.
+The installer is supposed to initially configure both RS.NET and RS.NET Service Agent on Windows, making them ready-to-run. If the automatic configuration fails, check the [instructions for manual configuration](#manual-configuration-on-windows).
 
-If the automatic configuration fails, please, get familiar with the [initialization process](#initialization-process) and follow the [instructions for manual configuration](#manual-configuration-on-windows).
+TODO: what a fail could mean here? a crash in the installer (likely not since no assets would be installed to be checked) or that there is an error once RS.NET is opened in the browser? maybe move this sentence at the end of the installation process and move installed assets at the end of the article to keep the correct flow of actions
 
 ### Initialization process
+
+TODO: maybe explain 2 and 3 in the installed assets section? make 1 longer
 
 1. When the Report Server is started for the first time, the user is supposed to pass the _Configure Storage_ and _Register Administrator_ pages. The settings from these pages are stored in a file named `ReportServerAdmin.json`.
 1. Next, the RS.NET checks its `appsettings.json` configuration file for the key __InitialAgentUrl__. If the installation has passed successfully, the key must exist and must have a valid value like __http://localhost:84__. This is where the MSI installation file for Windows has registered the __RS.NET Service Agent__.
@@ -55,3 +61,7 @@ If the automatic configuration fails, please, get familiar with the [initializat
 1. Restart the RS.NET and RS.NET Service Agent.
 1. Check the RS.NET's _Configuration_ -> _ServiceAgent_ page. The entry `"DefaultServiceAgent" : "http://localhost:84"` should now be present. The URL may differ, depending on your settings.
 1. To use the RS.NET Service Agent, ensure the _Mail Server_ settings in _Configuration_ page are valid.
+
+TODO: what restart means in step 4? iisreset/recycling the app pool for rs.net and restarting the service agent through services.msc > rsnet service agent > restart? maybe change the section title to "debugging" to let know users are supposed to do this as last resort when the automatic configuration fails. explain that the pages that are mentioned have to be opened in the browser
+
+TODO: Upgrade from old version of RS.NET (the one distributed with the combined MSI)/Downgrade from new RS.NET MSI to combined MSI - ask Hristov what these mean from the gh issue - whether users should be doing something to upgrade/downgrade or is it supposed to happen automatically and what does this upgrade/downgrade mean after all
