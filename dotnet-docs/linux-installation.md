@@ -77,6 +77,17 @@ In the installation directory, you will find the `docker-compose.yml` file, whic
 
 The installer will also automatically create a single [Report Server Agent]({%slug dotnet-server-agents%}), the configuration for which can also be found in the `docker-compose.yml` file.
 
+## Upgrading
+
+Use the following commands to upgrade your Report Server for .NET Docker image to the latest one we have released:
+	
+````bash
+docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
+docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
+````
+
+If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
+
 ## See Also
 
 * [Installation on Windows]({%slug dotnet-installation-on-windows%})
