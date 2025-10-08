@@ -81,7 +81,7 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 	![Review the Report Server .NET resource settings on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-review.png)
 
-	After the validation passes, you need to click on the `Create` button to start the deployment of your Report Server .NET.
+	After the validation passes, you need to click on the `Create` button to start the deployment of your Report Server for .NET.
 
 1. Wait for the deployment to finish. You will see a screen like below during the process that may take several minutes:
 
@@ -109,12 +109,12 @@ The user can access the Virtual Machine through [Secure Shell Protocol (SSH Prot
 
 ## Upgrading the Report Server for .NET on Azure Marketplace
 
-1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through SSH connection.
-1. Access the Azure Virtual Machine through the just opened SSH port 22.
+1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through an SSH connection.
+1. Access the Azure Virtual Machine through the just-opened SSH port 22.
 	
 	There are four (4) services running on the machine. You may list them with the command `docker service ls`. The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`. Execute the following commands for this purpose:
 	
-	````powershell
+	````bash
 docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
 	docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
 ````
