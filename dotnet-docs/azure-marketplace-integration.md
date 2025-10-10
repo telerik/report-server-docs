@@ -123,7 +123,7 @@ docker service update --image progressofficial/telerik-reportserver-app:latest r
 1. Run the command `docker image prune` to remove the old images, if any.
 1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
 
-If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
+> If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
 
 ## See Also
 
