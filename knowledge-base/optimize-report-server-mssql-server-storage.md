@@ -23,21 +23,21 @@ ticketid: 1699496
 
 ## Problem
 
-The MSSQL Server Database that I use as Storage for my Report Server became very large. Apart from taking a lot of space on the server machine, this seems to decrease significantly the performance of my Report Server.
+The MSSQL Server Database that I use as Storage for my Report Server became very large. Apart from taking a lot of space on the server machine, this seems to significantly decrease the performance of my Report Server.
 
 ## Description
 
 The [Report Server Storage]({%slug storage-settings%}) contains two major parts:
 
-* The __TRS__ part, short from 'Telerik Report Server'. It stores the actual Report Server like _report definitions_; _users_; _data connections_, etc.
-* The __{GUID}\{Telerik Reporting Version}__, for example __d4b7948f\19.2.25.1001__ part. This is the [embedded Telerik Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview) assets that keep the state of the clients/viewers that connect to the Report Server and use it as service for delivering report documents.
+* The __TRS__ part, short for 'Telerik Report Server'. It stores the actual Report Server assets like _report definitions_; _users_; _data connections_, etc.
+* The __{GUID}\{Telerik Reporting Version}__, for example __d4b7948f\19.2.25.1001__ part. This is the [embedded Telerik Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview) assets that keep the state of the clients/viewers that connect to the Report Server and use it as a service for delivering report documents.
 
-The latter keeps temporary assets that are needed only when communicating with the corresponding client/viewer. When the client expires, for example, when a user of a Report Viewer closes the browser tab with the viewer, the corresponding assets expire and the REST Service schedule them for removal - see the blog [Telerik Reporting REST Service Storage Revealed](https://www.telerik.com/blogs/telerik-reporting-rest-service-storage-revealed) for details.
+The REST Service part keeps temporary assets that are needed only when communicating with the corresponding client/viewer. When the client expires, for example, when a user of a Report Viewer closes the browser tab with the viewer, the corresponding assets expire and the REST Service schedules them for removal - see the blog [Telerik Reporting REST Service Storage Revealed](https://www.telerik.com/blogs/telerik-reporting-rest-service-storage-revealed) for details.
 
-In some scenarios the REST Service Storage may not be cleaned, with its expired assets piling up, taking unnecessary space. The most popular scenarios are:
+In some scenarios, the REST Service Storage may not be cleaned, with its expired assets piling up, taking up unnecessary space. The most popular scenarios are:
 
-* Stop/Restart of the Report Server. In such cases, usually remain the expired assets that are not yet deleted by the REST Service.
-* Upgrade of the Report Server. In this scenario, the part of the storage responsible for the REST Service assets obtains a new nickname corresponding to the new Reporting version.
+* Stop/Restart of the Report Server. In such cases, the REST Service may not have yet deleted the expired assets.
+* Upgrade of the Report Server. In this scenario, the part of the storage responsible for the REST Service assets obtains a new identifier corresponding to the new Reporting version. The old part remains, although unnecessary.
 
 ## Troubleshooting
 
@@ -70,11 +70,11 @@ from tr_String where left(Id, 3) <> 'TRS'
 order by 1,2
 ````
 
-The result returns the number of the _TRS_ (required) assets as 'RS', and the number of Reporting REST Service (removable) assets as 'Cache'.
+The result returns the number of the _TRS_ (required) assets as 'RS', and the number of Reporting REST Service (unnecessary) assets as 'Cache'.
 
 ## Solution
 
-* Track down the {GUID} and {Telerik Reporting Version} and use code like the following to delete the temporary REST Service assets. For example, if we use the above values 'd4b7948f' for the GUID and '19.2.25.1001' for the Reporting version, here is sample SQL code:
+* Track down the {GUID} and {Telerik Reporting Version} and use code like the following to delete the temporary REST Service assets. For example, if we use the above values 'd4b7948f' for the GUID and '19.2.25.1001' for the Reporting version, here is a sample SQL code:
 
 	````SQL
 delete from tr_object where left([Id], 21) = 'd4b7948f\19.2.25.1001'
@@ -82,23 +82,24 @@ delete from tr_object where left([Id], 21) = 'd4b7948f\19.2.25.1001'
 	delete from tr_set where left([Id], 21) = 'd4b7948f\19.2.25.1001'
 ````
 
-	> There may be left overs from previous Report Server versions. Ensure you delete also the old assets with nicknames corresponding to the old Reporting version and probably a different GUID part.
+	> There may be leftovers from previous Report Server versions. Ensure you also delete the old assets with identifiers corresponding to the old Report Server and Reporting version.
 
-* Upon Upgrade of the Report Server use the following SQL script to remove the REST Service tables that don't need to be migrated:
+* Upon upgrade of the Report Server, use the following SQL script to remove the REST Service tables that don't need to be migrated:
 
-````SQL
+	````SQL
 truncate table tr_AppLock;
-truncate table tr_Object;
-truncate table tr_Set;
-truncate table tr_String;
+	truncate table tr_Object;
+	truncate table tr_Set;
+	truncate table tr_String;
 ````
 
-* When Upgrading the Report Server you may also consider [Migrating its Storage with the tool we provide]({%slug migration-tool%}). The tool migrates only assets from the _TRS_ part of the storage and ignores the REST Service part.
+
+* When upgrading the Report Server, you may also consider [Migrating its Storage with the tool we provide]({%slug migration-tool%}). The tool migrates only assets from the _TRS_ part of the storage and ignores the REST Service part. After a successful migration, you may delete the whole previous Report Server Storage.
 
 ## See Also
 
 * [Welcome to Telerik® Report Server!]({%slug introduction%})
 * [Report Server Storage]({%slug storage-settings%})
 * [Storage Migration Tool]({%slug migration-tool%})
-* [embedded Telerik Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview)
+* [Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview)
 * [Telerik Reporting REST Service Storage Revealed](https://www.telerik.com/blogs/telerik-reporting-rest-service-storage-revealed)
