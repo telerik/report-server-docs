@@ -1,6 +1,6 @@
 ---
-title: Logging in the Report Server for .NET 
-page_title: Enabling logging in the Report Server for .NET
+title: Generating Logs 
+page_title: Recording runtime logs in the Report Server for .NET
 description: "Learn how to enable SeriLog logging in the Telerik Report Server for .NET application and service."
 slug: logging-rs-net
 tags: SeriLog,Logging,Troubleshooting,Error,RS.NET
