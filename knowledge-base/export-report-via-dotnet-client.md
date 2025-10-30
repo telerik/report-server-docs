@@ -17,16 +17,13 @@ res_type: kb
  </tr>
 </table>
 
-
 ## Description
 
-Telerik Report Server provides a [REST API]({%slug rest-api-reference-v2%}) which can be used to consume resources from an external application. How to communicate with the REST API using a JavaScript client is demonstrated in:
+Telerik Report Server provides a [REST API](slug:rs-v2-api-reference) which can be used to consume resources from an external application. How to communicate with the REST API using a JavaScript client is demonstrated in:
 
-- [Login]({%slug rest-api-login%})
-
-- [Resources]({%slug rest-api-get-resources%})
-
-- [Export]({%slug rest-api-export%})
+- [Login](slug:rest-api-login)
+- [Resources](slug:rest-api-get-resources)
+- [Export](slug:rest-api-export)
 
 The purpose of this article is to provide a demonstration of the same functionality but using a .NET client.
 
@@ -34,8 +31,7 @@ The purpose of this article is to provide a demonstration of the same functional
 
 The same JavaScript client can be written as a .NET client that executes requests and handles their responses. The following example illustrates how to send requests to the Report Server API and ultimately export a report to a report document.
 
-###### C# #
-
+```C#
     using Newtonsoft.Json.Linq;
     using System;
     using System.Collections.Generic;
@@ -148,3 +144,4 @@ The same JavaScript client can be written as a .NET client that executes request
                 }
             }
         }
+```
