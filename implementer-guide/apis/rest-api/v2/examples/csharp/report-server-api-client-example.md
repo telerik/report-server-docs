@@ -12,45 +12,44 @@ position: 100
 
 ## Login
 
-###### 
+```C#
+    var settings = new Settings()
+    {
+        BaseAddress = "https://myreportserver:83"
+    };
 
-	  var settings = new Settings()
-      {
-          BaseAddress = "https://myreportserver:83"
-      };
-	  
-      using (var rsClient = new ReportServerClient(settings))
-      {
-          rsClient.Login("username", "password");
-      }
-	  
+    using (var rsClient = new ReportServerClient(settings))
+    {
+        rsClient.Login("username", "password");
+    }
+```
+
 ## Get Resource
 
-###### 
+```C#
+    var category = rsClient.GetCategory("categoryId");
+```
 
-	  var category = rsClient.GetCategory("categoryId");
-	  
 ## Create Resource
 
-###### 
+```C#
+    var categoryData = new CreateCategoryData()
+    {
+        Name = "New Category",
+    };
+    var newCategory = rsClient.CreateCategory(categoryData);
+```
 
-	  var categoryData = new CreateCategoryData()
-      {
-          Name = "New Category",
-      };
-      var newCategory = rsClient.CreateCategory(categoryData);
-	  
 ## Update Resource
 
-###### 
+```C#
+    var category = rsClient.GetCategory("categoryId");
+    category.Name = "Updated Name";
+    var updatedCategory = rsClient.UpdateCategory(category);
+```
 
-	  var category = rsClient.GetCategory("categoryId");
-      category.Name = "Updated Name";
-      var updatedCategory = rsClient.UpdateCategory(category);
-	  
 ## Delete Resource
 
-###### 
-
-	  rsClient.DeleteCategory("categoryId");
-	  
+```C#
+    rsClient.DeleteCategory("categoryId");
+```
