@@ -1,0 +1,320 @@
+top-navigation-product: report-server
+path-prefix: /products/report-server/documentation
+product-id: 1586
+product-name: Telerik Report Server
+product-url: https://www.telerik.com/report-server
+product-code: REPSERVER
+product-trial-url: https://www.telerik.com/try/report-server
+contribute-url: https://github.com/telerik/report-server-docs/edit/master
+search-engine-id: 001595215763381649090:dikfyfm1qqw
+cta-overview: "@ProductLink is a end-to-end report management solution to store, create, manage and view reports in web and desktop applications. To try it out sign up for a free 30-day trial."
+cta-intro: "@ProductLink is a end-to-end report management solution to store, create, manage and view reports in web and desktop applications. To try it out sign up for a free 30-day trial."
+default-title-prefix: Telerik Report Server
+
+# git settings
+gitLastCommitDateEnabled: true
+
+# images
+avatar-path: ./images/docs-builder/avatar-ninja.svg
+no-results-image-path: ./images/docs-builder/ninja-no-results.svg
+pdf-cover-png-path: ./images/docs-builder/pdf-cover.png
+img-max-width: 100%
+
+# tables and colors
+primary-color:
+  light: "#1D8800"
+  dark: "#68BF51"
+enable-tabbed-code-blocks: true
+table-layout: fixed
+
+# toc
+# fileSources:
+#   introduction:
+#     meta:
+#       position: 1
+#       title: Introduction
+#       prefix: introduction
+#       path: introduction
+#       hideChildren: true
+#   licensing:
+#     meta:
+#       position: 2
+#       title: Licensing
+#       prefix: licensing
+#       path: licensing
+#   dotnet-docs:
+#     meta:
+#       position: 3
+#       title: Report Server for .NET
+#       prefix: dotnet-docs
+#       path: dotnet-docs
+#   security:
+#     meta:
+#       position: 4
+#       title: Security
+#       prefix: security
+#       path: security
+#   user-guide:
+#     meta:
+#       position: 5
+#       title: User Guide
+#       prefix: user-guide
+#       path: user-guide
+#   implementer-guide:
+#     meta:
+#       position: 6
+#       title: Implementer Guide
+#       prefix: implementer-guide
+#       path: implementer-guide
+#     setup:
+#       meta:
+#         position: 1
+#         title: Setup
+#         path: implementer-guide/setup
+#     configuration:
+#       meta:
+#         position: 2
+#         title: Configuration Page
+#         path: implementer-guide/configuration
+#     user-management:
+#       meta:
+#         position: 3
+#         title: User Management
+#         path: implementer-guide/user-management
+#     connecting-to-data:
+#       meta:
+#         position: 4
+#         title: Connecting to Data
+#         path: implementer-guide/connecting-to-data
+#     apis:
+#       meta:
+#         position: 5
+#         title: APIs
+#         path: implementer-guide/apis
+#       rest-api:
+#         meta:
+#           position: 1
+#           title: REST API
+#           path: implementer-guide/apis/rest-api
+#       v1:
+#         meta:
+#           position: 1
+#           title: V1
+#           path: implementer-guide/apis/rest-api/v1
+#       v2:
+#         meta:
+#           position: 2
+#           title: V2
+#           path: implementer-guide/apis/rest-api/v2
+#   images:
+#     meta:
+#       position: 9999
+#       title: Images
+#       prefix: images
+#       path: images
+#       hidden: true
+#   knowledge-base:
+#     meta:
+#       position: 10
+#       title: Knowledge Base
+#       prefix: knowledge-base
+#       path: knowledge-base
+#       hideChildren: true
+#       res_type: kb
+
+meta:
+  introduction:
+    position: 1
+    title: "Introduction"
+    hideChildren: true
+  dotnet-docs:
+    position: 2
+    title: "Report Server for .NET"
+  licensing:
+    position: 3
+    title: "Licensing"
+  security:
+    position: 4
+    title: "Security"
+  user-guide:
+    position: 5
+    title: "User Guide"
+  user-guide/reports-management:
+    position: 1
+    title: "Reports Management"
+  implementer-guide:
+    position: 6
+    title: "Implementer Guide"
+  implementer-guide/setup:
+    position: 1
+    title: "Setup"
+  implementer-guide/configuration:
+    position: 2
+    title: "Configuration Page"
+  implementer-guide/user-management:
+    position: 3
+    title: "User Management"
+  implementer-guide/connecting-to-data:
+    position: 4
+    title: "Connecting to Data"
+  implementer-guide/apis:
+    position: 5
+    title: "APIs"
+  implementer-guide/apis/rest-api:
+    position: 1
+    title: "REST API"
+  implementer-guide/apis/rest-api/v1:
+    position: 1
+    title: "V1"
+  implementer-guide/apis/rest-api/v1/examples:
+    title: "Examples"
+    position: 1
+  implementer-guide/apis/rest-api/v1/examples/javascript:
+    title: "JavaScript"
+    position: 1
+  implementer-guide/apis/rest-api/v2:
+    position: 2
+    title: "V2"
+  implementer-guide/apis/rest-api/v2/examples:
+    title: "Examples"
+    position: 1
+  implementer-guide/apis/rest-api/v2/examples/javascript:
+    title: "JavaScript"
+    position: 1
+  implementer-guide/apis/rest-api/v2/examples/csharp:
+    title: "C#"
+    position: 2
+  readme:
+    position: 9998
+    title: "Readme"
+    hidden: true
+  knowledge-base:
+    position: 100
+    res_type: kb
+    title: "Knowledge Base"
+    relativeUrl: /knowledge-base
+    hideChildren: true
+
+redirects:
+  - from: "^/?$"
+    to: "/introduction"
+    type: Permanent
+
+  - from: "/user-guide/searching-reports"
+    to: "/user-guide/report-server-manager-overview"
+    type: Permanent
+
+  - from: "/licensing/?$"
+    to: "/licensing/setting-up-your-telerik-report-server-license-key"
+    type: Permanent
+
+  - from: "^/report-designer$"
+    to: "/user-guide/report-designer"
+    type: Permanent
+
+  - from: "^/reports-management(.*)$"
+    to: "/user-guide/reports-management$1"
+    type: Permanent
+
+  - from: "^/categories-management$"
+    to: "/user-guide/categories-management"
+    type: Permanent
+
+  - from: "^/data-connections-management$"
+    to: "/user-guide/data-connections-management"
+    type: Permanent
+
+  - from: "^/scheduled-tasks-management$"
+    to: "/user-guide/scheduled-tasks-management"
+    type: Permanent
+
+  - from: "^/data-alerts-management$"
+    to: "/user-guide/data-alerts-management"
+    type: Permanent
+
+  - from: "^/search$"
+    to: "/user-guide/search"
+    type: Permanent
+
+  - from: "^/release-history$"
+    to: "/implementer-guide/release-history"
+    type: Permanent
+
+  - from: "^/whats-new$"
+    to: "/implementer-guide/whats-new"
+    type: Permanent
+
+  - from: "^/licensing-and-distribution(.*)$"
+    to: "/implementer-guide/licensing-and-distribution$1"
+    type: Permanent
+
+  - from: "^/setup(.*)$"
+    to: "/implementer-guide/setup$1"
+    type: Permanent
+
+  - from: "^/user-management(.*)$"
+    to: "/implementer-guide/user-management$1"
+    type: Permanent
+
+  - from: "^/apis(.*)$"
+    to: "/implementer-guide/apis$1"
+    type: Permanent
+
+  - from: "^/reports(.*)$"
+    to: "/implementer-guide/reports$1"
+    type: Permanent
+
+  - from: "^/upgrade$"
+    to: "/implementer-guide/setup/upgrade"
+    type: Permanent
+
+  - from: "^/migration-tool$"
+    to: "/implementer-guide/setup/migration-tool"
+    type: Permanent
+
+  - from: "^/implementer-guide/apis/rest-api/api-reference$"
+    to: "/implementer-guide/apis/rest-api/v2/api-reference"
+    type: Permanent
+
+  - from: "^/implementer-guide/apis/rest-api/examples/javascript/export$"
+    to: "/implementer-guide/apis/rest-api/v2/examples/javascript/export"
+    type: Permanent
+
+  - from: "^/implementer-guide/apis/rest-api/examples/javascript/get-resources$"
+    to: "/implementer-guide/apis/rest-api/v2/examples/javascript/get-resources"
+    type: Permanent
+
+  - from: "^/implementer-guide/apis/rest-api/examples/javascript/login$"
+    to: "/implementer-guide/apis/rest-api/v2/examples/javascript/login"
+    type: Permanent
+
+  - from: "^/implementer-guide/apis/rest-api/((?!v1|v2|overview|report-server-api-client).*)$"
+    to: "/implementer-guide/apis/rest-api/v1/$1"
+    type: Permanent
+
+  - from: "^/implementer-guide/setup/storage-settings$"
+    to: "/implementer-guide/configuration/storage-settings"
+    type: Permanent
+
+  - from: "^/implementer-guide/setup/whitelabeling$"
+    to: "/implementer-guide/configuration/whitelabeling"
+    type: Permanent
+
+  - from: "^/implementer-guide/setup/mail-templates$"
+    to: "/implementer-guide/configuration/mail-templates"
+    type: Permanent
+
+  - from: "^/implementer-guide/setup/login-using-ext-auth-provider$"
+    to: "/implementer-guide/configuration/login-using-ext-auth-provider"
+    type: Permanent
+
+  # external redirects
+  - from: "/personal-data-collection"
+    to: "https://www.progress.com/legal/privacy-policy"
+    type: Permanent
+  - from: "/copyright"
+    to: "https://www.progress.com/legal/documentation-copyright"
+    type: Permanent
+  - from: "/faq"
+    to: "https://www.telerik.com/faqs/report-server"
+    type: Permanent

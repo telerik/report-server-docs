@@ -16,24 +16,25 @@ Get Reports, Categories, and other resources.
 
 Here is a sample code snippet which illustrates how to read the report catalog items from the report server:
 
-###### Example
+## Example
 
-	  var token = window.sessionStorage.getItem(serverTokenKey);
-	  var headers = {};
-	  
-	  if (token) {
-		headers.Authorization = 'Bearer ' + token;
-	  }
-	  
-	  var serverHost = "http://reportserver:83/";
-	  var serverApi = serverHost + "api/reportserver/v1/";
+```JavaScript
+var token = window.sessionStorage.getItem(serverTokenKey);
+var headers = {};
 
-	  $.ajax({
+if (token) {
+	headers.Authorization = 'Bearer ' + token;
+	}
+
+var serverHost = "http://reportserver:83/";
+var serverApi = serverHost + "api/reportserver/v1/";
+
+$.ajax({
 		type: "GET",
 		url: serverApi + "reports",
 		headers : headers
 	  })
-	  .done(function (reports, status, xhr) {
+	.done(function (reports, status, xhr) {
 		var length = reports.length;
 		var reportNames = "";
 		for (var i = 0; i &lt; length; i++) {
@@ -41,10 +42,11 @@ Here is a sample code snippet which illustrates how to read the report catalog i
 		}
 		window.alert(reportNames);
 	  })
-	  .fail(function (xhr, status, error) {
+	.fail(function (xhr, status, error) {
 		window.alert(xhr.status + ": " + error);
-	  });
+	});
+```
 
-You can get the report categories and the other report server resources such as scheduled tasks, data alerts, data connections, etc. in the same way just by changing the request url. 
+You can get the report categories and the other report server resources such as scheduled tasks, data alerts, data connections, etc. in the same way just by changing the request url.
 
-For example: *serverApi + "categories"* to get report categories, *serverApi + "dataconnections"* to get data connections, etc.
+For example: _serverApi + "categories"_ to get report categories, _serverApi + "dataconnections"_ to get data connections, etc.
