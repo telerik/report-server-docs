@@ -21,7 +21,7 @@ position: 100
 
 - **Operating System** - Windows or Linux platform
 - **Web Server** - ASP.NET Core web server, e.g. IIS 7+, Kestrel. If **IIS** is used, the [ASP.NET Core Module (ANCM) for IIS](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module) must be installed.
-- **Runtimes** - [ASP.NET Core 8+ Runtim](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- **Runtimes** - [ASP.NET Core 8+ Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 
 ## Client

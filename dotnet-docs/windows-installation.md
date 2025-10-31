@@ -1,7 +1,7 @@
 ---
 title: Installation on Windows
-page_title: Installing ReportServer.NET on Windows
-description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Windows."
+page_title: Installing Report Server for .NET on Windows
+description: "Learn how to install Telerik Report Server for .NET on Windows using the dedicated MSI installer, including prerequisites, step-by-step installation, and troubleshooting."
 slug: dotnet-installation-on-windows
 tags: installation,dotnet,windows
 published: True
@@ -10,58 +10,55 @@ position: 2
 
 # Report Server for .NET: Installation on Windows
 
-Starting from **2025 Q4**, a dedicated Report Server for .NET (RS.NET) installer is introduced. This article explains the installation steps and the differences from the Report Server for .NET Framework installer.
+Starting from 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is available. This article explains how to install RS.NET on Windows and covers the available installation scenarios.
+
+> Prior to 2025 Q4, RS.NET was distributed with the [.NET Framework 4.6.2 installer]({%slug installation%}). If you use an older version, make sure to click **Customize** during installation to include RS.NET.
 
 ## Prerequisites
 
-RS.NET is an ASP.NET Core web application that requires the [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment. Install this module following the [Install the ASP.NET Core Module/Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0#install-the-aspnet-core-modulehosting-bundle) instructions before proceeding. The installation wizard will display a warning if this module is not available.
+Before installing RS.NET, ensure you have the following components installed:
 
-## Installation Process
+- [System Requirements]({%slug system-requirements%})
+- [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment
 
-TODO: mention what the msi is called and guide the user through the installation steps (go to downloads, etc.). while guiding, mention that currently there is no examples/migration tool (possibly in a note)
+> The installation wizard displays a warning if the ASP.NET Core Hosting Bundle is not available. Ignoring it is not recommended, as this makes the installed Report Server non-functional.
 
-The installer automatically assigns available ports for RS.NET and RS.NET Service Agent. By default, these are ports 81 and 84 respectively, but it can assign the next available ones if these are already in use.
+## Downloading the Installer
 
-![Use the button Customize to allow installing the Report Server for .NET](../images/rs-net-images/rs-customize.png)
+To download the RS.NET installer:
 
-## Installed Assets
+1. Navigate to [Downloads | Your Account](https://www.telerik.com/account/downloads).
+1. Click **Progress® Telerik® Report Server**.
+1. Select the desired version from the dropdown menu, then locate `Telerik_ReportServer_NET_{Your Version}.msi` and click on it to download the installer.
 
-The __RS.NET__ is installed in `{Installation Folder}\Telerik Report Server\Telerik.ReportServer.Web.NET`. The cross-platform distribution of RS.NET is in the `_non-windows` subfolder.
+## Installing Report Server for .NET
 
-The __RS.NET Service Agent__ is installed in `{Installation Folder}\Telerik Report Server\Services\.NET`. The cross-platform distribution of RS.NET Service Agent is in the `_non-windows` subfolder.
+To install RS.NET for the first time:
 
-TODO: explain this further? what is the purpose of the cross-platform distribution now that RS.NET can be installed on Linux through the dedicated installer? there doesn't seem to be such a folder anymore. maybe move this whole section at the end of the article to keep the correct flow of actions (installation > configuration > additional details)
+1. Double-click the downloaded MSI file to start the installer.
+1. Read the license agreement and click **I Agree - Continue**.
+1. Optionally, click **Customize** to customize the installed options, then click **Next**.
+1. Choose a user option and click **Next**.
+   > Creating a dedicated Windows user is recommended for security purposes. For more information about these user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({%slug installation%}#report-server-user-localsystem-identity-and-dedicated-users).
+1. Click **Install** to proceed with the installation.
 
-## Configuration
+The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
 
-### Automatic Configuration on Windows
+When you first access RS.NET, you will be prompted to configure storage and register an administrator user.
 
-The installer is supposed to initially configure both RS.NET and RS.NET Service Agent on Windows, making them ready-to-run. If the automatic configuration fails, check the [instructions for manual configuration](#manual-configuration-on-windows).
+## Upgrading Report Server for .NET
 
-TODO: what a fail could mean here? a crash in the installer (likely not since no assets would be installed to be checked) or that there is an error once RS.NET is opened in the browser? maybe move this sentence at the end of the installation process and move installed assets at the end of the article to keep the correct flow of actions
+To upgrade RS.NET from a previous version, run the new installer MSI file and follow the same installation steps mentioned in the [Installing Report Server for .NET](#installing-report-server-for-net) section.
 
-### Initialization process
+When you upgrade from the combined MSI installer (versions prior to 2025 Q4), environment variables (such as encryption keys) are automatically migrated from the old `RSUser` to the new one.
 
-TODO: maybe explain 2 and 3 in the installed assets section? make 1 longer
+>caution The RS.NET installer does not support automatic backup. Make sure to perform a [manual storage backup]({%slug storage-backup%}#manual-backup) before upgrading to avoid data loss.
 
-1. When the Report Server is started for the first time, the user is supposed to pass the _Configure Storage_ and _Register Administrator_ pages. The settings from these pages are stored in a file named `ReportServerAdmin.json`.
-1. Next, the RS.NET checks its `appsettings.json` configuration file for the key __InitialAgentUrl__. If the installation has passed successfully, the key must exist and must have a valid value like __http://localhost:84__. This is where the MSI installation file for Windows has registered the __RS.NET Service Agent__.
-1. The RS.NET calls the above URL and passes the storage settings to its Service Agent. They are saved in the file `ServiceAgent.json` in the RS.NET Service Agent's directory. If such a file does not exist, the agent was not initialized or registered in the IIS.
+## Troubleshooting
 
-### Manual Configuration on Windows
+If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps.
 
-1. Delete the file `\Services\.NET\ServiceAgent.json` from RS.NET Service Agent's folder if it exists.
-1. Test whether the RS.NET Service Agent responds by calling the RS.NET Service Agent endpoint `/api/system/isalive` from the browser. By default, this would be the URL `http://localhost:84/api/system/isalive`.
+For issues like missing or corrupt files, use the installer's repair functionality:
 
-	If the agent is working, the result must be __HTTP ERROR 401 - Unauthorized__.
-
-	If the agent is not working, the result should be __404 - Not Found__.
-
-1. Open RS.NET's `appsettings.json` configuration file and add/edit the key `"InitialAgentUrl": "http://localhost:84"`. The value in the example assumes the RS.NET Service Agent is running on port _84_. Change the URL based on your settings.
-1. Restart the RS.NET and RS.NET Service Agent.
-1. Check the RS.NET's _Configuration_ -> _ServiceAgent_ page. The entry `"DefaultServiceAgent" : "http://localhost:84"` should now be present. The URL may differ, depending on your settings.
-1. To use the RS.NET Service Agent, ensure the _Mail Server_ settings in _Configuration_ page are valid.
-
-TODO: what restart means in step 4? iisreset/recycling the app pool for rs.net and restarting the service agent through services.msc > rsnet service agent > restart? maybe change the section title to "debugging" to let know users are supposed to do this as last resort when the automatic configuration fails. explain that the pages that are mentioned have to be opened in the browser
-
-TODO: Upgrade from old version of RS.NET (the one distributed with the combined MSI)/Downgrade from new RS.NET MSI to combined MSI - ask Hristov what these mean from the gh issue - whether users should be doing something to upgrade/downgrade or is it supposed to happen automatically and what does this upgrade/downgrade mean after all
+1. Run the same MSI installer again and click **Next**.
+2. Select **Repair** to start the process.
