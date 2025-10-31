@@ -37,9 +37,8 @@ To install RS.NET for the first time:
 
 1. Double-click the downloaded MSI file to start the installer.
 1. Read the license agreement and click **I Agree - Continue**.
-1. Optionally, click **Customize** to customize the installed options, then click **Next**.
-1. Choose a user option and click **Next**.
-   > Creating a dedicated Windows user is recommended for security purposes. For more information about these user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({%slug installation%}#report-server-user-localsystem-identity-and-dedicated-users).
+1. Optionally, choose **Customize** to customize the installed options, then click **Next**.
+1. Choose a user option and click **Next**. Creating a dedicated Windows user is recommended for security purposes. For more information about these user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({%slug installation%}#reportserveruser-localsystem-identity-and-dedicated-users).
 1. Click **Install** to proceed with the installation.
 
 The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
@@ -56,7 +55,7 @@ When you upgrade from the combined MSI installer (versions prior to 2025 Q4), en
 
 ## Troubleshooting
 
-If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps.
+If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps on how to do this manually.
 
 For issues like missing or corrupt files, use the installer's repair functionality:
 
