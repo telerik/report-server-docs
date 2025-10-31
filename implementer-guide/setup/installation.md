@@ -10,9 +10,19 @@ position: 200
 
 # Report Server Installation
 
+>note This article covers the installation of Telerik Report Server for .NET Framework 4.6.2. Starting from **2025 Q4**, Report Server for .NET (RS.NET) has its own dedicated MSI installer. For RS.NET installation instructions, check the [Report Server for .NET Installation on Windows]({%slug dotnet-installation-on-windows%}) article.
+
 The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82.
 
-## ReportServerUser, LocalSystem Indentity and Dedicated Users
+## How to Download and Run the Installer?
+
+To get started with the installation process, you need to download the MSI installer from your Telerik account:
+
+1. Navigate to [Downloads | Your Account](https://www.telerik.com/account/downloads).
+1. Click **Progress® Telerik® Report Server**.
+1. Select the desired version from the dropdown menu, then locate `Telerik_ReportServer_NET_[version].msi` and click on it to download the installer.
+
+## ReportServerUser, LocalSystem Identity and Dedicated Users
 
 ### ReportServerUser 
 
