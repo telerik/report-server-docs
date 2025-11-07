@@ -14,14 +14,6 @@ position: 200
 
 The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named _Telerik Report Server_, automatically registered with its own application pool in the machine's IIS, and a non-UI application named _Telerik.ReportServer.ServiceAgent_, registered as a Windows Service. The Report Server web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82.
 
-## How to Download and Run the Installer?
-
-To get started with the installation process, you need to download the MSI installer from your Telerik account:
-
-1. Navigate to [Downloads | Your Account](https://www.telerik.com/account/downloads).
-1. Click **Progress® Telerik® Report Server**.
-1. Select the desired version from the dropdown menu, then locate `Telerik_ReportServer_NET_[version].msi` and click on it to download the installer.
-
 ## ReportServerUser, LocalSystem Identity and Dedicated Users
 
 ### ReportServerUser 
