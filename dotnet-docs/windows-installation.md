@@ -21,7 +21,7 @@ Before installing RS.NET, ensure that:
 - Your system [meets the requirements]({%slug system-requirements%})
 - [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment is installed.
 
-> The installation wizard displays a warning if the ASP.NET Core Hosting Bundle is not available. Ignoring it is not recommended, as this makes the installed Report Server non-functional.
+> The installation wizard displays a warning if the ASP.NET Core Hosting Bundle is not available. Ignoring it makes the installed Report Server non-functional.
 
 ## Downloading the Installer
 
