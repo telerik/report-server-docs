@@ -25,7 +25,7 @@ res_type: kb
 
 ## Description
 
-During RS.NET installation, the installer automatically configures the connection between the RS.NET web application and the RS.NET Service Agent. However, if the automatic configuration fails, you may need to manually configure this connection. In case the automatic configuration fails, opening `http://localhost:82/api/system/isalive` in the browser returns `404`.
+During RS.NET installation, the installer automatically configures the connection between the RS.NET web application and the RS.NET Service Agent. However, if the automatic configuration fails, you may need to [manually configure this connection](#solution). In case the automatic configuration fails, opening `http://localhost:82/api/system/isalive` in the browser returns `404`.
 
 > For versions prior to 2025 Q4 that relied on a combined installer for both RS and RS.NET, the RS.NET Service Agent is likely hosted on port 84 instead, and the URL should be `http://localhost:84/api/system/isalive`.
 
