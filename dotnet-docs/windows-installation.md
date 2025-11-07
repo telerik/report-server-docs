@@ -16,7 +16,7 @@ Starting with 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is 
 
 ## Prerequisites
 
-Before installing RS.NET, ensure you have the following components installed:
+Before installing RS.NET, ensure that:
 
 - [System Requirements]({%slug system-requirements%})
 - [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment
