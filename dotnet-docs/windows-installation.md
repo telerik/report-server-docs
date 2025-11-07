@@ -29,7 +29,7 @@ To download the RS.NET installer:
 
 1. Navigate to [Downloads | Your Account](https://www.telerik.com/account/downloads).
 1. Click **Progress® Telerik® Report Server**.
-1. Select the desired version from the dropdown menu, then locate `Telerik_ReportServer_NET_{Your Version}.msi` and click on it to download the installer.
+1. Select the desired version from the dropdown menu, then locate and click `Telerik_ReportServer_NET_{Your Version}.msi` to download the installer.
 
 ## Installing Report Server for .NET
 
@@ -56,7 +56,7 @@ When upgrading from the combined MSI installer (versions prior to 2025 Q4), envi
 
 ## Troubleshooting
 
-If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps on how to do this manually.
+If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have been configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps on how to do this manually.
 
 For issues like missing or corrupt files, use the installer's repair functionality:
 
