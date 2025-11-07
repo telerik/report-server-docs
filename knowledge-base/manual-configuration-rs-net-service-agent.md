@@ -35,7 +35,7 @@ The automatic RS.NET configuration and initialization process involves the follo
 1. RS.NET checks its `appsettings.json` configuration file for the `InitialAgentUrl` key. This should contain a valid URL like `http://localhost:82` where the Service Agent is registered.
 1. RS.NET calls the Service Agent URL and passes storage settings to it. These are saved in `ServiceAgent.json` in the Service Agent's directory.
 
-### Manual Configuration Steps
+## Solution
 
 If the automatic configuration fails, follow these steps:
 
