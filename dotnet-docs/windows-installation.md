@@ -10,7 +10,7 @@ position: 2
 
 # Report Server for .NET: Installation on Windows
 
-Starting from 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is available. This article explains how to install RS.NET on Windows and covers the available installation scenarios.
+Starting with 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is available. This article explains how to install RS.NET on Windows and covers the available installation scenarios.
 
 > Prior to 2025 Q4, RS.NET was distributed with the [.NET Framework 4.6.2 installer]({%slug installation%}). If you use an older version that features this combined installer, make sure to click **Customize** during installation to include RS.NET.
 
