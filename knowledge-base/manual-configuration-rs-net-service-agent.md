@@ -37,7 +37,7 @@ The automatic RS.NET configuration and initialization process involves the follo
 
 ## Solution
 
-If the automatic configuration fails, follow these steps:
+If the automatic configuration fails, configure the connection manually by following these steps:
 
 1. Delete the file `{Installation Folder}\Telerik Report Server .NET\Services\ServiceAgent.json` from RS.NET Service Agent's folder if it exists.
 1. Test whether the RS.NET Service Agent responds by calling the RS.NET Service Agent endpoint `/api/system/isalive` from the browser. By default, this is the URL `http://localhost:82/api/system/isalive`.
