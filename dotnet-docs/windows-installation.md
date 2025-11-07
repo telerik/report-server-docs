@@ -48,7 +48,7 @@ When you first access RS.NET, you will be prompted to configure storage and regi
 
 ## Upgrading Report Server for .NET
 
-To upgrade RS.NET from a previous version, run the new installer MSI file and follow the same installation steps mentioned in the [Installing Report Server for .NET](#installing-report-server-for-net) section.
+To upgrade RS.NET from a previous version, download and run a new installer file and follow the [installation steps](#installing-report-server-for-net).
 
 When upgrading from the combined MSI installer (versions prior to 2025 Q4), environment variables (such as encryption keys) are automatically migrated to the newly selected user option (for example, `RSUserNET` if creating a dedicated Windows user).
 
