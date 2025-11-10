@@ -67,8 +67,8 @@ The `accessToken` is used by the viewer to authenticate the requests. When it ex
 ![The response to the 'refresh' request from the Report Server for .NET with the new couple of temporary tokens.](../images/rs-net-images/rs-net-token-refresh-response.png)
 
 The existing Tokens may be disabled and deleted by the user. In this case, all the access-refresh token couples created by this personal token become immediately invalid:
-* When a User is disabled, all their personal access tokens are immediately disabled as well. Enabling the User doesn't enable its Tokens automatically. The user has to do this manually.
-* If a User is deleted from the Report Server for .NET, all its Tokens become immediately invalid, along with the temporary token couples created with it.
+* When a User is disabled, all their personal access tokens are immediately disabled as well. Enabling the User doesn't enable their Tokens automatically. The user has to do this manually.
+* If a User is deleted from the Report Server for .NET, all their Tokens become immediately invalid, along with the temporary token couples created with it.
 
 ## Guest User
 
@@ -78,7 +78,7 @@ The Report Viewers may use the Guest User to connect to the Report Server for .N
 
 The Tokens under the Guest User have their Reading permissions and can be controlled (disabled, deleted) by the admins. The setup and control process is identical to the regular users' workflow.
 
-When the Guest User is disabled, all its personal access tokens are immediately disabled as well.
+When the Guest User is disabled, all their personal access tokens are immediately disabled as well.
 
 Enabling the Guest User doesn't enable its Tokens automatically. The admin needs to do this manually for security reasons.
 
