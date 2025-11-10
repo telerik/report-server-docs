@@ -16,12 +16,13 @@ Starting with 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is 
 
 ## Prerequisites
 
-Before installing RS.NET, ensure that:
+Before installing RS.NET, ensure that you have the following components installed:
 
-- Your system [meets the requirements]({%slug system-requirements%})
-- [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment is installed.
+- [IIS (Internet Information Services)](https://www.iis.net/)
+- [.NET 8 and ASP.NET Core 8 Runtimes](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment
 
-> The installation wizard displays a warning if the ASP.NET Core Hosting Bundle is not available. Ignoring it makes the installed Report Server non-functional.
+> If IIS, .NET 8 Runtime, or ASP.NET Core 8 Runtime are missing, the installer interrupts the process and shows a message explaining what needs to be installed before proceeding. In the case where the ASP.NET Core Module for IIS is not present, the installer shows a warning but allows the installation to continue, since this module can be added later without affecting the initial setup.
 
 ## Downloading the Installer
 
@@ -41,6 +42,11 @@ To install RS.NET for the first time:
     >caution The RS.NET installer currently does not include SDK examples. This may be added in future releases.
 1. Choose a user option and click **Next**. Creating a dedicated Windows user (`RSUserNET`) is recommended for security purposes. For more information about the available user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({%slug installation%}#reportserveruser-localsystem-identity-and-dedicated-users).
 1. Click **Install** to proceed with the installation.
+
+By default, the installation directory is `C:\Program Files (x86)\Progress\Telerik Report Server .NET`. You can change this location during the **Customize** step of the installation. Within this directory:
+
+- RS.NET is installed at `\Telerik.ReportServer.Web`.
+- RS.NET Service Agent is installed at `\Services`.
 
 The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
 
