@@ -50,15 +50,19 @@ By default, the installation directory is `C:\Program Files (x86)\Progress\Teler
 
 The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
 
-When you first access RS.NET, you will be prompted to configure storage and register an administrator user.
+When you first access RS.NET, you will be prompted to configure storage and register an administrator user. During this setup, you will also be asked to download [encryption keys]({%slug security%}#encryption) that secure your sensitive RS.NET assets.
 
 ## Upgrading Report Server for .NET
 
 To upgrade RS.NET from a previous version, download and run a new installer file and follow the [installation steps](#installing-report-server-for-net).
 
-When upgrading from the combined MSI installer (versions prior to 2025 Q4), environment variables (such as encryption keys) are automatically migrated to the newly selected user option (for example, `RSUserNET` if creating a dedicated Windows user).
+When upgrading from the combined MSI installer (versions prior to 2025 Q4), the installer automatically migrates:
+- Environment variables (such as encryption keys) to the newly selected user option (for example, `RSUserNET` if creating a dedicated Windows user).
+- Storage configuration and assets (when using `FileStorage`) to the new RS.NET location.
 
->caution The RS.NET installer does not support automatic backup. Make sure to perform a [manual storage backup]({%slug storage-backup%}#manual-backup) before upgrading to avoid data loss.
+The original RS.NET assets created by the combined installer remain on your system for manual cleanup purposes and are not automatically removed.
+
+>caution The RS.NET installer does not support automatic backup. When upgrading from one RS.NET installer version to another, consider performing a [manual storage backup]({%slug storage-backup%}#manual-backup) before upgrading to prevent data loss. Automatic backup functionality will be added in a future release.
 
 ## Troubleshooting
 
