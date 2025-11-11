@@ -22,7 +22,7 @@ Before installing RS.NET, ensure that you have the following components installe
 - [.NET 8 and ASP.NET Core 8 Runtimes](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - [ASP.NET Core Hosting Bundle](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-8.0) for IIS deployment
 
-> If IIS, .NET 8 Runtime, or ASP.NET Core 8 Runtime are missing, the installer interrupts the process and shows a message explaining what needs to be installed before proceeding. In the case where the ASP.NET Core Module for IIS is not present, the installer shows a warning but allows the installation to continue, since this module can be added later without affecting the initial setup.
+If IIS, .NET 8 Runtime, or ASP.NET Core 8 Runtime are missing, the installer interrupts the process and shows a message explaining what needs to be installed before proceeding. In the case where the ASP.NET Core Module for IIS is not present, the installer shows a warning but allows the installation to continue, since this module can be added later without affecting the initial setup.
 
 ## Downloading the Installer
 
