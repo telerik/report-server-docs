@@ -1,23 +1,23 @@
 ---
 title: Using Tokens for Authentication
 page_title: Authenticate with Tokens against the Report Server for .NET
-description: "Learn how to use JWT Tokens to authenticate against the Telerik Report Server for .NET instance."
+description: "Learn how to use Personal Tokens to authenticate against the Telerik Report Server for .NET instance."
 slug: rs-net-token-authentication
 tags: report, server, dotnet, token, authenticate
 published: True
 position: 25
 ---
 
-# Configuring the Report Server for .NET for Authentication with JWT Tokens
+# Configuring the Report Server for .NET for Authentication with Personal Tokens
 
-Starting with [2025 Q4(11.3.25.1112)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1112), Telerik Report Server for .NET enhances security by letting the [Users]({%slug users%}) create Personal JWT Tokens. Each user may have multiple Tokens. The [Guest User]({%slug guest-user%}) may also keep Tokens added by the admin users.
+Starting with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1111), Telerik Report Server for .NET enhances security by letting the [Users]({%slug users%}) create Personal Tokens. The Tokens are based on the JWT Token structure. Each user may have multiple Tokens. The [Guest User]({%slug guest-user%}) may also keep Tokens added by the admin users.
 
 The tokens may be passed instead of user/password credentials from the Report Viewers for authentication against the Report Server for .NET. The Report Viewers expose a dedicated callback function `getPersonalAccessToken` for this purpose, leaving the responsibility for fetching and returning the Token to the developer. See the list of viewers supporting the Token authentication in the [Characteristics and Limitations](#characteristics-and-limitations) section.
 
 > The Report Viewers can still connect to the Report Server for .NET through the username/password, like in the Report Server for .NET Framework.
 
 In this article, we will explain:
-* how to create and add custom JWT Tokens, letting Users connect to the Report Server for .NET remotely;
+* how to create and add custom Personal Tokens, letting Users connect to the Report Server for .NET remotely;
 * how the server utilizes the Tokens;
 * how to add and use Tokens from the Guest User account;
 * how an authenticated user may share reports with the outside world.
@@ -30,7 +30,8 @@ All Report Server Users may create and add Tokens to their accounts. The Tokens 
 
 > Each Token may be used to authenticate remotely against the Report Server for .NET with the Reading permissions of the corresponding User.
 
-The 'Report Access Tokens' view of the Report Server Manager shows the main properties of the Token:
+The 'Report Access Tokens' view of the Report Server Manager shows the main properties of the Personal Token:
+
 * The Token _Name_
 * When was the Token _Created_
 * When the Token _Expires_
@@ -38,21 +39,21 @@ The 'Report Access Tokens' view of the Report Server Manager shows the main prop
 * Where was the _Last Connection From_ with the Token
 * The Token _Status_ You may control it through a switch in the view
 
-The view also lets you create a new Token through a button:
+The view also lets you create a new Personal Token through a button:
 
 ![The view for creating a new personal access token for the logged-in user.](../images/rs-net-images/rs-net-token-view-create-access-token.png)
 
-The Token has an expiration time selected by the User while creating it:
+Each Personal Token has an expiration time selected by the User while creating it:
 
 ![Create a new personal access token for the logged-in user and select an expiration time from the available options (7-365 days).](../images/rs-net-images/rs-net-token-create-access-token.png)
 
-When the new Token is created, the UI lets you copy it from a dedicated form. You need to store it securely as it is not kept by the Report Server for .NET in raw format and cannot be restored later.
+When the new Personal Token is created, the UI lets you copy it from a dedicated form. You need to store it securely as it is not kept by the Report Server for .NET in raw format and cannot be restored later.
 
 ![The form letting the user copy the newly created personal access token with the warning that the token should be stored securely as it will be shown only once.](../images/rs-net-images/rs-net-token-copy-access-token.png)
 
-Each `personalAccessToken` is passed from the Viewer to the Report Server for .NET only once per viewer's session, in the `PersonalToken` request. This ensures higher security in the communication between the viewer and the Report Server for .NET.
+Each Personal Token is passed from the Viewer to the Report Server for .NET only once per viewer's session, in the `PersonalToken` request. This ensures higher security in the communication between the viewer and the Report Server for .NET.
 
-The response from the server to the `PersonalToken` request contains two temporary tokens:
+The response from the server to the `PersonalToken` request contains two short-lived tokens:
 * `accessToken` with a default lifespan of 30 minutes;
 * `refreshToken` with a default lifespan of 2 days.
 
