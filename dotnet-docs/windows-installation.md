@@ -60,7 +60,7 @@ When upgrading from the combined MSI installer (versions prior to 2025 Q4), the 
 - Environment variables (such as encryption keys) to the newly selected user option (for example, `RSUserNET` if creating a dedicated Windows user).
 - Storage configuration and assets (when using `FileStorage`) to the new RS.NET location.
 
-The original RS.NET assets created by the combined installer remain on your system for manual cleanup purposes and are not automatically removed.
+The original RS.NET assets created by the combined installer remain on your system and are not automatically removed.
 
 >caution The RS.NET installer does not support automatic backup. When upgrading from one RS.NET installer version to another, consider performing a [manual storage backup]({%slug storage-backup%}#manual-backup) before upgrading to prevent data loss. Automatic backup functionality will be added in a future release.
 
