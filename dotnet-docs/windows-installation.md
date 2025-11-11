@@ -39,7 +39,9 @@ To install RS.NET for the first time:
 1. Double-click the downloaded MSI file to start the installer.
 1. Read and accept the license agreement.
 1. Optionally, choose **Customize** to customize the installed options, then click **Next**.
-    >caution The RS.NET installer currently does not include SDK examples. This may be added in future releases.
+
+    >caution The RS.NET installer currently does not include SDK examples. Those will be added in future releases.
+
 1. Choose a user option and click **Next**. Creating a dedicated Windows user (`RSUserNET`) is recommended for security purposes. For more information about the available user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({%slug installation%}#reportserveruser-localsystem-identity-and-dedicated-users).
 1. Click **Install** to proceed with the installation.
 
