@@ -16,7 +16,7 @@ position: 25
 		max-height: 300px;
 	}
 	img[src="../images/rs-net-images/rs-net-token-copy-access-token.png"] {
-		max-height: 300px;
+		max-height: 400px;
 	}
 </style>
 
