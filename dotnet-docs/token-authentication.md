@@ -8,6 +8,18 @@ published: True
 position: 25
 ---
 
+<style>
+	img[src="../images/rs-net-images/rs-net-token-add-to-user.png"] {
+		max-height: 200px;
+	}
+	img[src="../images/rs-net-images/rs-net-token-create-access-token.png"] {
+		max-height: 300px;
+	}
+	img[src="../images/rs-net-images/rs-net-token-copy-access-token.png"] {
+		max-height: 300px;
+	}
+</style>
+
 # Configuring the Report Server for .NET for Authentication with Personal Tokens
 
 Starting with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1111), Telerik Report Server for .NET enhances security by letting the [Users]({%slug users%}) create Personal Tokens. The Personal Tokens follow the JWT Token structure. Each user may have multiple Personal Tokens. The [Guest User]({%slug guest-user%}) may also keep Personal Tokens added by the admin users.
