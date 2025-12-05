@@ -8,22 +8,6 @@ published: True
 position: 4
 ---
 
-# Report Server for .NET: Installation on Docker Container
-
-The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers through ready-to-use Docker Images introduced in [2025 Q2 (11.1.25.521)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-521):
-
-* https://hub.docker.com/r/progressofficial/telerik-reportserver-app
-* https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
----
-title: Installation on Docker Container
-page_title: Installing ReportServer.NET on Docker Container
-description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Docker Container."
-slug: dotnet-installation-on-docker-container
-tags: installation,dotnet,docker,linux,container
-published: True
-position: 4
----
-
 # Report Server for .NET in Containers
 
 The Report Server for .NET (aka `RS.NET`) can be run as a Linux container (Docker, Podman, etc) using our images introduced in [2025 Q2 (11.1.25.521)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-521):
@@ -35,7 +19,7 @@ The Report Server for .NET (aka `RS.NET`) can be run as a Linux container (Docke
 
 ## Installation
 
-While you can deploy these containers separately, we strongly recommend using a stack like [Docker Compose](https://docs.docker.com/compose/) to keep everything coordinated. To demonstrate this, we will walk you through using `docker-compose.yml` and the `docker compose up -d` commands, however you can adapt this for your preferred deploymenmt (e.g., Portainer, podman, etc).
+While you can deploy these containers separately, we strongly recommend using a stack like [Docker Compose](https://docs.docker.com/compose/) to keep everything coordinated. To demonstrate this, we will walk you through using `docker-compose.yml` and the `docker compose up -d` commands, however you can adapt this for your preferred deployment (e.g., Portainer, podman, etc).
 
 ### Overview / Order of Operations
 
@@ -48,7 +32,7 @@ As we'll be repeatedly stopping and restarting containers for the initial setup,
     1. START the stack (the Report Server Manager setup is finished)
 1. Set up the agent container app:
     1. Log into the manager app and create a new agent configuration
-    1. STOP the stack => uncomment the agent's YAML, and set the environment variables you got form the previous step
+    1. STOP the stack => uncomment the agent's YAML, and set the environment variables you got from the previous step
     1. START the stack => log into the manager app and confirm the agent is connected.
 
 This repeated start/stop/start process is only needed the first time you setup Report Server so you can generate required runtime configs. 
@@ -83,7 +67,7 @@ There are three apps in the stack; the manager, the agent, and the SQL server. T
 
 ### Step 0. Prerequisites
 
-Lets get the required files out of the way, this is better if you do it in an empty folder that is dedicated to the stack
+Let's get the required files out of the way, this is better if you do it in an empty folder that is dedicated to the stack
 
 1. Create a new, empty directory to work in (e.g. **~/report-server-compose**)
 1. Inside the directory create two new files
@@ -92,7 +76,7 @@ Lets get the required files out of the way, this is better if you do it in an em
 
 ### Step 1. Environment Variables
 
-In our example, we use variable substitution placeholders like `${variable_name}` in the docker-compose file. The flexibility of this approach allows you to use whateevr your preferred approach of settings environment (docker CLI env, runtime secrets, .env, and more). To keep things simple for this tutorial, we will use an .env file as `docker compose up` command will automatically find and use it!
+In our example, we use variable substitution placeholders like `${variable_name}` in the docker-compose file. The flexibility of this approach allows you to use whatever your preferred approach of setting environment variables (docker CLI env, runtime secrets, .env, and more). To keep things simple for this tutorial, we will use an .env file as `docker compose up` command will automatically find and use it!
 
 Open the `.env` file and copy/paste the following content:
 
@@ -187,15 +171,15 @@ To begin, we'll add the Report Server Manager app and the SQL server app to the 
 1. Run  `docker compose up -d` command to start the stack again
 1. Go back to http://localhost:82 when the app is ready
 
-You're done with setting up the Report Server Manager app! Now, its time to set up and configure the Report Server Agent app. 
+You're done with setting up the Report Server Manager app! Now, it's time to set up and configure the Report Server Agent app. 
 
 ### Step 3 - Creating a New Report Server Agent
 
-Now that the stack is running again, lets set up a new agent.
+Now that the stack is running again, let's set up a new agent.
 
 #### Step 3.1
 
-1. Inm the web broswer, log into the Report Server Manager (at http://localhost:82)
+1. In the web browser, log into the Report Server Manager (at http://localhost:82)
 2. Open the **Configuration** page
 3. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 4. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
