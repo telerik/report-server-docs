@@ -119,17 +119,17 @@ services:
 			image: progressofficial/telerik-reportserver-app:latest
 			restart: always
 			environment:
-			- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-			- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
-			- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
-			- reportServer__storage__isDefault=false
-			- reportServer__storage__provider=MsSqlServer
-			- reportServer__storage__parameters__0__name=ConnectionString
-			- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
+				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+				- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
+				- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
+				- reportServer__storage__isDefault=false
+				- reportServer__storage__provider=MsSqlServer
+				- reportServer__storage__parameters__0__name=ConnectionString
+				- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
 			ports:
-			- "82:80"
+				- "82:80"
 			depends_on:
-			- storage
+				- storage
 		
 		# <-- leave space here for agent section later -->
 		
@@ -138,10 +138,10 @@ services:
 			image: "mcr.microsoft.com/mssql/server:2022-latest"
 			restart: always
 			environment:
-			- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
-			- ACCEPT_EULA=Y
+				- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
+				- ACCEPT_EULA=Y
 			volumes: 
-			- mssql-storage:/var/opt/mssql
+				- mssql-storage:/var/opt/mssql
 		
 		volumes:
 		mssql-storage:
@@ -237,10 +237,10 @@ services:
 			image: progressofficial/telerik-reportserver-agent:latest
 			restart: always
 			environment:
-			- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
-			- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
-			- Agent__Id=${MY_AGENT_AGENTID}
-			- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+				- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
+				- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
+				- Agent__Id=${MY_AGENT_AGENTID}
+				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
 			command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 		
 			# The storage app
@@ -272,43 +272,43 @@ To conclude, here is everything in its final form, without commentary.
 
 ````yml
 services:
-  telerik-report-server:
-    image: progressofficial/telerik-reportserver-app:latest
-    restart: always
-    environment:
-      - RS_NET_MainPrivateKey=${MY_RS_NET_MainPrivateKey}
-      - RS_NET_BackupPrivateKey=${MY_RS_NET_BackupPrivateKey}
-      - TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-      - reportServer__storage__provider=MsSqlServer
-      - reportServer__storage__parameters__0__name=ConnectionString
-      - reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
-      - reportServer__storage__isDefault=false
-    ports:
-      - "8888:80"
-    depends_on:
-      - storage
-
-  telerik-report-server-agent:
-    image: progressofficial/telerik-reportserver-agent:latest
-    restart: always
-    environment:
-    - Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
-    - Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
-    - Agent__Id=${MY_AGENT_AGENTID}
-    - TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-    command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
-
-  storage:
-    image: "mcr.microsoft.com/mssql/server:2022-latest"
-    restart: always
-    environment:
-      - MSSQL_SA_PASSWORD=${MY_SQL_PASS}
-      - ACCEPT_EULA=Y
-    volumes: 
-      - mssql-storage:/var/opt/mssql
+	telerik-report-server:
+	image: progressofficial/telerik-reportserver-app:latest
+	restart: always
+	environment:
+		- RS_NET_MainPrivateKey=${MY_RS_NET_MainPrivateKey}
+		- RS_NET_BackupPrivateKey=${MY_RS_NET_BackupPrivateKey}
+		- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+		- reportServer__storage__provider=MsSqlServer
+		- reportServer__storage__parameters__0__name=ConnectionString
+		- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
+		- reportServer__storage__isDefault=false
+	ports:
+		- "8888:80"
+	depends_on:
+		- storage
+	
+	telerik-report-server-agent:
+	image: progressofficial/telerik-reportserver-agent:latest
+	restart: always
+	environment:
+		- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
+		- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
+		- Agent__Id=${MY_AGENT_AGENTID}
+		- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+	command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+	
+	storage:
+	image: "mcr.microsoft.com/mssql/server:2022-latest"
+	restart: always
+	environment:
+		- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
+		- ACCEPT_EULA=Y
+	volumes: 
+		- mssql-storage:/var/opt/mssql
 
 volumes:
-  mssql-storage:
+	mssql-storage:
 ````
 
 **.env**
