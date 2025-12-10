@@ -27,13 +27,13 @@ As we'll be repeatedly stopping and restarting containers for the initial setup,
 
 1. Create docker-compose.yml, set initial values.
 1. Set up the manager container app:
-    1. START the stack (Report Server Manager and SQL Server only) => Follow the onboarding wizard to create an admin user, then generate and download encryption keys.
-    1. STOP the stack => set the encryption key environment variables you got from the previous step.
-    1. START the stack (the Report Server Manager setup is finished)
+	1. START the stack (Report Server Manager and SQL Server only) => Follow the onboarding wizard to create an admin user, then generate and download encryption keys.
+	1. STOP the stack => set the encryption key environment variables you got from the previous step.
+	1. START the stack (the Report Server Manager setup is finished)
 1. Set up the agent container app:
-    1. Log into the manager app and create a new agent configuration
-    1. STOP the stack => uncomment the agent's YAML, and set the environment variables you got from the previous step
-    1. START the stack => log into the manager app and confirm the agent is connected.
+	1. Log into the manager app and create a new agent configuration
+	1. STOP the stack => uncomment the agent's YAML, and set the environment variables you got from the previous step
+	1. START the stack => log into the manager app and confirm the agent is connected.
 
 This repeated start/stop/start process is only needed the first time you set up Report Server, so you can generate the required runtime configs. 
 
@@ -41,24 +41,24 @@ Next, let's peek at a simplified outline of the docker-compose.yml to explain th
 
 ````yml
 services:
-  # The Manager app
-  telerik-report-server:
-    image: progressofficial/telerik-reportserver-app:latest
-    depends_on: storage
-    ...
+	# The Manager app
+	telerik-report-server:
+		image: progressofficial/telerik-reportserver-app:latest
+		depends_on: storage
+		...
 
-  # The Agent app
-  telerik-report-server-agent:
-    image: progressofficial/telerik-reportserver-agent:latest
-    ...
+	# The Agent app
+	telerik-report-server-agent:
+		image: progressofficial/telerik-reportserver-agent:latest
+		...
 
-  # The storage app
-  storage:
-    image: "mcr.microsoft.com/mssql/server:2022-latest"
-    ...
+	# The storage app
+	storage:
+		image: "mcr.microsoft.com/mssql/server:2022-latest"
+		...
 
 volumes:
-  mssql-storage:
+	mssql-storage:
 ````
 
 There are three apps in the stack: the manager, the agent, and the SQL server. To keep things simple, we will slowly build up the docker-compose.yml as we go.
@@ -71,8 +71,8 @@ Let's get the required files out of the way. This is better if you do it in an e
 
 1. Create a new, empty directory to work in (e.g. **~/report-server-compose**)
 1. Inside the directory, create two new files
-    - `docker-compose.yml`
-    - `.env`
+	- `docker-compose.yml`
+	- `.env`
 
 ### Step 1. Environment Variables
 
@@ -114,47 +114,47 @@ To begin, we'll add the Report Server Manager app and the SQL Server app to the 
 1. Paste the following content, and save the file.
 	- ````yaml
 services:
-		# The Manager app
-		telerik-report-server:
-			image: progressofficial/telerik-reportserver-app:latest
-			restart: always
-			environment:
-				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-				- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
-				- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
-				- reportServer__storage__isDefault=false
-				- reportServer__storage__provider=MsSqlServer
-				- reportServer__storage__parameters__0__name=ConnectionString
-				- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
-			ports:
-				- "82:80"
-			depends_on:
-				- storage
-		
-		# <-- leave space here for agent section later -->
-		
-		# The storage app
-		storage:
-			image: "mcr.microsoft.com/mssql/server:2022-latest"
-			restart: always
-			environment:
-				- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
-				- ACCEPT_EULA=Y
-			volumes: 
-				- mssql-storage:/var/opt/mssql
-		
+			# The Manager app
+			telerik-report-server:
+				image: progressofficial/telerik-reportserver-app:latest
+				restart: always
+				environment:
+					- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+					- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
+					- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
+					- reportServer__storage__isDefault=false
+					- reportServer__storage__provider=MsSqlServer
+					- reportServer__storage__parameters__0__name=ConnectionString
+					- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
+				ports:
+					- "82:80"
+				depends_on:
+					- storage
+
+			# <-- leave space here for agent section later -->
+
+			# The storage app
+			storage:
+				image: "mcr.microsoft.com/mssql/server:2022-latest"
+				restart: always
+				environment:
+					- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
+					- ACCEPT_EULA=Y
+				volumes: 
+					- mssql-storage:/var/opt/mssql
+
 		volumes:
-		mssql-storage:
+			mssql-storage:
 ````
 
 
 	- *Notice the `${name}` substitution placeholders? This will be replaced by the values from the `.env` file!*
 1. In your preferred shell (bash, powershell), navigate to the directory that contains the `docker-compose.yml` and `.env` files
 1. Run the `docker compose up -d` command to start the stack
-    - Wait until the images have been pulled and the containers are running
+	- Wait until the images have been pulled and the containers are running
 1. In your browser, go to http://localhost:82 and follow the setup wizard steps
-    - Follow the wizard steps and finish setting up the admin account
-    - On the final step, download the provided **mainPrivateKey.rsk** and **backupPrivateKey.rsk** files
+	- Follow the wizard steps and finish setting up the admin account
+	- On the final step, download the provided **mainPrivateKey.rsk** and **backupPrivateKey.rsk** files
 1. Run `docker compose down` to stop the stack
 
 ### Step 2.2
@@ -217,41 +217,41 @@ Now that we have the agent's config details, we can update the env file and add 
 services:
 			# The Manager app
 			telerik-report-server:
-			image: progressofficial/telerik-reportserver-app:latest
-			restart: always
-			environment:
-				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-				- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
-				- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
-				- reportServer__storage__isDefault=false
-				- reportServer__storage__provider=MsSqlServer
-				- reportServer__storage__parameters__0__name=ConnectionString
-				- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
-			ports:
-				- "82:80"
-			depends_on:
-				- storage
+				image: progressofficial/telerik-reportserver-app:latest
+				restart: always
+				environment:
+					- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+					- RS_NET_MainPrivateKey=${MY_RS_NET_MAIN_PRIVATE_KEY}
+					- RS_NET_BackupPrivateKey=${MY_RS_NET_BACKUP_PRIVATE_KEY}
+					- reportServer__storage__isDefault=false
+					- reportServer__storage__provider=MsSqlServer
+					- reportServer__storage__parameters__0__name=ConnectionString
+					- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
+				ports:
+					- "82:80"
+				depends_on:
+					- storage
 		
 			# ADD AGENT HERE!
 			telerik-report-server-agent:
-			image: progressofficial/telerik-reportserver-agent:latest
-			restart: always
-			environment:
-				- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
-				- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
-				- Agent__Id=${MY_AGENT_AGENTID}
-				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-			command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+				image: progressofficial/telerik-reportserver-agent:latest
+				restart: always
+				environment:
+					- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
+					- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
+					- Agent__Id=${MY_AGENT_AGENTID}
+					- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+				command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 		
 			# The storage app
 			storage:
-			image: "mcr.microsoft.com/mssql/server:2022-latest"
-			restart: always
-			environment:
-				- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
-				- ACCEPT_EULA=Y
-			volumes: 
-				- mssql-storage:/var/opt/mssql
+				image: "mcr.microsoft.com/mssql/server:2022-latest"
+				restart: always
+				environment:
+					- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
+					- ACCEPT_EULA=Y
+				volumes: 
+					- mssql-storage:/var/opt/mssql
 		
 		volumes:
 			mssql-storage:
@@ -273,39 +273,39 @@ To conclude, here is everything in its final form, without commentary.
 ````yml
 services:
 	telerik-report-server:
-	image: progressofficial/telerik-reportserver-app:latest
-	restart: always
-	environment:
-		- RS_NET_MainPrivateKey=${MY_RS_NET_MainPrivateKey}
-		- RS_NET_BackupPrivateKey=${MY_RS_NET_BackupPrivateKey}
-		- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-		- reportServer__storage__provider=MsSqlServer
-		- reportServer__storage__parameters__0__name=ConnectionString
-		- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
-		- reportServer__storage__isDefault=false
-	ports:
-		- "8888:80"
-	depends_on:
-		- storage
-	
+		image: progressofficial/telerik-reportserver-app:latest
+		restart: always
+		environment:
+			- RS_NET_MainPrivateKey=${MY_RS_NET_MainPrivateKey}
+			- RS_NET_BackupPrivateKey=${MY_RS_NET_BackupPrivateKey}
+			- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+			- reportServer__storage__provider=MsSqlServer
+			- reportServer__storage__parameters__0__name=ConnectionString
+			- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
+			- reportServer__storage__isDefault=false
+		ports:
+			- "8888:80"
+		depends_on:
+			- storage
+
 	telerik-report-server-agent:
-	image: progressofficial/telerik-reportserver-agent:latest
-	restart: always
-	environment:
-		- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
-		- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
-		- Agent__Id=${MY_AGENT_AGENTID}
-		- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
-	command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
-	
+		image: progressofficial/telerik-reportserver-agent:latest
+		restart: always
+		environment:
+			- Agent__ServerAddress=${MY_AGENT_SERVER_ADDRESS}
+			- Agent__AuthenticationToken=${MY_AGENT_AUTHTOKEN}
+			- Agent__Id=${MY_AGENT_AGENTID}
+			- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
+		command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
+
 	storage:
-	image: "mcr.microsoft.com/mssql/server:2022-latest"
-	restart: always
-	environment:
-		- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
-		- ACCEPT_EULA=Y
-	volumes: 
-		- mssql-storage:/var/opt/mssql
+		image: "mcr.microsoft.com/mssql/server:2022-latest"
+		restart: always
+		environment:
+			- MSSQL_SA_PASSWORD=${MY_SQL_PASS}
+			- ACCEPT_EULA=Y
+		volumes: 
+			- mssql-storage:/var/opt/mssql
 
 volumes:
 	mssql-storage:
