@@ -82,19 +82,19 @@ Open the `.env` file and copy/paste the following content:
 
 ````bash
 # CHANGE ME!
-MY_SQL_PASS="my3xTraStr0ngP@ssw0rd"
+MY_SQL_PASS=my3xTraStr0ngP@ssw0rd
 
 # Provided by Report Server Manager during initial setup
-MY_RS_NET_MAIN_PRIVATE_KEY=""
-MY_RS_NET_BACKUP_PRIVATE_KEY=""
+MY_RS_NET_MAIN_PRIVATE_KEY=
+MY_RS_NET_BACKUP_PRIVATE_KEY=
 
 # Provided by Report Server Manager when configuring a new agent
-MY_AGENT_SERVER_ADDRESS="http://telerik-report-server"
-MY_AGENT_AUTHTOKEN=""
-MY_AGENT_AGENTID=""
+MY_AGENT_SERVER_ADDRESS=http://telerik-report-server
+MY_AGENT_AUTHTOKEN=
+MY_AGENT_AGENTID=
 
 # YOUR TELERIK LICENSE KEY
-MY_TELERIK_LICENSE=""
+MY_TELERIK_LICENSE=
 ````
 
 Then, do two things:
@@ -204,13 +204,11 @@ Using the values from the previous step, update the variables in your .env file:
 1. Edit your `.env` file and update the respective environment variables
 
 	````bash
-	...
-		
-	MY_AGENT_SERVER_ADDRESS=" paste the ReportServerAddress value here"
-	MY_AGENT_AUTHTOKEN=" paste the agent's AuthenticationToken value here"
-	MY_AGENT_AGENTID=" paste the agent's AgentId value here"
-		
-	...
+	
+	MY_AGENT_SERVER_ADDRESS=#Agent__ServerAddress value goes here, no spaces!
+	MY_AGENT_AUTHTOKEN=#Agent__AuthenticationToken value goes here, no spaces!
+	MY_AGENT_AGENTID=#Agent__Id value goes here, no spaces!
+	
 	````
 	- Save the changes!
 1. Go back to the `docker-compose.yml` file and now add the agent's service (see the "AGENT - START" comment):
@@ -317,15 +315,15 @@ volumes:
 **.env**
 
 ````bash
-MY_RS_NET_MAIN_PRIVATE_KEY=""
-MY_RS_NET_BACKUP_PRIVATE_KEY=""
+MY_RS_NET_MAIN_PRIVATE_KEY=
+MY_RS_NET_BACKUP_PRIVATE_KEY=
 
-MY_AGENT_SERVER_ADDRESS=""
-MY_AGENT_AUTHTOKEN=""
-MY_AGENT_AGENTID=""
+MY_AGENT_SERVER_ADDRESS=
+MY_AGENT_AUTHTOKEN=
+MY_AGENT_AGENTID=
 
-MY_SQL_PASS=""
-MY_TELERIK_LICENSE=""
+MY_SQL_PASS=
+MY_TELERIK_LICENSE=
 ````
 
 ## See Also
