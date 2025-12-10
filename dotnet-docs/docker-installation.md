@@ -15,7 +15,7 @@ Introduced in 2025 Q2 (11.1.25.521), Report Server for .NET (aka `RS.NET`) can b
 * [progressofficial/telerik-reportserver-app](https://hub.docker.com/r/progressofficial/telerik-reportserver-app)
 * [progressofficial/telerik-reportserver-agent](https://hub.docker.com/r/progressofficial/telerik-reportserver-agent)
 
-> The manifest contains images for `linux/amd64` and `linux/arm64` the architectures.
+> The manifest contains images for `linux/amd64` and `linux/arm64` architectures.
 
 ## Installation
 
