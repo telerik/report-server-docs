@@ -186,12 +186,12 @@ Now that the stack is running again, let's set up a new agent.
 1. In the web browser, log into the Report Server Manager (e.g. [http://localhost:82](http://localhost:82)).
 1. Open the **Configuration** page.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
-1. In the pop-up window with title **Configure New Agent**, enter the Report Server Manager's address (e.g. [http://localhost:82](http://localhost:82)). This is what the agent will use to connect to the manager app:
+1. In the **Configure New Agent** pop-up window, enter the URL of the Report Server Manager app (e.g. [http://localhost:82](http://localhost:82)):
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
 
 
-	>If the agent and the manager are in the same stack, you can use the service's ID for the url (e.g. [http://telerik-report-server](http://telerik-report-server) instead of http://localhost:82 or https://).
+	>As seen in the screenshot, you can also use the Manager app's name for the server address. Here, we can use `http://telerik-report-server` because **telerik-report-server** is the name we used for the manager app in the docker-compose.yml.
 
 1. Click the **GENERATE CONFIGURATION** button. When the pop-up appears, switch to the **ENVIRONMENT VARIABLES** tab, and then copy/paste values:
 
@@ -256,7 +256,7 @@ services:
 		
 		volumes:
 			mssql-storage:
-````
+		````
 
 
 1. Run the `docker compose up -d` command to start the stack again.
