@@ -1,5 +1,5 @@
 ---
-title: Generating Logs 
+title: Generating Logs
 page_title: Recording runtime logs in the Report Server for .NET
 description: "Learn how to enable SeriLog logging in the Telerik Report Server for .NET application and service."
 slug: logging-rs-net
@@ -10,7 +10,7 @@ position: 10
 
 # Creating Logs in the Report Server for .NET
 
-The Report Server for .NET uses [Serilog](https://serilog.net/) to allow  writing diagnostic logging information from the server onto a file for easier troubleshooting.
+The Report Server for .NET uses [Serilog](https://serilog.net/) to allow writing diagnostic logging information from the server onto a file for easier troubleshooting.
 
 ## Setup
 
@@ -23,16 +23,15 @@ The configuration options for Serilog that would usually be set up through the C
 
 You can enable logging for both the Report Server Manager and Service Agent at the same time by setting the following environment variables:
 
-````
-Serilog__MinimumLevel=Verbose
-Serilog__WriteTo__1__Name=File
-Serilog__WriteTo__1__Args__path=Logs/rsnetlogs.txt
-````
+- `Serilog__MinimumLevel=Verbose`
+- `Serilog__WriteTo__1__Name=File`
+- `Serilog__WriteTo__1__Args__path=Logs/rsnetlogs.txt`
 
 This requires the default Serilog configuration to exist in the `appsettings.json` files for both the manager and service components, as environment variables are intended to override these base settings as needed.
 
->note When the Report Server is installed using the MSI installer, it runs under a dedicated Windows user account (ReportServerUser) or a system account (e.g., LocalSystem) depending on your installation choice. These accounts do not have access to user-level environment variables. 
-> To ensure environment variable overrides work correctly, you must define them at the **system level**.
+> note When the Report Server is installed using the MSI installer, it runs under a dedicated Windows user account (ReportServerUser) or a system account (e.g., LocalSystem) depending on your installation choice.
+>
+> These accounts do not have access to user-level environment variables. To ensure environment variable overrides work correctly, you must define them at the **system level**.
 
 ### Using Configuration Files
 
@@ -43,7 +42,7 @@ Alternatively, you can define the configuration in the `appsettings.json` config
 The `appsettings.json` file of the Report Server Manager for .NET resides in its installation directory, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET\`.
 The following configuration settings can be added to that file, at the top level:
 
-````JSON
+```JSON
   "Serilog": {
    "MinimumLevel": "Verbose",
     "WriteTo": [
@@ -56,14 +55,14 @@ The following configuration settings can be added to that file, at the top level
       }
     ]
   }
-````
+```
 
 #### Service Agent
 
 The Report Server for .NET ServiceAgent's `appsettings.json` file can be found in its installation directory, by default - `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\`.
 The following configuration settings can be added to that file, at the top level:
 
-````JSON
+```JSON
   "Serilog": {
    "MinimumLevel": "Verbose",
     "WriteTo": [
@@ -76,12 +75,12 @@ The following configuration settings can be added to that file, at the top level
       }
     ]
   }
-````
+```
 
 > For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
 
 ## See Also
 
-* [Report Server for .NET Introduction]({%slug coming-soon%})
-* [Report Server for .NET: Installation on Windows]({%slug dotnet-installation-on-windows%})
-* [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
+- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET: Installation on Windows]({%slug dotnet-installation-on-windows%})
+- [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})

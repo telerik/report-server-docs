@@ -4,13 +4,14 @@ description: How to add more formatting options to the mail templates
 type: how-to
 page_title: Add More Formatting Options like FontName to the Mail Templates Toolbars
 slug: add-more-formatting-options-to-mail-templates
-position: 
-tags: 
+position:
+tags:
 ticketid: 1539934
 res_type: kb
 ---
 
 ## Environment
+
 <table>
 	<tbody>
 		<tr>
@@ -20,21 +21,21 @@ res_type: kb
 	</tbody>
 </table>
 
+## Description
 
-## Description 
-
-The Report Server has limited formatting options in its Mail Templates. This article elaborates on how you may add more of them. 
+The Report Server has limited formatting options in its Mail Templates. This article elaborates on how you may add more of them.
 
 The Mail Templates are [Kendo Editors](https://demos.telerik.com/kendo-ui/editor/index). They are set up in the CSHTML templates that get deployed with the Report Server.
 
-## Solution 
+## Solution
 
-The CSHTML templates can be found in the installation folder of the Report Server product, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Views\Shared`. 
-The files are `_LocalUsersMailTemplate.cshtml` and `_ExternalUsersMailTemplate.cshtml`. The setup of the Kendo Editors in these files includes a limited number of options 
-that can be increased to enlarge the available formatting functionality when needed. For example, if you would like to be able to select 'FontName', you need to add 
-the `fontName` option as it is absent by default. Here is the relevant part of the CSHTML script for the `_ExternalUsersMailTemplate.cshtml` file: 
+The CSHTML templates can be found in the installation folder of the Report Server product, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Views\Shared`.
 
-````HTML
+The files are `_LocalUsersMailTemplate.cshtml` and `_ExternalUsersMailTemplate.cshtml`. The setup of the Kendo Editors in these files includes a limited number of options that can be increased to enlarge the available formatting functionality when needed.
+
+For example, if you would like to be able to select 'FontName', you need to add the `fontName` option as it is absent by default. Here is the relevant part of the **CSHTML** script for the `_ExternalUsersMailTemplate.cshtml` file:
+
+```HTML
 <script id="externalUsersMailTemplateEditorTemplate" type="text/x-kendo-template">
     <textarea id='externalUsersMailTemplateBodyInput'
               data-role='editor'
@@ -57,5 +58,4 @@ the `fontName` option as it is absent by default. Here is the relevant part of t
               ]"
               data-bind='value: ExternalUsersMailTemplate.Body'></textarea>
 </script>
-````
-
+```

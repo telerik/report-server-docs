@@ -2,10 +2,10 @@
 title: Add reports to Report Server programmatically
 description: Upload reports to Report Server from the code
 type: how-to
-page_title: Use Report Server API to upload reports 
+page_title: Use Report Server API to upload reports
 slug: upload-reports-in-report-server-with-public-api
-position: 
-tags: 
+position:
+tags:
 ticketid: 1168719
 res_type: kb
 ---
@@ -23,7 +23,6 @@ res_type: kb
 	</tr>
 </table>
 
-
 ## Description
 
 How to upload a report in the Report Server using the public [API]({%slug rest-api-overview%}).
@@ -34,7 +33,7 @@ A simple console application in `C#` demonstrating how to upload a report (_Conc
 
 It is necessary to change the Log-in details to reflect your local settings, i.e. modify the following code accordingly:
 
-````CSharp
+```C#
 class Program
 {
 	static void Main(string[] args)
@@ -44,5 +43,4 @@ class Program
 		//...
 	}
 }
-````
-
+```

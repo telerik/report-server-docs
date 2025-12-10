@@ -26,9 +26,15 @@ After publishing a report to Report Server and previewing it, there is an error 
 
 `Cannot read a document with the specified schema`
 
-## Solution
+## Cause
 
-This error is caused by the mismatch in Telerik Reporting versions, report that is created or modified with a newer version cannot be processed by the older version. When you modify the report in the Standalone Designer of the newer version, the [XML schema of the report](https://docs.telerik.com/reporting/upgrading-xml-report-definition-versioning) will be updated. The Reporting engine of the older version is not able to read the updated schema and will show the mentioned error.
+This error is caused by the mismatch in Telerik Reporting versions, report that is created or modified with a newer version cannot be processed by the older version.
+
+When you modify the report in the Standalone Designer of the newer version, the [XML schema of the report](https://docs.telerik.com/reporting/upgrading-xml-report-definition-versioning) will be updated.
+
+The Reporting engine of the older version is not able to read the updated schema and will show the mentioned error.
+
+## Solution
 
 To avoid issues caused by the version mismatch when using both Telerik Reporting and Report Server products it is recommended:
 
@@ -37,4 +43,4 @@ To avoid issues caused by the version mismatch when using both Telerik Reporting
 
 ## See Also
 
-* [XML Report Definition](https://docs.telerik.com/reporting/upgrading-xml-report-definition-versioning)
+- [XML Report Definition](https://docs.telerik.com/reporting/upgrading-xml-report-definition-versioning)

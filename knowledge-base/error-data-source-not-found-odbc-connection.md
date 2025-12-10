@@ -21,11 +21,14 @@ res_type: kb
  </tr>
 </table>
 
-
 ## Description
 
-The message 'Data source name not found and no default driver specified' appears when Standalone Report Designer tries to open an ODBC connection, registered in Telerik Report Server, although the connection string is valid and ODBC DSN is registered as User DSN.
+The message `Data source name not found and no default driver specified` appears when Standalone Report Designer tries to open an ODBC connection, registered in Telerik Report Server, although the connection string is valid and ODBC DSN is registered as User DSN.
 
 ## Solution
 
-When a DSN is registered as [User DSN](https://support.microsoft.com/en-us/topic/what-is-a-dsn-data-source-name-ae9a0c76-22fc-8a30-606e-2436fe26e89f), this means that only the currently logged-in user can access it. The Report Server pool uses [LocalSystem](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/31d57870-1faa-4e14-8527-ce77b1ff40e4/local-service-local-system-or-network-service?forum=sqlsecurity) built-in account by default, so it probably is unable to access the registered User DSN. The solution is to register the DSN as System DSN in ODBC Data Source Administrator, so it will be available to all users.
+When a DSN is registered as [User DSN](https://support.microsoft.com/en-us/topic/what-is-a-dsn-data-source-name-ae9a0c76-22fc-8a30-606e-2436fe26e89f), this means that only the currently logged-in user can access it.
+
+The Report Server pool uses [LocalSystem](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/31d57870-1faa-4e14-8527-ce77b1ff40e4/local-service-local-system-or-network-service?forum=sqlsecurity) built-in account by default, so it probably is unable to access the registered User DSN.
+
+The solution is to register the DSN as `System DSN` in `ODBC Data Source Administrator`, so it will be available to all users.

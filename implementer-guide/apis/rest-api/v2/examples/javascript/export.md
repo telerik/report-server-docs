@@ -18,11 +18,12 @@ Here is a sample function to illustrate the approach:
 
 ## Example
 
-```JavaScript
+```JS
 var serverHost = "http://reportserver:83/";
 var serverApi = serverHost + "api/reportserver/v2/";
 
 function exportDocument(reportId, format, parameterValues, asAttachment) {
+
 	if (!reportId) {
 		window.alert('Please, select a report.');
 	}
@@ -46,19 +47,21 @@ function exportDocument(reportId, format, parameterValues, asAttachment) {
 		contentType: 'application/json',
 		data: JSON.stringify(data),
 		headers: headers
-		})
-		.done(function (data) {
-		  var documentId = data;
-		  var queryString = "";
+	})
+	.done(function (data) {
 
-		  if (asAttachment) {
+		var documentId = data;
+		var queryString = "";
+
+		if (asAttachment) {
 			queryString += "content-disposition=attachment";
-		  }
+		}
 
-		  var exportUrl = serverApi + "documents/" + documentId + "?" + queryString;
-		  window.open(exportUrl);
-		})
-		.fail(onError);
+		var exportUrl = serverApi + "documents/" + documentId + "?" + queryString;
+
+		window.open(exportUrl);
+	})
+	.fail(onError);
 }
 ```
 

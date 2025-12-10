@@ -18,54 +18,52 @@ Here is a sample function to illustrate the approach:
 
 ## Example
 
-```JavaScript
-	var serverHost = "http://reportserver:83/";
-	var serverApi = serverHost + "api/reportserver/v1/";
+```JS
+var serverHost = "http://reportserver:83/";
+var serverApi = serverHost + "api/reportserver/v1/";
 
-	function exportDocument(reportId, format, parameterValues, asAttachment) {
-		if (!reportId) {
-		  window.alert('Please, select a report.');
-		}
+function exportDocument(reportId, format, parameterValues, asAttachment) {
 
-		var data = {
-		  ReportId: reportId,
-		  Format: format,
-		  ParameterValues: parameterValues,
-		};
-
-		var token =
-		  window.sessionStorage.getItem(serverTokenKey);
-
-		var headers = {};
-
-		if (token) {
-		  headers.Authorization = 'Bearer ' + token;
-		}
-
-		$.ajax({
-		  type: "POST",
-		  url: serverApi + "documents",
-		  contentType: 'application/json',
-		  data: JSON.stringify(data),
-		  headers: headers
-		  })
-		.done(function (data) {
-		  var documentId = data;
-
-		  var queryString = "";
-
-		  if (asAttachment) {
-			queryString += "content-disposition=attachment";
-		  }
-
-		  var exportUrl =
-			  serverApi + "documents/" + documentId + "?" + queryString;
-
-		  window.open(exportUrl);
-
-		})
-		.fail(onError);
+	if (!reportId) {
+		window.alert('Please, select a report.');
 	}
+
+	var data = {
+		ReportId: reportId,
+		Format: format,
+		ParameterValues: parameterValues,
+	};
+
+	var token = window.sessionStorage.getItem(serverTokenKey);
+	var headers = {};
+
+	if (token) {
+		headers.Authorization = 'Bearer ' + token;
+	}
+
+	$.ajax({
+		type: "POST",
+		url: serverApi + "documents",
+		contentType: 'application/json',
+		data: JSON.stringify(data),
+		headers: headers
+	})
+	.done(function (data) {
+
+		var documentId = data;
+		var queryString = "";
+
+		if (asAttachment) {
+		   queryString += "content-disposition=attachment";
+		}
+
+		var exportUrl = serverApi + "documents/" + documentId + "?" + queryString;
+
+		window.open(exportUrl);
+
+	})
+	.fail(onError);
+}
 ```
 
 The described function can be used in the following way:

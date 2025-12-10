@@ -1,13 +1,15 @@
 ---
-title: API Reference
-page_title: API Reference
-description: Web API Reference
-slug: rest-api-reference-v2
-tags: rest, api, rest api, reference
+title: REST API v2
+page_title: REST API v2
+description: "Learn how Report Server API enables developers to use the Report Server functionality inside their own applications. Check REST API v2 article."
+slug: rs-v2-api-reference
+tags: progress, telerik, report, server, rest, api
 published: True
-position: 200
+position: 2
 ---
 
-# REST API Reference V2
+# REST API v2
 
-[Placeholder for the automatically generated Web API reference V2.]
+## Introduction
+
+Telerik Report Server Web API.

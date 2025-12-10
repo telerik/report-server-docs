@@ -41,15 +41,15 @@ If the Report Server uses [Microsoft SQL Server (MsSqlServer)]({%slug storage-se
 1. **Backup** the database - [Storage Backup]({%slug storage-backup%}).
 1. Delete **all** scheduled task documents using the following SQL statement:
 
-````SQL
+```SQL
 DELETE [ReportServer].[dbo].[tr_Object]
 WHERE Id LIKE 'TRS\1\Sd%'
-````
+```
 
-> Replace `[ReportServer]` with the name of the database.
+> tip Replace `[ReportServer]` with the name of the database.
 
 ## See Also
 
-* [Report Server API Client - Telerik Report Server]({%slug report-server-api-client%})
-* [Report Server REST API](/implementer-guide/apis/rest-api/v2/api-reference)
-* [Storage Backup - Telerik Report Server]({%slug storage-backup%})
+- [Report Server API Client - Telerik Report Server]({%slug report-server-api-client%})
+- [Report Server REST API](/implementer-guide/apis/rest-api/v2/api-reference)
+- [Storage Backup - Telerik Report Server]({%slug storage-backup%})
