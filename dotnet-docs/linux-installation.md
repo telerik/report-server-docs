@@ -6,54 +6,59 @@ slug: dotnet-installation-on-linux
 tags: installation,dotnet,linux,ubuntu,debian
 published: True
 position: 3
+tag: new
 ---
 
 # Report Server for .NET: Installation on Linux
 
 Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q3-11-2-25-813) of the Telerik Report Server, you can download a separate installer for Linux operating systems.
 
->note The CLI installer is configured for [Ubuntu](https://ubuntu.com/) and Ubuntu-based distributions.
+> note The CLI installer is configured for [Ubuntu](https://ubuntu.com/) and Ubuntu-based distributions.
 
 ## Installation Process
 
-1. Navigate to the [Progress® Telerik® Report Server download page](https://www.telerik.com/account/downloads/product-download?product=REPSERVER), where you should find the zipped installer file.
+1.  Navigate to the [Progress® Telerik® Report Server download page](https://www.telerik.com/account/downloads/product-download?product=REPSERVER), where you should find the zipped installer file.
 
-	![The Linux Installer for Report Server available for download from the Telerik downloads page](../images/rs-net-images/rs-net-download-linux-cli-installer.png)
+    ![The Linux Installer for Report Server available for download from the Telerik downloads page](../images/rs-net-images/rs-net-download-linux-cli-installer.png)
 
-1. If the `unzip` command isn't already installed on the system (use `which unzip` to check), run the following command to install it:
+1.  If the `unzip` command isn't already installed on the system (use `which unzip` to check), run the following command to install it:
 
-	````bash
-sudo apt-get install unzip
-````
+        ````bash
+
+    sudo apt-get install unzip
+
+`````
 
 
 1. After installing the unzip utility, use the following command to extract the installer into a new directory:
 
 	````bash
 unzip Telerik_ReportServer_Net_NonWindows_Installer_11_2_25_813.zip -d reportserver
-````
+`````
 
+1.  Navigate to the newly created _reportserver_ directory and then use the `ls` command to ensure that the **Telerik.ReportServer.Installer** file is present:
 
-1. Navigate to the newly created *reportserver* directory and then use the `ls` command to ensure that the **Telerik.ReportServer.Installer** file is present:
+        ````bash
 
-	````bash
-cd reportserver
-ls
-````
+    cd reportserver
+    ls
+
+`````
 
 
 1. Make the **Telerik.ReportServer.Installer** file an executable using the `chmod` command to give it the **+x** permission:
 
 	````bash
 sudo chmod +x ./Telerik.ReportServer.Installer
-````
+`````
 
+1.  Run the executable file to begin the installation:
 
-1. Run the executable file to begin the installation:
+        ````bash
 
-	````bash
-sudo ./Telerik.ReportServer.Installer
-````
+    sudo ./Telerik.ReportServer.Installer
+
+`````
 
 
 1. If the previous steps were executed successfully, the installer will begin, and during the rest of the installation process, you will be asked to configure the Telerik Report Server for .NET via the CLI. This includes providing the operating system account that should be used by the installer, credentials for the admin user in the Report Server, and so on.
@@ -80,16 +85,16 @@ The installer will also automatically create a single [Report Server Agent]({%sl
 ## Upgrading
 
 Use the following commands to upgrade your Report Server for .NET Docker image to the latest one we have released:
-	
+
 ````bash
 docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
 docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
-````
+`````
 
 If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
 
 ## See Also
 
-* [Installation on Windows]({%slug dotnet-installation-on-windows%})
-* [Azure Marketplace Deployment]({%slug azure-marketplace-integration%})
-* [Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
+- [Installation on Windows]({%slug dotnet-installation-on-windows%})
+- [Azure Marketplace Deployment]({%slug azure-marketplace-integration%})
+- [Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})

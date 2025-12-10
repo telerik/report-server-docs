@@ -16,7 +16,7 @@ Here is a sample code snippet which demonstrates how to login and get the token:
 
 ## Example
 
-```JavaScript
+```JS
 var serverHost = "http://reportserver:83/";
 var serverApi = serverHost + "api/reportserver/v1/";
 
@@ -32,13 +32,13 @@ function login(username, password) {
 			username: username,
 			password: password
 			}
-		})
-		.done(function (data, textStatus, jqXHR) {
+	})
+	.done(function (data, textStatus, jqXHR) {
 		  accessToken = data.access_token;
-		})
-		.fail(function (xhr, status, error) {
-		  window.alert(xhr.status + ": " + error);
-		});
+	})
+	.fail(function (xhr, status, error) {
+		window.alert(xhr.status + ": " + error);
+	});
 
 	return accessToken;
 }
@@ -46,7 +46,7 @@ function login(username, password) {
 
 Once you get the access token, you can store it in [window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) and later use it in subsequent requests.
 
-```JavaScript
+```JS
 var serverTokenKey = "TelerikReportServerToken";
 
 $(document).ready(function () {
@@ -55,4 +55,4 @@ $(document).ready(function () {
 })
 ```
 
-The **Guest** user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case a 1.1.400 Bad Request will be returned from the server.
+The **Guest** user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case, a [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400) will be returned from the server.

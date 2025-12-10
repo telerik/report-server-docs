@@ -1,5 +1,5 @@
 ---
-title: Report Server API Client Examples
+title: Report Server API Client
 page_title: Report Server API Client Examples
 description: Report Server API Client for .NET Examples
 slug: report-server-api-client-examples

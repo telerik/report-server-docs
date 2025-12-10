@@ -27,101 +27,7 @@ primary-color:
 enable-tabbed-code-blocks: true
 table-layout: fixed
 
-# toc
-# fileSources:
-#   introduction:
-#     meta:
-#       position: 1
-#       title: Introduction
-#       prefix: introduction
-#       path: introduction
-#       hideChildren: true
-#   licensing:
-#     meta:
-#       position: 2
-#       title: Licensing
-#       prefix: licensing
-#       path: licensing
-#   dotnet-docs:
-#     meta:
-#       position: 3
-#       title: Report Server for .NET
-#       prefix: dotnet-docs
-#       path: dotnet-docs
-#   security:
-#     meta:
-#       position: 4
-#       title: Security
-#       prefix: security
-#       path: security
-#   user-guide:
-#     meta:
-#       position: 5
-#       title: User Guide
-#       prefix: user-guide
-#       path: user-guide
-#   implementer-guide:
-#     meta:
-#       position: 6
-#       title: Implementer Guide
-#       prefix: implementer-guide
-#       path: implementer-guide
-#     setup:
-#       meta:
-#         position: 1
-#         title: Setup
-#         path: implementer-guide/setup
-#     configuration:
-#       meta:
-#         position: 2
-#         title: Configuration Page
-#         path: implementer-guide/configuration
-#     user-management:
-#       meta:
-#         position: 3
-#         title: User Management
-#         path: implementer-guide/user-management
-#     connecting-to-data:
-#       meta:
-#         position: 4
-#         title: Connecting to Data
-#         path: implementer-guide/connecting-to-data
-#     apis:
-#       meta:
-#         position: 5
-#         title: APIs
-#         path: implementer-guide/apis
-#       rest-api:
-#         meta:
-#           position: 1
-#           title: REST API
-#           path: implementer-guide/apis/rest-api
-#       v1:
-#         meta:
-#           position: 1
-#           title: V1
-#           path: implementer-guide/apis/rest-api/v1
-#       v2:
-#         meta:
-#           position: 2
-#           title: V2
-#           path: implementer-guide/apis/rest-api/v2
-#   images:
-#     meta:
-#       position: 9999
-#       title: Images
-#       prefix: images
-#       path: images
-#       hidden: true
-#   knowledge-base:
-#     meta:
-#       position: 10
-#       title: Knowledge Base
-#       prefix: knowledge-base
-#       path: knowledge-base
-#       hideChildren: true
-#       res_type: kb
-
+#toc
 meta:
   introduction:
     position: 1
@@ -140,25 +46,43 @@ meta:
     position: 5
     title: "User Guide"
   user-guide/reports-management:
-    position: 1
+    position: 4
     title: "Reports Management"
   implementer-guide:
     position: 6
     title: "Implementer Guide"
+  # implementer-guide/release-history:
+  #   position: 1
+  #   title: "Release History"
+  # implementer-guide/whats-new:
+  #   position: 2
+  #   title: "What's New"
   implementer-guide/setup:
-    position: 1
-    title: "Setup"
-  implementer-guide/configuration:
-    position: 2
-    title: "Configuration Page"
-  implementer-guide/user-management:
     position: 3
-    title: "User Management"
-  implementer-guide/connecting-to-data:
+    title: "Setup"
+  implementer-guide/user-management:
     position: 4
-    title: "Connecting to Data"
-  implementer-guide/apis:
+    title: "User Management"
+  implementer-guide/configuration:
     position: 5
+    title: "Configuration Page"
+  implementer-guide/connecting-to-data:
+    position: 6
+    title: "Connecting to Data"
+  # implementer-guide/webhooks-implementation:
+  #   position: 7
+  #   title: "Webhooks Implementation"
+  # implementer-guide/custom-login-provider:
+  #   position: 8
+  #   title: "Implement Custom Login Provider"
+  # implementer-guide/integration-with-report-viewers:
+  #   position: 9
+  #   title: "Integration with Report Viewers"
+  # implementer-guide/embed-in-another-application:
+  #   position: 10
+  #   title: "Embed in Another Application"
+  implementer-guide/apis:
+    position: 50
     title: "APIs"
   implementer-guide/apis/rest-api:
     position: 1
@@ -194,6 +118,8 @@ meta:
     title: "Knowledge Base"
     relativeUrl: /knowledge-base
     hideChildren: true
+  rest-api/v*:
+    disableLastModified: true
 
 redirects:
   - from: "^/?$"
