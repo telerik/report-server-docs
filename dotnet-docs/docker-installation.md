@@ -76,7 +76,7 @@ Let's get the required files out of the way. This is better if you do it in an e
 
 ### Step 1. Environment Variables
 
-In our example, we use variable substitution placeholders like `${variable_name}` in the docker-compose file. The flexibility of this approach allows you to use whatever your preferred approach of setting environment variables (docker CLI env, runtime secrets, .env, and more). To keep things simple for this tutorial, we will use an .env file, as `docker compose up` command will automatically find and use it!
+In our example, we use variable substitution placeholders like `${variable_name}` in the docker-compose file. The flexibility of this approach allows you to use whatever your preferred approach of setting environment variables (docker CLI env, runtime secrets, .env, and more). To keep things simple for this tutorial, we will use an .env file, as the `docker compose up` command will automatically find and use it!
 
 Open the `.env` file and copy/paste the following content:
 
@@ -190,7 +190,6 @@ Now that the stack is running again, let's set up a new agent.
 
 	![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
 
-
 	>We can also use `http://telerik-report-server` for the address because **"telerik-report-server"** is the name of the service in the stack.
 
 1. Click the **GENERATE CONFIGURATION** button. When the pop-up appears, switch to the **ENVIRONMENT VARIABLES** tab, and then copy/paste values:
@@ -204,17 +203,17 @@ Using the values from the previous step, update the variables in your .env file:
 1. Edit your `.env` file and update the respective environment variables
 
 	````bash
-	
-	MY_AGENT_SERVER_ADDRESS=#Agent__ServerAddress value goes here, no spaces!
+MY_AGENT_SERVER_ADDRESS=#Agent__ServerAddress value goes here, no spaces!
 	MY_AGENT_AUTHTOKEN=#Agent__AuthenticationToken value goes here, no spaces!
 	MY_AGENT_AGENTID=#Agent__Id value goes here, no spaces!
-	
-	````
+````
+
+
 	- Save the changes!
 1. Go back to the `docker-compose.yml` file and now add the agent's service (see the "AGENT - START" comment):
 
 	````yaml
-	services:
+services:
 		# The Manager app
 		telerik-report-server:
 			image: progressofficial/telerik-reportserver-app:latest
@@ -231,7 +230,7 @@ Using the values from the previous step, update the variables in your .env file:
 				- "82:80"
 			depends_on:
 				- storage
-	
+
 		# ******* AGENT - START ******* #
 		telerik-report-server-agent:
 			image: progressofficial/telerik-reportserver-agent:latest
@@ -243,7 +242,7 @@ Using the values from the previous step, update the variables in your .env file:
 				- TELERIK_LICENSE=${MY_TELERIK_LICENSE}
 			command: dockerize -wait tcp://telerik-report-server:80 -timeout 1200s
 		# ******* AGENT - END ******* #
-	
+
 		# The storage app
 		storage:
 			image: "mcr.microsoft.com/mssql/server:2022-latest"
@@ -253,17 +252,16 @@ Using the values from the previous step, update the variables in your .env file:
 				- ACCEPT_EULA=Y
 			volumes: 
 				- mssql-storage:/var/opt/mssql
-	
+
 	volumes:
 		mssql-storage:
-	````
+````
 
 
 1. Run the `docker compose up -d` command to start the stack again.
 1. Open the **Configuration** page with the Service Agents again. Now, there should be one agent visible in the Server Agents table in the middle of the page:
 
 	![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
-
 
 ## Conclusion
 
