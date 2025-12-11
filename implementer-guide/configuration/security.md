@@ -3,7 +3,7 @@ title: Security
 page_title: Security
 description: Security Settings
 slug: security
-tags: security,settings,report,server
+tags: security,settings,encryption,report,server
 published: True
 position: 850
 ---
