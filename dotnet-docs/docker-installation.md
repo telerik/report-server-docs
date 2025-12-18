@@ -125,7 +125,7 @@ services:
 					- reportServer__storage__isDefault=false
 					- reportServer__storage__provider=MsSqlServer
 					- reportServer__storage__parameters__0__name=ConnectionString
-					- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
+					- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
 				ports:
 					- "82:80"
 				depends_on:
@@ -225,7 +225,7 @@ services:
 				- reportServer__storage__isDefault=false
 				- reportServer__storage__provider=MsSqlServer
 				- reportServer__storage__parameters__0__name=ConnectionString
-				- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false}
+				- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
 			ports:
 				- "82:80"
 			depends_on:
@@ -283,7 +283,7 @@ services:
 			- reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=${MY_SQL_PASS};User Id=sa;Encrypt=false
 			- reportServer__storage__isDefault=false
 		ports:
-			- "8888:80"
+			- "82:80"
 		depends_on:
 			- storage
 
