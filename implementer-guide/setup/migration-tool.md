@@ -10,7 +10,7 @@ position: 720
 
 # Storage Migration Tool
 
-The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation. It was introduced in [R2 2017 (3.1.17.503)](https://www.telerik.com/support/whats-new/report-server/release-history/telerik-report-server-r2-2017-(version-3-1-17-503)). Its purpose is to provide an easy out-of-the-box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in *Tools\\* subfolder of the installation directory. The tool supports as source and destination the following built-in storages:
+The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation. It was introduced in [R2 2017 (3.1.17.503)](https://www.telerik.com/support/whats-new/report-server/release-history/telerik-report-server-r2-2017-(version-3-1-17-503)). Its purpose is to provide an easy out-of-the-box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in `Tools\` subfolder of the installation directory. The tool supports as source and destination the following built-in storages:
 
 - MS SQL Server storage
 - Redis storage
@@ -114,7 +114,7 @@ The application outputs a detailed log in the console so the migration process c
 
 ## Storage Migration Tool for Report Server for .NET
 
-The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1, we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in the *Tools\\.NET\\* subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
+The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1, we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in the `Tools\` subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
 
   * The *Destination Storage* configuration now accepts a new argument: **serverType** with the following options:
   
