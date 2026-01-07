@@ -5,7 +5,7 @@ description: "Learn about the specifics of what is supported in the new Whitelab
 slug: dotnet-server-whitelabeling
 tags: whitelabeling,report,server,.net,color,logo,favicon
 published: True
-position: 6
+position: 7
 tag: new
 ---
 
@@ -18,6 +18,7 @@ tag: new
 # Overview
 
 Our product supports white-labeling, allowing customers to personalize the visual identity of their instance. This feature enables organizations to align the product's appearance with their brand guidelines.
+
 Whitelabeling enables the **Report Server for .NET's** customers to remove branding elements in the Report Server Manager web application and its internal Web Report Designer.
 
 By replacing the default colors, logo, and favicon with branding from the customer's enterprise, you can personalize the visual identity of each Report Server. This feature enables organizations to align the product's appearance with their brand guidelines.

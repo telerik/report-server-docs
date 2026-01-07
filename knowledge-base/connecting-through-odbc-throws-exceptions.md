@@ -20,8 +20,8 @@ res_type: kb
   <td>Windows</td>
  </tr>
  <tr>
-  <td>.Net Framework</td>
-  <td>Version 4.6</td>
+  <td>Target Framework</td>
+  <td>.NET Framework 4.6</td>
  </tr>
 </table>
 

@@ -5,7 +5,7 @@ description: "Learn how to install Telerik Report Server for .NET on Windows usi
 slug: dotnet-installation-on-windows
 tags: installation,dotnet,windows
 published: True
-position: 2
+position: 3
 tag: new
 ---
 

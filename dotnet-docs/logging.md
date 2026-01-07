@@ -40,6 +40,7 @@ Alternatively, you can define the configuration in the `appsettings.json` config
 #### Report Server Manager
 
 The `appsettings.json` file of the Report Server Manager for .NET resides in its installation directory, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET\`.
+
 The following configuration settings can be added to that file, at the top level:
 
 ```JSON
@@ -60,6 +61,7 @@ The following configuration settings can be added to that file, at the top level
 #### Service Agent
 
 The Report Server for .NET ServiceAgent's `appsettings.json` file can be found in its installation directory, by default - `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\`.
+
 The following configuration settings can be added to that file, at the top level:
 
 ```JSON

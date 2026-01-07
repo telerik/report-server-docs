@@ -5,7 +5,7 @@ description: "Learn about the specifics, recommendations, and available approach
 slug: dotnet-installation-on-docker-container
 tags: installation,dotnet,docker,linux,container
 published: True
-position: 4
+position: 6
 tag: updated
 ---
 

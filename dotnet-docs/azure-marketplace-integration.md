@@ -11,7 +11,9 @@ tag: updated
 
 # Using Telerik Report Server .NET from the Azure Marketplace
 
-You may deploy Telerik Report Server .NET directly from the Microsoft Azure Marketplace. It installs the public Report Server .NET Docker images with the specified settings on a new Azure Virtual Machine. Here are links to the necessary Docker images we provide publicly:
+You may deploy Telerik Report Server .NET directly from the Microsoft Azure Marketplace. It installs the public Report Server .NET Docker images with the specified settings on a new Azure Virtual Machine.
+
+Here are links to the necessary Docker images we provide publicly:
 
 - https://hub.docker.com/r/progressofficial/telerik-reportserver-app
 - https://hub.docker.com/r/progressofficial/telerik-reportserver-agent
@@ -71,7 +73,9 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
 1. In **HTTPS**, you may choose a Free Let's Encrypt HTTPS Certificate.
 
-   If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section. Enter here your domain name created in the _Virtual Machine_ section. It will be the domain name you bought.
+   If you want to use the Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address as explained in the _Virtual Machine_ section.
+
+   Enter here your domain name created in the _Virtual Machine_ section. It will be the domain name you bought.
 
    ![Configuring the optional HTTPS section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-https.png)
 
@@ -95,38 +99,42 @@ You may deploy Telerik Report Server .NET directly from the Microsoft Azure Mark
 
    ![Report Server .NET Manager log in screen after successful deployment from the Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-access-rs.png)
 
-> note The user who created the Virtual Machine is fully responsible for managing it.
+   > note The user who created the Virtual Machine is fully responsible for managing it.
 
-The user can access the Virtual Machine through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section. In this scenario, port 22 should be opened explicitly:
+   The user can access the Virtual Machine through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section. In this scenario, port 22 should be opened explicitly:
 
-- Select the _Network Settings_ to open the configuration page of the Virtual Machine:
+   - Select the _Network Settings_ to open the configuration page of the Virtual Machine:
 
-  ![Select the configuration page for the Network Settings of the Virtual Machine.](../images/rs-net-images/create-rs-net-network.png)
+   ![Select the configuration page for the Network Settings of the Virtual Machine.](../images/rs-net-images/create-rs-net-network.png)
 
-- Add the row that opens port 22 of the Virtual Machine:
+   - Add the row that opens port 22 of the Virtual Machine:
 
-  ![Add the setting for opening port 22 of the Virtual Machine.](../images/rs-net-images/create-rs-net-network-settings.png)
+   ![Add the setting for opening port 22 of the Virtual Machine.](../images/rs-net-images/create-rs-net-network-settings.png)
 
 ## Upgrading the Report Server for .NET on Azure Marketplace
 
 1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through an SSH connection.
 1. Access the Azure Virtual Machine through the just-opened SSH port 22.
-   There are four (4) services running on the machine. You may list them with the command `docker service ls`. The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`. Execute the following commands for this purpose:
-   ````bash
-   docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
-   docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
 
-```
+There are four (4) services running on the machine. You may list them with the command `docker service ls`.
 
+The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`.
+
+1. Execute the following commands for this purpose:
+
+   ```bash
+    docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
+
+    docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
+   ```
 
 1. Run the command `docker image prune` to remove the old images, if any.
 1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
 
-> If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
 
 ## See Also
 
-* [Report Server for .NET Introduction]({%slug coming-soon%})
-* [Telerik Report Server License]({%slug license-key%})
-* [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
-```
+- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Telerik Report Server License]({%slug license-key%})
+- [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

@@ -25,11 +25,7 @@ Previewing report book in Telerik Report Server results in an error.
 
 ## Error Message
 
-```
-Unable to get report parameters.
-An error has occurred.
-'ReportName.trdp' report cannot be found.
-```
+`Unable to get report parameters. An error has occurred. 'ReportName.trdp' report cannot be found.`
 
 ## Cause\Possible Cause(s)
 

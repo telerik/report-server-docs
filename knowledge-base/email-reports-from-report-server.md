@@ -16,7 +16,7 @@ res_type: kb
 	<tbody>
 		<tr>
 			<td>Product Version</td>
-			<td>8.2.22.914</td>
+			<td>8.2.22.914+</td>
 		</tr>
 		<tr>
 			<td>Product</td>
