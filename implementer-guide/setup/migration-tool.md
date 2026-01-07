@@ -10,7 +10,7 @@ position: 720
 
 # Storage Migration Tool
 
-The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation. It was introduced in [R2 2017 (3.1.17.503)](https://www.telerik.com/support/whats-new/report-server/release-history/telerik-report-server-r2-2017-(version-3-1-17-503)). Its purpose is to provide an easy out-of-the-box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in *Tools\\* subfolder of the installation directory. The tool supports as source and destination the following built-in storages:
+The **Telerik Report Server Storage Migration Tool** is a standalone module shipped with the Telerik Report Server installation. It was introduced in [R2 2017 (3.1.17.503)](https://www.telerik.com/support/whats-new/report-server/release-history/telerik-report-server-r2-2017-(version-3-1-17-503)). Its purpose is to provide an easy out-of-the-box solution for migrating the Report Server storage. It can be used from a command line or a graphical (Windows Forms) user interface. The executables are placed in `Tools\` subfolder of the installation directory. The tool supports as source and destination the following built-in storages:
 
 - MS SQL Server storage
 - Redis storage
@@ -20,7 +20,7 @@ The **Telerik Report Server Storage Migration Tool** is a standalone module ship
 
 ### Command-Line Interface
 
-The executable **migrate.exe** operates in two modes - *simple* and *configurable* migration. The simple mode copies all the entries from the source storage to the destination storage. The configurable mode allows selecting which assets will be migrated along with their related entities (see the *Storage assets upgrade mechanism* section below). The migration mode is determined by the arguments provided to the executable. For the simple migration mode, the executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by connection information for each storage type. Example commands that perform a copy of file storage located on *C:\Report Server\Data* to a Redis database hosted on *localhost:6981* or to an MS SQL Server instance would look like this:
+The executable **migrate.exe** operates in two modes - *simple* and *configurable* migration. The simple mode copies all the entries from the source storage to the destination storage. The configurable mode allows selecting which assets will be migrated along with their related entities (see the *Storage assets upgrade mechanism* section below). The migration mode is determined by the arguments provided to the executable. For the simple migration mode, the executable must be started with two arguments, describing respectively the **source** and **destination** storage types, followed by connection information for each storage type. Example commands that perform a copy of file storage located on `C:\Report Server\Data` to a Redis database hosted on `localhost:6981` or to an MS SQL Server instance would look like this:
 
 <code>migrate.exe type=file,connection="C:\Report Server\Data" type=redis,connection=localhost:6981,defaultDatabase=1</code>
 
@@ -62,9 +62,9 @@ Both scripts accept startup parameters, defining the installation directory and 
 ## Storage assets upgrade mechanism
 The migration tool can perform a selective migration using a rule set defined in an external JSON file. This is useful in continuous deployment scenarios, where the target database must be regularly updated without affecting its current assets. This migration mode is determined by an additional *config* parameter of the **migrate.exe** utility and looks like this:
 
-*migrate.exe type=file,connection="C:\Report Server Source\Data" type=file,connection="C:\Report Server Deployed\Data" config=config.json*
+`migrate.exe type=file,connection="C:\Report Server Source\Data" type=file,connection="C:\Report Server Deployed\Data" config=config.json`
 
-The above command will migrate the report server file storage located at *C:\Report Server Source\Data* to the file storage located at *C:\Report Server Deployed\Data*, applying the rules defined in the *config.json* file. If the destination storage does not exist, it will be created.
+The above command will migrate the report server file storage located at `C:\Report Server Source\Data` to the file storage located at `C:\Report Server Deployed\Data`, applying the rules defined in the `config.json` file. If the destination storage does not exist, it will be created.
 
 ### Configuration file
 The configuration file that determines the rules for the migration is in JSON format and looks like the one below:
@@ -114,7 +114,7 @@ The application outputs a detailed log in the console so the migration process c
 
 ## Storage Migration Tool for Report Server for .NET
 
-The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1, we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in the *Tools\\.NET\\* subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
+The assets storage of Report Server for .NET utilizes a different serialization mechanism. That's why the storage assets are not interchangeable between both flavors of Report Server applications. In 2025 Q1, we introduced a preview version of **Telerik Report Server .NET Storage Migration Tool**. The executables are placed in the `Tools\` subfolder of the installation directory. It is built on top of the classic Migration Tool with a few differences listed below. 
 
   * The *Destination Storage* configuration now accepts a new argument: **serverType** with the following options:
   
