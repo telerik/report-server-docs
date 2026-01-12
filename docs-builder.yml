@@ -1,5 +1,5 @@
 top-navigation-product: report-server
-path-prefix: /products/report-server/documentation
+path-prefix: /report-server/documentation
 product-id: 1586
 product-name: Telerik Report Server
 product-url: https://www.telerik.com/report-server
@@ -7,8 +7,8 @@ product-code: REPSERVER
 product-trial-url: https://www.telerik.com/try/report-server
 contribute-url: https://github.com/telerik/report-server-docs/edit/master
 search-engine-id: 001595215763381649090:dikfyfm1qqw
-cta-overview: "@ProductLink is a end-to-end report management solution to store, create, manage and view reports in web and desktop applications. To try it out sign up for a free 30-day trial."
-cta-intro: "@ProductLink is a end-to-end report management solution to store, create, manage and view reports in web and desktop applications. To try it out sign up for a free 30-day trial."
+cta-overview: "@ProductLink is an end-to-end report management solution to store, create, manage, and view reports in web and desktop applications. To try it out, sign up for a free 30-day trial."
+cta-intro: "@ProductLink is an end-to-end report management solution to store, create, manage, and view reports in web and desktop applications. To try it out, sign up for a free 30-day trial."
 default-title-prefix: Telerik Report Server
 
 # git settings
