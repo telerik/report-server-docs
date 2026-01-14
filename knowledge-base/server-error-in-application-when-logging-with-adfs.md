@@ -8,6 +8,7 @@ position:
 tags: #reportserver, AzureAD
 ticketid: 1549560
 res_type: kb
+previous_url: /knowledge-base/server%20error%20in%20'/server-error-in-application-when-logging-with-adfs
 ---
 
 ## Environment
