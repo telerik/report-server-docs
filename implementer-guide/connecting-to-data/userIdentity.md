@@ -22,19 +22,19 @@ The code responsible for initializing the User Identity is located solely in the
 
 ### Report Server
 
-The Report Server is a web application that requires user authentication. When our code triggers a viewer and reaches the GetUserIdentity() method, the user is already authenticated in the Report Server. As a result, GetUserIdentity() retrieves the username of the currently logged‑in user. This ensures that all subsequent operations are performed under the correct authenticated identity.
+The Report Server is a web application that requires user authentication. When rendering a report - either in the Report Server's web application or through its REST API - the operation is performed in an authentication context. As a result, GetUserIdentity() retrieves the username of the currently logged‑in user. This ensures that all subsequent operations are performed under the correct authenticated identity.
 
 ### Report Server Agent
 
-On the legacy server(localhost:83), the Report Server Agent runs as a Windows Service therefore it does not provide the GetUserIdentity() method. As a result, retrieving the user identity through UserIdentity is not supported in this environment.
+When using Telerik Report Server for .NET Framework, the RSA operates as a Windows Service. Because Windows Services do not have an HttpContext, the system cannot determine the current user identity and therefore cannot initialize the internal model.
 
-On the new server(localhost:81), the Report Server Agent will initialize the UserIdentity using the system user.
+When using Telerik Report Server on .NET 8, the Report Server Agent runs as a web application that authenticates internally using a built‑in system user account. This internal account does not have a configured user name and cannot populate the internal model.
 
 ## Behavior Across Execution Scenarios
 
 When a report is previewed through the Report Server UI, the UserIdentity value corresponds to the currently logged‑in user.
 
-When the same report is executed by a Scheduled task, the application running it is not a web application, and therefore, no authenticated user context is available. As a result, UserIdentity is empty in this scenario.
+When the same report is executed by a Scheduled Task or Data Alert, it gets processed by the Report Server Agent, where the authenticated user context is not available or not initialized. As a result, the GetUserIdentity() function will return an empty string.
 
 ## See Also
 
