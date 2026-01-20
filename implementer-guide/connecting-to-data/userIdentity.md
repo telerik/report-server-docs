@@ -35,3 +35,7 @@ On the new server(localhost:81), the Report Server Agent will initialize the Use
 When a report is previewed through the Report Server UI, the UserIdentity value corresponds to the currently logged‑in user.
 
 When the same report is executed by a Scheduled task, the application running it is not a web application, and therefore, no authenticated user context is available. As a result, UserIdentity is empty in this scenario.
+
+## See Also
+
+* [UserIdentity](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/expressions-reference/global-objects#useridentity)
