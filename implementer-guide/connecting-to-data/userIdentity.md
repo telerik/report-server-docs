@@ -38,4 +38,4 @@ When the same report is executed by a Scheduled task, the application running it
 
 ## See Also
 
-* [UserIdentity](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/expressions-reference/global-objects#useridentity)
+* [UserIdentity in Telerik Reporting](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/expressions-reference/global-objects#useridentity)
