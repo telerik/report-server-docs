@@ -4,13 +4,14 @@ description: How to set manually CommandTimeout for the Report Server MSSQL Stor
 type: how-to
 page_title: CommandTimeout for the Report Server MSSQL Storage
 slug: set-command-timeout-mssql-server-storage
-position: 
-tags: 
+position:
+tags:
 ticketid: 1519009
 res_type: kb
 ---
 
 ## Environment
+
 <table>
 	<tbody>
 		<tr>
@@ -24,21 +25,23 @@ res_type: kb
 	</tbody>
 </table>
 
+## Description
 
-## Description 
+Starting with version [R3 2021 SP2 (7.2.21.1125)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2021-sp2-7-2-21-1125), the `CommandTimeout` of the Report Server MSSQL Storage is configurable.
 
-Starting with version [R3 2021 SP2 (7.2.21.1125)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-r3-2021-sp2-7-2-21-1125),
-the `CommandTimeout` of the Report Server MSSQL Storage is configurable. Generally, this should be set when you configure the MSSQL storage from the Configuration page 
-of the Report Server along with the connection string. This is a bug in the Report Server UI that is reported in 
+Generally, this should be set when you configure the MSSQL storage from the Configuration page of the Report Server along with the connection string. This is a bug in the Report Server UI that is reported in
 [The MSSQL Storage Configuration page doesn't allow setting the CommandTimeout property](https://feedback.telerik.com/report-server/1548474-the-mssql-storage-configuration-page-doesn-t-allow-setting-the-commandtimeout-property).
 
-## Solution 
+## Solution
 
-You may configure the value of the `CommandTimeout` property for the MSSQL Storage in the `ReportServerAdmin.config` configuration file of your Report Server web application. 
-The file resides by default in the installation folder of the Report Server web application, for example, 
-`C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web`. Here is a sample code for the config file: 
+You may configure the value of the `CommandTimeout` property for the MSSQL Storage in the `ReportServerAdmin.config` configuration file of your Report Server web application.
 
-````XML
+The file resides by default in the installation folder of the Report Server web application, for example,
+`C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web`.
+
+Here is a sample code for the config file:
+
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <configSections>
@@ -53,6 +56,6 @@ The file resides by default in the installation folder of the Report Server web 
     </storage>
   </reportServer>
 </configuration>
-````
+```
 
-You need to edit the file manually to add the command timeout configuration.
+Edit the file manually to add the command timeout configuration.

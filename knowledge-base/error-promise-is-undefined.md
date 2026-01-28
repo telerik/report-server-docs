@@ -21,12 +21,10 @@ res_type: kb
  </tr>
 </table>
 
-
 ## Description
 
-As of Telerik Reporting R2 2017, the Report Server and HTML5 Report Viewer require a browser supporting promises.
+As of **Telerik Reporting R2 2017**, the Report Server and HTML5 Report Viewer require a browser supporting promises.The error indicates that the used browser does not support promises.
 
-The error indicates that the used browser does not support promises.
 Please follow the [HTML5 Viewer: Important Settings](http://docs.telerik.com/reporting/html5-report-viewer-system-requirements#important-settings) article which contains the requirements for promises.
 
 ## Solution

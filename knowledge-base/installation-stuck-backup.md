@@ -4,13 +4,14 @@ description: Report Server upgrade installation gets stuck when running the back
 type: troubleshooting
 page_title: Report Server installation is stuck at Backup Step
 slug: installation-stuck-backup
-position: 
+position:
 tags: installation,failure,upgrade,backup,metadata
-ticketid: 
+ticketid:
 res_type: kb
 ---
 
 ## Environment
+
 <table>
 	<tr>
 		<td>Product</td>
@@ -48,15 +49,13 @@ If you want to run the backup script, then you can be proactive before running t
 
 1. Open **Command Prompt** as Administrator
 
-    ![Command Prompt](../images/report-server-images/kb/installer_stuck_cmd.jpg)
+   ![Command Prompt](../images/report-server-images/kb/installer_stuck_cmd.jpg)
 
 2. Run the following command
 
-    ```
-    C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass
-    ```
-    
-    If you see that user input is needed, complete those steps now and close the PowerShell instance.
+   `C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass`
 
-3. Repeat Step 2 to confirm there is no longer any need for user input when a new instance is launched. 
+   If you see that user input is needed, complete those steps now and close the PowerShell instance.
+
+3. Repeat Step 2 to confirm there is no longer any need for user input when a new instance is launched.
 4. Run the Report Server installer with backups enabled.
