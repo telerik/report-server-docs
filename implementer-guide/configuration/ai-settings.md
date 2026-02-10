@@ -58,10 +58,9 @@ position: 50
 }
 </style>
 
-
 # AI-Powered Features Settings
 
-With the [**2025 Q3**](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-716) release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — __AI Integration__ and __AI-Powered Report Document Insights__.
+With the [**2025 Q3**](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q2-11-1-25-716) release, Report Server introduces its first AI-powered feature — a set of configurable AI Settings designed to enhance the reporting experience through intelligent automation. The AI configuration includes two panels — **AI Integration** and **AI-Powered Report Document Insights**.
 
 During the report preview phase, the [AI-Powered Insights](https://docs.telerik.com/reporting/interactivity/ai-powered-insights) feature provides a rich set of capabilities, including generating responses, building prompts, interacting with AI-generated content, and executing predefined instructions. One of the configurable options in this panel is the ability to display a consent message to end users.
 
@@ -73,29 +72,29 @@ During the report preview phase, the [AI-Powered Insights](https://docs.telerik.
 
 The AI configuration panel is always visible in the user interface, regardless of the current AI enablement status. When the `Enable AI` checkbox is unchecked (which is the default state), the panel enters read-only mode. In this mode:
 
-* All dropdowns and checkboxes are disabled and cannot be modified
-* Users can still view and copy existing configuration values.
-* No changes to AI-related settings can be made until the `Enable AI` option is activated.
+- All dropdowns and checkboxes are disabled and cannot be modified
+- Users can still view and copy existing configuration values.
+- No changes to AI-related settings can be made until the `Enable AI` option is activated.
 
 Depending on the state of the `Enable AI` setting:
 
-* If the `Enable AI` checkbox is unchecked, the AI Insights section will not be displayed in the Report Server
-* If the `Enable AI` checkbox is checked, you will be able to configure the AI by following these steps:
+- If the `Enable AI` checkbox is unchecked, the AI Insights section will not be displayed in the Report Server
+- If the `Enable AI` checkbox is checked, you will be able to configure the AI by following these steps:
 
 1. Choose one of the supported providers:
 
-  | Provider |
-  | ------ |
-  |`MicrosoftExtensionsAzureAIInference`|
-  |`MicrosoftExtensionsAzureOpenAI`|
-  |`MicrosoftExtensionsOllama`|
-  |`MicrosoftExtensionsOpenAI`|
+   | Provider                              |
+   | ------------------------------------- |
+   | `MicrosoftExtensionsAzureAIInference` |
+   | `MicrosoftExtensionsAzureOpenAI`      |
+   | `MicrosoftExtensionsOllama`           |
+   | `MicrosoftExtensionsOpenAI`           |
 
-  ![An image of the providers supported by the Report Server](../../images/AIProvidersReportServer.png)
+   ![An image of the providers supported by the Report Server](../../images/AIProvidersReportServer.png)
 
 1. Select a `Model Name`, specify the `Server Endpoint` and the `API Key`
 
-  ![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
+   ![An image of the Model Name, Server Endpoint, and API Key fields](../../images/modelNameServiceEndpointAPIKey.png)
 
 > While the **Provider** and **Model** are required for all AI providers, the remaining fields (**Endpoint** and **API Key**) depend on the specific provider's requirements.
 
@@ -103,7 +102,7 @@ If all required fields are filled in, you can test the integration using the `Te
 
 ![An image of the of the message that will appear if the fields are filled in correctly](../../images/testIntegrationSuccessfulMessage.png)
 
- If there is a problem, a pop-up will appear with detailed error information.
+If there is a problem, a pop-up will appear with detailed error information.
 
 ![An image of the message that will appear if the fields are filled in incorrectly](../../images/testIntegrationFailedMessage.png)
 
@@ -140,6 +139,7 @@ If all settings have been configured correctly and the changes have been saved, 
 ![Image of the message 'The new settings have been saved successfully' in the Report Server Configuration](../../images/SavedSuccessfullyMessage.png)
 
 ## Workflow
+
 This section describes the workflow of displaying the AI prompt during report preview.
 
 ### Consent
@@ -162,9 +162,9 @@ The **Output** of the AI processor will be displayed in the Output tab of the As
 
 ## Differences between Report Server for .NET and Report Server for .NET Framework
 
-In [Report Server for .NET]({%slug coming-soon%}), *Retrieval-Augmented Generation* (RAG) is enabled by default to enhance response accuracy and relevance while minimizing token usage.
+In [Report Server for .NET]({%slug coming-soon%}), _Retrieval-Augmented Generation_ (RAG) is enabled by default to enhance response accuracy and relevance while minimizing token usage.
 
-Currently, RAG can be disabled only via the `appsettings.json` configuration file. 
+Currently, RAG can be disabled only via the `appsettings.json` configuration file.
 
 Support for controlling the RAG status directly from the UI is planned for upcoming versions of RS.NET. This feature is already logged for Q4.
 
