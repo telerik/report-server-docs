@@ -338,6 +338,7 @@ Execute the following commands to upgrade the Report Server for .NET. Run them f
    docker compose down
    docker compose up -d
    ```
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the `docker-compose.yml` with the corresponding version tag.
 
 ## See Also
 
