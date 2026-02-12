@@ -131,6 +131,8 @@ We changed the installation approach for the Report Server for .NET on Linux in 
 1. Run the command `docker image prune` to remove the old images, if any.
 1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
 
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the `docker-compose.yml` with the corresponding version tag.
+
 ### Upgrade Steps for Report Server Instances Installed Before Version 2026 Q1 (12.0.26.211)
 
 There are four (4) services running on the machine. You may list them with the command `docker service ls`.
