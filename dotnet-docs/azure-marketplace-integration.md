@@ -116,7 +116,7 @@ Here are links to the necessary Docker images we provide publicly:
 1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through an SSH connection.
 1. Access the Azure Virtual Machine through the just-opened SSH port 22.
 
-We changed the installation approach for the Report Server .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
+We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
 
 ### Upgrade Steps for Report Server Instances Installed With and After Version 2026 Q1 (12.0.26.211)
 
