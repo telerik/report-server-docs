@@ -333,11 +333,18 @@ MY_TELERIK_LICENSE=
 
 Execute the following commands to upgrade the Report Server for .NET. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
-   ```bash
-   docker compose pull
-   docker compose down
-   docker compose up -d
-   ```
+```bash
+docker compose pull
+```
+
+```bash
+docker compose down
+```
+
+```bash
+docker compose up -d
+```
+
 > tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the `docker-compose.yml` with the corresponding version tag.
 
 ## See Also
