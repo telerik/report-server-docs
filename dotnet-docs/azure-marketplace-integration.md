@@ -120,7 +120,7 @@ We changed the installation approach for the Report Server for .NET on Linux in 
 
 ### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 
-1. Execute the following commands for this purpose:
+1. Execute the following commands for this purpose. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
    ```bash
    docker compose pull
