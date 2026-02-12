@@ -116,16 +116,43 @@ Here are links to the necessary Docker images we provide publicly:
 1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through an SSH connection.
 1. Access the Azure Virtual Machine through the just-opened SSH port 22.
 
+> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
+
+### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
+
+1. Execute the following commands to upgrade the Report Server for .NET. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
+
+   ```bash
+   docker compose pull
+   ```
+
+   ```bash
+   docker compose down
+   ```
+
+   ```bash
+   docker compose up -d
+   ```
+
+1. Run the command `docker image prune` to remove the old images, if any.
+1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
+
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the `docker-compose.yml` with the corresponding version tag.
+
+### Upgrade Steps for Report Server Instances Installed Before Version 2026 Q1 (12.0.26.211)
+
 There are four (4) services running on the machine. You may list them with the command `docker service ls`.
 
 The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`.
 
-1. Execute the following commands for this purpose:
+1. Execute the following commands for this purpose. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
    ```bash
-    docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
+   docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
+   ```
 
-    docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
+   ```bash
+   docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
    ```
 
 1. Run the command `docker image prune` to remove the old images, if any.

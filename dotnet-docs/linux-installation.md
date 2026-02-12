@@ -75,21 +75,43 @@ The installer will also automatically create a single [Report Server Agent]({%sl
 
 ## Upgrading
 
-Use the following commands to upgrade your Report Server for .NET Docker image to the latest one we have released:
+> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
 
-- Command for updating the Report Server Application
+### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 
-  ```bash
-  docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
-  ```
+Execute the following commands to upgrade the Report Server for .NET. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
-- Command for updating the Report Server Agent
+```bash
+docker compose pull
+```
 
-  ```bash
-  docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
-  ```
+```bash
+docker compose down
+```
 
-If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
+```bash
+docker compose up -d
+```
+
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the `docker-compose.yml` with the corresponding version tag.
+
+### Upgrade Steps for Report Server Instances Installed Before Version 2026 Q1 (12.0.26.211)
+
+There are four (4) services running on the machine. You may list them with the command `docker service ls`.
+
+The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`.
+
+Execute the following commands for this purpose. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
+
+```bash
+docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
+```
+
+```bash
+docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
+```
+
+> tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
 
 ## See Also
 
