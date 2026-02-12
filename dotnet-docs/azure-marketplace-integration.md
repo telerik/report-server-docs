@@ -118,7 +118,7 @@ Here are links to the necessary Docker images we provide publicly:
 
 We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
 
-### Upgrade Steps for Report Server Instances Installed With and After Version 2026 Q1 (12.0.26.211)
+### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 
 1. Execute the following commands for this purpose:
 
