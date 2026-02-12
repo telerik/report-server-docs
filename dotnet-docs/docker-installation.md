@@ -329,6 +329,16 @@ MY_SQL_PASS=
 MY_TELERIK_LICENSE=
 ```
 
+### Upgrading
+
+Execute the following commands to upgrade the Report Server for .NET. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
+
+   ```bash
+   docker compose pull
+   docker compose down
+   docker compose up -d
+   ```
+
 ## See Also
 
 - [Telerik Report Server Introduction]({%slug introduction%})
