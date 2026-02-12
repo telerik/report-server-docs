@@ -79,7 +79,7 @@ We changed the installation approach for the Report Server for .NET on Linux in 
 
 ### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 
-Execute the following commands for this purpose. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
+Execute the following commands to upgrade the Report Server for .NET. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
    ```bash
    docker compose pull
@@ -101,9 +101,7 @@ Execute the following commands for this purpose. Run them from the directory tha
    docker service update --image progressofficial/telerik-reportserver-agent:latest report-server_telerik-report-server-agent
    ```
 
-
 > tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
-
 
 ## See Also
 
