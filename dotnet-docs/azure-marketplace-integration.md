@@ -118,6 +118,19 @@ Here are links to the necessary Docker images we provide publicly:
 
 We changed the installation approach for the Report Server .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
 
+### Upgrade Steps for Report Server Instances Installed With and After Version 2026 Q1 (12.0.26.211)
+
+1. Execute the following commands for this purpose:
+
+   ```bash
+   docker compose pull
+   docker compose down
+   docker compose up -d
+   ```
+
+1. Run the command `docker image prune` to remove the old images, if any.
+1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
+
 ### Upgrade Steps for Report Server Instances Installed Before Version 2026 Q1 (12.0.26.211)
 
 There are four (4) services running on the machine. You may list them with the command `docker service ls`.
@@ -134,20 +147,6 @@ The services we need to upgrade are `report-server_telerik-report-server` and `r
 
 1. Run the command `docker image prune` to remove the old images, if any.
 1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
-
-### Upgrade Steps for Report Server Instances Installed With and After Version 2026 Q1 (12.0.26.211)
-
-1. Execute the following commands for this purpose:
-
-   ```bash
-   docker compose pull
-   docker compose down
-   docker compose up -d
-   ```
-
-1. Run the command `docker image prune` to remove the old images, if any.
-1. Close port 22 by removing the SSH rule we introduced in the first step to keep your environment safe.
-
 
 > tip If you need to revert to an older Report Server for .NET version, replace the tag `latest` in the above commands with the corresponding version tag.
 
