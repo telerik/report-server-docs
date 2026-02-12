@@ -137,7 +137,7 @@ There are four (4) services running on the machine. You may list them with the c
 
 The services we need to upgrade are `report-server_telerik-report-server` and `report-server_telerik-report-server-agent`.
 
-1. Execute the following commands for this purpose:
+1. Execute the following commands for this purpose. Run them from the directory that contains your `docker-compose.yml` file, or specify the file explicitly with `-f /path/to/docker-compose.yml`:
 
    ```bash
    docker service update --image progressofficial/telerik-reportserver-app:latest report-server_telerik-report-server
