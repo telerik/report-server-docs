@@ -1,0 +1,7 @@
+apiRules:
+  - exclude:
+      uidRegex: ^Newtonsoft\.Json
+      type: Namespace
+  - exclude:
+      uidRegex: ^System
+      type: Namespace
