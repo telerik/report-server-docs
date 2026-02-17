@@ -1,0 +1,18 @@
+{
+  "metadata": [
+    {
+      "codeSourceBasePath": "./reporting",
+      "src": [
+        {
+          "files": [
+            "rs-assemblies-api/*.dll"
+          ],
+          "exclude": [
+          ]
+        }
+      ],
+      "dest": "metadata",
+      "filter": "filterConfig.yml"
+    }
+  ]
+}
