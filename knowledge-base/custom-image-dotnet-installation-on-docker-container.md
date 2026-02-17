@@ -35,7 +35,6 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
 1. (_optional, recommended_) Change the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your own strong password in the file `docker-compose.yml`:
-
    - Open the file `docker-compose.yml` in a text editor like Notepad++ and change the password. The tabulation is essential and should be preserved:
 
    `- SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3`
@@ -167,4 +166,4 @@ The above approach for starting the RS.NET from the container will stop it _each
 
 - [Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
 - [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET Introduction]({%slug report-server-net-overview%})

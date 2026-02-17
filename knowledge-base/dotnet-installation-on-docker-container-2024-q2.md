@@ -56,7 +56,6 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 
 1. Run the command `docker-compose up` in _Powershell_ to execute the above script to create and run the MsSqlServer Docker container we are going to use as Report Server Storage.
 1. Open `MSSQL Management Studio` and _Login_ with the following parameters:
-
    - _Server_ : `localhost`
    - _User_ : `sa`
    - _Password_: `place_your_sa_password_here` (this is the argument _SA_PASSWORD_ from the above script file. You may change it as required.)
@@ -128,6 +127,6 @@ The above approach for starting the RS.NET from the container will stop it _each
 ## See Also
 
 - [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
 - [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
 - [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4)

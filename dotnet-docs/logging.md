@@ -83,6 +83,6 @@ The following configuration settings can be added to that file, at the top level
 
 ## See Also
 
-- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
 - [Report Server for .NET: Installation on Windows]({%slug dotnet-installation-on-windows%})
 - [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})

@@ -5,3 +5,9 @@ apiRules:
   - exclude:
       uidRegex: ^System
       type: Namespace
+  - exclude:
+      uidRegex: Telerik.ReportServer.Services.Models.Obsolete
+      type: Namespace
+  - exclude:
+      uidRegex: Telerik.WebReportDesigner.Services.Models
+      type: Namespace

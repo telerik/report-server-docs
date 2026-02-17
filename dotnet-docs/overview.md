@@ -2,7 +2,7 @@
 title: Overview
 page_title: Report Server for .NET Overview
 description: "The Telerik Report Server for .NET is a server-based reporting platform for working with Telerik Reports that can be hosted on Windows and Linux systems as well as containers."
-slug: coming-soon
+slug: report-server-net-overview
 tags: report,server,dotnet,overview
 published: true
 position: 1

@@ -5,7 +5,7 @@ description: "Learn about the specifics of what is supported in the new Whitelab
 slug: dotnet-server-whitelabeling
 tags: whitelabeling,report,server,.net,color,logo,favicon
 published: True
-position: 7
+position: 6
 tag: new
 ---
 
@@ -56,5 +56,5 @@ Administrator rights are required to access the Report Server Configuration page
 
 ## See Also
 
-- [Report Server for .NET Overview]({%slug coming-soon%})
+- [Report Server for .NET Overview]({%slug report-server-net-overview%})
 - [Whitelabeling in the Report Server for .NET Framework]({%slug whitelabeling%})

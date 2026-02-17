@@ -36,6 +36,12 @@ meta:
   dotnet-docs:
     position: 2
     title: "Report Server for .NET"
+  dotnet-docs/installation:
+    position: 2
+    title: "Installation"
+  dotnet-docs/entra-id:
+    position: 3
+    title: "Using Microsoft Entra ID"
   licensing:
     position: 3
     title: "Licensing"
@@ -51,12 +57,6 @@ meta:
   implementer-guide:
     position: 6
     title: "Implementer Guide"
-  # implementer-guide/release-history:
-  #   position: 1
-  #   title: "Release History"
-  # implementer-guide/whats-new:
-  #   position: 2
-  #   title: "What's New"
   implementer-guide/setup:
     position: 3
     title: "Setup"
@@ -69,18 +69,6 @@ meta:
   implementer-guide/connecting-to-data:
     position: 6
     title: "Connecting to Data"
-  # implementer-guide/webhooks-implementation:
-  #   position: 7
-  #   title: "Webhooks Implementation"
-  # implementer-guide/custom-login-provider:
-  #   position: 8
-  #   title: "Implement Custom Login Provider"
-  # implementer-guide/integration-with-report-viewers:
-  #   position: 9
-  #   title: "Integration with Report Viewers"
-  # implementer-guide/embed-in-another-application:
-  #   position: 10
-  #   title: "Embed in Another Application"
   implementer-guide/apis:
     position: 50
     title: "APIs"

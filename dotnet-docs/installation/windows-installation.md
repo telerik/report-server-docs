@@ -1,5 +1,5 @@
 ---
-title: Installation on Windows
+title: Windows
 page_title: Installing Report Server for .NET on Windows
 description: "Learn how to install Telerik Report Server for .NET on Windows using the dedicated MSI installer, including prerequisites, step-by-step installation, and troubleshooting."
 slug: dotnet-installation-on-windows
@@ -7,6 +7,7 @@ tags: installation,dotnet,windows
 published: True
 position: 3
 tag: new
+previous_url: /dotnet-docs/windows-installation
 ---
 
 # Report Server for .NET: Installation on Windows
