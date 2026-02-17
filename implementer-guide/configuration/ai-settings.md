@@ -162,7 +162,7 @@ The **Output** of the AI processor will be displayed in the Output tab of the As
 
 ## Differences between Report Server for .NET and Report Server for .NET Framework
 
-In [Report Server for .NET]({%slug coming-soon%}), _Retrieval-Augmented Generation_ (RAG) is enabled by default to enhance response accuracy and relevance while minimizing token usage.
+In [Report Server for .NET]({%slug report-server-net-overview%}), _Retrieval-Augmented Generation_ (RAG) is enabled by default to enhance response accuracy and relevance while minimizing token usage.
 
 Currently, RAG can be disabled only via the `appsettings.json` configuration file.
 

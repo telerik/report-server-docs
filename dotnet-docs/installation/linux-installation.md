@@ -1,12 +1,13 @@
 ---
-title: Installation on Linux
+title: Linux
 page_title: Installing ReportServer.NET on Linux
 description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Linux."
 slug: dotnet-installation-on-linux
 tags: installation,dotnet,linux,ubuntu,debian
 published: True
-position: 4
+position: 2
 tag: new
+previous_url: /dotnet-docs/linux-installation
 ---
 
 # Report Server for .NET: Installation on Linux
@@ -19,7 +20,7 @@ Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/re
 
 1. Navigate to the [Progress® Telerik® Report Server download page](https://www.telerik.com/account/downloads/product-download?product=REPSERVER), where you should find the zipped installer file.
 
-   ![The Linux Installer for Report Server available for download from the Telerik downloads page](../images/rs-net-images/rs-net-download-linux-cli-installer.png)
+   ![The Linux Installer for Report Server available for download from the Telerik downloads page](../../images/rs-net-images/rs-net-download-linux-cli-installer.png)
 
 1. If the `unzip` command isn't already installed on the system (use `which unzip` to check), run the following command to install it:
 
@@ -54,7 +55,7 @@ Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/re
 
 1. If the previous steps were executed successfully, the installer will begin, and during the rest of the installation process, you will be asked to configure the Telerik Report Server for .NET via the CLI. This includes providing the operating system account that should be used by the installer, credentials for the admin user in the Report Server, and so on.
 
-   ![A Preview of a Successful Start of the Report Server Linux CLI Installer](../images/rs-net-images/rs-net-linux-installer-preview.png)
+   ![A Preview of a Successful Start of the Report Server Linux CLI Installer](../../images/rs-net-images/rs-net-linux-installer-preview.png)
 
 ## Post-Installation
 
@@ -75,7 +76,7 @@ The installer will also automatically create a single [Report Server Agent]({%sl
 
 ## Upgrading
 
-> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
+> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](<https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)>). Here are the upgrade steps before and after the change.
 
 ### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 

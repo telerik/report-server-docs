@@ -49,7 +49,7 @@ To become effective, open the **TelerikReporting.config** file and uncomment the
 
 ### Report Server for .NET
 
-In the newer [Report Server for .NET](slug:coming-soon), the rendering engine can be fine-tuned using a JSON-based configuration file called **TelerikReporting.json**, located at `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\config`(_default location_).
+In the newer [Report Server for .NET](slug:report-server-net-overview), the rendering engine can be fine-tuned using a JSON-based configuration file called **TelerikReporting.json**, located at `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\config`(_default location_).
 
 The **Telerik Report Server .NET** site needs to be manually restarted from the [IIS Manager](https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-the-iis-manager-in-iis-7-and-iis-8) in order to apply the changes.
 

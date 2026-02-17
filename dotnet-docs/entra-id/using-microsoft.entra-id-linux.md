@@ -1,11 +1,12 @@
 ---
-title: Using Microsoft Entra ID on Linux
+title: Linux
 page_title: Single Sign-On with Microsoft Entra ID on Linux
 description: "Learn how to set up the Single Sign-On (SSO) functionality in Microsoft Entra ID and use it to authenticate against the Telerik Report Server instance hosted on Linux or Docker Container."
 slug: using-microsoft-entra-id-linux
 tags: azure,microsoft,entra,id,linux
 published: True
-position: 9
+position: 2
+previous_url: /dotnet-docs/using-microsoft.entra-id-linux
 ---
 
 # Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Linux/Container
@@ -33,23 +34,23 @@ Besides the enhanced authentication security, this approach also improves the us
 1. From the menu in the top left corner of the page, select **Microsoft Entra ID**.
 1. In the displayed _Overview_ page, click **Manage Tenants**:
 
-   ![Location of the Manage Tenant button in the Azure portal.](../images/rs-net-images/microsoft-entra-id-manage-tenants-step.png)
+   ![Location of the Manage Tenant button in the Azure portal.](../../images/rs-net-images/microsoft-entra-id-manage-tenants-step.png)
 
 1. Click the **Create** button on the **Manage Tenants** page:
 
-   ![Location of the Create button on the Manage Tenants page in the Azure portal.](../images/rs-net-images/microsoft-entra-id-create-tenant-step.png)
+   ![Location of the Create button on the Manage Tenants page in the Azure portal.](../../images/rs-net-images/microsoft-entra-id-create-tenant-step.png)
 
 1. On the **Create a tenant** page, choose `Microsoft Entra ID` as the tenant type (it should be selected by default):
 
-   ![The Create a tenant page with Microsoft Entra ID as the selected type.](../images/rs-net-images/microsoft-entra-id-select-tenant-type-step.png)
+   ![The Create a tenant page with Microsoft Entra ID as the selected type.](../../images/rs-net-images/microsoft-entra-id-select-tenant-type-step.png)
 
 1. Click **Next: Configuration >** and type Organization name (for example, `Report Server Tenant`) and Initial Domain Name (e.g. `ReportServerNetDomain`):
 
-   ![The configuration step of creating a tenant with sample directory details.](../images/rs-net-images/microsoft-entra-id-tenant-configuration-step.png)
+   ![The configuration step of creating a tenant with sample directory details.](../../images/rs-net-images/microsoft-entra-id-tenant-configuration-step.png)
 
 1. Click **Next: Review + create >** and if the configuration is correct, a green message notifying that the validation has passed will be displayed:
 
-   ![The review and create step of the workflow.](../images/rs-net-images/microsoft-entra-id-tenant-review-step.png)
+   ![The review and create step of the workflow.](../../images/rs-net-images/microsoft-entra-id-tenant-review-step.png)
 
 1. Click **Create** and then fill in the Captcha (it will take a minute or two to complete the process once it has been submitted).
 
@@ -67,21 +68,21 @@ Besides the enhanced authentication security, this approach also improves the us
 
    > Add **Report Server Application**, for example, as a name, leave the rest options to be the default, and click `Register`.
 
-   ![The step where the Report Server for .NET application is registered in Azure.](../images/rs-net-images/microsoft-entra-id-app-registration-step.png)
+   ![The step where the Report Server for .NET application is registered in Azure.](../../images/rs-net-images/microsoft-entra-id-app-registration-step.png)
 
 1. Expand the **Manage** dropdown in the menu on the left and choose **Authentication**.
 1. Click `Add Platform` >> `Web` >> Tick the `ID Tokens` checkbox, then click **Configure**.
 
-   ![Opening the authentication page for the Report Server application in Azure.](../images/rs-net-images/microsoft-entra-id-authentication-step.png)
+   ![Opening the authentication page for the Report Server application in Azure.](../../images/rs-net-images/microsoft-entra-id-authentication-step.png)
 
 1. Add a Redirect URL, for example, `http://localhost:82/signin-oidc`.
 
-   ![Configuring a redirect URL and the token settings for authentication between the Report Server and Azure.](../images/rs-net-images/microsoft-entra-id-authentication-redirect-and-token-settings-step.png)
+   ![Configuring a redirect URL and the token settings for authentication between the Report Server and Azure.](../../images/rs-net-images/microsoft-entra-id-authentication-redirect-and-token-settings-step.png)
 
 1. Click **Certificates & secrets** in the expanded **Manage** dropdown in the menu on the left.
 1. On the **Certificates & secrets** page, Click the **New client secret** button.
 
-   ![Triggering the creation of new client secret in the Azure portal.](../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
+   ![Triggering the creation of new client secret in the Azure portal.](../../images/rs-net-images/microsoft-entra-id-creating-client-secret-step.png)
 
    > Once the secret is created, copy and save the secret value as it will be used in the Report Server later. Note that you can do this only at this step. The failure would require another secret to be created, saved, and used.
 
@@ -136,11 +137,11 @@ Besides the enhanced authentication security, this approach also improves the us
 1. Click on the **SERVER AGENT** tab and start the creation of a new Service Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
 
-   ![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
+   ![Configuring a new Server Agent in the Report Server for .NET - Step 1](../../images/rs-net-images/configure-new-agent-step1.png)
 
 1. Press the **GENERATE CONFIGURATION** pop-up and copy the tokens from the **ENVIRONMENT VARIABLES** tab:
 
-   ![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
+   ![Configuring a new Server Agent in the Report Server for .NET - Step 2](../../images/rs-net-images/configure-new-agent-step2.png)
 
 1. Open the `\ReportServer\docker-configs\docker-compose.yml` file in a text editor again, and uncomment the section with the `telerik-report-server-agent` element. This section should be present by default in the file and it looks as follows:
 
@@ -158,14 +159,14 @@ Besides the enhanced authentication security, this approach also improves the us
 1. Run the command `docker stack deploy -c docker-compose.yml report-server` to re-deploy with the updated `docker-compose.yml`.
 1. Open the **Configuration** page with the Service Agents again, now there should be one agent visible in the Server Agents table in the middle of the page:
 
-   ![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
+   ![Server Agents Configuration page with one agent created](../../images/rs-net-images/created-server-agent-view.png)
 
 ### 4. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET
 
 1. Open the Telerik Report Server for .NET in the browser. The default URL is `http://localhost:82/`.
 1. Navigate to the **Configuration** page and select the **Authentication** tab.
 
-   ![The Report Server for .NET Application's Configuration page on the Authentication tab.](../images/rs-net-images/microsoft-entra-id-rs-net-configuration-authentication-settings.png)
+   ![The Report Server for .NET Application's Configuration page on the Authentication tab.](../../images/rs-net-images/microsoft-entra-id-rs-net-configuration-authentication-settings.png)
 
 1. Enable the `Microsoft Entra ID Provider`.
 1. In the **Instance** field, use the URL - `https://login.microsoftonline.com/`.
@@ -182,7 +183,7 @@ Besides the enhanced authentication security, this approach also improves the us
    - Click the application name e.g. `Report Server Application` (defined in the previous section).
    - Copy the Application (client) ID and add it to the Report Server in the Client ID field.
 
-     ![The Report Server Application page in the Azure portal where the application (client) ID is located.](<../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png>)
+     ![The Report Server Application page in the Azure portal where the application (client) ID is located.](../../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png)
 
    - Click the `Save Changes` button in the Report Server for .NET's Configuration page (a message that a manual restart of the service is required will appear on the screen).
    - The restart can be performed from the IIS Manager >> Application Pools >> Right-click the Telerik Report Server for .NET site and choose `Recycle`.
@@ -195,11 +196,11 @@ Besides the enhanced authentication security, this approach also improves the us
    - Add the domain name login email e.g. `username@mycompany.com`.
    - Choose a User Role and save the changes.
 
-   ![Creating a user with EntraID authentication in the Report Server for .NET Application](../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
+   ![Creating a user with EntraID authentication in the Report Server for .NET Application](../../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)
 
 1. Log out of the Report Server to go to the Login page.
 
-   ![The Report Server for .NET Login page with an enabled Microsoft Entra ID.](../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
+   ![The Report Server for .NET Login page with an enabled Microsoft Entra ID.](../../images/rs-net-images/microsoft-entra-id-login-page-with-enabled-entraid.png)
 
 1. Click the blue `Microsoft Entra ID` button. You should be automatically logged in with your **EntraID**.
 

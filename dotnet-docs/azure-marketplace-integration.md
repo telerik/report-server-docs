@@ -5,7 +5,7 @@ description: "Learn how to deploy the Telerik Report Server for .NET directly fr
 slug: azure-marketplace-integration
 tags: report,server,dotnet,azure,marketplace
 published: true
-position: 5
+position: 2
 tag: updated
 ---
 
@@ -102,11 +102,9 @@ Here are links to the necessary Docker images we provide publicly:
    > note The user who created the Virtual Machine is fully responsible for managing it.
 
    The user can access the Virtual Machine through [Secure Shell Protocol (SSH Protocol)](https://en.wikipedia.org/wiki/Secure_Shell) with the credentials provided in the _Virtual Machine_ section. In this scenario, port 22 should be opened explicitly:
-
    - Select the _Network Settings_ to open the configuration page of the Virtual Machine:
 
    ![Select the configuration page for the Network Settings of the Virtual Machine.](../images/rs-net-images/create-rs-net-network.png)
-
    - Add the row that opens port 22 of the Virtual Machine:
 
    ![Add the setting for opening port 22 of the Virtual Machine.](../images/rs-net-images/create-rs-net-network-settings.png)
@@ -116,7 +114,7 @@ Here are links to the necessary Docker images we provide publicly:
 1. Add the SSH Networking rule to open the secure port 22 as explained at the end of the previous section. You may log into the Virtual Machine terminal only through an SSH connection.
 1. Access the Azure Virtual Machine through the just-opened SSH port 22.
 
-> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)). Here are the upgrade steps before and after the change.
+> We changed the installation approach for the Report Server for .NET on Linux in version [2026 Q1 (12.0.26.211)](<https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q1-(12-0-26-211)>). Here are the upgrade steps before and after the change.
 
 ### Upgrade Steps for Report Server Instances Installed in Version 2026 Q1 (12.0.26.211) or Later
 
@@ -162,6 +160,6 @@ The services we need to upgrade are `report-server_telerik-report-server` and `r
 
 ## See Also
 
-- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
 - [Telerik Report Server License]({%slug license-key%})
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

@@ -1,12 +1,13 @@
 ---
-title: Installation on Docker Container
+title: Docker
 page_title: Installing ReportServer.NET on Docker Container
 description: "Learn about the specifics, recommendations, and available approaches for installing the Telerik Report Server for .NET on Docker Container."
 slug: dotnet-installation-on-docker-container
 tags: installation,dotnet,docker,linux,container
 published: True
-position: 6
+position: 1
 tag: updated
+previous_url: /dotnet-docs/docker-installation
 ---
 
 # Report Server for .NET in Containers
@@ -194,13 +195,13 @@ Now that the stack is running again, let's set up a new agent.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the **Configure New Agent** pop-up window, enter the URL of the Report Server Manager app (e.g. [http://localhost:82](http://localhost:82)):
 
-   ![Configuring a new Server Agent in the Report Server for .NET - Step 1](../images/rs-net-images/configure-new-agent-step1.png)
+   ![Configuring a new Server Agent in the Report Server for .NET - Step 1](../../images/rs-net-images/configure-new-agent-step1.png)
 
    > tip We can also use `http://telerik-report-server` for the address because **"telerik-report-server"** is the name of the service in the stack.
 
 1. Click the **GENERATE CONFIGURATION** button. When the pop-up appears, switch to the **ENVIRONMENT VARIABLES** tab, and then copy/paste values:
 
-   ![Configuring a new Server Agent in the Report Server for .NET - Step 2](../images/rs-net-images/configure-new-agent-step2.png)
+   ![Configuring a new Server Agent in the Report Server for .NET - Step 2](../../images/rs-net-images/configure-new-agent-step2.png)
 
 #### Step 3.2
 
@@ -266,7 +267,7 @@ Using the values from the previous step, update the variables in your .env file:
 1. Run the `docker compose up -d` command to start the stack again.
 1. Open the **Configuration** page with the Service Agents again. Now, there should be one agent visible in the Server Agents table in the middle of the page:
 
-   ![Server Agents Configuration page with one agent created](../images/rs-net-images/created-server-agent-view.png)
+   ![Server Agents Configuration page with one agent created](../../images/rs-net-images/created-server-agent-view.png)
 
 ## Conclusion
 
@@ -350,4 +351,4 @@ docker compose up -d
 ## See Also
 
 - [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug coming-soon%})
+- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
