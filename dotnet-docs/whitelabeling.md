@@ -21,7 +21,9 @@ Our product supports white-labeling, allowing customers to personalize the visua
 
 Whitelabeling enables the **Report Server for .NET's** customers to remove branding elements in the Report Server Manager web application and its internal Web Report Designer.
 
-By replacing the default colors, logo, and favicon with branding from the customer's enterprise, you can personalize the visual identity of each Report Server. This feature enables organizations to align the product's appearance with their brand guidelines.
+By replacing the default colors, logo, and favicon with branding from the customer's enterprise, you can personalize the visual identity of each Report Server.
+
+This feature enables organizations to align the product's appearance with their brand guidelines.
 
 ### Customizable Elements
 

@@ -11,7 +11,7 @@ previous_url: /dotnet-docs/using-microsoft.entra-id-linux
 
 # Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Linux/Container
 
-> important With the current version of the [Report Server for .NET](https://www.telerik.com/report-server) product - [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
+> important There is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET.
 
@@ -96,17 +96,14 @@ Besides the enhanced authentication security, this approach also improves the us
 1. Run the command `docker build -t telerik-report-server-agent:local .` in _Powershell_ to build the Report Server ServiceAgent image. Mind the dot `.` at the end of the command.
 1. Navigate to the subfolder `ReportServer\docker-configs`.
 1. (_optional, recommended_) Change the password `P1@ceStr0ngP@ssw0rdH3r3` for the SA database user with your own strong password in the files `docker-compose.yml` and `mssql_storage.env`:
-
    - Open the file `docker-compose.yml` in a text editor like Notepad++ and change the password on line 31. The tabulation is essential and should be preserved:
 
    `      - SA_PASSWORD=P1@ceStr0ngP@ssw0rdH3r3`
-
    - Open the file `mssql_storage.env` in a text editor like Notepad++ and change the password with your own password you used above:
 
    `reportServer__storage__parameters__0__value=Data Source=storage;Initial Catalog=reportserver;Password=P1@ceStr0ngP@ssw0rdH3r3;User Id=sa;Encrypt=false`
 
 1. (_optional, recommended_) Set the **client secret** via an environment variable:
-
    - Open the file `docker-compose.yml` in a text editor like Notepad++ and after _line 7_, inside the `environment` element, add the following line:
 
    `- ExternalLogin__EntraId__ClientSecret=yoursecretvalue`
@@ -172,12 +169,10 @@ Besides the enhanced authentication security, this approach also improves the us
 1. In the **Instance** field, use the URL - `https://login.microsoftonline.com/`.
 1. In the **Domain** field, use the one from [step 5 in the Create a Microsoft Entra ID Tenant section](#1-create-a-microsoft-entra-id-tenant) and add it as a URL, for example - `https://ReportServerNetDomain.onmicrosoft.com/`.
 1. Open the [Microsoft Azure Portal](https://portal.azure.com/) to get the `Tenant ID`:
-
    - From the menu in the top left corner of the page, select **Microsoft Entra ID**.
    - The `Tenant ID` can be copied from the **Basic Information** table in the center of the page.
 
 1. Open the [Microsoft Azure Portal](https://portal.azure.com/) to get the `Client ID`:
-
    - From the menu in the top left corner of the page, select **Microsoft Entra ID**.
    - Expand the `Manage` dropdown >> `App Registrations` >> `All Applications`.
    - Click the application name e.g. `Report Server Application` (defined in the previous section).
@@ -190,7 +185,6 @@ Besides the enhanced authentication security, this approach also improves the us
 
 1. Once the service is manually restarted, log in with a user that has an administrator role and go to `User Management`.
 1. Click the `Add New User` button:
-
    - Select the `Authentication Provider` to be `EntraId`.
    - Add a username.
    - Add the domain name login email e.g. `username@mycompany.com`.
