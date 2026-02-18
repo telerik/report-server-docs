@@ -13,7 +13,9 @@ previous_url: /dotnet-docs/using-microsoft-entra-id
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET.
 
-In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET. Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into the Report Server Manager UI without entering their login credentials each time.
+In this article, we will explain how to set up and enable the Microsoft Entra ID authentication for the users of the Telerik Report Server for .NET.
+
+Besides the enhanced authentication security, this approach also improves the user experience, because the users who are already registered in Microsoft Entra will be able to log into the Report Server Manager UI without entering their login credentials each time.
 
 ## Prerequisites
 
@@ -119,7 +121,7 @@ In this article, we will explain how to set up and enable the Microsoft Entra ID
    - Click the application name, e.g., `Report Server Application` (defined in the previous section).
    - Copy the Application (client) ID and add it to the Report Server in the Client ID field:
 
-     ![The Report Server Application page in the Azure portal where the application (client) ID is located.](../../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png)
+     ![The Report Server Application page in the Azure portal where the application (client) ID is located.](<../../images/rs-net-images/microsoft-entra-id-application(client)-id-location.png>)
 
    - Click the `Save Changes` button in the Report Server for .NET's Configuration page (a message that a manual restart of the service is required will appear on the screen).
    - The restart can be performed from the IIS Manager >> Application Pools >> Right-click the Telerik Report Server for .NET site and choose `Recycle`.

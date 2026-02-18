@@ -73,7 +73,9 @@ The original RS.NET assets created by the combined installer remain on your syst
 
 ## Troubleshooting
 
-If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have been configured automatically. See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps on how to do this manually.
+If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({%slug service-agent%}) connection may not have been configured automatically.
+
+See [Manual Configuration of RS.NET Service Agent Connection]({%slug manual-configuration-rs-net-service-agent%}) for detailed steps on how to do this manually.
 
 For issues like missing or corrupt files, use the installer's repair functionality:
 

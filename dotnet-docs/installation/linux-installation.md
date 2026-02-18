@@ -38,6 +38,9 @@ Starting with the [2025 Q3 release](https://www.telerik.com/support/whats-new/re
 
    ```bash
    cd reportserver
+   ```
+
+   ```bash
    ls
    ```
 
