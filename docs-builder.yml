@@ -10,6 +10,7 @@ search-engine-id: 001595215763381649090:dikfyfm1qqw
 cta-overview: "@ProductLink is an end-to-end report management solution to store, create, manage, and view reports in web and desktop applications. To try it out, sign up for a free 30-day trial."
 cta-intro: "@ProductLink is an end-to-end report management solution to store, create, manage, and view reports in web and desktop applications. To try it out, sign up for a free 30-day trial."
 default-title-prefix: Telerik Report Server
+search-provider: nuclia
 
 # git settings
 gitLastCommitDateEnabled: true
