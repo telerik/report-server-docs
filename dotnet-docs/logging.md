@@ -29,7 +29,7 @@ You can enable logging for both the Report Server Manager and Service Agent at t
 
 This requires the default Serilog configuration to exist in the `appsettings.json` files for both the manager and service components, as environment variables are intended to override these base settings as needed.
 
-> note When the Report Server is installed using the MSI installer, it runs under a dedicated Windows user account (ReportServerUser) or a system account (e.g., LocalSystem) depending on your installation choice.
+> note When the Report Server is installed using the MSI installer, it runs under a dedicated Windows user account (ReportServerUser) or a system account (e.g., LocalSystem), depending on your installation choice.
 >
 > These accounts do not have access to user-level environment variables. To ensure environment variable overrides work correctly, you must define them at the **system level**.
 
@@ -39,7 +39,7 @@ Alternatively, you can define the configuration in the `appsettings.json` config
 
 #### Report Server Manager
 
-The `appsettings.json` file of the Report Server Manager for .NET resides in its installation directory, for example, `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET\`.
+The `appsettings.json` file of the Report Server Manager for .NET resides in its installation directory, for example, `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\`.
 
 The following configuration settings can be added to that file, at the top level:
 
@@ -60,7 +60,7 @@ The following configuration settings can be added to that file, at the top level
 
 #### Service Agent
 
-The Report Server for .NET ServiceAgent's `appsettings.json` file can be found in its installation directory, by default - `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\`.
+The Report Server for .NET ServiceAgent's `appsettings.json` file can be found in its installation directory, by default - `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Services\`.
 
 The following configuration settings can be added to that file, at the top level:
 
