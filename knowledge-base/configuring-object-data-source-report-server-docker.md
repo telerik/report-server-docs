@@ -1,6 +1,6 @@
 ---
 title: Setting Object Data Source in Report Server.NET
-description: "Learn how to correctly add and configure an object data source in Telerik Report Server hosted in a Docker container.""
+description: "Learn how to correctly add and configure an object data source in Telerik Report Server hosted in a Docker container."
 type: how-to
 page_title: Configuring Object Data Source in Report Server on Docker
 meta_title: Configuring Object Data Source in Report Server on Docker
