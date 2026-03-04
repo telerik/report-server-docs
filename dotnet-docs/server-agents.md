@@ -32,7 +32,7 @@ The table displays the name of the Scheduled task or Data Alert, the target Serv
 
 ## Creating Server Agents on Windows
 
-1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
+1. Open the Report Server Manager(by default - http://localhost:81), and then open the **Configuration** page.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the pop-up window with title **Configure New Agent**, enter the Report Server base URL or http://telerik-report-server. This should automatically route to the Report Server Manager application.
 
@@ -44,7 +44,7 @@ The table displays the name of the Scheduled task or Data Alert, the target Serv
 
    The Report Server has generated a configuration containing the server address, authentication token, and ID of the new Server Agent.
 
-1. Navigate to the `C:\Program Files (x86)\Progress\Telerik Report Server\Services\.NET\` folder and open the `appsettings.json` file in a text editor of choice.
+1. Navigate to the `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Services\` folder and open the `appsettings.json` file in a text editor of choice.
 1. Paste the JSON-based Server Agent configuration in the file:
 
    ```JSON
