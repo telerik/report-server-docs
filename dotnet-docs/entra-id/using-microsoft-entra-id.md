@@ -84,7 +84,7 @@ Besides the enhanced authentication security, this approach also improves the us
 
    > Once the secret is created, copy and save the secret value, as it will be used in the Report Server later. You can do this only at this stage. Upon failure, you need to create, copy, and use another secret.
 
-1. Go to the installation folder of the Telerik Report Server for .NET, e.g., `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
+1. Go to the installation folder of the Telerik Report Server for .NET, e.g., `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web`.
 1. Open the `appsettings.json` file in a text editor and add the following (replacing the secret from the example below with your secret):
 
    ```JSON
@@ -99,7 +99,7 @@ Besides the enhanced authentication security, this approach also improves the us
 
    ![An image demonstrating how the Report Server for .NET can be restarted from the IIS Manager](../../images/rs-net-images/rs-net-restart-from-iismanager.png)
 
-> important If you do not wish to store the client secret in the **appsettings.json** file, an alternative option is to set it via the `ExternalLogin__EntraId__ClientSecret` [environment variable](https://en.wikipedia.org/wiki/Environment_variable). The variable needs to be created for the respective user who hosts the Report Server for the .NET application. If `IIS` is used, this is the application pool user, by default `ReportServerUser`. After setting the environment variable, restart the application(on IIS, you may use the `iisreset` command).
+> important If you do not wish to store the client secret in the **appsettings.json** file, an alternative option is to set it via the `ExternalLogin__EntraId__ClientSecret` [environment variable](https://en.wikipedia.org/wiki/Environment_variable). The variable needs to be created for the respective user who hosts the Report Server for the .NET application. If `IIS` is used, this is the application pool user, by default `RSUserNET`. After setting the environment variable, restart the application(on IIS, you may use the `iisreset` command).
 
 ### 3. Enabling Microsoft Entra ID Authentication in the Telerik Report Server for .NET
 
