@@ -13,16 +13,16 @@ ticketid: 1709828
 ## Environment
 
 <table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>Report Server</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>11.3.26.121</td>
-</tr>
-</tbody>
+ <tbody>
+  <tr>
+   <td>Product</td>
+   <td>Report Server</td>
+  </tr>
+  <tr>
+   <td>Version</td>
+   <td>11.3.26.121+</td>
+  </tr>
+ </tbody>
 </table>
 
 ## Description
