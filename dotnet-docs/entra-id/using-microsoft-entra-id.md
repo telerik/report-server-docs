@@ -130,7 +130,7 @@ Besides the enhanced authentication security, this approach also improves the us
 1. Click the `Add New User` button:
    - Select the `Authentication Provider` to be `EntraId`.
    - Add a username.
-   - Add the domain name login email, e.g. `username@mycompany.com.`
+   - Add the domain name login email, e.g. `username@mycompany.com`.
    - Choose a User Role and save the changes.
 
    ![Creating an user with EntraID authentication in the Report Server for .NET Application.](../../images/rs-net-images/microsoft-entra-id-rs-new-user-with-entraid-auth-provider.png)

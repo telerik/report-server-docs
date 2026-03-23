@@ -33,7 +33,7 @@ A possible cause is that report book was created locally but not on the Report S
 
 When report book is saved locally, reports added to the report book would be referenced using relative paths to those reports. When report book is saved on the server reports would be referenced using their location on the server, for example: **[CategoryName]/[ReportName]**. In this case, report will be referenced only by its name without file extension.
 
-After report book that was created localy is uploaded to Report Server and previewed in the viewer, the above-mentioned error is shown because the path to the local report file cannot be resolved.
+After report book that was created locally is uploaded to Report Server and previewed in the viewer, the above-mentioned error is shown because the path to the local report file cannot be resolved.
 
 ## Solution
 

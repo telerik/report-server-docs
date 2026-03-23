@@ -34,7 +34,7 @@ After installing the Telerik Report Server product, one may want to assign a cus
 
 This is supported as well, and you can find a step-by-step tutorial on how to do it in the [How to Run Report Server and Service Agent with Limited Permissions]({%slug how-to-change-report-server-iis-user%}) article.
 
-Any custom Windows user must have the following permissions/policies for the Report Server, and it Service Agent, to function properly with all of the functionalities being supported:
+Any custom Windows user must have the following permissions/policies for the Report Server, and its Service Agent, to function properly with all of the functionalities being supported:
 
 - [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the Report Server installation directory(`C:\Program Files (x86)\Progress\Telerik Report Server`), and all subdirectories
 - [Modify access](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) for the `%ProgramData%\Telerik\Reporting` directory - This is the place where the cache of the [Map](https://docs.telerik.com/reporting/report-items/map/overview) report item is stored.

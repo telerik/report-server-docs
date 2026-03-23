@@ -53,7 +53,7 @@ with thе code
 <link href="/ReportViewer/styles/telerikReportViewer.css" rel="stylesheet" />
 ```
 
-3\. The viewer is configured in the _Preview.cshtml_ View file that could be found in the folder (_Telerik Report Server installation folder_)\\Telerik.ReportServer.Web\\Views\\Report (for example _C:\\Program Files (x86)\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web\\Views\\Report_). Modify **Preview.cshtm** by setting **templateUrl** property of the ReportViewer:
+3\. The viewer is configured in the _Preview.cshtml_ View file that could be found in the folder (_Telerik Report Server installation folder_)\\Telerik.ReportServer.Web\\Views\\Report (for example _C:\\Program Files (x86)\\Progress\\Telerik Report Server\\Telerik.ReportServer.Web\\Views\\Report_). Modify **Preview.cshtml** by setting **templateUrl** property of the ReportViewer:
 ```C#
 .telerik_ReportViewer({
 serviceUrl: '@Url.Content("~/api/reports/")',

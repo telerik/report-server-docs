@@ -13,7 +13,7 @@ position: 100
 ## Report Server for .NET Framework
 
 - **Operating System** - Windows platform such as Windows 11, Windows Server 2025, Windows Server 2022, and so on.
-- **Web Server**- [Internet Information Services](https://www.iis.net/) (IIS) 7+
+- **Web Server** - [Internet Information Services](https://www.iis.net/) (IIS) 7+
 - **Runtimes** - [Microsoft .NET Framework 4.6.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net462)+
 
 

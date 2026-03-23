@@ -23,7 +23,7 @@ previous_url: /knowledge-base/server%20error%20in%20'/server-error-in-applicatio
 
 
 ## Description
-The problem  is caused by a known issue with AD which is logged on our feedback portal - 
+The problem is caused by a known issue with AD which is logged on our feedback portal - 
 [Web.config error after authenticating with Active Directory](https://feedback.telerik.com/report-server/1516342-web-config-error-after-authenticating-with-active-directory). 
 
 ## Error Message

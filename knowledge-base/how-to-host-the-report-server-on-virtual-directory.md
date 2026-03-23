@@ -1,5 +1,5 @@
 ---
-title: Hotsting the Report Server on a Virtual Directory
+title: Hosting the Report Server on a Virtual Directory
 description: Explains how to host the Report Server on a virtual directory in IIS
 type: how-to
 page_title: How to Host the Report Server on Virtual Directory in IIS
@@ -33,7 +33,7 @@ Below are the required steps:
 1. Open the IIS;
 2. Under **Connections** -> **Sites** -> right-click over the site ->** Add Virtual Directory**;
 3. In **Alias**, type **reporting**;
-4. **Phisical path** should point to **Telerik.ReportServer.Web** folder of the Report Server.
+4. **Physical path** should point to **Telerik.ReportServer.Web** folder of the Report Server.
 5. Right-click over the virtual directory -> **Convert to application**. 
 
 

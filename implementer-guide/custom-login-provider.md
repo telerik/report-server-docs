@@ -249,5 +249,5 @@ The calling method that redirects to the Report Server if the POST request is su
 
 ## Certificate requirements
 
-- The current implementation of the custom login method uses certificates whose keys implemet [RSACryptoServiceProvider](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsacryptoserviceprovider?redirectedfrom=MSDN&view=netframework-4.6.2) as the default RSA algorithm. Using certificates with keys implementing a different assymetric algorithm is not currently supported.
+- The current implementation of the custom login method uses certificates whose keys implement [RSACryptoServiceProvider](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsacryptoserviceprovider?redirectedfrom=MSDN&view=netframework-4.6.2) as the default RSA algorithm. Using certificates with keys implementing a different asymmetric algorithm is not currently supported.
 - Ensure that the certificate has defined the proper permissions to the applications and identities that use it. Usually the IUSR identity needs to have a certificate permission in order to use its private key for signing. [This forum topic](https://stackoverflow.com/questions/45042108/privatekey-threw-an-exception-of-type-system-security-cryptography-cryptographic) explains some of the possible issues in details.

@@ -34,6 +34,6 @@ Examples:
 
 ### File
 
-Тhe file storage uses the file system of the operating system to store the reports and other data. To configure this storage specify the location of the storage by using the **BasePath** parameter.
+The file storage uses the file system of the operating system to store the reports and other data. To configure this storage specify the location of the storage by using the **BasePath** parameter.
 
 It can be also a relative path to the report server's web application. For example: `_~/Data/ReportServer_`.

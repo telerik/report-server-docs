@@ -17,7 +17,7 @@ position: 50
   width: 600px;
 }
 
-  img[alt="An image of the of the message that will appear if the fields are filled in correctly"] {
+  img[alt="An image of the message that will appear if the fields are filled in correctly"] {
   width: 600px;
 }
 
@@ -100,7 +100,7 @@ Depending on the state of the `Enable AI` setting:
 
 If all required fields are filled in, you can test the integration using the `Test Integration` button. This will send a request to the selected provider with the specified information using a test prompt. If everything is configured correctly, you will receive a response saying `Integration successful`.
 
-![An image of the of the message that will appear if the fields are filled in correctly](../../images/testIntegrationSuccessfulMessage.png)
+![An image of the message that will appear if the fields are filled in correctly](../../images/testIntegrationSuccessfulMessage.png)
 
 If there is a problem, a pop-up will appear with detailed error information.
 

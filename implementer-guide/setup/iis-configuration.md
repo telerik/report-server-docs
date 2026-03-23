@@ -14,7 +14,7 @@ The Report Server installer performs a basic setup of the new Report Server web 
 
 We recommend setting up an HTTPS-secured binding for the production deployment. We also recommend applying additional settings in IIS to compress resources sent from the Report Server to the clients and improve load times:
 
-## Step-By-Step Giude
+## Step-By-Step Guide
 
 The **first** step is to enable static and dynamic HTTP compression for the Report Server website. The Microsoft article [HTTP Compression](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/httpcompression/) provides a detailed guide.
 

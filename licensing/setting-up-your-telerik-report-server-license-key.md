@@ -32,7 +32,7 @@ To activate Telerik Report Server Q2 2025 and future releases, we recommend usin
 
 1. Open the Report Server Manager web interface and log in with an admin user.
 1. Select _Configuration_ from the top-right corner.
-1. Inside the _Configration_ page, select the _About_ tab.
+1. Inside the _Configuration_ page, select the _About_ tab.
 1. Look for the _Status_ row under the _License Details_ section and choose:
 
    - _Add_ if you are setting up a license for the first time

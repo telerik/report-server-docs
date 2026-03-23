@@ -56,7 +56,7 @@ By default, the installation directory is `C:\Program Files (x86)\Progress\Teler
 
 The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
 
-When you first access RS.NET, you will be prompted to configure storage and register an administrator user. During this setup, you will also be asked to download шге [encryption keys]({%slug security%}#encryption) that secure your sensitive RS.NET assets.
+When you first access RS.NET, you will be prompted to configure storage and register an administrator user. During this setup, you will also be asked to download the [encryption keys]({%slug security%}#encryption) that secure your sensitive RS.NET assets.
 
 ## Upgrading Report Server for .NET
 

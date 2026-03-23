@@ -43,7 +43,7 @@ The following elements can be rebranded:
 
 #### Report Server Manager
 
-![Overiew of the Report Server for .NET with changed colors](../images/rs-net-images/rs-net-whitelabeling-manager-applied.png)
+![Overview of the Report Server for .NET with changed colors](../images/rs-net-images/rs-net-whitelabeling-manager-applied.png)
 
 #### Web Report Designer
 

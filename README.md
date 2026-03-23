@@ -2,7 +2,7 @@
 
 Welcome to the GitHub repository for [Telerik Report Server](https://www.telerik.com/report-server) documentation. This repository contains the source content — written in Markdown — that we use to power the Telerik Report Server Documentation at [docs.telerik.com/report-server](https://docs.telerik.com/report-server). If you've arrived here wanting to search and use our docs, head over to [docs.telerik.com/report-server](https://docs.telerik.com/report-server) where our content is prettified and searchable.
 
-We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. As such, this documentation is both public, and open sourced under and MIT license (see below). That means you can clone this repository, or read the docs offline.
+We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. As such, this documentation is both public, and open sourced under an MIT license (see below). That means you can clone this repository, or read the docs offline.
 
 It also means that you can play a role in making our docs better for everyone, and if helping us make the Telerik Report Server docs better sounds interesting to you, read on.
 

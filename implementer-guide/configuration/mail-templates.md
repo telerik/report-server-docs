@@ -56,7 +56,7 @@ Mail variables common for all **Scheduled Task** templates with a generated repo
 
 -   {StartTime} - start time of the report document generation.
 
--   {StartTmeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
+-   {StartTimeShort} - start time of the report document generation formatted with the **short time pattern** of the operating system.
 
 -   {StartTimeLong} - start time of the report document generation formatted with the **long time pattern** of the operating system.
 
@@ -78,11 +78,11 @@ Mail variables common for all **Scheduled Task** templates with a generated repo
 
 -   {ExecutionTimeDays} - elapsed time of the report document generation in **days**.
 
--   {ExecutionTimeHours} - elapsed time of the report document generation in **hours **.
+-   {ExecutionTimeHours} - elapsed time of the report document generation in **hours**.
 
--   {ExecutionTimeMinutes} - elapsed time of the report document generation in **minutes **.
+-   {ExecutionTimeMinutes} - elapsed time of the report document generation in **minutes**.
 
--   {ExecutionTimeSeconds} - elapsed time of the report document generation in **seconds **.
+-   {ExecutionTimeSeconds} - elapsed time of the report document generation in **seconds**.
 
--   {ExecutionTimeMilliseconds} - elapsed time of the report document generation in **milliseconds **.
+-   {ExecutionTimeMilliseconds} - elapsed time of the report document generation in **milliseconds**.
 
