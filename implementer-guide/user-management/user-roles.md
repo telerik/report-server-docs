@@ -57,7 +57,7 @@ You can perform the following actions from the *User Roles* view:
 
 -   **Edit** user role.
 
--   **Delete** user role - you can delete any use role except *System
+-   **Delete** user role - you can delete any user role except *System
     Administrator* role.
 
 -   **Manage permissions** - for permissions management refer to ([Users and Permissions]({%slug users%})).

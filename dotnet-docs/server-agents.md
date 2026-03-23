@@ -28,7 +28,7 @@ A queued task represents a Scheduled task or Data alert that is currently being 
 
 The table displays the name of the Scheduled task or Data Alert, the target Server Agent, and when was the task scheduled for execution.
 
-![The Queued Tasks Grid with one taks scheduled for execution.](../images/rs-net-images/queued-tasks-grid-server-agent.png)
+![The Queued Tasks Grid with one task scheduled for execution.](../images/rs-net-images/queued-tasks-grid-server-agent.png)
 
 ## Creating Server Agents on Windows
 
@@ -57,7 +57,7 @@ The table displays the name of the Scheduled task or Data Alert, the target Serv
 
 ## Creating Server Agents in Linux Containers
 
-> important The Report Server for .NET should be completely set and configured before adding Server Agents - [Installing ReportServer.NET on Docker Containe]({%slug dotnet-installation-on-docker-container%}).
+> important The Report Server for .NET should be completely set and configured before adding Server Agents - [Installing ReportServer.NET on Docker Container]({%slug dotnet-installation-on-docker-container%}).
 
 1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.

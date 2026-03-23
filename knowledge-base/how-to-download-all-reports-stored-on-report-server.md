@@ -1,6 +1,6 @@
 ---
 title: Downloading All Reports Stored on Report Server
-description: Download all report defintions that are stored on the report server
+description: Download all report definitions that are stored on the report server
 type: how-to
 page_title: How to Download All Reports Stored on Report Server
 slug: how-to-download-all-reports-stored-on-report-server

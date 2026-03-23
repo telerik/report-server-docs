@@ -1,6 +1,6 @@
 ---
 title: Implementing a webhook receiver in Self-Hosted Asp.Net application
-description: This article elaborates on how to create a OWIN self-host console application for the WebApi that recives webhooks.
+description: This article elaborates on how to create a OWIN self-host console application for the WebApi that receives webhooks.
 type: how-to
 page_title: Implementing a webhook receiver in Self-Hosted Asp.Net application
 slug: implementing-a-webhook-receiver-in-self-hosted-asp-net-application

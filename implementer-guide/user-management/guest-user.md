@@ -30,7 +30,7 @@ Report Server's API provides a method that serves a report by specified category
 The format is _`serverUrl`/report/share/`category`/`reportName`/`revision`_. 
 Omit the _`revision`_ parameter to display the last revision of the specified report.
 The Report Server processes such a request using the Guest account.
-If the Guest account is disabled, the server will return a response with error code 403- Forbidden.
+If the Guest account is disabled, the server will return a response with error code 403 - Forbidden.
 
 ### Display a server report in an embedded Report Viewer control
 

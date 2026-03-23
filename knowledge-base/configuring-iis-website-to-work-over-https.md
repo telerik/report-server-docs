@@ -29,7 +29,7 @@ There are several approaches for configuring IIS website to work over HTTPS. Sel
 
 ## Solution
 
-Ensure that a valid SSL Certificate is available. Configure the Report Server to run ver HTTPS on IIS using the following articles for reference:
+Ensure that a valid SSL Certificate is available. Configure the Report Server to run over HTTPS on IIS using the following articles for reference:
 
 - [How To Set Up an HTTPS Service in IIS](https://support.microsoft.com/en-us/help/324069/how-to-set-up-an-https-service-in-iis) from **Microsoft**;
 - [Setting up IIS with HTTPS Binding](https://www.codeproject.com/Tips/722979/Setting-up-IIS-with-HTTPS-Binding) from **Code Project**;

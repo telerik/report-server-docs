@@ -63,7 +63,7 @@ The users that need to authenticate using Azure AD, must be registered in the Re
 
 ### 5. Configure Redirect URIs
 
-Go to the Authtentication tab and add the URI of the Telerik Report Server instance you will use. This is the URI that will be used to return the authentication response after successful sign-in. 
+Go to the Authentication tab and add the URI of the Telerik Report Server instance you will use. This is the URI that will be used to return the authentication response after successful sign-in. 
 
 ![AzureAD - application setup](../../images/report-server-images/HowToLoginUsingADFS/azure_ad_step4.png)
 
