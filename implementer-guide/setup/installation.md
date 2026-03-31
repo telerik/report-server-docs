@@ -79,7 +79,7 @@ The Control Panel is a small Windows utility that will notify you when a new ver
 
 ### Download Automatically through Progress Control Panel
 
-The best way is to download the new version through your Progress Control Panel from:
+The best way is to download the new version through your Progress Control Panel:
 
 ![Progress Control Panel with the installed and the available to install Progress Telerik products.](../../images/report-server-images/progress-control-panel-outlook.png)
 
