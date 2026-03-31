@@ -97,7 +97,7 @@ It automatically detects the latest version and lets you install it for the prod
 
 1. From there, select the product files you want to download:
 
-	![latest internal build step 3](../../images/report-server-images/rs-download-installation-files.png)
+	![Select the Report Server installation files to download from your account Product Files page.](../../images/report-server-images/rs-download-installation-files.png)
 
 ## See Also
 
