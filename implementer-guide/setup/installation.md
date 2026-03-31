@@ -48,7 +48,9 @@ Installing multiple instances of Report Server will also affect the retrieval of
 
 ## Downloading and Installing
 
-You can download the licensed product version from the [Telerik Control Panel](https://docs.telerik.com/controlpanel/introduction), which you can get from [Your Account](http://www.telerik.com/account).
+You can download the licensed product version from the [Telerik Control Panel](https://docs.telerik.com/controlpanel/introduction), which you can get from [Your Account](http://www.telerik.com/account):
+
+![Download Progress Control Panel from your Progress Telerik Account.](../../images/report-server-images/download-progress-control-panel.png)
 
 The Control Panel is a small Windows utility that will notify you when a new version of the Telerik product(s) you have purchased is available. Once you download the product, run the installer to install it on your machine.
 
@@ -56,49 +58,48 @@ The Control Panel is a small Windows utility that will notify you when a new ver
 
 - The installation can be customized to include SDK examples in the installation folder and enable JSON dynamic compression for the Report Server website in IIS. These options can be selected from the _Customization_ installer page when clicking the **Customize** button.
 
-  The SDK examples show how to implement a [custom login provider]({%slug custom-login-provider%}) and how to use the [Telerik.ReportServer.HttpClient]({%slug report-server-api-client%}) library to programmatically access Report Server assets and control the Report Server engine.
+	The SDK examples show how to implement a [custom login provider](slug:custom-login-provider) and how to use the [Telerik.ReportServer.HttpClient](slug:report-server-api-client) library to programmatically access Report Server assets and control the Report Server engine.
+	The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration](slug:iis-configuration) article for more details or if you plan to do it manually later.
 
-  The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration]({%slug iis-configuration%}) article for more details or if you plan to do it manually later.
+- The installer provides an option to choose whether the website and the Windows Service will be installed in 32-bit or 64-bit mode.
 
-- The installer provides an option to choose whether the website and the Windows service will be installed in 32-bit or 64-bit mode.
-
-  The option is available only on 64-bit OS.
-
-  It sets the option _Enable 32-Bit Applications_ in the website's application pool and registers the corresponding version of the **ServiceAgent** in the Windows Services list.
-
-  This configuration option is useful when the Report Server and its Scheduling service need to work with a specific version of external entities like ODBC drivers without architecture mismatch between the driver and the application.
+	The option is available only on a 64-bit OS.
+	It sets the option _Enable 32-Bit Applications_ in the website's application pool and registers the corresponding version of the **ServiceAgent** in the Windows Services list.
+	This configuration option is useful when the Report Server and its Scheduling service need to work with a specific version of external entities, like ODBC drivers, without an architecture mismatch between the driver and the application.
 
 - Use powershell command [Start-Process](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.3) to install the Report Server silently:
 
-  ```powershell
-  Start-Process -FilePath "msiexec" -Wait -ArgumentList "/I D:\Installs\Telerik_ReportServer_9_2_23_1010_Dev.msi /passive"
-  ```
+	```powershell
+	Start-Process -FilePath "msiexec" -Wait -ArgumentList "/I D:\Installs\Telerik_ReportServer_12_0_26_304_Dev.msi /passive"
+	```
 
-  The above script will install Telerik Report Server version `9.2.23.1010` from the file `D:\Installs\Telerik_ReportServer_9_2_23_1010_Dev.msi`. You need to change the file path to point to the position and version of the MSI installer on your machine.
+	The above script will install Telerik Report Server version `12.0.26.304` from the file `D:\Installs\Telerik_ReportServer_12_0_26_304_Dev.msi`. You need to change the file path to point to the position and version of the MSI installer on your machine.
 
 ## New Versions
 
-The best way is to download the Control Panel from [Your Account](http://www.telerik.com/account/):
+### Download Automatically through Progress Control Panel
 
-![control panel](../../images/report-server-images/control-panel.png)
+The best way is to download the new version through your Progress Control Panel from:
+
+![Progress Control Panel with the installed and the available to install Progress Telerik products.](../../images/report-server-images/progress-control-panel-outlook.png)
 
 It automatically detects the latest version and lets you install it for the products you have access to.
 
-## Other Product Files and Latest Internal Builds
+## Other Product Files and Latest Public Version
 
-1. From [Your Account page](http://www.telerik.com/account/), go to “Products & Subscriptions” and select the product:
+1. From [Your Account page](http://www.telerik.com/account/), go to `Downloads` and select the product:
 
-   ![latest internal build step 1](../../images/report-server-images/latest-internal-build.png)
+	![Select Report Server product from the Downloads option in your Progress Telerik account.](../../images/report-server-images/downloads-in-your-account-rs.png)
 
-1. Hit the "Download" button:
+1. Download the `Latest Public Version` from the corresponding `Download` button, or select another version from the dropdown with the listed available Public Versions below:
 
-   ![latest internal build step 2](../../images/report-server-images/latest-internal-build-2.png)
+	![Download the latest Report Server version or select another available one from the list.](../../images/report-server-images/rs-download-latest-or-other-version.png)
 
-1. From there, select the product file you want to download:
+1. From there, select the product files you want to download:
 
-   ![latest internal build step 3](../../images/report-server-images/latest-internal-build-3.png)
+	![latest internal build step 3](../../images/report-server-images/rs-download-installation-files.png)
 
 ## See Also
 
-- [Upgrade Report Server]({%slug upgrade%})
-- [Run Report Server with Low-Privileged User]({%slug how-to-change-report-server-iis-user%})
+- [Upgrade Report Server](slug:upgrade)
+- [Run Report Server with Low-Privileged User](slug:how-to-change-report-server-iis-user)
