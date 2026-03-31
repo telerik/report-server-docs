@@ -67,7 +67,7 @@ The Control Panel is a small Windows utility that will notify you when a new ver
 	It sets the option _Enable 32-Bit Applications_ in the website's application pool and registers the corresponding version of the **ServiceAgent** in the Windows Services list.
 	This configuration option is useful when the Report Server and its Scheduling service need to work with a specific version of external entities, like ODBC drivers, without an architecture mismatch between the driver and the application.
 
-- Use powershell command [Start-Process](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.3) to install the Report Server silently:
+- Use PowerShell command [Start-Process](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.3) to install the Report Server silently:
 
 	```powershell
 	Start-Process -FilePath "msiexec" -Wait -ArgumentList "/I D:\Installs\Telerik_ReportServer_12_0_26_304_Dev.msi /passive"
