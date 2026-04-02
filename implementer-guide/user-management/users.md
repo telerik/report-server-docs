@@ -43,7 +43,7 @@ Disabling a user will stop their access to the report server assets and will fre
 
 ### Delete User
 
-The [Guest]({%slug guest-user%}) user and the currently logged user cannot be deleted. All other users can be deleted by a user with sufficient permissions. Deleting a user will unlock their reports and will remove the user from all roles they are currently assigned to. Deleting a user will free a CAL for a new user.
+The [Guest](slug:guest-user) user and the currently logged user cannot be deleted. All other users can be deleted by a user with sufficient permissions. Deleting a user will unlock their reports and will remove the user from all roles they are currently assigned to. Deleting a user will free a CAL for a new user.
 
 ### Manage User Permissions
 
@@ -63,8 +63,7 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 - *Modify* - gives an **edit** permission for the selected scope.
 - *Delete* - gives **delete** permission for the selected scope.
 - *Create* - gives **create** permission for the selected scope.
-- *Allow Reading Sub Reports* - gives a **read** permission for the SubReports referencing report definitions in the selected scope. The permission is visible only for the following scopes:
-	+ *Reports in All Categories*
+- *Allow Reading Nested Reports* - gives a **read** permission for the SubReports in other Reports and Reports in Report Books that reference report definitions in the selected scope. The permission is visible only for the following scopes:
 	+ *Reports in Category*
 	+ *Specific Report*
 
@@ -74,8 +73,8 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 
 	**Examples**:
 
-	1. To render *SubReport1* in main report *MainReport1*, the user must have **Read** permission for *SubReport1* or **Allow Reading Sub Reports** for *MainReport1*.
-	1. To render *SubReport2* nested in *SubReport1* nested in *MainReport1*, the user must have **Read** permission for *SubReport2* or **Allow Reading Sub Reports** for *MainReport1* or *SubReport1*.
+	1. To render *SubReport1* in main report *MainReport1*, the user must have **Read** permission for *SubReport1* or **Allow Reading Nested Reports** for *MainReport1*.
+	1. To render *SubReport2* nested in *SubReport1* nested in *MainReport1*, the user must have **Read** permission for *SubReport2* or **Allow Reading Nested Reports** for *MainReport1* or *SubReport1*.
 
 > *Modify* and *Delete* access modes require *Read* access. *Create* access mode **cannot** have a specific scope (e.g. *Specific Report*, *Specific Category*, *Specific Data Connection*).
 
