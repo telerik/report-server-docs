@@ -55,7 +55,7 @@ You can add/remove permissions by clicking on the Manage Permissions button from
 
 You can grant permissions to a user from the **Apply Roles** and **Add Permission** tabs.
 
-The Apply Roles tab allows assigning users to user roles. The user can simultaneously belong to more than one user group. In this way, he/she receives the permissions of the user role.
+The Apply Roles tab allows assigning users to user roles. The user can simultaneously belong to more than one user group. In this way, they receive the permissions of the user role.
 
 The Add Permission tab allows giving specific permissions to users. Each permission has an **Access Mode**, **Scope**, and **Target**:
 
