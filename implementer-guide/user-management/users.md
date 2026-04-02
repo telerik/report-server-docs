@@ -24,9 +24,9 @@ Each user is registered with the following information:
 
 	- at least 6 characters long
 
-	> If a mail (SMTP) server is configured, there is no need to specify a password for the new local user. After saving the new user, an email with a special activation link will be sent to the user's email address. When clicking the link, the user will be taken to a page to set their password, after which they will be redirected to the login page.
+	> If a mail (SMTP) server is configured, there is no need to specify a password for the new local user. After saving the new user, an e-mail with a special activation link will be sent to the user's e-mail address. When clicking the link, the user will be taken to a page to set their password, after which they will be redirected to the login page.
 
-- *Email*
+- *E-mail*
 - *First Name* - available only for local accounts. When creating a Federation user, its names will be populated upon first login using AD FS.
 - *Last Name* - available only for local accounts.
 - *Roles* - optional. You can assign the user to one or more existing user roles.
@@ -35,7 +35,7 @@ Each user is registered with the following information:
 
 You can change the following user settings:
 
-- *Email*
+- *E-mail*
 - *First Name*
 - *Last Name*
 - *Password*
