@@ -17,16 +17,14 @@ position: 200
 Each user is registered with the following information:
 
 - *Authentication Provider* - in case you have set up an external authentication provider (AD FS), a **Federation** entry will be added in the drop-down list. Otherwise, only **Local** is available.
-
 - *Username*
-
 - *Password* - available only for local accounts. By default, the password must conform to the following rules:
 
 	- at least 6 characters long
 
 	> If a mail (SMTP) server is configured, there is no need to specify a password for the new local user. After saving the new user, an e-mail with a special activation link will be sent to the user's e-mail address. When clicking the link, the user will be taken to a page to set their password, after which they will be redirected to the login page.
 
-- *E-mail*
+- *Email*
 - *First Name* - available only for local accounts. When creating a Federation user, its names will be populated upon first login using AD FS.
 - *Last Name* - available only for local accounts.
 - *Roles* - optional. You can assign the user to one or more existing user roles.
@@ -35,7 +33,7 @@ Each user is registered with the following information:
 
 You can change the following user settings:
 
-- *E-mail*
+- *Email*
 - *First Name*
 - *Last Name*
 - *Password*
@@ -65,7 +63,7 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 - *Modify* - gives an **edit** permission for the selected scope.
 - *Delete* - gives **delete** permission for the selected scope.
 - *Create* - gives **create** permission for the selected scope.
-- *Allow Reading Sub Reports* - gives a **read** permission for the SubReports referencing report definitions in the selected scope. The permission is visible only for scopes:
+- *Allow Reading Sub Reports* - gives a **read** permission for the SubReports referencing report definitions in the selected scope. The permission is visible only for the following scopes:
 	+ *Reports in All Categories*
 	+ *Reports in Category*
 	+ *Specific Report*
