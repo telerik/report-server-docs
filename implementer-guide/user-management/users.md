@@ -67,6 +67,8 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 	+ *Reports in Category*
 	+ *Specific Report*
 
+	![The Allow Reading Nested Reports permission in the scope of the Specific Report.]()
+
 	The default behavior is restrictive. If a user lacks **Read** permission for a subreport, the subreport is not rendered.
 
 	When the permission is enabled, the user may render any subreport nested in the allowed scope hierarchy.
