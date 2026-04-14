@@ -22,7 +22,7 @@ Each user is registered with the following information:
 
 	- at least 6 characters long
 
-	> If a mail (SMTP) server is configured, there is no need to specify a password for the new local user. After saving the new user, an e-mail with a special activation link will be sent to the user's e-mail address. When clicking the link, the user will be taken to a page to set their password, after which they will be redirected to the login page.
+	> If a mail (SMTP) server is configured, there is no need to specify a password for the new local user. After saving the new user, an email with a special activation link will be sent to the user's email address. When clicking the link, the user will be taken to a page to set their password, after which they will be redirected to the login page.
 
 - *Email*
 - *First Name* - available only for local accounts. When creating a Federation user, its names will be populated upon first login using AD FS.
@@ -67,7 +67,7 @@ The Add Permission tab allows giving specific permissions to users. Each permiss
 	+ *Reports in Category*
 	+ *Specific Report*
 
-	![The Allow Reading Nested Reports permission in the scope of the Specific Report.]()
+	![The Allow Reading Nested Reports permission in the scope of the Specific Report.](../../images/report-server-images/rs-add-permission-allow-reading-nested-reports.png)
 
 	The default behavior is restrictive. If a user lacks **Read** permission for a subreport, the subreport is not rendered.
 
