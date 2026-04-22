@@ -25,7 +25,7 @@ This is a **BYOL (Bring Your Own License)** offer:
 - Customers purchase a Telerik Report Server license separately from [Progress Software](https://www.telerik.com/purchase/report-server).
 - Azure infrastructure costs (VM, storage, networking) are billed through the customer's Azure subscription, which can be CSP-managed.
 
-A [free trial license](https://www.telerik.com/account/trials) is available for evaluation.
+A [free trial license](https://www.telerik.com/account/trials) is available for evaluation. For licensing terms, see the [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server).
 
 ## Documentation
 
@@ -39,8 +39,3 @@ A [free trial license](https://www.telerik.com/account/trials) is available for 
 Partners in the CSP program are expected to provide tier 1 support to their customers. For issues requiring escalation, submit a ticket through the [Telerik Support Portal](https://www.telerik.com/account/support-tickets).
 
 For sales inquiries, [contact Progress Sales](https://www.telerik.com/contact).
-
-## Additional Resources
-
-- [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
-- [Full Product Documentation]({slug:introduction})
