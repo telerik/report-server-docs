@@ -26,7 +26,7 @@ The MSI installer of the Report Server for the .NET Framework 4.6.2 will suggest
 
 ### Storage Backup
 
-Depending on the changes introduced in the new Report Server versions, their assets storage schema version may be upgraded. This upgrade happens automatically either during the installation process while performing the Storage backup, or when the new Report Server version is started for the first time.
+Depending on the changes introduced in new Report Server versions, the assets storage schema version may be upgraded. This upgrade happens automatically either during the installation process while performing the Storage backup, or when the new Report Server version is started for the first time.
 
 > note The upgraded Storage will not work with previous versions of Telerik Report Server that use an older assets storage schema version.
 
