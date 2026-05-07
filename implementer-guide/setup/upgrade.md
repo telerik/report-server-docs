@@ -38,7 +38,7 @@ To ensure you will be able to use the older Report Server after migrating it to 
 
 You need to back up your own configuration files, as they will be overridden by the installation/upgrade process.
 
-For example, if you have changed the Report Server application configuration file, `/Telerik.ReportServer.Web/Web.config` and/or the Service Agent configuration file `/Services/Telerik.ReportServer.ServiceAgent.exe.config`, you need to backup them before the upgrade and restore them after that.
+For example, if you have changed the Report Server application configuration file, `/Telerik.ReportServer.Web/Web.config` and/or the Service Agent configuration file `/Services/Telerik.ReportServer.ServiceAgent.exe.config`, you need to back them up before the upgrade and restore them after that.
 
 ### IIS Settings
 
