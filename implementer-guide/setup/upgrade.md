@@ -30,7 +30,7 @@ Each Report Server version works with a particular Storage version. Therefore, u
 
 > note The Storage version is updated only when necessary, not with each Report Server version. Two consecutive Report Server versions may have the same Storage version.
 
-To ensure you will be able to downgrade to the older Report Server version, before upgrading, we recommend to backup the Storage using its own, i.e., the older Migration Tool version. 
+To ensure you will be able to downgrade to the older Report Server version, before upgrading, we recommend backing up the Storage using its own, i.e., the older Migration Tool version. 
 
 ### IIS Settings
 
