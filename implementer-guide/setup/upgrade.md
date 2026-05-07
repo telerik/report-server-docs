@@ -22,7 +22,15 @@ The installer has a step that [backs up the assets' storage]({%slug storage-back
 
 ## Before upgrading the Report Server
 
-We advise performing a file backup before upgrading. This is specifically recommended if you have changed the application configuration files `/Telerik.ReportServer.Web/Web.config` and `/Services/Telerik.ReportServer.ServiceAgent.exe.config`
+We advise performing a file backup before upgrading. This is specifically recommended if you have changed the application configuration files `/Telerik.ReportServer.Web/Web.config` and `/Services/Telerik.ReportServer.ServiceAgent.exe.config`.
+
+### Storage Backup
+
+Each Report Server version works with a particular Storage version. Therefore, upgrading the Report Server may involve upgrading the Storage version. The upgraded storage will not work with previous versions of Telerik Report Server.
+
+> note The Storage version is updated only when necessary, not with each Report Server version. Two consequtive Report Server versions may have the same Storage version.
+
+To ensure you will be able to downgrade to the older Report Server version, before upgrading, we recommend to backup the Storage using its own, i.e., the older Migration Tool version. 
 
 ### IIS Settings
 
