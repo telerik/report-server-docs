@@ -26,11 +26,11 @@ We advise performing a file backup before upgrading. This is specifically recomm
 
 ### Storage Backup
 
-Each Report Server version works with a particular Storage version. Therefore, upgrading the Report Server may involve upgrading the Storage version. The upgraded storage will not work with previous versions of Telerik Report Server.
+Each Report Server version works with a particular assets storage schema version. Therefore, upgrading the Report Server may involve upgrading the assets storage schema version. The upgraded storage will not work with previous versions of Telerik Report Server.
 
-> note The Storage version is updated only when necessary, not with each Report Server version. Two consecutive Report Server versions may have the same Storage version.
+> note The assets storage schema version is updated only when necessary, not with each Report Server version. Two consecutive Report Server versions may have the same assets storage schema version.
 
-To ensure you will be able to downgrade to the older Report Server version, before upgrading, we recommend backing up the Storage using its own, i.e., the older Migration Tool version. 
+To ensure you will be able to downgrade to the older Report Server version, before upgrading, we recommend backing up the storage using its own, i.e., the older Migration Tool version.
 
 ### IIS Settings
 
