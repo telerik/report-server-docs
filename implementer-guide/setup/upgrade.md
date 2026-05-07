@@ -22,15 +22,23 @@ The installer has a step that [backs up the assets' storage]({%slug storage-back
 
 ## Before upgrading the Report Server
 
-We advise performing a file backup before upgrading. This is specifically recommended if you have changed the application configuration files `/Telerik.ReportServer.Web/Web.config` and `/Services/Telerik.ReportServer.ServiceAgent.exe.config`.
+The MSI installer of the Report Server for the .NET Framework 4.6.2 will suggest making a storage backup. We recommend this as explained below.
 
 ### Storage Backup
 
-Each Report Server version works with a particular assets storage schema version. Therefore, upgrading the Report Server may involve upgrading the assets storage schema version. The upgraded storage will not work with previous versions of Telerik Report Server.
+Depending on the changes introduced in the new Report Server versions, their assets storage schema version may be upgraded. This upgrade happens automatically either during the installation process while performing the Storage backup, or when the new Report Server version is started for the first time.
+
+> note The upgraded Storage will not work with previous versions of Telerik Report Server that use an older assets storage schema version.
 
 > note The assets storage schema version is updated only when necessary, not with each Report Server version. Two consecutive Report Server versions may have the same assets storage schema version.
 
-To ensure that you can downgrade to the older Report Server version, back up the Storage before upgrading by using the Migration Tool version that matches the pre-upgrade Report Server version.
+To ensure you will be able to use the older Report Server after migrating it to a newer version, back up the Storage before upgrading by using the Migration Tool version that matches the pre-upgrade Report Server version.
+
+### File Backup
+
+You need to back up your own configuration files, as they will be overridden by the installation/upgrade process.
+
+For example, if you have changed the Report Server application configuration file, `/Telerik.ReportServer.Web/Web.config` and/or the Service Agent configuration file `/Services/Telerik.ReportServer.ServiceAgent.exe.config`, you need to backup them before the upgrade and restore them after that.
 
 ### IIS Settings
 
