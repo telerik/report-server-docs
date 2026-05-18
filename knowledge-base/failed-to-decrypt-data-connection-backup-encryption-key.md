@@ -71,6 +71,6 @@ To work around this issue, manually delete the stale encryption key environment 
 
 ## Notes
 
-This issue is specific to IIS-hosted (Windows) installations of the Report Server for .NET. It does not affect the **Report Server for .NET Framework** edition.
+This issue is specific to IIS-hosted (Windows) installations of the Report Server for .NET. It does not affect **Report Server for .NET Framework** installations.
 
 A permanent fix that ensures the installer cleans up stale encryption keys from previous installations is planned for a future release.
