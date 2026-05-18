@@ -58,16 +58,16 @@ To resolve this issue, manually delete the stale encryption key environment vari
 1. Locate and delete the following environment variables:
    - `RS_NET_MainPrivateKey`
    - `RS_NET_BackupPrivateKey`
-1. Run an IIS reset by opening an elevated command prompt and executing:
+1. Run an IIS reset by opening an command prompt with administrator privileges and executing:
 
    ```bash
    iisreset
    ```
 
 1. Open the Report Server in a browser and log in. The application navigates you to the **Override Encryption Keys** page.
-1. Follow the on-screen instructions to reset the encryption keys.
+1. Follow the on-screen instructions to overwrite the encryption keys.
 
-> important After resetting the encryption keys, all previously encrypted data connections must be re-entered because the old encrypted values cannot be decrypted with the new keys.
+> important After overwriting the encryption keys, all previously encrypted data connections must be re-entered because the old encrypted values cannot be decrypted with the new keys.
 
 ## Notes
 
