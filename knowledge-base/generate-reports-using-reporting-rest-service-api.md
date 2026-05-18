@@ -204,7 +204,7 @@ Below is a self-contained example that combines all the steps above. You can pas
 (async function () {
     // ===== Configuration =====
     const serverHost = "http://localhost:81";
-    const reportsApiBase = `${serverHost}/api/reports/reports`;
+    const reportsApiBase = `${serverHost}/api/reports`;
 
     // Authentication - choose one of the following:
     const username = "myUsername";
