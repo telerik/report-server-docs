@@ -28,7 +28,7 @@ res_type: kb
 
 After upgrading or reinstalling the [Report Server for .NET](slug:report-server-net-overview) with a different Windows user account, navigating to the **Data Connections** page results in a `Failed to decrypt` error. The administrator is not redirected to the **Override Encryption Keys** page, even after performing an IIS reset.
 
-The issue occurs when stale encryption key environment variables (`RS_NET_MainPrivateKey` and `RS_NET_BackupPrivateKey`) remain in the default user registry hive (`HKEY_USERS\.DEFAULT`) from a previous installation.
+The issue occurs when stale encryption key environment variables (`RS_NET_MainPrivateKey` and `RS_NET_BackupPrivateKey`) remain in the default user registry hive (`HKEY_USERS\.DEFAULT\Environment`) from a previous installation.
 
 ## Error Message
 
@@ -38,7 +38,7 @@ Failed to decrypt
 
 ## Cause
 
-When the [Report Server for .NET](slug:report-server-net-overview) is first installed under one Windows user account (for example, `LocalSystem`) and later reinstalled or upgraded under a different user account (for example, a dedicated `ReportServerUser`), the encryption key environment variables from the original installation persist in the registry under `Computer\HKEY_USERS\.DEFAULT`.
+When the [Report Server for .NET](slug:report-server-net-overview) is first installed under one Windows user account (for example, `LocalSystem`) and later reinstalled or upgraded under a different user account (for example, a dedicated `ReportServerUser`), the encryption key environment variables from the original installation persist in the registry under `Computer\HKEY_USERS\.DEFAULT\Environment`.
 
 The Report Server application inherits environment variables from the parent process. Because the stale keys from the previous installation exist at the `.DEFAULT` registry level, the application detects them instead of recognizing that the current user is missing valid keys. As a result, the Report Server attempts to decrypt data connections with the outdated keys and fails. The expected redirect to the **Override Encryption Keys** page does not occur because the application does not identify the keys as missing.
 
