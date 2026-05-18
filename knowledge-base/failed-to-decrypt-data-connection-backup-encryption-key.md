@@ -46,7 +46,7 @@ The Report Server application runs with limited permissions and cannot delete th
 
 ## Solution
 
-To work around this issue, manually delete the stale encryption key environment variables from the default user registry hive:
+To resolve this issue, manually delete the stale encryption key environment variables from the default user registry hive:
 
 1. Open **Registry Editor** (`regedit`) on the server machine with administrator privileges.
 1. Navigate to the following registry path:
