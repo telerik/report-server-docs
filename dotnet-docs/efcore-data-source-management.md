@@ -22,13 +22,13 @@ The Report Server for .NET can use custom .NET assemblies containing [Entity Fra
 
 	```json
 	{
-   	"telerikReporting": {
-   		"assemblyReferences": [
-      		{
-      			"name": "MyEfCoreAssembly"
-      		}
-   		]
-   	}
+	   	"telerikReporting": {
+	   		"assemblyReferences": [
+	      		{
+	      			"name": "MyEfCoreAssembly"
+	      		}
+	   		]
+	   	}
 	}
 	```
 
