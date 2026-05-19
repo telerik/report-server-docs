@@ -27,7 +27,7 @@ Once you enable it, you will see the icon in the reports view:
 
 ### Data Connectivity
 
-Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [JSON](https://docs.telerik.com/reporting/jsondatasource-component), [SQL](https://docs.telerik.com/reporting/sqldatasource), [Business Objects](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
+Report Server supports [WebService](https://docs.telerik.com/reporting/webservicedatasource-component), [JSON](https://docs.telerik.com/reporting/jsondatasource-component), [SQL](https://docs.telerik.com/reporting/sqldatasource), [Business Objects](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview), [Entity Framework Core](https://www.telerik.com/products/reporting/documentation/designing-reports/connecting-to-data/data-source-components/entitycoredatasource-component/overview) (only Report Server for .NET) and inline [CSV](https://docs.telerik.com/reporting/csvdatasource-component) data sources.
 
 ### Shared Data Source
 
