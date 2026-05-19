@@ -37,6 +37,7 @@ The Report Server for .NET can use custom .NET assemblies containing [Entity Fra
 	> When the Report Server is upgraded to a newer version, the `appsettings.json` file may be overwritten and any changes applied to it will be lost. It is recommended to perform a file backup before upgrading.
 
 1. Allow user access to the custom EF Core data source — after the assembly is present in the root folder and declared in the configuration file, a read-only data connection entry will be displayed for it in the [Data Connections View](slug:data-connections-management). This data connection entry can be used to control the user access to the assembly via [User Roles](slug:user-roles).
+  <img src="../images/rs-net-images/efcore-permissions.png" alt="Add permission dialog for the EfCoreContext data connection in the User Roles view, with Read access mode selected." width="500px" />
 1. Create a [New Report](slug:new-report).
 1. Create a new [EntityCoreDataSource Component](https://www.telerik.com/products/reporting/documentation/designing-reports/connecting-to-data/data-source-components/entitycoredatasource-component/overview) and follow the EntityCoreDataSource Wizard to select a `DbContext` type, a data-retrieval member, and configure any data source parameters:
 	* [Web Report Designer EntityCoreDataSource Wizard](https://www.telerik.com/products/reporting/documentation/designing-reports/designing-reports/report-designer-tools/web-report-designer/tools/entitycoredatasource-wizard)
