@@ -12,7 +12,7 @@ position: 10
 
 The Report Server for .NET uses [Serilog](https://serilog.net/) to allow writing diagnostic logging information from the server onto a file for easier troubleshooting.
 
-## Setup
+## Setup Report Server Logging
 
 The configuration options for Serilog that would usually be set up through the C# API - [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics), can be configured in two ways:
 
@@ -44,18 +44,18 @@ The `appsettings.json` file of the Report Server Manager for .NET resides in its
 The following configuration settings can be added to that file, at the top level:
 
 ```JSON
-  "Serilog": {
-   "MinimumLevel": "Verbose",
-    "WriteTo": [
-      {
-        "Name": "Console"
-      },
-	  {
-        "Name": "File",
-        "Args": { "path": "Logs/logServerManagerAll.txt" }
-      }
-    ]
-  }
+"Serilog": {
+	"MinimumLevel": "Verbose",
+	"WriteTo": [
+		{
+			"Name": "Console"
+		},
+		{
+			"Name": "File",
+			"Args": { "path": "Logs/logServerManagerAll.txt" }
+		}
+	]
+}
 ```
 
 #### Service Agent
@@ -65,25 +65,34 @@ The Report Server for .NET ServiceAgent's `appsettings.json` file can be found i
 The following configuration settings can be added to that file, at the top level:
 
 ```JSON
-  "Serilog": {
-   "MinimumLevel": "Verbose",
-    "WriteTo": [
-      {
-        "Name": "Console"
-      },
-	  {
-        "Name": "File",
-        "Args": { "path": "Logs/logServiceAgentAll.txt" }
-      }
-    ]
-  }
+"Serilog": {
+	"MinimumLevel": "Verbose",
+	"WriteTo": [
+		{
+			"Name": "Console"
+		},
+		{
+			"Name": "File",
+			"Args": { "path": "Logs/logServiceAgentAll.txt" }
+		}
+	]
+}
 ```
 
 > For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
 
-> note
->
-> To increase Reporting Engine logging verbosity, add a `telerikReporting` section with a `processing` element to the configuration file of the Report Server Manager or Service Agent. See the Reporting documentation on the [processing element](https://www.telerik.com/products/reporting/documentation/doc-output/configure-the-report-engine/processing-element).
+## Setup Reporting Engine Logging
+
+To increase Reporting Engine logging verbosity, add a `telerikReporting` section with a `processing` element to the `appsettings.json` configuration file of the Report Server Manager or Service Agent, as explained in the Reporting documentation on the [processing element](https://www.telerik.com/products/reporting/documentation/doc-output/configure-the-report-engine/processing-element):
+
+```JSON
+"telerikReporting": {
+	"processing": {
+		"traceVerbosity": "Verbose"
+	}
+}
+```
+
 ## See Also
 
 - [Report Server for .NET Introduction]({%slug report-server-net-overview%})
