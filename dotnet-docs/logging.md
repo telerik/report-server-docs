@@ -35,7 +35,7 @@ This requires the default Serilog configuration to exist in the `appsettings.jso
 
 ### Using Configuration Files
 
-Alternatively, you can define the configuration in the `appsettings.json` configuration files of the Report Server for .NET.
+Alternatively, you can define the configurations in the `appsettings.json` configuration files of the Report Server for .NET.
 
 #### Report Server Manager
 
@@ -80,6 +80,8 @@ The following configuration settings can be added to that file, at the top level
 ```
 
 > For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
+
+> Add a `telerikReporting` section with a `processing` element in the configuration file of the Report Server Manager or Service Agent to enhance the verbosity of the Reporting Engine logging as explained in the Reporting article [processing Element](https://www.telerik.com/products/reporting/documentation/doc-output/configure-the-report-engine/processing-element).
 
 ## See Also
 
