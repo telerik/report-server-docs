@@ -81,8 +81,9 @@ The following configuration settings can be added to that file, at the top level
 
 > For more configuration settings, refer to [Serilog Configuration Basics](https://github.com/serilog/serilog/wiki/Configuration-Basics).
 
-> Add a `telerikReporting` section with a `processing` element in the configuration file of the Report Server Manager or Service Agent to enhance the verbosity of the Reporting Engine logging as explained in the Reporting article [processing Element](https://www.telerik.com/products/reporting/documentation/doc-output/configure-the-report-engine/processing-element).
-
+> note
+>
+> To increase Reporting Engine logging verbosity, add a `telerikReporting` section with a `processing` element to the configuration file of the Report Server Manager or Service Agent. See the Reporting documentation on the [processing element](https://www.telerik.com/products/reporting/documentation/doc-output/configure-the-report-engine/processing-element).
 ## See Also
 
 - [Report Server for .NET Introduction]({%slug report-server-net-overview%})
