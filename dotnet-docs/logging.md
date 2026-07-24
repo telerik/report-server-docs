@@ -35,7 +35,7 @@ This requires the default Serilog configuration to exist in the `appsettings.jso
 
 ### Using Configuration Files
 
-Alternatively, you can define the configurations in the `appsettings.json` configuration files of the Report Server for .NET.
+Alternatively, you can define the configuration in the `appsettings.json` configuration files of the Report Server for .NET.
 
 #### Report Server Manager
 
