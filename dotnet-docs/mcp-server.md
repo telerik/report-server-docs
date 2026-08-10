@@ -38,7 +38,7 @@ The MCP server is disabled by default. Enable and configure it from the AI Confi
 - **Base Path** — a configurable path, `/mcp` by default, that controls where the MCP endpoint is mapped. This value is persisted in the Report Server for .NET storage.
 - **Allow MCP tools to work with security-sensitive assets** - Lets MCP tools create, update, and read data connections, which may expose connection strings and credentials. Disabled by default; while disabled, the data connections MCP tool returns an error instead of executing. You must enable MCP Server before allowing MCP tools to work with security-sensitive assets.
 
-![The AI Settings view showing the Enable MCP Server switch, the sensitive-data switch, and the base path field highlighted in the AI Configuration section of the Report Server .NET.](images/mcp-server-ai-settings.png)
+![The AI Settings view showing the Enable MCP Server switch, the sensitive-data switch, and the base path field highlighted in the AI Configuration section of the Report Server .NET.](../images/rs-net-images/mcp-server-ai-settings.png)
 
 > You must restart the Report Server .NET Manager application after enabling the MCP Server or changing its configuration.
 
@@ -52,10 +52,10 @@ The Report Server for .NET web application hosts a stateless Streamable HTTP tra
 
 The MCP server requires a Personal Access Token, separate from the tokens that the [Report Viewers use to preview reports]({%slug rs-net-token-authentication%}):
 
-- **Report preview tokens** - the _Report Viewer_ Personal Access Tokens described in [Using Personal Tokens for Authentication]({%slug rs-net-token-authentication%}). These tokens only grant the Reading permissions of the user they belong to and are meant to be passed from a Report Viewer to authenticate report preview requests.
-- **API access tokens** - the _Report Server_ Personal Access Tokens described in [Using Personal Tokens for Authentication]({%slug rs-net-token-authentication%}).Unlike report preview tokens, API access tokens are scoped for the MCP server (and, more broadly, the Report Server REST API) and can carry the full range of permissions of the user they belong to, including write operations such as creating reports, managing users, or configuring scheduled tasks. Generate an API access token for the user account that an AI agent connects as, then keep it as secret as you would a password.
+- **Report preview tokens** - the _Report Viewer_ Personal Access Tokens described in [Report Viewer Access Token]({%slug rs-net-token-authentication%}#report-viewer-access-token). These tokens only grant the Reading permissions of the user they belong to and are meant to be passed from a Report Viewer to authenticate report preview requests.
+- **API access tokens** - the _Report Server_ Personal Access Tokens described in [Report Server Access Token]({%slug rs-net-token-authentication%}#report-server-access-token).Unlike report preview tokens, API access tokens are scoped for the MCP server (and, more broadly, the Report Server REST API) and can carry the full range of permissions of the user they belong to, including write operations such as creating reports, managing users, or configuring scheduled tasks. Generate an API access token for the user account that an AI agent connects as, then keep it as secret as you would a password.
 
-![The Report Viewer and Report Server Personal Access Tokens in the Report Access Tokens menu for the logged in user.](images/user-personal-access-tokens.png)
+![The Report Viewer and Report Server Personal Access Tokens in the Report Access Tokens menu for the logged in user.](../images/rs-net-images/user-personal-access-tokens.png)
 
 Every request to the in-process HTTP transport must include a valid API access token in the `X-ReportServer-Token` header. The permissions enforced for each MCP tool call match the permissions of the user that the token belongs to.
 

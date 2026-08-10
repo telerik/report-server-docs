@@ -1,12 +1,12 @@
 ---
 title: Using Personal Tokens for Authentication
 page_title: Authenticate with Tokens against the Report Server for .NET
-description: "Learn how to use Personal Tokens to authenticate against the Telerik Report Server for .NET instance."
+description: "Learn how to use Personal Tokens to authenticate against the Telerik Report Server for .NET instance, its REST API, and its MCP Server."
 slug: rs-net-token-authentication
-tags: report, server, dotnet, personal, token, authenticate
+tags: report, server, dotnet, personal, token, authenticate, mcp, rest, api
 published: True
 position: 3
-tag: new
+tag: updated
 ---
 
 <style>
@@ -23,34 +23,51 @@ tag: new
 
 # Configuring the Report Server for .NET for Authentication with Personal Tokens
 
-Starting with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1111), Telerik Report Server for .NET enhances security by letting the [Users]({%slug users%}) create Personal Tokens.
+Telerik Report Server for .NET enhances security by letting the [Users]({%slug users%}) create Personal Tokens.
 
 The Personal Tokens follow the JWT Token structure. Each user may have multiple Personal Tokens. The [Guest User]({%slug guest-user%}) may also keep Personal Tokens added by the admin users.
 
-The Personal Tokens may be passed instead of user/password credentials from the Report Viewers for authentication against the Report Server for .NET. The Report Viewers expose a dedicated callback function `getPersonalAccessToken` for this purpose, leaving the responsibility for fetching and returning the Token to the developer.
+In the rest of the article, we will explain:
+
+- how to create and add custom Personal Tokens, letting Users connect to the Report Server for .NET remotely, or authenticate against its REST API and [MCP Server]({%slug rs-net-mcp-server%});
+- how the short-lived tokens, `accessToken` and `refreshToken` are used to keep the communication between the viewer and the Report Server for .NET;
+- how to add and use Tokens from the Guest User account;
+- how an authenticated user may share reports with the outside world.
+
+## Types of Personal Access Tokens
+
+There are two types of Personal Access Tokens exposed by the Report Server for .NET:
+
+* Report Viewer Access Token, which grants only read access to reports for preview purposes.
+* Report Server Access Token, which grants access to the Report Server for .NET REST API and [RS.NET MCP Server]({%slug rs-net-mcp-server%}).
+
+### Report Viewer Access Token
+
+The Report Viewer Personal Tokens introduced with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1111), may be passed instead of user/password credentials from the Report Viewers for authentication against the Report Server for .NET. The Report Viewers expose a dedicated callback function `getPersonalAccessToken` for this purpose, leaving the responsibility for fetching and returning the Token to the developer.
 
 See the list of viewers supporting the Token authentication in the [Characteristics and Limitations](#characteristics-and-limitations) section.
 
 > The Report Viewers can still connect to the Report Server for .NET through the username/password, like in the Report Server for .NET Framework.
 
-In the rest of the article, we will explain:
+### Report Server Access Token
 
-- how to create and add custom Personal Tokens, letting Users connect to the Report Server for .NET remotely;
-- how the short-lived tokens, `accessToken` and `refreshToken` are used to keep the communication between the viewer and the Report Server for .NET;
-- how to add and use Tokens from the Guest User account;
-- how an authenticated user may share reports with the outside world.
+The Report Server Personal Access Tokens, also referred to as API access tokens, were introduced with [2026 Q3(12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-12-2-26-812). They are scoped for the Report Server for .NET REST API and the [MCP Server]({%slug rs-net-mcp-server%}). A Report Server Access Token carries the full range of permissions of the user it belongs to, including write operations such as creating reports, managing users, or configuring scheduled tasks.
+
+> Report Server Access Tokens cannot be used to authenticate against the Report Viewers. Use a Report Viewer Access Token for that purpose.
 
 ## Mechanism
 
-All Report Server Users may create and add Tokens to their accounts. The Tokens may be used to connect to the Report Server for .NET from a Report Viewer:
+All Report Server Users may create and add Tokens to their accounts. The Tokens may be used to connect to the Report Server for .NET from a Report Viewer, or to access the Report Server REST API or [MCP Server]({%slug rs-net-mcp-server%}):
 
 ![Add a new personal access token to the logged-in user.](../images/rs-net-images/rs-net-token-add-to-user.png)
 
-> Each Personal Token may be used to authenticate remotely against the Report Server for .NET with the Reading permissions of the corresponding User.
+> Each Report Viewer Personal Token may be used to authenticate remotely against the Report Server for .NET with the Reading permissions of the corresponding User.
+> Each Report Server Personal Token may be used to authenticate against the Report Server for .NET REST API or MCP Server with all the permissions of the corresponding User.
 
 The 'Report Access Tokens' view of the Report Server Manager shows the main properties of the Personal Token:
 
 - The Personal Token _Name_
+- The Personal Token _API Scope_ — shows whether the Personal Token is of the _Report Viewer_ or _Report Server_ type
 - When was the Personal Token _Created_
 - When the Personal Token _Expires_
 - When was the Personal Token _Last Used_
@@ -59,9 +76,9 @@ The 'Report Access Tokens' view of the Report Server Manager shows the main prop
 
 The view also lets you create a new Personal Token through a button:
 
-![The view for creating a new personal access token for the logged-in user.](../images/rs-net-images/rs-net-token-view-create-access-token.png)
+![The view for creating a new personal access token for the logged-in user.](../images/rs-net-images/user-personal-access-tokens.png)
 
-Each Personal Token has an expiration time selected by the User while creating it:
+Each Personal Token has a Name, API Scope, and an Expiration time selected by the User while creating it:
 
 ![Create a new personal access token for the logged-in user and select an expiration time from the available options (7-365 days).](../images/rs-net-images/rs-net-token-create-access-token.png)
 
@@ -90,6 +107,8 @@ The life of the short-lived tokens is sustained automatically, through the `refr
 
 The expiration of both short-lived tokens would also result in an automatic extra `PersonalToken` request to obtain a new short-lived tokens couple to continue the communication seamlessly.
 
+> The short-lived `accessToken` and `refreshToken` exchange described above applies to the Report Viewers and to the Report Server REST API. When a Report Server Access Token is used to authenticate against the [MCP Server]({%slug rs-net-mcp-server%}), the token is sent directly in the `X-ReportServer-Token` request header on every call, with no exchange for short-lived tokens.
+
 The existing Personal Tokens may be disabled and deleted by the user. In this case, all the short-lived token couples created by this Personal Token become immediately invalid:
 
 - When a User is disabled, all their personal access tokens are immediately disabled as well. Enabling the User doesn't enable their Personal Tokens automatically. The user has to do this manually.
@@ -97,7 +116,7 @@ The existing Personal Tokens may be disabled and deleted by the user. In this ca
 
 ## Guest User
 
-The Report Viewers may use the Guest User to connect to the Report Server for .NET only through a Personal Token already assigned to the Guest User. The users of the Report Server for .NET with administrative permissions can create Personal Tokens for the Guest User through the [User Management]({%slug users%}) view:
+The Report Viewers may use the Guest User to connect to the Report Server for .NET only through a Report Viewer Personal Token already assigned to the Guest User. The users of the Report Server for .NET with administrative permissions can create Personal Tokens for the Guest User through the [User Management]({%slug users%}) view:
 
 ![Guest User in the Report Server for .NET User Management view with the Access Tokens button.](../images/rs-net-images/rs-net-token-guest-user-add-token.png)
 
@@ -127,22 +146,33 @@ The autogenerated Personal Token is added to the Guest Users' Personal Access To
 
 ## Characteristics and Limitations
 
+### Report Viewer Personal Tokens
+
 - Each Personal Token grants the Reading permissions of the User it belongs to.
 - The Personal Tokens are restricted to be used by Report Viewers for authentication against the Report Server for .NET.
 - The Report Viewers that support the Personal Token authentication are:
-  - [HTML5 Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/html5-report-viewer/overview)
-  - [Native Blazor Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/native-blazor-report-viewer/overview)
-  - [Blazor Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/blazor-report-viewer/overview)
-  - [Native Angular Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/native-angular-report-viewer/overview)
-  - [Angular Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/angular-report-viewer/angular-report-viewer-overview)
-  - [React Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/react-report-viewer/react-report-viewer-overview)
+	- [HTML5 Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/html5-report-viewer/overview)
+	- [Native Blazor Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/native-blazor-report-viewer/overview)
+	- [Blazor Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/blazor-report-viewer/overview)
+	- [Native Angular Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/native-angular-report-viewer/overview)
+	- [Angular Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/angular-report-viewer/angular-report-viewer-overview)
+	- [React Report Viewer](https://docs.telerik.com/reporting/embedding-reports/display-reports-in-applications/web-application/react-report-viewer/react-report-viewer-overview)
 
 - The Personal Access Tokens don't hold information about the user permissions. This information is obtained server-side after resolving who the Personal Token belongs to.
 - The Personal Access Tokens hold information that lets users authenticated with them only read reports.
 - If you reinstall RS.NET without removing the storage or migrate the storage from one RS.NET to another the existing Personal Tokens will stop working because they are signed with a different key. The Personal Tokens will still be visible in the UI as they exist in the storage. This behavior will be improved.
+
+### Report Server Personal Tokens
+
+- Each Personal Token grants the full range of permissions of the User it belongs to, including write operations.
+- The Personal Tokens are restricted to be used against the Report Server for .NET REST API and the [MCP Server]({%slug rs-net-mcp-server%}). They cannot be used to authenticate against the Report Viewers.
+- When used against the MCP Server, the Personal Token is sent directly in the `X-ReportServer-Token` request header, with no exchange for short-lived `accessToken` and `refreshToken` values.
+- The Guest User cannot be issued Report Server Personal Tokens. Only the Report Viewer Personal Tokens described above are available for the Guest User.
+- If you reinstall RS.NET without removing the storage or migrate the storage from one RS.NET to another, the existing Personal Tokens will stop working because they are signed with a different key. The Personal Tokens will still be visible in the UI as they exist in the storage. This behavior will be improved.
 
 ## See Also
 
 - [Report Server for .NET Overview]({%slug report-server-net-overview%})
 - [Report Server Users]({%slug users%})
 - [Guest User]({%slug guest-user%})
+- [MCP Server]({%slug rs-net-mcp-server%})
