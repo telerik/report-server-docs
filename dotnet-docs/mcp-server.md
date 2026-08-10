@@ -11,7 +11,7 @@ position: 4
 
 # Configuring the Report Server for .NET MCP Server
 
-Starting with 2026 Q3 (12.2.26.812)[https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-(12-2-26-812)] release version, the Telerik Report Server for .NET exposes a Model Context Protocol (MCP) server.
+Starting with [2026 Q3 (12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-(12-2-26-812)) release version, the Telerik Report Server for .NET exposes a Model Context Protocol (MCP) server.
 
 ## Overview
 
