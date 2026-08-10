@@ -16,8 +16,9 @@ position: 850
 
 ## Encryption
 
-Introduced with 2024 Q4 (10.3.24.1112) for Report Server for .NET Framework.
-Introduced with 2025 Q1 (11.0.25.211) for Report Server for .NET.
+Introduced with [2024 Q4 (10.3.24.1112)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q4-10-3-24-1112) for Report Server for .NET Framework.
+
+Introduced with [2025 Q1 (11.0.25.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q1-11-0-25-211) for Report Server for .NET.
 
 The sensitive assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. Now the encryption functionality is leveraged to use industry-standard encryption routines. The encryption algorithms use a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
 
@@ -25,7 +26,7 @@ The sensitive assets are stored in the [Report Server Storage]({%slug storage-se
 
 To enable the enhanced encryption functionality, the administrator must download both _Main_ and _Backup_ private keys and type `Confirm` (case insensitive) in the input field just above the __Complete__ button to validate that the keys are safely stored. We strongly recommend storing the encryption private keys securely, for example, in a key vault.
 
-When the button _Complete_ is pressed, the existing sensitive assets will be securely encrypted and the encryption keys will be stored as environment variables for the user, who is used to run the Report Server and Report Server ServiceAgent.
+When the _Complete_ button is pressed, the existing sensitive assets will be securely encrypted, and the encryption keys will be stored as environment variables for the user who runs the Report Server and the Report Server ServiceAgent.
 
 The administrator can generate a new pair of encryption keys through the `RESET ENCRYPTION KEYS` or upload a specific pair of encryption keys through the `OVERWRITE ENCRYPTION KEYS` buttons in the __Configuration__ page / __Security__ tab:
 
@@ -45,7 +46,7 @@ Starting with version 2024 Q4 (10.3.24.1112) for Report Server for .NET Framewor
 
 When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin user of the Report Server may choose to encrypt the Storage using the strengthened encryption algorithm (recommended).
 
-If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights is logged into the [Report Server Manager]({%slug search%}):
+If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({%slug search%}):
 
 ![The message reminding the administrator to enable encryption in the Report Server.](../../images/report-server-images/security-enable-encryption-message.png)
 
@@ -55,7 +56,7 @@ Introduced with [2024 Q3 (10.2.24.806)](https://www.telerik.com/support/whats-ne
 
 Rate limiting is a technique used to control the rate of incoming requests to an API. It sets limits on the number of requests that can be made by an IP address to a specific anonymous endpoint within a defined time period (window). The rate limiter is applied only to non-authenticated users. The Guest special account is not affected by the rate limiter.
 
-When the client has exhausted the number of requests allowed, a 409 "Conflict" response with "The endpoint "{endpointName}" is currently not accessible." message is returned from the server.
+When the client has exhausted the number of requests allowed, a 409 `Conflict` response with the message `The endpoint "{endpointName}" is currently not accessible.` is returned from the server.
 
 ### Enable rate limiter
 
