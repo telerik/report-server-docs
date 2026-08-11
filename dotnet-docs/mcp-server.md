@@ -107,7 +107,7 @@ The MCP server exposes consolidated, multi-operation tools rather than a single 
 | `manage_report` | List, get, create, update, lock and unlock, shelve, publish, and view revisions of reports. |
 | `manage_document` | Generate documents on demand. Document generation is asynchronous: `Create` starts rendering, `GetStatus` is polled for progress, and `Get` downloads the base64-encoded content once rendering completes. This tool requires the Report Server REST API v3 surface. |
 | `manage_data_connection` | List, get, create, update, and delete data connections and their providers. |
-| `manage_user` | List, get, update, enable and disable local and federation users. |
+| `manage_user` | List, get, update, enable, and disable local and federation users. |
 | `manage_role` | List, get, create, update, and delete roles, and manage role membership. |
 | `manage_permission` | List, add, and delete report and category permissions for users and roles. |
 | `manage_scheduled_task` | List, get, create, update, execute, and delete scheduled tasks and their executions. |
@@ -128,4 +128,4 @@ The following capabilities are not available in the current version of the MCP s
 
 - [Report Server for .NET Introduction]({%slug report-server-net-overview%})
 - [Using Personal Tokens for Authentication]({%slug rs-net-token-authentication%})
-- [REST API V3](dotnet-docs/rest-api/v3/api-reference)
+- [REST API V3](/dotnet-docs/rest-api/v3/api-reference)
