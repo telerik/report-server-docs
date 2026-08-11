@@ -43,6 +43,12 @@ meta:
   dotnet-docs/entra-id:
     position: 3
     title: "Using Microsoft Entra ID"
+  dotnet-docs/rest-api:
+    position: 4
+    title: "REST API"
+  dotnet-docs/rest-api/v3:
+    position: 3
+    title: "V3"
   licensing:
     position: 3
     title: "Licensing"
