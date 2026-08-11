@@ -1,36 +1,36 @@
 ---
-title: Report Designer
-page_title: Report Designer
-description: Report Designer
+title: Standalone Report Designer
+page_title: Standalone Report Designer
+description: Standalone Report Designer in Telerik Report Server
 slug: report-designer
 tags: report,designer
 published: true
 position: 3
 ---
 
-# Report Designer
+# Standalone Report Designer
 
-The Report Designer is a report authoring tool. When you design a report, you specify where to get the data, which data to get, and how to display the data.
+The Standalone Report Designer is a report authoring tool. When you design a report, you specify where to get the data, which data to get, and how to display the data.
 
 When you run the report, the report generation engine takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the final report document.
 
-You can preview these documents in Report Designer, or you can publish your report to Report Server, where others can run it.
+You can preview these documents in Standalone Report Designer, or you can publish your report to Report Server, where others can run it.
 
 ## Access
 
-The Report Designer tool can be accessed from the Report Server web management application upon new report or edit report action. If the web browser agent supports the ClickOnce deployment technology (built-in for IE and extension for other browsers), the tool gets installed on the client machine. Otherwise, the web application will provide a link to download and run the tool manually.
+The Standalone Report Designer tool can be accessed from the Report Server web management application upon new report or edit report action. If the web browser agent supports the ClickOnce deployment technology (built-in for IE and extension for other browsers), the tool gets installed on the client machine. Otherwise, the web application will provide a link to download and run the tool manually.
 
 In the first case, the user will get the subsequent tool updates handled by the ClickOnce technology, and in the latter, this should be handled by the user (re-download a fresh version of the tool).
 
 ## Schema Compatibility
 
-The supported report definitions format eventually changes with the new versions of the Report Server product. The version of the report definition is referred as [Schema version](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/xml-report-definition#xml-schema-versioning).
+The supported report definitions format eventually changes with the new versions of the Telerik Report Server product. The version of the report definition is referred as [Schema version](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/xml-report-definition#xml-schema-versioning).
 
-The definition schema version of a particular report stored on the server gets updated upon editing with a newer Report Designer. However, no Report Designer can be used having a newer schema version than the one supported by the Report Server.
+The definition schema version of a particular report stored on the server gets updated upon editing with a newer Standalone Report Designer. However, no Standalone Report Designer can be used having a newer schema version than the one supported by the Report Server.
 
-This rule gets enforced by the Server and Designer negotiation logic so that the Server can actually render the uploaded report definition. The best practice is to always use the Report Designer coming with the current version of the Report Server product.
+This rule gets enforced by the Server and Designer negotiation logic so that the Server can actually render the uploaded report definition. The best practice is to always use the Standalone Report Designer coming with the current version of the Report Server product.
 
-## Report Designer Localization with ClickOnce Deployment
+## Standalone Report Designer Localization with ClickOnce Deployment
 
 Telerik Report Server supports localization of the Standalone Report Designer when used with **ClickOnce** deployment.
 
