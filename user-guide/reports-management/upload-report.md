@@ -10,9 +10,9 @@ position: 120
 
 # Upload Report
 
-Upload an existing report definition from the file system. When uploading a report you should select the report definition in the ZIP-based `TRDP`, XML-based `TRDX`, or JSON-based `TRDJ` format. For ReportBook definition select `TRBP` file. Next specify the report's __title__ and select the report's __category__. All the fields are mandatory except the __description__ field.
+Upload an existing report definition from the file system. When uploading a report, select the report definition in the ZIP-based `TRDP`, XML-based `TRDX`, or JSON-based `TRDJ` format. For ReportBook definition select `TRBP` file. Next, specify the report's __title__ and select the report's __category__. All the fields are mandatory except the __description__ field.
 
-> The `TRDJ` format is available from [Telerik Report Server 2026 Q3 (12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-(12-2-26-812)) release.
+> The `TRDJ` format is available starting with the [Telerik Report Server 2026 Q3 (12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-(12-2-26-812)) release.
 
 ![upload report](../../images/report-server-images/reports-management/upload-report.png)
 
