@@ -43,7 +43,7 @@ There are two types of Personal Access Tokens exposed by the Report Server for .
 
 ### Report Viewer Access Token
 
-The Report Viewer Personal Tokens introduced with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-11-3-25-1111), may be passed instead of user/password credentials from the Report Viewers for authentication against the Report Server for .NET. The Report Viewers expose a dedicated callback function `getPersonalAccessToken` for this purpose, leaving the responsibility for fetching and returning the Token to the developer.
+The Report Viewer Personal Tokens introduced with [2025 Q4(11.3.25.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q4-(11-3-25-1111)), may be passed instead of user/password credentials from the Report Viewers for authentication against the Report Server for .NET. The Report Viewers expose a dedicated callback function `getPersonalAccessToken` for this purpose, leaving the responsibility for fetching and returning the Token to the developer.
 
 See the list of viewers supporting the Token authentication in the [Characteristics and Limitations](#characteristics-and-limitations) section.
 
@@ -51,7 +51,7 @@ See the list of viewers supporting the Token authentication in the [Characterist
 
 ### Report Server Access Token
 
-The Report Server Personal Access Tokens, also referred to as API access tokens, were introduced with [2026 Q3(12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q3-12-2-26-812). They are scoped for the Report Server for .NET REST API and the [MCP Server]({%slug rs-net-mcp-server%}). A Report Server Access Token carries the full range of permissions of the user it belongs to, including write operations such as creating reports, managing users, or configuring scheduled tasks.
+The Report Server Personal Access Tokens, also referred to as API access tokens, were introduced with [2026 Q3(12.2.26.812)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-(2026-q3-12-2-26-812)). They are scoped for the Report Server for .NET REST API and the [MCP Server]({%slug rs-net-mcp-server%}). A Report Server Access Token carries the full range of permissions of the user it belongs to, including write operations such as creating reports, managing users, or configuring scheduled tasks.
 
 > Report Server Access Tokens cannot be used to authenticate against the Report Viewers. Use a Report Viewer Access Token for that purpose.
 
