@@ -182,7 +182,7 @@ To begin, we'll add the Report Server Manager app and the SQL Server app to the 
 
 You're done with setting up the Report Server Manager app! Now, it's time to set up and configure the Report Server Agent app.
 
-### Step 3 - Creating a New Report Server Agent
+### Step 3 - Create a New Service Agent
 
 Now that the stack is running again, let's set up a new agent.
 
@@ -190,7 +190,7 @@ Now that the stack is running again, let's set up a new agent.
 
 1. In the web browser, log into the Report Server Manager (e.g. [http://localhost:82](http://localhost:82)).
 1. Open the **Configuration** page.
-1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
+1. Click on the **SERVICE AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.
 1. In the **Configure New Agent** pop-up window, enter the URL of the Report Server Manager app (e.g. [http://localhost:82](http://localhost:82)):
 
    ![Configuring a new Server Agent in the Report Server for .NET - Step 1](../../images/rs-net-images/configure-new-agent-step1.png)
