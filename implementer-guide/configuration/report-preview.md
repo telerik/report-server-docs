@@ -1,7 +1,7 @@
 ---
 title: Report Preview
 page_title: Report Preview
-description: Report Preview Settings
+description: "Configure report preview parameter editors, export options, and the page area background image in Telerik Report Server."
 slug: report-preview
 tags: Report Preview,settings
 published: True
@@ -10,17 +10,29 @@ position: 800
 
 # Report Preview
 
-The report preview settings view enables Report Server customers to modify Telerik Report Viewer options in Preview view.
+Use the Report Preview settings to choose parameter editor types, enable export options, and upload a page area background image.
 
-## Parameters Area options
+**Report Preview Settings**
 
-The parameters area section allows you to set single and multi-select report parameters' editor type. The available values for both are ListView and ComboBox. The ListView is the default option. It represents a [Kendo UI ListView](https://docs.telerik.com/kendo-ui/api/javascript/ui/listview) widget.
+![The Report Preview settings page shows the parameter editor choices, the export options checkbox, and the page area background image control.](../../images/report-server-images/report-preview-settings.png)
 
-The ComboBox has two different representations of the Telerik Report Viewer for both editors:
-* Single select editor - it is rendered as a [Kendo UI ComboBox](https://docs.telerik.com/kendo-ui/api/javascript/ui/combobox) widget.
+## Parameters Area Options
 
-* Multi-select editor - it is rendered as a [Kendo UI MultiSelect](https://docs.telerik.com/kendo-ui/api/javascript/ui/multiselect) widget
+Choose **ListView** or **ComboBox** as the editor type for single-select and multi-select report parameters.
 
-## Page Area options
+- **ListView** is the default and uses the [Kendo UI ListView](https://docs.telerik.com/kendo-ui/api/javascript/ui/listview) widget.
+- **ComboBox** uses the [Kendo UI ComboBox](https://docs.telerik.com/kendo-ui/api/javascript/ui/combobox) for single-select parameters and the [Kendo UI MultiSelect](https://docs.telerik.com/kendo-ui/api/javascript/ui/multiselect) for multi-select parameters.
 
-The page area section allows you to upload an image that will be used as a background image in the Telerik Report Viewer Page area. The image should be in PNG, GIF, or JPG file format. It is used only when the parameter values are missing or invalid.
+## Export Settings
+
+The **Allow customizing the export options** setting is `disabled` by default.
+
+To enable it, select the checkbox and then select **Save Changes**. Report Server then includes rendering-extension settings in the document information it sends to the Report Viewer.
+
+Users can configure available settings in the [Export Options dialog](https://www.telerik.com/products/reporting/documentation/embedding-reports/display-reports-in-applications/web-application/web-report-viewers-export-options) before they export a report. Their export-option changes apply only during the current browser session and do not change server-side rendering defaults.
+
+When this setting is cleared, Report Server does not send rendering-extension settings to the viewer. Users can still export reports directly, but they cannot customize device settings in the viewer.
+
+## Page Area Options
+
+Upload a PNG, GIF, or JPG image to use as a background in the Telerik Report Viewer page area. Report Server displays the image only when parameter values are missing or invalid.
