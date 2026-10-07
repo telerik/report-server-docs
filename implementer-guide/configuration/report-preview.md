@@ -3,16 +3,16 @@ title: Report Preview
 page_title: Report Preview
 description: "Configure report preview parameter editors, export options, and the page area background image in Telerik Report Server."
 slug: report-preview
-tags: Report Preview,settings
+tags: Report Preview, settings
 published: True
 position: 800
 ---
 
 # Report Preview
 
-Use the Report Preview settings to choose parameter editor types, enable export options, and upload a page area background image.
+Use the Report Preview settings to choose parameter editor types, enable export options, and upload a page-area background image.
 
-**Report Preview Settings**
+<p style="text-align: center;"><strong>Report Preview Settings</strong></p>
 
 ![The Report Preview settings page shows the parameter editor choices, the export options checkbox, and the page area background image control.](../../images/report-server-images/report-preview-settings.png)
 
