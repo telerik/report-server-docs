@@ -49,6 +49,23 @@ When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin
 If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({%slug search%}):
 
 ![The message reminding the administrator to enable encryption in the Report Server.](../../images/report-server-images/security-enable-encryption-message.png)
+## Server URL
+
+Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
+
+Open **Configuration > Security** and set **Server URL** to the public address that users use to open Report Server. Include any virtual directory or reverse proxy path.
+
+![The Server URL page of the Report Server Configuration with the buttons to complete or skip.](../../images/report-server-images/security-configure-server-url.png)
+
+Report Server uses this URL to build links in account activation, password reset, and scheduled task emails. Until you set the URL, you cannot create users or reset passwords. Proper warning messages will be displayed to the users.
+
+To use the same URL across all instances in a web farm, set the `RS_ServerUrl` environment variable. It overrides the value on this page and requires a restart. You cannot change the URL on this page while the variable is set.
+
+When you save a new Server URL, Report Server also replaces the URL on the **Configuration > Webhooks** tab. To use a different URL for webhook notifications, set it on the Webhooks tab after you save the main URL. On existing installations, re-enter a custom Webhooks URL after changing the main URL if the two URLs differ.
+
+If you skip the Server URL configuration, the admin will start seeing the following warning:
+
+![The warning shown to the Report Server admin when the Server URL is not set.](../../images/report-server-images/server-url-unset-admin-warning.png)
 
 ## Rate Limiter
 
@@ -69,3 +86,9 @@ Specifies the time window in milliseconds that takes in the requests. It must be
 ### Permit Limit
 
 The maximum permitted number of requests that can be allowed in a time window. It must be set to a value greater than 0. By default, the value is set to `1`.
+
+## See Also
+
+The following article provides more information:
+
+- [Webhooks configuration]({%slug webhooks%})
