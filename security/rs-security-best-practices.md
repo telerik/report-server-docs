@@ -21,6 +21,7 @@ Following the recommendations in this section is the responsibility of the imple
 * CORS is disabled by default. Keep the [CORS]({%slug cors%}) disabled if possible; or enable CORS only for trusted hosts.
 * Configure the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your sensitive assets like connection strings and mail settings safer.
 * Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to restrict the network traffic and prevent malicious agents that can exhaust system resources by conducting Denial-of-Service attacks.
+* Enable **Deny shared write access to resources for users in non-administrative roles** under **Configuration** > **Designer** > **Web Report Designer**. Introduced in [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)), this setting is disabled by default in both Report Server variants. Enable it to prevent non-administrative users from modifying shared assets with another recorded creator. Assets without a recorded creator remain writable under the existing access rules, and read access does not change. For the complete rules and configuration steps, see [Designer settings]({%slug designer%}#web-report-designer).
 
 ## Working with Report Server Assets
 
@@ -46,9 +47,27 @@ The admin user and the users with sufficient permissions may control access to a
 * [Scheduled Tasks Management]({%slug tasks-management%})
 * [Data Alerts Management]({%slug alerts-management%})
 
+## Restricting Access to External Resources
+
+Telerik Reporting introduced `IStrictResourceResolver` in the [2026 Q4 (20.3.26.1111)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2026-q4-(20-3-26-1111)) release. Configure your implementation in both Report Server for .NET Framework and Report Server for .NET to apply your application's resource rules. Telerik does not provide a ready-to-use public implementation.
+
+The existing `IResourceResolver` handles selected references, including relative image paths. Absolute image references and resources such as map tiles do not all pass through it. The strict interface covers external images, CSV/JSON sources, shapefiles, stylesheets, and map resources across relative paths, absolute paths, UNC paths, and URLs.
+
+Validate each reference before returning resource bytes or an approved location. Return `null` to deny access without fallback to the original location. Keep report-path validation enabled; the interface does not define your resource policy.
+
+Deploy the resolver DLL to the web application and each service agent that executes reports. Register its type through `typeReferences` or its assembly through `assemblyReferences`, and select the resolver through `processing.resourceResolver` with the `custom` provider. Keep type validation enabled.
+
+Use `TelerikReporting.config` for Framework hosts and `config\TelerikReporting.json` for .NET hosts. Configure both live report execution and scheduled tasks/data alerts, then restart the corresponding applications.
+
+For deployment paths, XML/JSON examples, and the linked sample, refer to [Restricting Access to External Resources]({%slug configure-the-report-engine%}#restricting-access-to-external-resources).
+
 ## Extending the Reporting Engine
 
-Telerik Report Server lets you extend its built-in Reporting functionality with custom code, for example by introducing [Custom User Functions](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/extending-expressions/user-functions), [Custom Aggregate Functions](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/extending-expressions/user-aggregate-functions), [Event Handlers](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/using-event-handlers-in-srd#add-event-handlers-to-reports-created-with-the-standalone-report-designer) and [ObjectDataSources](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview). The Reporting Engine invokes the custom functionality with reflection. The allowed assemblies should be whitelisted in the configuration file _TelerikReporting.config_ of the Report Server application as explained in the articles [assemblyReferences Element](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/assemblyreferences-element), [TypeReferences](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typereferences-element), and [typeValidation](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typevalidation-element). The entire responsibility for registering the custom assemblies and the security of their code is delegated to the developer.
+Telerik Report Server lets you extend its built-in Reporting functionality with custom code, for example by introducing [Custom User Functions](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/extending-expressions/user-functions), [Custom Aggregate Functions](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/extending-expressions/user-aggregate-functions), [Event Handlers](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/using-event-handlers-in-srd#add-event-handlers-to-reports-created-with-the-standalone-report-designer) and [ObjectDataSources](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview).
+
+The Reporting Engine invokes custom functionality through reflection. Register trusted types or assemblies in `TelerikReporting.config` for Framework hosts or `config\TelerikReporting.json` for .NET hosts. Configure both the web application and the relevant service agents.
+
+For details, refer to [assemblyReferences Element](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/assemblyreferences-element), [TypeReferences](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typereferences-element), and [typeValidation](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typevalidation-element). The developer is responsible for the custom code and its registration.
 
 Avoid the [Unsafe Code](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/unsafe-code) in your ObjectDataSource/User Function/Event Handlers projects and their references.
 
