@@ -59,7 +59,7 @@ Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/s
 
 Open **Configuration > Security** and set **Server URL** to the public address that users use to open Report Server. Include any virtual directory or reverse proxy path.
 
-![The Server URL page of the Report Server Configuration with the buttons to complete or skip. ><](../../images/report-server-images/security-configure-server-url.png)
+<img src="../../images/report-server-images/security-configure-server-url.png" alt="The Server URL page of the Report Server Configuration with the buttons to complete or skip. ><" style="width: 600px;" />
 
 Report Server uses this URL to build links in account activation, password reset, and scheduled task emails. Until you set the URL, you cannot create users or reset passwords. Proper warning messages will be displayed to the users.
 
