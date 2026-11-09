@@ -52,7 +52,7 @@ When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin
 
 If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({%slug search%}):
 
-![The message reminding the administrator to enable encryption in the Report Server. ><](../../images/report-server-images/security-enable-encryption-message.png)
+<img src="../../images/report-server-images/security-enable-encryption-message.png" alt="The message reminding the administrator to enable encryption in the Report Server. ><" style="width: 800px;" />
 ## Server URL
 
 Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
@@ -69,7 +69,7 @@ When you save a new Server URL, Report Server also replaces the URL on the **Con
 
 If you skip the Server URL configuration, the admin will start seeing the following warning:
 
-![The warning shown to the Report Server admin when the Server URL is not set. ><](../../images/report-server-images/server-url-unset-admin-warning.png)
+<img src="../../images/report-server-images/server-url-unset-admin-warning.png" alt="The warning shown to the Report Server admin when the Server URL is not set. ><" style="width: 800px;" />
 
 ## Rate Limiter
 
