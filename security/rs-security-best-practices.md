@@ -21,6 +21,7 @@ Following the recommendations in this section is the responsibility of the imple
 * CORS is disabled by default. Keep the [CORS]({%slug cors%}) disabled if possible; or enable CORS only for trusted hosts.
 * Configure the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your sensitive assets like connection strings and mail settings safer.
 * Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to restrict the network traffic and prevent malicious agents that can exhaust system resources by conducting Denial-of-Service attacks.
+* Enable **Deny shared write access to resources for users in non-administrative roles** under **Configuration** > **Designer** > **Web Report Designer**. Introduced in [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)), this setting is disabled by default in both Report Server variants. Enable it to prevent non-administrative users from modifying shared assets with another recorded creator. Assets without a recorded creator remain writable under the existing access rules, and read access does not change. For the complete rules and configuration steps, see [Designer settings]({%slug designer%}#web-report-designer).
 
 ## Working with Report Server Assets
 

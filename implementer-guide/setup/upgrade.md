@@ -69,3 +69,18 @@ After the upgrade progress has passed, open the Report Server Manager (the Finis
 Open the IIS manager and reapply the web application settings, including the Bindings, noted before the upgrade. Make sure the Telerik Report Server web application is working again.
 
 The Report Server Manager is a web application and it is possible to have its styles and scripts cached by the browser, which may result in unpredictable behavior when upgrading or installing a new version. We recommend clearing the browser cache or force-reloading the page, usually with `Ctrl+F5`.
+
+## Shared Resource Write Access After an Upgrade
+
+[Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)) introduces **Deny shared write access to resources for users in non-administrative roles** in both Report Server variants. The setting is disabled by default. An upgrade does not reset an already enabled restriction.
+
+Existing shared images, data files, stylesheets, and shared data sources without a recorded creator retain their write access after the upgrade. They remain writable under the existing access rules even when the new restriction is enabled. Neither the upgrade nor the setting assigns creators retroactively.
+
+New shared assets record their creator. When the restriction is enabled, only the creator or a System Administrator can modify an asset with a recorded creator. Read access and report permissions remain unchanged.
+
+For configuration steps, see [Designer settings]({%slug designer%}#web-report-designer). Review the recommendation in [Security Best Practices]({%slug rs-security-best-practices%}#configuration-settings) before you enable the restriction.
+
+## See Also
+
+- [Designer Settings]({%slug designer%}#web-report-designer)
+- [Storage Migration Tool]({%slug migration-tool%}#shared-resource-write-access-after-migration)
