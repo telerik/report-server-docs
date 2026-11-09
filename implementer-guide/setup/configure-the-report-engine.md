@@ -99,7 +99,9 @@ The default installation roots are `C:\Program Files (x86)\Progress\Telerik Repo
 
 Configure both the web application and every relevant service agent. The web application handles live previews and exports; service agents handle scheduled tasks and data alerts. Grant their process identities read access to the approved resource directory and deployed assemblies.
 
-### Registering Through XML
+### Registering in Configuration Files
+
+<TabStrip><TabStripTab title="XML: Report Server for .NET Framework 4.6.2">
 
 In each Framework host's `TelerikReporting.config`, enable the `Telerik.Reporting` section registration and the section itself if they are commented out. Keep `configSections` as the first child of `configuration`. Merge the following settings without removing existing configuration:
 
@@ -137,8 +139,7 @@ The example trusts the individual resolver type through `typeReferences`. Altern
   <add name="StrictResourceResolver" />
 </assemblyReferences>
 ```
-
-### Registering Through JSON
+</TabStripTab><TabStripTab title="JSON: Report Server for .NET 10">
 
 In each .NET host's `config\TelerikReporting.json`, merge the following settings into the existing `telerikReporting` section:
 
@@ -181,6 +182,7 @@ Alternatively, replace `typeReferences` with `assemblyReferences` inside the sam
   ]
 }
 ```
+</TabStripTab></TabStrip>
 
 ### Applying the Resource Policy
 
