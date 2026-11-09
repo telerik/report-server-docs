@@ -18,36 +18,35 @@ The reports rendering engine is exercised from the Report Server instance in the
 - When exporting a report using the 'documents' Report Server WebApi endpoint
 - When the report scheduling service executes a Scheduled Task or Data Alert
 
-### Report Server for .NET Framework
+<TabStrip><TabStripTab title="Report Server for .NET Framework 4.6.2">
 
 The rendering engine can be fine-tuned using a dedicated configuration file, called **TelerikReporting.config**.
 This file is automatically created on the server when it is started for the first time.
 
 For the first two usages of the engine, the default location of this file is
-_C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config_. The Report Server web application needs to be restarted manually in order to apply the changes.
+_C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\TelerikReporting.config_. The Report Server web application needs to be restarted manually to apply the changes.
 
 For the report scheduling service usage the default location of the configuration file is
-_c:\Program Files (x86)\Progress\Telerik Report Server\Services\TelerikReporting.config_. The **Telerik.ReportServer.ServiceAgent** windows service needs to be restarted manually in order to apply the changes.
+_c:\Program Files (x86)\Progress\Telerik Report Server\Services\TelerikReporting.config_. The **Telerik.ReportServer.ServiceAgent** windows service needs to be restarted manually to apply the changes.
 
 Both files' content is not affected by Report Server upgrade installations.
 
-#### XML Configuration Section
+__XML Configuration Section__
 
 To become effective, open the **TelerikReporting.config** file and uncomment the TelerikReporting configuration section registration:
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-  <configSections>
-    <section name="Telerik.Reporting" type="{0}" allowLocation="true" allowDefinition="Everywhere" />
-  </configSections>
-  <Telerik.Reporting>
-    <restReportService workerCount="3" clientSessionTimeout="15" reportSharingTimeout="0" />
-  </Telerik.Reporting>
+	<configSections>
+		<section name="Telerik.Reporting" type="{0}" allowLocation="true" allowDefinition="Everywhere" />
+	</configSections>
+	<Telerik.Reporting>
+		<restReportService workerCount="3" clientSessionTimeout="15" reportSharingTimeout="0" />
+	</Telerik.Reporting>
 </configuration>
 ```
-
-### Report Server for .NET
+</TabStripTab><TabStripTab title="Report Server for .NET 10">
 
 In the newer [Report Server for .NET](slug:report-server-net-overview), the rendering engine can be fine-tuned using a JSON-based configuration file called **TelerikReporting.json**, located at `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\config`(_default location_).
 
@@ -55,22 +54,23 @@ The **Telerik Report Server .NET** site needs to be manually restarted from the 
 
 For scheduled tasks and data alerts, configure the service agent's `TelerikReporting.json`. Its default location is `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Services\config\TelerikReporting.json`. Restart the corresponding .NET service agent after configuration changes. For a separately deployed agent, use its own application directory.
 
-#### JSON Configuration Section
+__JSON Configuration Section__
 
 To become effective, open the **TelerikReporting.json** file and edit the `telerikReporting` section. Additional configuration options can be seen in the [Report Engine Configuration](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/overview) article.
 
 ```JSON
 {
-  "telerikReporting": {
-    "restReportService": {
-      "hostAppId": "TRS",
-      "workerCount": 3,
-      "reportSharingTimeout": 0,
-      "clientSessionTimeout": 15
-    }
-  }
+	"telerikReporting": {
+		"restReportService": {
+		"hostAppId": "TRS",
+		"workerCount": 3,
+		"reportSharingTimeout": 0,
+		"clientSessionTimeout": 15
+		}
+	}
 }
 ```
+</TabStripTab></TabStrip>
 
 ## Restricting Access to External Resources
 
