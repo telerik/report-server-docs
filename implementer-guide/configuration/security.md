@@ -56,7 +56,7 @@ If the enhanced encryption is not applied, the following notification will be sh
 
 ## Server URL
 
-Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
+Introduced with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)).
 
 Open **Configuration > Security** and set **Server URL** to the public address that users use to open Report Server. Include any virtual directory or reverse proxy path.
 
