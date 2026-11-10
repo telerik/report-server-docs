@@ -20,23 +20,19 @@ The **Designer** tab of **Configuration** contains settings for the Standalone R
 
 ## Standalone Report Designer
 
-In Report Server for .NET Framework, the **Preferred Language** setting controls the language of the Standalone Report Designer.
+- **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory - `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
 
-A drop down lists all languages available in the report server languages directory - `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`. For example, by default, for the German language this would be `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web\Report Designer\Languages\de`.
+For more information, see [Localization]({%slug localization%}#localize-standalone-report-designer) article.
 
-For more information see [Localization]({%slug localization%}#localize-standalone-report-designer) article.
 
-In Report Server for .NET, **Enable Standalone Report Designer** controls access to the Standalone Report Designer.
+- **Enable Standalone Report Designer** - allows using Standalone Report Designer for creating and editing reports. Available in Report Server for .NET only.
 
 ## Web Report Designer
 
-In Report Server for .NET Framework, select **Enable Web Report Designer** in this section to enable the web designer. Report Server for .NET does not expose this checkbox.
+- **Enable Web Report Designer** allows using Web Report Designer for creating and editing reports. Available in Report Server for .NET Framework only.
 
-The shared-resource write restriction described below applies to both Report Server for .NET Framework and Report Server for .NET.
-
-Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
-
-**Deny shared write access to resources for users in non-administrative roles.** restricts who can overwrite, rename, move, or delete shared assets. The setting is **disabled by default** to preserve existing behavior. It applies to images, data files, stylesheets, and shared data sources in the **Assets Manager**.
+- **Deny shared write access to resources for users in non-administrative roles** - restricts who can overwrite, rename, move, or delete shared assets. Applies to images, data files, stylesheets, and shared data sources in the **Assets Manager**.
+When enabled, only users in administrative roles and the user who created the asset will be able to modify or delete it. When modifying or deleting a folder, the operation is successful if all the assets in the folder and its subfolders operations satisfy the verification.
 
 To enable the restriction:
 
@@ -44,6 +40,13 @@ To enable the restriction:
 2. Expand **Web Report Designer**.
 3. Select **Deny shared write access to resources for users in non-administrative roles.**
 4. Select **Save Changes**.
+
+Disabled by default for backward compatibility. Recommended state: **Enabled**.
+
+Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
+Available in both Report Server for .NET Framework and Report Server for .NET.
+
+
 
 <TabStrip><TabStripTab title="Report Server for .NET Framework 4.6.2">
 	![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)

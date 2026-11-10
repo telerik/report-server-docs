@@ -134,16 +134,7 @@ The **serverType** option can be selected when using either the CLI tool or the 
 
   - Redis database as destination storage. You can migrate storage assets from a **Redis** database to **File or MSSQLServer** storage.
   - Migration rules - currently, the supported migration mode allows the transfer of the whole storage.
-  - Changing storage type - currently, the migration from File to MSSQL storage or vice versa is not supported.
   - Backwards migration - migrating from Report Server for .NET storage to Report Server for .NET Framework storage is not supported.
-
-## Shared Resource Write Access After Migration
-
-[Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)) introduces a shared-resource write restriction for both Report Server variants. Migration does not assign creators to legacy shared images, data files, stylesheets, or shared data sources that have no recorded creator.
-
-These assets remain writable under the existing access rules, even when **Deny shared write access to resources for users in non-administrative roles** is enabled. The setting does not change read access or the report permission migration rules described above.
-
-For the default and access rules, see [Designer settings]({%slug designer%}#web-report-designer). For upgrade compatibility, see [Shared Resource Write Access After an Upgrade]({%slug upgrade%}#shared-resource-write-access-after-an-upgrade).
 
 ## See Also
 
