@@ -139,7 +139,7 @@ The **serverType** option can be selected when using either the CLI tool or the 
 
 ## Shared Resource Write Access After Migration
 
-[Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)) introduces a shared-resource write restriction for both Report Server variants. Migration does not assign creators to legacy shared images, data files, stylesheets, or shared data sources that have no recorded creator.
+[Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)) introduces a shared-resource write restriction for both Report Server variants. Migration does not assign creators to legacy shared images, data files, stylesheets, or shared data sources that have no recorded creator.
 
 These assets remain writable under the existing access rules, even when **Deny shared write access to resources for users in non-administrative roles** is enabled. The setting does not change read access or the report permission migration rules described above.
 

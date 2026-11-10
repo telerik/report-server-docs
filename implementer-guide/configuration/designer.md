@@ -34,7 +34,7 @@ In Report Server for .NET Framework, select **Enable Web Report Designer** in th
 
 The shared-resource write restriction described below applies to both Report Server for .NET Framework and Report Server for .NET.
 
-Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
+Introduced with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)).
 
 **Deny shared write access to resources for users in non-administrative roles.** restricts who can overwrite, rename, move, or delete shared assets. The setting is **disabled by default** to preserve existing behavior. It applies to images, data files, stylesheets, and shared data sources in the **Assets Manager**.
 

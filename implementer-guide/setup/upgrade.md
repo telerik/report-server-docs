@@ -72,7 +72,7 @@ The Report Server Manager is a web application and it is possible to have its st
 
 ## Shared Resource Write Access After an Upgrade
 
-[Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)) introduces **Deny shared write access to resources for users in non-administrative roles** in both Report Server variants. The setting is disabled by default. An upgrade does not reset an already enabled restriction.
+[Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)) introduces **Deny shared write access to resources for users in non-administrative roles** in both Report Server variants. The setting is disabled by default. An upgrade does not reset an already enabled restriction.
 
 Existing shared images, data files, stylesheets, and shared data sources without a recorded creator retain their write access after the upgrade. They remain writable under the existing access rules even when the new restriction is enabled. Neither the upgrade nor the setting assigns creators retroactively.
 

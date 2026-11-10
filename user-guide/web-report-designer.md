@@ -41,7 +41,7 @@ The Web Report Designer allows uploading shared resources like images, styles, a
 
 Note that in the context of the Report Server, the reports are organized into one-level directories representing the report categories on the Report Server.
 
-Starting with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)), administrators can enable **Deny shared write access to resources for users in non-administrative roles**. This setting is disabled by default and applies to both Report Server variants.
+Starting with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)), administrators can enable **Deny shared write access to resources for users in non-administrative roles**. This setting is disabled by default and applies to both Report Server variants.
 
 When enabled, only the recorded creator or a System Administrator can overwrite, rename, move, or delete an asset with a recorded creator. Existing assets without a recorded creator remain writable under the existing access rules. To rename, move, or delete a folder, the user needs write access to all contained files, including nested files.
 
