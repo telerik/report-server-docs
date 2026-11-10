@@ -53,6 +53,7 @@ When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin
 If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({%slug search%}):
 
 <img src="../../images/report-server-images/security-enable-encryption-message.png" alt="The message reminding the administrator to enable encryption in the Report Server. ><" style="width: 800px;" />
+
 ## Server URL
 
 Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
