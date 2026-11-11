@@ -20,10 +20,9 @@ The **Designer** tab of **Configuration** contains settings for the Standalone R
 
 ## Standalone Report Designer
 
-- **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory - `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
+- **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory: `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
 
-For more information, see [Localization]({%slug localization%}#localize-standalone-report-designer) article.
-
+For more information, see the [Localization]({slugМlocalization%}#localize-standalone-report-designer) article.
 
 - **Enable Standalone Report Designer** - allows using Standalone Report Designer for creating and editing reports. Available in Report Server for .NET only.
 
@@ -46,8 +45,6 @@ Disabled by default for backward compatibility. Recommended state: **Enabled**.
 Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
 Available in both Report Server for .NET Framework and Report Server for .NET.
 
-
-
 <TabStrip><TabStripTab title="Report Server for .NET Framework 4.6.2">
 	![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)
 	</TabStripTab><TabStripTab title="Report Server for .NET 10">
@@ -62,7 +59,7 @@ The following rules apply in addition to existing authentication and authorizati
 | Enabled; user has the System Administrator role | The user can modify shared assets regardless of their creator. |
 | Enabled; user created the asset | The user can modify the asset. |
 | Enabled; asset has no recorded creator | The asset remains writable under the existing access rules. |
-| Enabled; asset has another recorded creator and user is not an administrator | The user cannot overwrite, rename, move, or delete the asset. |
+| Enabled; asset has another recorded creator, and user is not an administrator | The user cannot overwrite, rename, move, or delete the asset. |
 
 New shared assets record the creator's user ID in `CreatedBy`, even when the restriction is disabled. Overwrite, rename, and move operations preserve the recorded creator.
 
