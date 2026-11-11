@@ -22,7 +22,7 @@ The **Designer** tab of **Configuration** contains settings for the Standalone R
 
 - **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory: `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
 
-For more information, see the [Localization]({slugМlocalization%}#localize-standalone-report-designer) article.
+For more information, see the [Localization]({slug:localization%}#localize-standalone-report-designer) article.
 
 - **Enable Standalone Report Designer** - allows using Standalone Report Designer for creating and editing reports. Available in Report Server for .NET only.
 
