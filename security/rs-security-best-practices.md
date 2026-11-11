@@ -49,7 +49,7 @@ The admin user and the users with sufficient permissions may control access to a
 
 ## Restricting Access to External Resources
 
-Telerik Reporting introduced `IStrictResourceResolver` in the [2026 Q4 (20.3.26.1111)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2026-q4-(20-3-26-1111)) release. Configure your implementation in both Report Server for .NET Framework and Report Server for .NET to apply your application's resource rules. Telerik does not provide a ready-to-use public implementation.
+Telerik Reporting introduced `IStrictResourceResolver` in the [2026 Q4 (20.3.26.1110)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2026-q4-(20-3-26-1110)) release. Configure your implementation in both Report Server for .NET Framework and Report Server for .NET to apply your application's resource rules. Telerik does not provide a ready-to-use public implementation.
 
 The existing `IResourceResolver` handles selected references, including relative image paths. Absolute image references and resources such as map tiles do not all pass through it. The strict interface covers external images, CSV/JSON sources, shapefiles, stylesheets, and map resources across relative paths, absolute paths, UNC paths, and URLs.
 

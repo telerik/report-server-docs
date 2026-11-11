@@ -42,7 +42,7 @@ To enable the restriction:
 
 Disabled by default for backward compatibility. Recommended state: **Enabled**.
 
-Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
+Introduced with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)).
 Available in both Report Server for .NET Framework and Report Server for .NET.
 
 <TabStrip>
