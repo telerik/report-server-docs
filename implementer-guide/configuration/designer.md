@@ -49,7 +49,7 @@ Available in both Report Server for .NET Framework and Report Server for .NET.
 	![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)
 	</TabStripTab><TabStripTab title="Report Server for .NET 10">
 	![The Report Server for .NET 10 Configuration > Designer page with Web Report Designer expanded. ><](../../images/rs-net-images/rsnet10-configuration-designer-settings.png)
-</TabStripTab></TabStrip>
+	</TabStripTab></TabStrip>
 
 The following rules apply in addition to existing authentication and authorization:
 
