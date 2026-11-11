@@ -22,7 +22,7 @@ The **Designer** tab of **Configuration** contains settings for the Standalone R
 
 - **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory: `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
 
-For more information, see the [Localization]({slug:localization%}#localize-standalone-report-designer) article.
+For more information, see the [Localization](slug:localization#localize-standalone-report-designer) article.
 
 - **Enable Standalone Report Designer** - allows using Standalone Report Designer for creating and editing reports. Available in Report Server for .NET only.
 
@@ -31,7 +31,7 @@ For more information, see the [Localization]({slug:localization%}#localize-stand
 - **Enable Web Report Designer** allows using Web Report Designer for creating and editing reports. Available in Report Server for .NET Framework only.
 
 - **Deny shared write access to resources for users in non-administrative roles** - restricts who can overwrite, rename, move, or delete shared assets. Applies to images, data files, stylesheets, and shared data sources in the **Assets Manager**.
-When enabled, only users in administrative roles and the user who created the asset will be able to modify or delete it. When modifying or deleting a folder, the operation is successful if all the assets in the folder and its subfolders operations satisfy the verification.
+When enabled, only users in administrative roles and the user who created the asset will be able to modify or delete it. When modifying or deleting a folder, the operation is successful if all the assets in the folder and its subfolders' operations satisfy the verification.
 
 To enable the restriction:
 
@@ -49,7 +49,7 @@ Available in both Report Server for .NET Framework and Report Server for .NET.
 	![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)
 	</TabStripTab><TabStripTab title="Report Server for .NET 10">
 	![The Report Server for .NET 10 Configuration > Designer page with Web Report Designer expanded. ><](../../images/rs-net-images/rsnet10-configuration-designer-settings.png)
-	</TabStripTab></TabStrip>
+</TabStripTab></TabStrip>
 
 The following rules apply in addition to existing authentication and authorization:
 
@@ -65,12 +65,12 @@ New shared assets record the creator's user ID in `CreatedBy`, even when the res
 
 Folders have no recorded creator. Before a folder is renamed, moved, or deleted, Report Server checks all contained files, including files in nested folders. The operation is denied if at least one contained file is not writable by the user.
 
-The restriction applies to actions in the Report Server UI and corresponding Web Report Designer REST API operations. It does not add restrictions on reading assets or creating new assets. Reports remain subject to their existing [user permissions]({%slug users%}#manage-permissions).
+The restriction applies to actions in the Report Server UI and corresponding Web Report Designer REST API operations. It does not add restrictions on reading assets or creating new assets. Reports remain subject to their existing [user permissions](slug:users#manage-permissions).
 
 >note Existing assets without a recorded creator remain writable even when the setting is enabled. Enabling the setting does not assign creators retroactively.
 
 ## See Also
 
-- [Web Report Designer]({%slug web-report-designer%})
-- [Security Best Practices]({%slug rs-security-best-practices%})
-- [Upgrading Report Server]({%slug upgrade%}#shared-resource-write-access-after-an-upgrade)
+- [Web Report Designer](slug:web-report-designer)
+- [Security Best Practices](slug:rs-security-best-practices)
+- [Upgrading Report Server](slug:upgrade#shared-resource-write-access-after-an-upgrade)
