@@ -37,13 +37,13 @@ Shared data source files (`.sdsx`) are shared assets, separate from the report p
 
 ### Report Resources
 
-The Web Report Designer allows uploading shared resources like images, styles, and data on the server. It makes them easily accessible and allows us to reuse them among different reports to achieve and maintain a common report vision. It also makes it easy to renew the offline data in JSON or CSV format for multiple reports visualizing it. The respective tool is called `Assets Manager` and more information on how it can be used is available in the [Report shared resources](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/web-report-designer/tools/shared-resources) article.
+The Web Report Designer lets you upload and manage shared resources such as images, styles, and data files on the server. These resources can be reused across multiple reports, helping maintain visual consistency while reducing duplication. Shared JSON and CSV data files can also be updated in one place while referenced by multiple reports. Resource management is available through the `Assets Manager` For more details, see the [Report shared resources](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/web-report-designer/tools/shared-resources) article.
 
 Note that in the context of the Report Server, the reports are organized into one-level directories representing the report categories on the Report Server.
 
 Starting with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)), administrators can enable **Deny shared write access to resources for users in non-administrative roles**. This setting is disabled by default and applies to both Report Server variants.
 
-When enabled, only the recorded creator or a System Administrator can overwrite, rename, move, or delete an asset with a recorded creator. Existing assets without a recorded creator remain writable under the existing access rules. To rename, move, or delete a folder, the user needs write access to all contained files, including nested files.
+When enabled, assets that have an recorded creator can be overwritten, renamed, moved, or deleted only by their creator or a System Administrator. Existing assets without an recorded creator remain writable according to the standard Report Server access rules. Renaming, moving, or deleting a folder is permitted only when the user has write access to all files in the folder and its subfolders.
 
 The setting does not add restrictions on reading shared assets or creating new assets. Report permissions remain unchanged. For configuration steps and the complete rules, see [Designer settings]({%slug designer%}#web-report-designer).
 
