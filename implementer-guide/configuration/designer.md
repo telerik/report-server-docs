@@ -45,11 +45,18 @@ Disabled by default for backward compatibility. Recommended state: **Enabled**.
 Introduced with [Report Server 2026 Q4 (12.3.26.1111)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1111)).
 Available in both Report Server for .NET Framework and Report Server for .NET.
 
-<TabStrip><TabStripTab title="Report Server for .NET Framework 4.6.2">
-	![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)
-	</TabStripTab><TabStripTab title="Report Server for .NET 10">
-	![The Report Server for .NET 10 Configuration > Designer page with Web Report Designer expanded. ><](../../images/rs-net-images/rsnet10-configuration-designer-settings.png)
-	</TabStripTab></TabStrip>
+<TabStrip>
+<TabStripTab title="Report Server for .NET Framework 4.6.2">
+
+![The Report Server for .NET Framework Configuration > Designer page with Web Report Designer expanded. ><](../../images/report-server-images/rs462-configuration-designer-settings.png)
+
+</TabStripTab>
+<TabStripTab title="Report Server for .NET 10">
+
+![The Report Server for .NET 10 Configuration > Designer page with Web Report Designer expanded. ><](../../images/rs-net-images/rsnet10-configuration-designer-settings.png)
+
+</TabStripTab>
+</TabStrip>
 
 The following rules apply in addition to existing authentication and authorization:
 
