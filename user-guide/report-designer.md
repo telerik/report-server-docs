@@ -31,7 +31,7 @@ Use the designer distributed with the target Report Server to match both the fra
 
 A successful connection or matching report-definition schema does not establish compatibility between the two variants. The [schema requirement](#schema-compatibility) applies in addition to the framework requirement.
 
-The framework requirement applies to direct communication, not all transfers of report files. Before you transfer a report between frameworks, verify its schema and format, supported features, and runtime dependencies, such as custom assemblies. Preview and validate the report in the destination environment. For format and schema details, see [Declarative Report Definition](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/xml-report-definition).
+The framework requirement applies to direct communication, not all transfers of report files. In other words, a report designed in one of the report designers (e.g., targeting .NET Framework 4.6.2) can be safely opened in the other (e.g., targeting .NET 10) and vice versa. Before you transfer a report between frameworks, verify its schema and format, supported features, and runtime dependencies, such as custom assemblies. Preview and validate the report in the destination environment. For format and schema details, see [Declarative Report Definition](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/standalone-report-designer/xml-report-definition).
 
 ## Access
 
