@@ -68,7 +68,7 @@ Specifies the mail template which is sent to the added local users for the alert
 
 When there is an error during the report processing or a general error during the data alert execution, then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used.
 
-Data alert error emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+Data alert error emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 If you haven't explicitly changed this template, then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used.
 
@@ -102,7 +102,7 @@ In the template, you can use the following mail variables, which will be replace
 
 Specifies the mail template that is sent to the added external users for the alert when the data conditions are met and the report(s) document has been successfully generated.
 
-When there is an error during the report processing or a general error during the data alert execution, then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used. Data alert error emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+When there is an error during the report processing or a general error during the data alert execution, then the **Configuration** | **Mail Templates** | **Data Alert Error** mail template is used. Data alert error emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 If you haven't explicitly changed this template, then the template from **Configuration** | **Mail Templates** | **Data Alert Attachment** will be used.
 
@@ -142,12 +142,12 @@ From the `Subscribers` view, you can manage who will receive the created documen
 
 The emails should be separated with a new line, a semicolon `;` or a comma `,`.
 
-> When there is an error during the report processing or a general error in the data alert execution, emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+> When there is an error during the report processing or a general error in the data alert execution, emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({slug:installation})
-- [Telerik Report Server User Management]({slug:user-management})
-- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
+- [Telerik Report Server Installation](slug:installation)
+- [Telerik Report Server User Management](slug:user-management)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

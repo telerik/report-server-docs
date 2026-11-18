@@ -10,7 +10,7 @@ position: 205
 
 # Upgrading Report Server
 
-To upgrade an existing Report Server installation, run a newer version of the [Telerik Report Server Installer]({slug:installation}) than the installed one.
+To upgrade an existing Report Server installation, run a newer version of the [Telerik Report Server Installer](slug:installation) than the installed one.
 
 Telerik Report Server installer replaces all files in the selected installation folder deployed by the previous installer, including the configuration files `/Telerik.ReportServer.Web/Web.config` and `/Services/Telerik.ReportServer.ServiceAgent.exe.config`.
 
@@ -18,7 +18,7 @@ The only configuration files in the installation folder that will be preserved a
 
 This way the previously configured assets storage will be preserved after the upgrade as well as any report generation engine configuration options applied in the `/Telerik.ReportServer.Web/TelerikReporting.config` file.
 
-The installer has a step that [backs up the assets' storage]({slug:storage-backup}) used from the Report Server. This step is optional and turned on by default. We recommend keeping it. On the first run after the upgrade, the Report Server will upgrade the assets storage schema version if necessary. Keep the backed-up assets' storage at least until the Report Server is up and running again.
+The installer has a step that [backs up the assets' storage](slug:storage-backup) used from the Report Server. This step is optional and turned on by default. We recommend keeping it. On the first run after the upgrade, the Report Server will upgrade the assets storage schema version if necessary. Keep the backed-up assets' storage at least until the Report Server is up and running again.
 
 ## Before upgrading the Report Server
 
@@ -78,9 +78,9 @@ Existing shared images, data files, stylesheets, and shared data sources without
 
 New shared assets record their creator. When the restriction is enabled, only the creator or a System Administrator can modify an asset with a recorded creator. Read access and report permissions remain unchanged.
 
-For configuration steps, see [Designer settings]({slug:designer}#web-report-designer). Review the recommendation in [Security Best Practices]({slug:rs-security-best-practices}#configuration-settings) before you enable the restriction.
+For configuration steps, see [Designer settings](slug:designer#web-report-designer). Review the recommendation in [Security Best Practices](slug:rs-security-best-practices#configuration-settings) before you enable the restriction.
 
 ## See Also
 
-- [Designer Settings]({slug:designer}#web-report-designer)
-- [Storage Migration Tool]({slug:migration-tool}#shared-resource-write-access-after-migration)
+- [Designer Settings](slug:designer#web-report-designer)
+- [Storage Migration Tool](slug:migration-tool#shared-resource-write-access-after-migration)

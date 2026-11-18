@@ -48,7 +48,7 @@ To become effective, open the **TelerikReporting.config** file and uncomment the
 ```
 </TabStripTab><TabStripTab title="Report Server for .NET 10">
 
-In the newer [Report Server for .NET]({slug:report-server-net-overview}), the rendering engine can be fine-tuned using a JSON-based configuration file called **TelerikReporting.json**, located at `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\config`(_default location_).
+In the newer [Report Server for .NET](slug:report-server-net-overview), the rendering engine can be fine-tuned using a JSON-based configuration file called **TelerikReporting.json**, located at `C:\Program Files (x86)\Progress\Telerik Report Server .NET\Telerik.ReportServer.Web\config`(_default location_).
 
 The **Telerik Report Server .NET** site needs to be manually restarted from the [IIS Manager](https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-the-iis-manager-in-iis-7-and-iis-8) in order to apply the changes.
 
@@ -234,7 +234,7 @@ Changing this is _highly recommended_ for a user-intensive Report Server deploym
 
 For related configuration guidance, refer to these resources:
 
-* [Security Best Practices]({slug:rs-security-best-practices})
+* [Security Best Practices](slug:rs-security-best-practices)
 * [Report Engine Configuration](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/overview)
 * [Type References](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typereferences-element)
 * [Assembly References](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/assemblyreferences-element)

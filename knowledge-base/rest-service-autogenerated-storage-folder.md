@@ -31,7 +31,7 @@ The Telerik Report Server uses the same reporting engine as Telerik Reporting. W
 
 These resources are cached in a subfolder of the `Telerik.ReportServer.Web\Data\8963c32d` named on the version of Telerik Reporting used, e.g. `13.0.19.116`. This folder may be deleted as the temporary resources generated in it are no longer needed after closing the previewed reports, and their absence will not influence Report Server data/reports/users/etc.
 
-This _REST Service storage_ is different from the [Report Server Storage]({slug:storage-settings}) and is not migrated with the latter. However, the folders may remain after upgrade. They should be deleted manually to free the occupied space.
+This _REST Service storage_ is different from the [Report Server Storage](slug:storage-settings) and is not migrated with the latter. However, the folders may remain after upgrade. They should be deleted manually to free the occupied space.
 
 The Storage of the REST Service may be configured separately in the `Web.config` file of the application - by default in `(_Telerik Report Server installation folder_)\Telerik.ReportServer.Web`.
 

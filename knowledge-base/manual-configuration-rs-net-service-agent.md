@@ -48,5 +48,5 @@ If the automatic configuration fails, configure the connection manually by follo
 
 ## See Also
 
-* [Report Server for .NET Installation on Windows]({slug:dotnet-installation-on-windows})
-* [Troubleshooting Report Server for .NET]({slug:troubleshoot-report-server-net})
+* [Report Server for .NET Installation on Windows](slug:dotnet-installation-on-windows)
+* [Troubleshooting Report Server for .NET](slug:troubleshoot-report-server-net)

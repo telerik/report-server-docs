@@ -10,7 +10,7 @@ position: 1
 
 # Report Server for .NET Introduction
 
-The Telerik Report Server for .NET was introduced in the [2024 Q2(10.1.24.514)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q2-10-1-24-514) release and will, in the future, replace the [older Report Server]({slug:search}) application.
+The Telerik Report Server for .NET was introduced in the [2024 Q2(10.1.24.514)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2024-q2-10-1-24-514) release and will, in the future, replace the [older Report Server](slug:search) application.
 
 ## Report Server Manager
 
@@ -37,11 +37,11 @@ The Web UI provides a dedicated view for each functionality of the server.
 
 For direct authoring, connect to Report Server for .NET with the Standalone Report Designer for .NET, not the .NET Framework designer. Use `Telerik.ReportDesigner.Net.exe` from the target server's designer download.
 
-The designer runs on Windows even when Report Server runs on another operating system. For the framework and schema requirements, see [Server and Designer Compatibility]({slug:report-designer}#server-and-designer-compatibility).
+The designer runs on Windows even when Report Server runs on another operating system. For the framework and schema requirements, see [Server and Designer Compatibility](slug:report-designer#server-and-designer-compatibility).
 
 ## Telerik Report Server for .NET Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server for .NET Windows Installation]({slug:dotnet-installation-on-windows})
-- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
+- [Telerik Report Server for .NET Windows Installation](slug:dotnet-installation-on-windows)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

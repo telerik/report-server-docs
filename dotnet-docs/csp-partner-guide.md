@@ -29,10 +29,10 @@ A [free trial license](https://www.telerik.com/account/trials) is available for 
 
 ## Documentation
 
-- [Report Server for .NET Overview]({slug:report-server-net-overview}) — Product capabilities and system requirements.
-- [Azure Marketplace Deployment Guide]({slug:azure-marketplace-integration}) — Step-by-step instructions for deploying the product from the Azure Marketplace.
-- [Setting Up the License Key]({slug:license-key}) — How to activate the product license.
-- [Full Product Documentation]({slug:introduction}) — Complete documentation for Telerik Report Server.
+- [Report Server for .NET Overview](slug:report-server-net-overview) — Product capabilities and system requirements.
+- [Azure Marketplace Deployment Guide](slug:azure-marketplace-integration) — Step-by-step instructions for deploying the product from the Azure Marketplace.
+- [Setting Up the License Key](slug:license-key) — How to activate the product license.
+- [Full Product Documentation](slug:introduction) — Complete documentation for Telerik Report Server.
 
 ## Support
 

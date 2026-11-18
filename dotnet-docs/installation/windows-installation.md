@@ -14,7 +14,7 @@ previous_url: /dotnet-docs/windows-installation
 
 Starting with 2025 Q4, a dedicated Report Server for .NET (RS.NET) installer is available. This article explains how to install RS.NET on Windows and covers the available installation scenarios.
 
-> Prior to 2025 Q4, RS.NET was distributed with the [.NET Framework 4.6.2 installer]({slug:installation}). If you use an older version that features this combined installer, make sure to click **Customize** during installation to include RS.NET.
+> Prior to 2025 Q4, RS.NET was distributed with the [.NET Framework 4.6.2 installer](slug:installation). If you use an older version that features this combined installer, make sure to click **Customize** during installation to include RS.NET.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ To install RS.NET for the first time:
 
    > The RS.NET installer currently does not include SDK examples. Those will be added in future releases.
 
-1. Choose a user option and click **Next**. Creating a dedicated Windows user (`RSUserNET`) is recommended for security purposes. For more information about the available user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users]({slug:installation}#reportserveruser-localsystem-identity-and-dedicated-users).
+1. Choose a user option and click **Next**. Creating a dedicated Windows user (`RSUserNET`) is recommended for security purposes. For more information about the available user options, see [ReportServerUser, LocalSystem Identity and Dedicated Users](slug:installation#reportserveruser-localsystem-identity-and-dedicated-users).
 1. Click **Install** to proceed with the installation.
 
 By default, the installation directory is `C:\Program Files (x86)\Progress\Telerik Report Server .NET`. You can change this location during the **Customize** step of the installation. Within this directory:
@@ -56,7 +56,7 @@ By default, the installation directory is `C:\Program Files (x86)\Progress\Teler
 
 The installer automatically creates IIS applications on port 81 (RS.NET) and port 82 (RS.NET Service Agent). If these ports are unavailable, it assigns the next available ones.
 
-When you first access RS.NET, you will be prompted to configure storage and register an administrator user. During this setup, you will also be asked to download the [encryption keys]({slug:security}#encryption) that secure your sensitive RS.NET assets.
+When you first access RS.NET, you will be prompted to configure storage and register an administrator user. During this setup, you will also be asked to download the [encryption keys](slug:security#encryption) that secure your sensitive RS.NET assets.
 
 ## Upgrading Report Server for .NET
 
@@ -69,13 +69,13 @@ When upgrading from the combined MSI installer (versions prior to 2025 Q4), the 
 
 The original RS.NET assets created by the combined installer remain on your system and are not automatically removed.
 
-> caution The RS.NET installer does not support automatic backup. When upgrading from one RS.NET installer version to another, consider performing a [manual storage backup]({slug:storage-backup}#manual-backup) before upgrading to prevent data loss. Automatic backup functionality will be added in a future release.
+> caution The RS.NET installer does not support automatic backup. When upgrading from one RS.NET installer version to another, consider performing a [manual storage backup](slug:storage-backup#manual-backup) before upgrading to prevent data loss. Automatic backup functionality will be added in a future release.
 
 ## Troubleshooting
 
-If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent]({slug:service-agent}) connection may not have been configured automatically.
+If scheduled tasks, data alerts, or email functionality is not working, the [Report Server Agent](slug:service-agent) connection may not have been configured automatically.
 
-See [Manual Configuration of RS.NET Service Agent Connection]({slug:manual-configuration-rs-net-service-agent}) for detailed steps on how to do this manually.
+See [Manual Configuration of RS.NET Service Agent Connection](slug:manual-configuration-rs-net-service-agent) for detailed steps on how to do this manually.
 
 For issues like missing or corrupt files, use the installer's repair functionality:
 

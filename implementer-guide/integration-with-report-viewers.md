@@ -35,4 +35,4 @@ Since the user credentials will be sent to the Report Server instance in plain t
 
 The user credentials, however, can be seen when inspecting the page code in HTML5-based report viewers. This should not be considered as a security issue, because the report viewer must be used by the person that provides the credentials of its associated CAL user to access the Report Server.
 
-If the report viewer needs to be utilized by many users, then the [Guest]({slug:guest-user}) user must be used which does not have credentials.
+If the report viewer needs to be utilized by many users, then the [Guest](slug:guest-user) user must be used which does not have credentials.

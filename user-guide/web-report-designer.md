@@ -19,7 +19,7 @@ Further information about this control can be found in [Telerik Web Report Desig
 
 In Report Server for .NET Framework, open **Configuration** > **Designer** and expand **Web Report Designer**. Select **Enable Web Report Designer**, then select **Save Changes**.
 
-Report Server for .NET does not expose this checkbox. Its **Enable Standalone Report Designer** setting controls the desktop designer, not the web designer. For the settings available in each variant, see [Designer]({slug:designer}#web-report-designer).
+Report Server for .NET does not expose this checkbox. Its **Enable Standalone Report Designer** setting controls the desktop designer, not the web designer. For the settings available in each variant, see [Designer](slug:designer#web-report-designer).
 
 Use the Web Report Designer icon in the reports view to open the designer:
 
@@ -33,7 +33,7 @@ Report Server supports [WebService](https://docs.telerik.com/reporting/webservic
 
 In the Web Report Designer the report authors can predefine Data Source definitions called [Shared Data Source](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/shareddatasource-component). Each available Shared Data Source can be then utilized as a resource by the report authors while building reports to connect and return tabular data sets. This way the report authors can create multiple reports conveying different messages using the same Shared Data Source definition. Using this feature, two professionals can collaborate to produce the reports: A data expert can define the shared data sources, and a visualization specialist can focus on the data presentation creating reports on top of the available data sources.
 
-Shared data source files (`.sdsx`) are shared assets, separate from the report permissions described in [User Permissions]({slug:users}). They are subject to the [shared-resource write restriction]({slug:designer}#web-report-designer) described below.
+Shared data source files (`.sdsx`) are shared assets, separate from the report permissions described in [User Permissions](slug:users). They are subject to the [shared-resource write restriction](slug:designer#web-report-designer) described below.
 
 ### Report Resources
 
@@ -45,7 +45,7 @@ Starting with [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/sup
 
 When enabled, assets that have an recorded creator can be overwritten, renamed, moved, or deleted only by their creator or a System Administrator. Existing assets without an recorded creator remain writable according to the standard Report Server access rules. Renaming, moving, or deleting a folder is permitted only when the user has write access to all files in the folder and its subfolders.
 
-The setting does not add restrictions on reading shared assets or creating new assets. Report permissions remain unchanged. For configuration steps and the complete rules, see [Designer settings]({slug:designer}#web-report-designer).
+The setting does not add restrictions on reading shared assets or creating new assets. Report permissions remain unchanged. For configuration steps and the complete rules, see [Designer settings](slug:designer#web-report-designer).
 
 ### Browsers Support
 
@@ -54,9 +54,9 @@ The Web Report Designer can run on web browsers that support `JavaScript ECMAScr
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({slug:installation})
-- [Telerik Report Server User Management]({slug:user-management})
-- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
+- [Telerik Report Server Installation](slug:installation)
+- [Telerik Report Server User Management](slug:user-management)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
 
 ## See Also

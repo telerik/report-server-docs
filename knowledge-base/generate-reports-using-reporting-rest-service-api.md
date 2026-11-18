@@ -25,7 +25,7 @@ res_type: kb
 
 ## Description
 
-The [Report Server v2 API]({slug:rs-v2-api-reference}) is fully supported and feature‑complete in Report Server for .NET Framework. In Report Server for .NET (RS.NET), support for the v2 API is still in progress, as some of the endpoints are not exposed yet.
+The [Report Server v2 API](slug:rs-v2-api-reference) is fully supported and feature‑complete in Report Server for .NET Framework. In Report Server for .NET (RS.NET), support for the v2 API is still in progress, as some of the endpoints are not exposed yet.
 
 As a workaround, to programmatically generate and download report documents from RS.NET, you can use the [Reporting REST Service API](https://www.telerik.com/products/reporting/documentation/embedding-reports/host-the-report-engine-remotely/rest-api-reference/overview) at `/api/reports/`. This is the same API that the built-in report viewer uses internally to render reports.
 
@@ -57,7 +57,7 @@ Response:
 
 #### Option B - Personal Access Token (Recommended for RS.NET 2025 Q4+)
 
-Starting with 2025 Q4 (version `11.3.25.1111`), users can create [Personal Access Tokens]({slug:rs-net-token-authentication}) from the Report Server Manager UI.
+Starting with 2025 Q4 (version `11.3.25.1111`), users can create [Personal Access Tokens](slug:rs-net-token-authentication) from the Report Server Manager UI.
 
 Request:
 
@@ -338,5 +338,5 @@ Below is a self-contained example that combines all the steps above. You can pas
 
 ## See Also
 
-- [Using Personal Tokens for Authentication]({slug:rs-net-token-authentication})
+- [Using Personal Tokens for Authentication](slug:rs-net-token-authentication)
 - [Reporting REST Service API](https://www.telerik.com/products/reporting/documentation/embedding-reports/host-the-report-engine-remotely/rest-api-reference/overview)

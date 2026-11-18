@@ -36,9 +36,9 @@ For more information on using the REST API, consult the [Report Server API Clien
 
 ### MSSQL Storage - Using SQL Script
 
-If the Report Server uses [Microsoft SQL Server (MsSqlServer)]({slug:storage-settings}#microsoft-sql-server-mssqlserver) storage, the scheduled task executions can be deleted through SQL.
+If the Report Server uses [Microsoft SQL Server (MsSqlServer)](slug:storage-settings#microsoft-sql-server-mssqlserver) storage, the scheduled task executions can be deleted through SQL.
 
-1. **Backup** the database - [Storage Backup]({slug:storage-backup}).
+1. **Backup** the database - [Storage Backup](slug:storage-backup).
 1. Delete **all** scheduled task documents using the following SQL statement:
 
 ```SQL
@@ -50,6 +50,6 @@ WHERE Id LIKE 'TRS\1\Sd%'
 
 ## See Also
 
-- [Report Server API Client - Telerik Report Server]({slug:report-server-api-client})
+- [Report Server API Client - Telerik Report Server](slug:report-server-api-client)
 - [Report Server REST API](/implementer-guide/apis/rest-api/v2/api-reference)
-- [Storage Backup - Telerik Report Server]({slug:storage-backup})
+- [Storage Backup - Telerik Report Server](slug:storage-backup)

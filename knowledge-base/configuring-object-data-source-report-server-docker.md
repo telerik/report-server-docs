@@ -27,14 +27,14 @@ ticketid: 1709828
 
 ## Description
 
-I need to configure an [ObjectDataSource component](https://www.telerik.com/products/reporting/documentation/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview) in the [Report Server for .NET]({slug:report-server-net-overview}) hosted in a Docker container.
+I need to configure an [ObjectDataSource component](https://www.telerik.com/products/reporting/documentation/designing-reports/connecting-to-data/data-source-components/objectdatasource-component/overview) in the [Report Server for .NET](slug:report-server-net-overview) hosted in a Docker container.
 
 I added the `.dll` file to the container's `app` directory, but the data source does not appear in the [ObjectDataSource Wizard](https://www.telerik.com/products/reporting/documentation/designing-reports/report-designer-tools/desktop-designers/tools/data-source-wizards/objectdatasource-wizard) after restarting the container.
 
 This knowledge base article also answers the following questions:
 
-- How to add an external assembly in the Telerik [Report Server for .NET]({slug:report-server-net-overview}) in Docker?
-- Why don't my types appear in the [Telerik Report Server for .NET]({slug:report-server-net-overview})?
+- How to add an external assembly in the Telerik [Report Server for .NET](slug:report-server-net-overview) in Docker?
+- Why don't my types appear in the [Telerik Report Server for .NET](slug:report-server-net-overview)?
 
 ## Solution
 
@@ -91,7 +91,7 @@ This knowledge base article also answers the following questions:
 4. Restart the container to apply changes using the `docker compose up` command.
 5. Verify the assembly and updated `appsettings.json` file are present in the container using the [Docker Desktop GUI](https://www.docker.com/products/docker-desktop/) or command-line tools.
 
-After performing the above steps, the custom assemblies should appear when you open the [ObjectDataSource Wizard](https://www.telerik.com/products/reporting/documentation/designing-reports/report-designer-tools/web-report-designer/tools/objectdatasource-wizard) in the [Web Report Designer]({slug:web-report-designer}).
+After performing the above steps, the custom assemblies should appear when you open the [ObjectDataSource Wizard](https://www.telerik.com/products/reporting/documentation/designing-reports/report-designer-tools/web-report-designer/tools/objectdatasource-wizard) in the [Web Report Designer](slug:web-report-designer).
 
 > If you encounter issues with the container creating new instances on each restart, ensure the storage configuration is correctly set up in the `docker-compose.yml` file.
 

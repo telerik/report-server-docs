@@ -81,5 +81,5 @@ This tutorial will show you how to change the Report Server's IIS application po
 
 ## See Also
 
-* [System Requirements for Telerik Report Server]({slug:system-requirements})
-* [Report Server Installation]({slug:installation})
+* [System Requirements for Telerik Report Server](slug:system-requirements)
+* [Report Server Installation](slug:installation)

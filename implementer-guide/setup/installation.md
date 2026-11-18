@@ -10,7 +10,7 @@ position: 200
 
 # Report Server Installation
 
-> note This article covers the installation of Telerik Report Server for .NET Framework 4.6.2. Starting with **2025 Q4**, Report Server for .NET (RS.NET) has a dedicated MSI installer. For RS.NET installation instructions, check the [Report Server for .NET Installation on Windows]({slug:dotnet-installation-on-windows}) article.
+> note This article covers the installation of Telerik Report Server for .NET Framework 4.6.2. Starting with **2025 Q4**, Report Server for .NET (RS.NET) has a dedicated MSI installer. For RS.NET installation instructions, check the [Report Server for .NET Installation on Windows](slug:dotnet-installation-on-windows) article.
 
 The Report Server web application is installed by a Windows MSI installer, which deploys two applications: a website named `Telerik Report Server Manager`, automatically registered with its own application pool in the machine's IIS, and a non-UI application named `Telerik.ReportServer.ServiceAgent`, registered as a Windows Service. The Report Server Manager web application is accessible by default on HTTP port 83 and the Service Agent on HTTP port 82.
 
@@ -26,13 +26,13 @@ The **ReportServerUser** is created with a strong random password, which is not 
 
 The MSI installer allows opting out of the safe workflow and installing the applications under the **LocalSystem** identity, which uses elevated permissions.
 
-The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions]({slug:how-to-change-report-server-iis-user}).
+The safety recommendations dictate that this option should be selected only if the Report Server is deployed and used in a safe environment. If needed, the Report Server applications can be configured to use an [identity with limited permissions](slug:how-to-change-report-server-iis-user).
 
 ### Using Dedicated Users After Installation
 
 After installing the Telerik Report Server product, one may want to assign a custom dedicated user to be used by the Report Server and the Service Agent.
 
-This is supported as well, and you can find a step-by-step tutorial on how to do it in the [How to Run Report Server and Service Agent with Limited Permissions]({slug:how-to-change-report-server-iis-user}) article.
+This is supported as well, and you can find a step-by-step tutorial on how to do it in the [How to Run Report Server and Service Agent with Limited Permissions](slug:how-to-change-report-server-iis-user) article.
 
 Any custom Windows user must have the following permissions/policies for the Report Server and its Service Agent to function properly with all of the functionalities being supported:
 
@@ -58,8 +58,8 @@ The Control Panel is a small Windows utility that will notify you when a new ver
 
 - The installation can be customized to include SDK examples in the installation folder and enable JSON dynamic compression for the Report Server website in IIS. These options can be selected from the _Customization_ installer page when clicking the **Customize** button.
 
-	The SDK examples show how to implement a [custom login provider]({slug:custom-login-provider}) and how to use the [Telerik.ReportServer.HttpClient]({slug:report-server-api-client}) library to programmatically access Report Server assets and control the Report Server engine.
-	The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration]({slug:iis-configuration}) article for more details or if you plan to do it manually later.
+	The SDK examples show how to implement a [custom login provider](slug:custom-login-provider) and how to use the [Telerik.ReportServer.HttpClient](slug:report-server-api-client) library to programmatically access Report Server assets and control the Report Server engine.
+	The JSON dynamic compression is a feature that can lower the report loading times in Web Report Designer. See the [IIS Configuration](slug:iis-configuration) article for more details or if you plan to do it manually later.
 
 - The installer provides an option to choose whether the website and the Windows Service will be installed in 32-bit or 64-bit mode.
 
@@ -101,5 +101,5 @@ It automatically detects the latest version and lets you install it for the prod
 
 ## See Also
 
-- [Upgrade Report Server]({slug:upgrade})
-- [Run Report Server with Low-Privileged User]({slug:how-to-change-report-server-iis-user})
+- [Upgrade Report Server](slug:upgrade)
+- [Run Report Server with Low-Privileged User](slug:how-to-change-report-server-iis-user)

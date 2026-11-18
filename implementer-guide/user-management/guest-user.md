@@ -38,7 +38,7 @@ Use the Guest account to display reports to the users of a client application.
 To do this, embed a suitable report viewer control according to the UI technology without setting up user credentials in the viewer's configuration.
 This will effectively authenticate the viewer's requests to the server as a Guest user. 
 More information and how-to recipes on displaying server reports in client applications are available in the help article 
-[Integration With Report Viewers]({slug:integration-with-report-viewers}).
+[Integration With Report Viewers](slug:integration-with-report-viewers).
 
 ## Limitations of the Guest user
 
@@ -55,7 +55,7 @@ When you authenticate with the Guest user, you grant access to the reports allow
 
 * [__Distributed denial-of-service (DDoS) attack__](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack)
   
-	The [rate limiter]({slug:security}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in a short time.
+	The [rate limiter](slug:security) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in a short time.
 
 * __Information disclosure__
   

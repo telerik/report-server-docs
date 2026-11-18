@@ -95,6 +95,6 @@ To increase Reporting Engine logging verbosity, add a `telerikReporting` section
 
 ## See Also
 
-- [Report Server for .NET Introduction]({slug:report-server-net-overview})
-- [Report Server for .NET: Installation on Windows]({slug:dotnet-installation-on-windows})
-- [Report Server for .NET: Installation on Docker Container]({slug:dotnet-installation-on-docker-container})
+- [Report Server for .NET Introduction](slug:report-server-net-overview)
+- [Report Server for .NET: Installation on Windows](slug:dotnet-installation-on-windows)
+- [Report Server for .NET: Installation on Docker Container](slug:dotnet-installation-on-docker-container)

@@ -57,7 +57,7 @@ Specifies the mail template which is sent to the added local users for the task,
 
 When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used.
 
-Scheduled task error emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+Scheduled task error emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
 
@@ -91,7 +91,7 @@ In the template, you can use the following mail variables which will be replaced
 
 Specifies the mail template which is sent to the added external users for the task, by the scheduling service when the report document has been successfully generated.
 
-When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+When there is an error during the report processing or a general error in the task execution then the **Configuration** | **Mail Templates** | **Scheduled Task Error** mail template is used. Scheduled task error emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 If you haven't explicitly changed this template then the template from **Configuration** | **Mail Templates** | **Scheduled Task Attachment** will be used.
 
@@ -121,7 +121,7 @@ In the template, you can use the following mail variables which will be replaced
 
 > A new task can be also created directly from the **Reports** | **Scheduling** view.
 
-You can search for tasks by their Name, Report, or Document Format. For more information, see [Search]({slug:search}).
+You can search for tasks by their Name, Report, or Document Format. For more information, see [Search](slug:search).
 
 ## Activity View
 
@@ -135,12 +135,12 @@ From the `Subscribers` view, you can manage who will receive the created documen
 
 The emails should be separated with a new line, a semicolon `;` or a comma `,`.
 
-> tip When there is an error during the report processing or a general error in the task execution, emails will be sent to the **System Administrator** and **Report Creator** [roles]({slug:user-roles}) only.
+> tip When there is an error during the report processing or a general error in the task execution, emails will be sent to the **System Administrator** and **Report Creator** [roles](slug:user-roles) only.
 
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({slug:installation})
-- [Telerik Report Server User Management]({slug:user-management})
-- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
+- [Telerik Report Server Installation](slug:installation)
+- [Telerik Report Server User Management](slug:user-management)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

@@ -12,7 +12,7 @@ position: 1
 
 Starting with the Q1 2025 release, the Telerik Report Server requires activation using a license key — this applies to both the trial and commercial versions of the product. This article describes how to download or update your personal license key and use it to activate the Telerik Report Server product.
 
-An invalid license results in [error and warning]({slug:license-errors-and-warnings}) indicators such as watermarks and banners.
+An invalid license results in [error and warning](slug:license-errors-and-warnings) indicators such as watermarks and banners.
 
 ## Downloading the License Key
 
@@ -67,7 +67,7 @@ To activate the Q1 2025 version of Telerik Report Server:
 
 - When deploying the Report Server in a cloud environment, create an Environment Variable named `TELERIK_LICENSE` and add the text content of your Telerik Report Server license key file as a value.
 
-- When deploying the Report Server on your local environment, copy the `telerik-license.txt` license key file to the installation folder of the Telerik Report Server or any parent folder. By default, this is `C:\Program Files (x86)\Progress\Telerik Report Server\`. This step makes the license key available to both the [Report Server Manager]({slug:search}) and [Report Server Agent]({slug:service-agent}).
+- When deploying the Report Server on your local environment, copy the `telerik-license.txt` license key file to the installation folder of the Telerik Report Server or any parent folder. By default, this is `C:\Program Files (x86)\Progress\Telerik Report Server\`. This step makes the license key available to both the [Report Server Manager](slug:search) and [Report Server Agent](slug:service-agent).
 
 To make the license key available to individual Reporting Engine components, copy the file to the following folder:
 
@@ -82,5 +82,5 @@ Whenever you purchase a new license or renew an existing one, always [download](
 
 # See Also
 
-- [License Activation Errors and Warnings]({slug:license-errors-and-warnings})
-- [Frequently Asked Questions about Your Telerik Report Server License Key]({slug:license-frequently-asked-questions})
+- [License Activation Errors and Warnings](slug:license-errors-and-warnings)
+- [Frequently Asked Questions about Your Telerik Report Server License Key](slug:license-frequently-asked-questions)

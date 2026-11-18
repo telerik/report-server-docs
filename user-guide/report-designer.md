@@ -65,14 +65,14 @@ The `Report Designer` -> `Options` -> `Language` drop-down lists all available l
 
 ## Data Connectivity
 
-Report Server supports [WebService](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/webservicedatasource-component/overview), [SQL]({slug:data-connections-management}), [Object]({slug:business-objects-management}), and inline [JSON DataSource](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/jsondatasource-component) and [CSV](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/csvdatasource-component/overview) data sources.
+Report Server supports [WebService](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/webservicedatasource-component/overview), [SQL](slug:data-connections-management), [Object](slug:business-objects-management), and inline [JSON DataSource](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/jsondatasource-component) and [CSV](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/csvdatasource-component/overview) data sources.
 
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({slug:installation})
-- [Telerik Report Server User Management]({slug:user-management})
-- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
+- [Telerik Report Server Installation](slug:installation)
+- [Telerik Report Server User Management](slug:user-management)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
 
 ## See Also
@@ -85,4 +85,4 @@ Report Server supports [WebService](https://docs.telerik.com/reporting/designing
 - [JsonDataSource Wizard](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/tools/data-source-wizards/jsondatasource-wizard)
 - [CsvDataSource Component](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/data-source-components/csvdatasource-component/overview "CsvDataSource Component")
 - [CsvDataDource Wizard](https://docs.telerik.com/reporting/designing-reports/report-designer-tools/desktop-designers/tools/data-source-wizards/csvdatasource-wizard "CsvDataDource Wizard Overview")
-- [Connecting to Business Objects]({slug:business-objects-management})
+- [Connecting to Business Objects](slug:business-objects-management)
