@@ -22,7 +22,7 @@ Here are links to the necessary Docker images we provide publicly:
 ## Prerequisites
 
 - A Microsoft Azure subscription
-- A valid [Telerik Report Server License]({%slug license-key%})
+- A valid [Telerik Report Server License](slug:license-key)
 - If you would like to use a Free Let's Encrypt HTTPS Certificate, before starting to deploy the Report Server in Azure, you have to buy a domain name, create a DNS Zone, and a Public IP address. Make the _A_ record of the DNS zone to have the value of your public IP address. The DNS Zone and the Public IP address must be in a separate Resource group, because deploying the Report Server needs to happen in an empty resource group.
 
 ## Configuration Steps
@@ -55,7 +55,7 @@ Here are links to the necessary Docker images we provide publicly:
 
    > important The **DNS Prefix for the public IP Address** will be concatenated with the string below it to form the Report Server URL, where you will be able to access the Report Server Manager.
 
-1. Add the **License** token for your Telerik Report Server product - see how to set up the [Telerik Report Server License]({%slug license-key%}):
+1. Add the **License** token for your Telerik Report Server product - see how to set up the [Telerik Report Server License](slug:license-key):
 
    ![Configuring the License section of the Report Server .NET resource on Azure Marketplace.](../images/rs-net-images/rs-net-azure-marketplace-settings-license.png)
 
@@ -160,6 +160,6 @@ The services we need to upgrade are `report-server_telerik-report-server` and `r
 
 ## See Also
 
-- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
-- [Telerik Report Server License]({%slug license-key%})
+- [Report Server for .NET Introduction](slug:report-server-net-overview)
+- [Telerik Report Server License](slug:license-key)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

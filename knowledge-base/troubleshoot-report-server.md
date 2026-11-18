@@ -50,7 +50,7 @@ We recommend using the following basic approaches for troubleshooting :
    </configuration>
    ```
 
-1. For issues related to Scheduled Tasks, it's recommended to set up a Trace Listener in the Report Server Service Agent configuration file. Please check [Telerik Report Server Service Agent is not running]({%slug report-server-service-agent-is-not-running%}) KB article for details.
+1. For issues related to Scheduled Tasks, it's recommended to set up a Trace Listener in the Report Server Service Agent configuration file. Please check [Telerik Report Server Service Agent is not running](slug:report-server-service-agent-is-not-running) KB article for details.
 1. Additional information may also be logged in the machine's [Windows Events](https://docs.microsoft.com/en-us/windows/desktop/events/windows-events). You may use the [Event Viewer](https://www.howtogeek.com/123646/htg-explains-what-the-windows-event-viewer-is-and-how-you-can-use-it/) to inspect the events logged from **w3wp** or **serviceAgent** processes and see if there is any useful information.
 
 ## Further Assistance

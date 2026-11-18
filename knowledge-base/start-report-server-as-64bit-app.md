@@ -26,7 +26,7 @@ res_type: kb
 
 ## Description
 
-The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation]({%slug installation%}) article) for compatibility reasons.
+The Report Server application is installed and configured to run in 32-bit mode by default (see [Installation](slug:installation) article) for compatibility reasons.
 
 To allow addressing more memory or using specific version of database drivers, the mode in which the Report Server is started may need to be changed.
 

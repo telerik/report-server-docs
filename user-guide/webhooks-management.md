@@ -36,12 +36,12 @@ The **Webhooks** grid allows you to create, modify, and delete webhooks. The gri
 
 ## Receiving Webhooks
 
-To implement a webhook receiver in your web application refer to the [Implement Webhooks]({%slug webhooks-implementation%}) page.
+To implement a webhook receiver in your web application refer to the [Implement Webhooks](slug:webhooks-implementation) page.
 
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({%slug installation%})
-- [Telerik Report Server User Management]({%slug user-management%})
-- [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+- [Telerik Report Server Installation](slug:installation)
+- [Telerik Report Server User Management](slug:user-management)
+- [Connecting to Data with Telerik Report Server](slug:connecting-to-data)
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

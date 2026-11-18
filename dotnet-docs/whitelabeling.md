@@ -58,5 +58,5 @@ Administrator rights are required to access the Report Server Configuration page
 
 ## See Also
 
-- [Report Server for .NET Overview]({%slug report-server-net-overview%})
-- [Whitelabeling in the Report Server for .NET Framework]({%slug whitelabeling%})
+- [Report Server for .NET Overview](slug:report-server-net-overview)
+- [Whitelabeling in the Report Server for .NET Framework](slug:whitelabeling)

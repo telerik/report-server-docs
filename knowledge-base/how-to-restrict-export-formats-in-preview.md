@@ -29,7 +29,7 @@ The article explains how to hide some of the rendering extensions in the Report 
 
 By default, all rendering extensions in the export options of the viewer of the Report Server are visible.
 
-To hide some of them it will be necessary to set accordingly the [extensions Element](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/extensions-element) of the [Telerik Reporting Configuration]({%slug configure-the-report-engine%}) section of the `TelerikReporting.config` file in the `_Telerik Report Server installation folder_\Telerik.ReportServer.Web`, by default `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web`.
+To hide some of them it will be necessary to set accordingly the [extensions Element](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/extensions-element) of the [Telerik Reporting Configuration](slug:configure-the-report-engine) section of the `TelerikReporting.config` file in the `_Telerik Report Server installation folder_\Telerik.ReportServer.Web`, by default `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web`.
 
 After modifications the config file should look like this:
 

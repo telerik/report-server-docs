@@ -138,5 +138,5 @@ The **serverType** option can be selected when using either the CLI tool or the 
 
 ## See Also
 
-- [Designer Settings]({%slug designer%}#web-report-designer)
-- [Upgrading Report Server]({%slug upgrade%}#shared-resource-write-access-after-an-upgrade)
+- [Designer Settings](slug:designer#web-report-designer)
+- [Upgrading Report Server](slug:upgrade#shared-resource-write-access-after-an-upgrade)

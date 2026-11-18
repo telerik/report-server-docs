@@ -17,7 +17,7 @@ When that event occurs, the report server makes an HTTP POST request to the URL 
 
 ### Webhooks Grid
 
-The **Webhooks** grid provides a simple user interface to create, modify, or delete webhooks. For an overview of the grid refer to the [Webhooks Management]({%slug webhooks-management%}) page.
+The **Webhooks** grid provides a simple user interface to create, modify, or delete webhooks. For an overview of the grid refer to the [Webhooks Management](slug:webhooks-management) page.
 
 ### POST Request
 

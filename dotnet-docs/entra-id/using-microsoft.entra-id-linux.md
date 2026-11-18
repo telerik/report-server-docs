@@ -11,7 +11,7 @@ previous_url: /dotnet-docs/using-microsoft.entra-id-linux
 
 # Configuring the Report Server for .NET Single Sign-On Functionality using Microsoft Entra ID for Linux/Container
 
-> important There is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
+> important There is a known problem with the [licensing](slug:license-key) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container, however, the above error message will be shown in the terminal.
 
 [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) is a cloud-based identity and access management service that can be used for authentication in the Telerik Report Server for .NET.
 
@@ -203,4 +203,4 @@ Besides the enhanced authentication security, this approach also improves the us
 - [What is Microsoft Entra ID?](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
 - [Set up Microsoft Entra ID](https://learn.microsoft.com/en-us/mem/intune/industry/education/tutorial-school-deployment/set-up-microsoft-entra-id)
 - [Microsoft Entra ID Training](https://learn.microsoft.com/en-us/training/browse/?resource_type=module&expanded=entra&products=entra-id)
-- [Installing ReportServer.NET on Docker Container]({%slug dotnet-installation-on-docker-container%})
+- [Installing ReportServer.NET on Docker Container](slug:dotnet-installation-on-docker-container)

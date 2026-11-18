@@ -25,7 +25,7 @@ res_type: kb
 
 ## Description
 
-How to upload a report in the Report Server using the public [API]({%slug rest-api-overview%}).
+How to upload a report in the Report Server using the public [API](slug:rest-api-overview).
 
 ## Solution
 

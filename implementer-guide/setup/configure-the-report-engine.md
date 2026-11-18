@@ -234,7 +234,7 @@ Changing this is _highly recommended_ for a user-intensive Report Server deploym
 
 For related configuration guidance, refer to these resources:
 
-* [Security Best Practices]({%slug rs-security-best-practices%})
+* [Security Best Practices](slug:rs-security-best-practices)
 * [Report Engine Configuration](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/overview)
 * [Type References](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/typereferences-element)
 * [Assembly References](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/assemblyreferences-element)

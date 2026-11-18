@@ -27,7 +27,7 @@ By enabling logging, the internal exceptions that are not shown on the browser p
 1. Ensure that the [ASP.NET Core Module (ANCM)](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer) is installed on the machine with the Telerik Report Server for .NET - [Install ASP.NET Core Module (ANCM)](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-8.0#install-aspnet-core-module-ancm).
 1. Check for errors in the `Browser Console` or failing requests in the `Network` tab.
 1. Use [Fiddler ](https://www.telerik.com/download/fiddler) to see the exact requests from the Report Viewer of the Report Server Manager to the Report Server REST Service, and the corresponding responses - they may indicate what has failed.
-1. Enable `Serilog` logging - [Enabling logging in the Report Server for .NET]({%slug logging-rs-net%}), and inspect the logs.
+1. Enable `Serilog` logging - [Enabling logging in the Report Server for .NET](slug:logging-rs-net), and inspect the logs.
 1. Enable [ASP.NET Core Module](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-8.0) logging in the Report Server for .NET application by editing the `web.config` file in the root directory of the application, e.g. `C:\Program Files (x86)\Progress\Telerik Report Server\Telerik.ReportServer.Web.NET`.
 
    ```XML
@@ -56,4 +56,4 @@ By enabling logging, the internal exceptions that are not shown on the browser p
 
 ## See Also
 
-- [Enabling logging in the Report Server for .NET]({%slug logging-rs-net%})
+- [Enabling logging in the Report Server for .NET](slug:logging-rs-net)

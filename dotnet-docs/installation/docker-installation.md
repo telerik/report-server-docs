@@ -348,5 +348,5 @@ docker compose up -d
 
 ## See Also
 
-- [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
+- [Telerik Report Server Introduction](slug:introduction)
+- [Report Server for .NET Introduction](slug:report-server-net-overview)

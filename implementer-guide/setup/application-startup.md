@@ -25,7 +25,7 @@ The Report Server persists all assets such as reports, scheduled tasks, and user
 
 ![Setup Storage ><](../../images/report-server-images/setup-storage-step-one-report-server.png)
 
-By default, the setup page offers the File storage which stores all assets as files in a target folder. It is the default option as it does not need the installation of extra tools. This makes it perfect for test deployment. This storage suits a production deployment only if the Report Server instance will not get heavily utilized. For other cases, including multi-instance setup, one of the other options is a must. You can find more info on each supported storage in the [Storage]({%slug storage-settings%}) article.
+By default, the setup page offers the File storage which stores all assets as files in a target folder. It is the default option as it does not need the installation of extra tools. This makes it perfect for test deployment. This storage suits a production deployment only if the Report Server instance will not get heavily utilized. For other cases, including multi-instance setup, one of the other options is a must. You can find more info on each supported storage in the [Storage](slug:storage-settings) article.
 
 The storage settings go into the Report Server configuration file called _ReportServerAdmin.config_. The Report Server installer preserves that file upon upgrade. That way the setting will remain when you upgrade the Report Server version.
 
@@ -47,15 +47,15 @@ To enable enhanced encryption, the administrator must:
 1. Type “Confirm” (case-insensitive) in the field above the Complete button to verify the keys are securely stored
 1. Store the keys safely
 
-When the Complete button is clicked, all existing sensitive assets are securely re-encrypted, and the [Encryption keys]({%slug security%}#encryption) are stored as environment variables for the account that runs the Report Server and the ServiceAgent.
+When the Complete button is clicked, all existing sensitive assets are securely re-encrypted, and the [Encryption keys](slug:security#encryption) are stored as environment variables for the account that runs the Report Server and the ServiceAgent.
 
 ## Further setup
 
 When done with this sequence, you will land on the Reports page that lists the core assets of the server - the reports. The app adds a few sample reports to showcase the functionality.
 
-As a next step, go to the Configuration page to configure a [send mail server]({%slug mail-server%}). This would enable the report scheduling functionality for all users. The Configuration page is accessible in the up-right menu of the app UI.
+As a next step, go to the Configuration page to configure a [send mail server](slug:mail-server). This would enable the report scheduling functionality for all users. The Configuration page is accessible in the up-right menu of the app UI.
 
 ## See Also
 
-- [Security]({%slug security%})
-- [AI-Powered Features Settings]({%slug ai-settings%})
+- [Security](slug:security)
+- [AI-Powered Features Settings](slug:ai-settings)

@@ -14,7 +14,7 @@ The Report Server Manager is an ASP.NET MVC web application. A frequent business
 
 ## Subdomain and Whitelabeling
 
-One way to satisfy the organization requirements is to host the Report Server Manager on a subdomain. Step two is to style it in a similar manner with [whitelabeling]({%slug whitelabeling%}). The final touch is to implement single sign-on (SSO) using a [custom login provider]({%slug custom-login-provider%}).
+One way to satisfy the organization requirements is to host the Report Server Manager on a subdomain. Step two is to style it in a similar manner with [whitelabeling](slug:whitelabeling). The final touch is to implement single sign-on (SSO) using a [custom login provider](slug:custom-login-provider).
 
 ## Inline Frame &lt;iframe&gt;
 

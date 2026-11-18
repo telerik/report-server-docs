@@ -60,7 +60,7 @@ You can perform the following actions from the *User Roles* view:
 -   **Delete** user role - you can delete any user role except *System
     Administrator* role.
 
--   **Manage permissions** - for permissions management refer to ([Users and Permissions]({%slug users%})).
+-   **Manage permissions** - for permissions management refer to ([Users and Permissions](slug:users)).
 
 -   **Assign users** - you can select/deselect which users belong or not
     to this user role.

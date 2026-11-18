@@ -51,4 +51,4 @@ Configure the **Service Agent** to run in 32-bit mode. See the [Forcing a .Net W
 
 ## See Also
 
-- [BadImageFormatException or Architecture Mismatch message when using ODBC connection]({%slug badimageformatrxception-or-architecture-mismatch-message-when-using-odbc-connection%})
+- [BadImageFormatException or Architecture Mismatch message when using ODBC connection](slug:badimageformatrxception-or-architecture-mismatch-message-when-using-odbc-connection)
