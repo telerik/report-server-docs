@@ -35,7 +35,7 @@ The Web UI provides a dedicated view for each functionality of the server.
 
 ## Standalone Report Designer Compatibility
 
-For direct authoring, connect to Report Server for .NET with the Standalone Report Designer for .NET, not the .NET Framework designer. Use `Telerik.ReportDesigner.Net.exe` from the target server's designer download.
+For direct authoring, connect to Report Server for .NET with the Standalone Report Designer for .NET. Use `Telerik.ReportDesigner.Net.exe` from the target server's designer download.
 
 The designer runs on Windows even when Report Server runs on another operating system. For the framework and schema requirements, see [Server and Designer Compatibility](slug:report-designer#server-and-designer-compatibility).
 
