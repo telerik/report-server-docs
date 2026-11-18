@@ -24,7 +24,7 @@ Introduced with [2024 Q4 (10.3.24.1112)](https://www.telerik.com/support/whats-n
 
 Introduced with [2025 Q1 (11.0.25.211)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2025-q1-11-0-25-211) for Report Server for .NET.
 
-The sensitive assets are stored in the [Report Server Storage]({%slug storage-settings%}) in encrypted form. Now the encryption functionality is leveraged to use industry-standard encryption routines. The encryption algorithms use a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
+The sensitive assets are stored in the [Report Server Storage]({slug:storage-settings}) in encrypted form. Now the encryption functionality is leveraged to use industry-standard encryption routines. The encryption algorithms use a pair of keys, __Main Key__ and __Backup Key__ created during the initial configuration of the Report Server:
 
 ![The Encryption page of the Report Server Configuration with the buttons to download the encryption keys. ><](../../images/report-server-images/security-configure-encryption.png)
 
@@ -50,7 +50,7 @@ Starting with version 2024 Q4 (10.3.24.1112) for Report Server for .NET Framewor
 
 When upgrading an existing Report Server instance to 2024 Q4 or newer, the admin user of the Report Server may choose to encrypt the Storage using the strengthened encryption algorithm (recommended).
 
-If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({%slug search%}):
+If the enhanced encryption is not applied, the following notification will be shown every time a user with administrative rights logs into the [Report Server Manager]({slug:search}):
 
 <img src="../../images/report-server-images/security-enable-encryption-message.png" alt="The message reminding the administrator to enable encryption in the Report Server. ><" style="width: 800px;" />
 
@@ -96,4 +96,4 @@ The maximum permitted number of requests that can be allowed in a time window. I
 
 The following article provides more information:
 
-- [Webhooks configuration]({%slug webhooks%})
+- [Webhooks configuration]({slug:webhooks})

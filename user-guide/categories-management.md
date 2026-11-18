@@ -22,12 +22,12 @@ Next to the category name in the grid, you can see the number of reports in that
 
 > Categories that contain reports cannot be deleted.
 
-You can search for categories by their name. For more information, see [Search]({%slug search%}#search).
+You can search for categories by their name. For more information, see [Search]({slug:search}#search).
 
 ## Telerik Report Server Learning Resources
 
 * [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-* [Telerik Report Server Installation]({%slug installation%})
-* [Telerik Report Server User Management]({%slug user-management%})
-* [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+* [Telerik Report Server Installation]({slug:installation})
+* [Telerik Report Server User Management]({slug:user-management})
+* [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
 * [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

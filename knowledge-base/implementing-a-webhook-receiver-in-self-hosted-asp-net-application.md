@@ -23,7 +23,7 @@ res_type: kb
 
 [Webhooks](https://en.wikipedia.org/wiki/Webhook) are user-defined HTTP callbacks which are usually triggered by some event, such as executing a data alert or modifying a report. When that event occurs, the report server makes an HTTP POST request to the URL configured for the webhook in order to notify the subscriber.
 
-A step-by-step instructions on how to create and receive webhooks is provided in [Implement Webhooks]({%slug webhooks-implementation%}) documentation article.
+A step-by-step instructions on how to create and receive webhooks is provided in [Implement Webhooks]({slug:webhooks-implementation}) documentation article.
 
 This knowledge base article is an example of implementing a self-hosted custom webhook receiver.
 
@@ -33,7 +33,7 @@ Implementation of a webhook could be divided into two major steps:
 
 ### 1. Creating a Webhook
 
-For these steps, follow the [Create Webhooks section]({%slug webhooks-implementation%}#create-webhooks) of the documentation.
+For these steps, follow the [Create Webhooks section]({slug:webhooks-implementation}#create-webhooks) of the documentation.
 
 ### 2. Receive Webhooks
 

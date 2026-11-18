@@ -16,36 +16,36 @@ This article covers security practices that are generally applicable to web appl
 
 Following the recommendations in this section is the responsibility of the implementer who deploys and configures the Telerik Report Server. These recommendations pertain to general security settings for web applications deployed on Windows IIS Servers. Following the principle "safe-by-default", the product installer and the initial setup workflow will configure Telerik Report Server using the safest options where possible. All of the items listed below can be configured through the web application's registration in IIS or the product's Configuration page:
 
-* Configure your Report Server instance to run under [HTTPS protocol](https://developer.mozilla.org/en-US/docs/Glossary/HTTPS). Consider the advice in the article [Configuring IIS Website to Work Over HTTPS]({%slug configuring-iis-website-to-work-over-https%}).
-* Let the user with lowered permissions in IIS and Report Server ServiceAgent be your preferred choice. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and creating a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({%slug installation%}). 
-* CORS is disabled by default. Keep the [CORS]({%slug cors%}) disabled if possible; or enable CORS only for trusted hosts.
-* Configure the [Encryption]({%slug security%}#encryption) functionality of the Report Server to keep your sensitive assets like connection strings and mail settings safer.
-* Consider the [Rate Limiting]({%slug security%}#rate-limiter) in your Report Server to restrict the network traffic and prevent malicious agents that can exhaust system resources by conducting Denial-of-Service attacks.
-* Enable **Deny shared write access to resources for users in non-administrative roles** under **Configuration** > **Designer** > **Web Report Designer**. Introduced in [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)), this setting is disabled by default in both Report Server variants. Enable it to prevent non-administrative users from modifying shared assets with another recorded creator. Assets without a recorded creator remain writable under the existing access rules, and read access does not change. For the complete rules and configuration steps, see [Designer settings]({%slug designer%}#web-report-designer).
+* Configure your Report Server instance to run under [HTTPS protocol](https://developer.mozilla.org/en-US/docs/Glossary/HTTPS). Consider the advice in the article [Configuring IIS Website to Work Over HTTPS]({slug:configuring-iis-website-to-work-over-https}).
+* Let the user with lowered permissions in IIS and Report Server ServiceAgent be your preferred choice. By default, the MSI installer suggests applying the [principle of least privilege](https://learn.microsoft.com/en-us/entra/identity-platform/secure-least-privileged-access) and creating a dedicated Windows user named __ReportServerUser__ whose identity will be used by both applications. The user is granted the minimum necessary permissions to operate within the installation folder of Telerik Report Server as explained in [Report Server Installation]({slug:installation}).
+* CORS is disabled by default. Keep the [CORS]({slug:cors}) disabled if possible; or enable CORS only for trusted hosts.
+* Configure the [Encryption]({slug:security}#encryption) functionality of the Report Server to keep your sensitive assets like connection strings and mail settings safer.
+* Consider the [Rate Limiting]({slug:security}#rate-limiter) in your Report Server to restrict the network traffic and prevent malicious agents that can exhaust system resources by conducting Denial-of-Service attacks.
+* Enable **Deny shared write access to resources for users in non-administrative roles** under **Configuration** > **Designer** > **Web Report Designer**. Introduced in [Report Server 2026 Q4 (12.3.26.1110)](https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1110)), this setting is disabled by default in both Report Server variants. Enable it to prevent non-administrative users from modifying shared assets with another recorded creator. Assets without a recorded creator remain writable under the existing access rules, and read access does not change. For the complete rules and configuration steps, see [Designer settings]({slug:designer}#web-report-designer).
 
 ## Working with Report Server Assets
 
-After successfully installing and configuring the Telerik Report Server, the users with sufficient rights, for example, the admin user and those with granted permissions for the corresponding resources, may further enhance their security through the administration policy options provided by the server. Check the article section [Manage Permissions]({%slug users%}#manage-permissions) for the available access modes, scopes, and targets you may provide to Report Server Users. The built-in user roles are listed in the article [User Roles]({%slug user-roles%}).
+After successfully installing and configuring the Telerik Report Server, the users with sufficient rights, for example, the admin user and those with granted permissions for the corresponding resources, may further enhance their security through the administration policy options provided by the server. Check the article section [Manage Permissions]({slug:users}#manage-permissions) for the available access modes, scopes, and targets you may provide to Report Server Users. The built-in user roles are listed in the article [User Roles]({slug:user-roles}).
 
 The admin user and the users with sufficient permissions may control access to all or part of the following Report Server resources:
 
-* [Manage User Permissions]({%slug users%}#manage-user-permissions)
+* [Manage User Permissions]({slug:users}#manage-user-permissions)
 	Each Report Server User is responsible for the Resources in his/her control. 
-* [Guest user]({%slug guest-user%})
+* [Guest user]({slug:guest-user})
 	When you enable the Guest user, you grant access to the reports allowed to be read by it to anyone who may use your application/report viewer, authenticating with it. The users don't need credentials for your Report Server in this scenario. This makes the Report Server potentially vulnerable to:
 
 	+ [_Distributed denial-of-service (DDoS) attack_](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack) 
-		The [rate limiter]({%slug security%}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in a short time.
+		The [rate limiter]({slug:security}) is disabled for the Guest user. This lets the bad agents use the report viewer to exhaust the Report Server resources by requesting lots of reports through the Guest user in a short time.
 
 	+ _Information disclosure_ 
 		By letting users access reports from the Report Server without authentication, you grant them access to all the information in these reports.
 
-* [Reports Management]({%slug reports-management%})
+* [Reports Management]({slug:reports-management})
   Grant users access only to the Reports/Categories they need. Ensure they are entitled to access the corresponding data sources.
-* [Data Connections Management]({%slug data-connections-management%})
+* [Data Connections Management]({slug:data-connections-management})
   Try applying the principle of least privilege to the credentials provided in connection strings in the _Data Connections_ view. The identity used to connect to the database or the web service should have the lowest permissions possible. Try using a dedicated user account with read-only permissions and access scope including only the tables needed for reporting purposes.
-* [Scheduled Tasks Management]({%slug tasks-management%})
-* [Data Alerts Management]({%slug alerts-management%})
+* [Scheduled Tasks Management]({slug:tasks-management})
+* [Data Alerts Management]({slug:alerts-management})
 
 ## Restricting Access to External Resources
 
@@ -59,7 +59,7 @@ Deploy the resolver DLL to the web application and each service agent that execu
 
 Use `TelerikReporting.config` for Framework hosts and `config\TelerikReporting.json` for .NET hosts. Configure both live report execution and scheduled tasks/data alerts, then restart the corresponding applications.
 
-For deployment paths, XML/JSON examples, and the linked sample, refer to [Restricting Access to External Resources]({%slug configure-the-report-engine%}#restricting-access-to-external-resources).
+For deployment paths, XML/JSON examples, and the linked sample, refer to [Restricting Access to External Resources]({slug:configure-the-report-engine}#restricting-access-to-external-resources).
 
 ## Extending the Reporting Engine
 
@@ -77,8 +77,8 @@ Use the advice in the article [Telerik Reporting Security Best Practices](https:
 
 ## See Also
 
-* [Security Overview]({%slug security-overview%})
-* [Security FAQ]({%slug security-faq%})
-* [Introduction to Telerik Report Server]({%slug introduction%})
-* [System Requirements]({%slug system-requirements%})
+* [Security Overview]({slug:security-overview})
+* [Security FAQ]({slug:security-faq})
+* [Introduction to Telerik Report Server]({slug:introduction})
+* [System Requirements]({slug:system-requirements})
 * [Telerik Reporting Security Best Practices](https://docs.telerik.com/reporting/security/security-best-practices)

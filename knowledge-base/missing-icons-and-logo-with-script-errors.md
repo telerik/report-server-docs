@@ -46,9 +46,9 @@ Re-enable IIS and reselect all relevant features, especially `Internet Informati
 
 ![An image demonstrating how to enable static content to be served over HTTP in IIS](./images/iis-settings.png)
 
-> After fixing the IIS settings, if your white labeling customizations are still missing, *disable* the [Whitelabeling]({%slug whitelabeling%}), then reenable it (and reapply customizations).
+> After fixing the IIS settings, if your white labeling customizations are still missing, *disable* the [Whitelabeling]({slug:whitelabeling}), then reenable it (and reapply customizations).
 
 ## See Also
 
-* [IIS Configuration]({%slug iis-configuration%})
-* [Whitelabeling]({%slug whitelabeling%})
+* [IIS Configuration]({slug:iis-configuration})
+* [Whitelabeling]({slug:whitelabeling})

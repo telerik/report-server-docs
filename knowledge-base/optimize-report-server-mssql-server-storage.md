@@ -27,7 +27,7 @@ The MSSQL Server Database that I use as Storage for my Report Server became very
 
 ## Description
 
-The [Report Server Storage]({%slug storage-settings%}) contains two major parts:
+The [Report Server Storage]({slug:storage-settings}) contains two major parts:
 
 - The **TRS** part, short for 'Telerik Report Server'. It stores the actual Report Server assets like _report definitions_; _users_; _data connections_, etc.
 - The **{GUID}\{Telerik Reporting Version}**, for example **d4b7948f\19.2.25.1001** part. This is the [embedded Telerik Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview) assets that keep the state of the clients/viewers that connect to the Report Server and use it as a service for delivering report documents.
@@ -95,12 +95,12 @@ The result returns the number of the _TRS_ (required) assets as 'RS', and the nu
   truncate table tr_String;
   ```
 
-- When upgrading the Report Server, you may also consider [Migrating its Storage with the tool we provide]({%slug migration-tool%}). The tool migrates only assets from the _TRS_ part of the storage and ignores the REST Service part. After a successful migration, you may delete the whole previous Report Server Storage.
+- When upgrading the Report Server, you may also consider [Migrating its Storage with the tool we provide]({slug:migration-tool}). The tool migrates only assets from the _TRS_ part of the storage and ignores the REST Service part. After a successful migration, you may delete the whole previous Report Server Storage.
 
 ## See Also
 
-- [Welcome to Telerik® Report Server!]({%slug introduction%})
-- [Report Server Storage]({%slug storage-settings%})
-- [Storage Migration Tool]({%slug migration-tool%})
+- [Welcome to Telerik® Report Server!]({slug:introduction})
+- [Report Server Storage]({slug:storage-settings})
+- [Storage Migration Tool]({slug:migration-tool})
 - [Reporting REST Service Storage](https://docs.telerik.com/reporting/embedding-reports/host-the-report-engine-remotely/rest-service-storage/overview)
 - [Telerik Reporting REST Service Storage Revealed](https://www.telerik.com/blogs/telerik-reporting-rest-service-storage-revealed)

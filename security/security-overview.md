@@ -66,6 +66,6 @@ We closely monitor the [OWASP Top 10](https://owasp.org/www-project-top-ten/) li
 
 ## Redistributing Telerik Report Server
 
-[Telerik Report Server]({%slug introduction%}) is part of several Telerik bundles and is licensed under the conditions with which you've obtained the product. In the article, you can find technical guidelines for protecting the Telerik Report Server application.
+[Telerik Report Server]({slug:introduction}) is part of several Telerik bundles and is licensed under the conditions with which you've obtained the product. In the article, you can find technical guidelines for protecting the Telerik Report Server application.
 
-For more detailed answers to common security-related questions, please refer to our [Security FAQ page]({%slug security-faq%}).
+For more detailed answers to common security-related questions, please refer to our [Security FAQ page]({slug:security-faq}).

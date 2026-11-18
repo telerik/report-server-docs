@@ -12,14 +12,14 @@ position: 1
 
 The Report Server Manager is the ASP.NET Application that lets the Report Server users log in and use its functionality through a user-friendly interface. It provides a dedicated view for each functionality of the server. These views are explained in detail in the corresponding articles:
 
-- [Reports Management]({%slug reports-management%})
-- [Categories Management]({%slug categories-management%})
-- [Data Connections Management]({%slug data-connections-management%})
-- [Scheduled Tasks Management]({%slug tasks-management%})
-- [Data Alerts Management]({%slug alerts-management%})
-- [Webhooks Management]({%slug webhooks-management%})
-- [Users]({%slug users%})
-- [User Roles]({%slug user-roles%})
+- [Reports Management]({slug:reports-management})
+- [Categories Management]({slug:categories-management})
+- [Data Connections Management]({slug:data-connections-management})
+- [Scheduled Tasks Management]({slug:tasks-management})
+- [Data Alerts Management]({slug:alerts-management})
+- [Webhooks Management]({slug:webhooks-management})
+- [Users]({slug:users})
+- [User Roles]({slug:user-roles})
 
 The purpose of this article is to describe the common functionality of the Report Server views that would let you access and organize your Report Server assets more easily. This includes [Sorting](#Sort), [Page Size](#page-size) and [Searching](#search).
 
@@ -65,7 +65,7 @@ The search text box is located on top of the search supporting pages. To search 
 ## Telerik Report Server Learning Resources
 
 - [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-- [Telerik Report Server Installation]({%slug installation%})
-- [Telerik Report Server User Management]({%slug user-management%})
-- [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+- [Telerik Report Server Installation]({slug:installation})
+- [Telerik Report Server User Management]({slug:user-management})
+- [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
 - [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

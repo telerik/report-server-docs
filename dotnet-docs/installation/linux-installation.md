@@ -73,9 +73,9 @@ Internally, the installer uses the ready-to-use Docker Images introduced in [202
 
 The above images are downloaded automatically during the installation. If [Docker](https://www.docker.com/) is not present on the system, it will be automatically installed, as the installer uses **Docker** to host the application.
 
-In the installation directory, you will find the `docker-compose.yml` file, which contains valuable information such as the **main and backup** [encryption keys]({%slug security%}#encryption).
+In the installation directory, you will find the `docker-compose.yml` file, which contains valuable information such as the **main and backup** [encryption keys]({slug:security}#encryption).
 
-The installer will also automatically create a single [Report Server Agent]({%slug dotnet-server-agents%}), the configuration for which can also be found in the `docker-compose.yml` file.
+The installer will also automatically create a single [Report Server Agent]({slug:dotnet-server-agents}), the configuration for which can also be found in the `docker-compose.yml` file.
 
 ## Upgrading
 
@@ -119,6 +119,6 @@ docker service update --image progressofficial/telerik-reportserver-agent:latest
 
 ## See Also
 
-- [Installation on Windows]({%slug dotnet-installation-on-windows%})
-- [Azure Marketplace Deployment]({%slug azure-marketplace-integration%})
-- [Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
+- [Installation on Windows]({slug:dotnet-installation-on-windows})
+- [Azure Marketplace Deployment]({slug:azure-marketplace-integration})
+- [Installation on Docker Container]({slug:dotnet-installation-on-docker-container})

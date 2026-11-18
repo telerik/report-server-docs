@@ -57,7 +57,7 @@ The table displays the name of the Scheduled task or Data Alert, the target Serv
 
 ## Creating Server Agents in Linux Containers
 
-> important The Report Server for .NET should be completely set and configured before adding Server Agents - [Installing ReportServer.NET on Docker Container]({%slug dotnet-installation-on-docker-container%}).
+> important The Report Server for .NET should be completely set and configured before adding Server Agents - [Installing ReportServer.NET on Docker Container]({slug:dotnet-installation-on-docker-container}).
 
 1. Open the Report Server Manager(by default - http://localhost:82), and then open the **Configuration** page.
 1. Click on the **SERVER AGENT** tab and start the creation of a new Server Agent by pressing the **CONFIGURE NEW AGENT** button.

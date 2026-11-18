@@ -50,10 +50,10 @@ The Report Server for .NET web application hosts a stateless Streamable HTTP tra
 
 ### Authentication
 
-The MCP server requires a Personal Access Token, separate from the tokens that the [Report Viewers use to preview reports]({%slug rs-net-token-authentication%}):
+The MCP server requires a Personal Access Token, separate from the tokens that the [Report Viewers use to preview reports]({slug:rs-net-token-authentication}):
 
-- **Report preview tokens** - the _Report Viewer_ Personal Access Tokens described in [Report Viewer Access Token]({%slug rs-net-token-authentication%}#report-viewer-access-token). These tokens only grant the Reading permissions of the user they belong to and are meant to be passed from a Report Viewer to authenticate report preview requests.
-- **API access tokens** - the _Report Server_ Personal Access Tokens described in [Report Server Access Token]({%slug rs-net-token-authentication%}#report-server-access-token).Unlike report preview tokens, API access tokens are scoped for the MCP server (and, more broadly, the Report Server REST API) and can carry the full range of permissions of the user they belong to, including write operations such as creating reports, managing users, or configuring scheduled tasks. Generate an API access token for the user account that an AI agent connects as, then keep it as secret as you would a password.
+- **Report preview tokens** - the _Report Viewer_ Personal Access Tokens described in [Report Viewer Access Token]({slug:rs-net-token-authentication}#report-viewer-access-token). These tokens only grant the Reading permissions of the user they belong to and are meant to be passed from a Report Viewer to authenticate report preview requests.
+- **API access tokens** - the _Report Server_ Personal Access Tokens described in [Report Server Access Token]({slug:rs-net-token-authentication}#report-server-access-token).Unlike report preview tokens, API access tokens are scoped for the MCP server (and, more broadly, the Report Server REST API) and can carry the full range of permissions of the user they belong to, including write operations such as creating reports, managing users, or configuring scheduled tasks. Generate an API access token for the user account that an AI agent connects as, then keep it as secret as you would a password.
 
 ![The Report Viewer and Report Server Personal Access Tokens in the Report Access Tokens menu for the logged in user.](../images/rs-net-images/user-personal-access-tokens.png)
 
@@ -126,6 +126,6 @@ The following capabilities are not available in the current version of the MCP s
 
 ## See Also
 
-- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
-- [Using Personal Tokens for Authentication]({%slug rs-net-token-authentication%})
+- [Report Server for .NET Introduction]({slug:report-server-net-overview})
+- [Using Personal Tokens for Authentication]({slug:rs-net-token-authentication})
 - [REST API V3](/dotnet-docs/rest-api/v3/api-reference)

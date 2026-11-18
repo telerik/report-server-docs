@@ -8,13 +8,13 @@ tags: installation,dotnet,docker,linux,container
 res_type: kb
 ---
 
-> The steps in this tutorial are for RS.NET `2024 Q2`. For newer Report Server versions use the Documentation article [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%}).
+> The steps in this tutorial are for RS.NET `2024 Q2`. For newer Report Server versions use the Documentation article [Report Server for .NET: Installation on Docker Container]({slug:dotnet-installation-on-docker-container}).
 
 ## Description
 
 The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers. The assets for non-Windows platforms are available as separate resources downloadable from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 
-This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
+This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({slug:storage-settings}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
 
 ## Installation Process
 
@@ -110,7 +110,7 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Go back to the _Powershell_ environment and execute the above _yaml_ file with the same command `docker-compose up`. This should run the Report Server Manager and ReportServer.ServiceAgent for .NET.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
-The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
+The first time you open the Report Server you need to configure it as explained in the article [Application Startup]({slug:application-startup}).
 
 ## Additional Resources
 
@@ -126,7 +126,7 @@ The above approach for starting the RS.NET from the container will stop it _each
 
 ## See Also
 
-- [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
-- [Report Server for .NET: Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
+- [Telerik Report Server Introduction]({slug:introduction})
+- [Report Server for .NET Introduction]({slug:report-server-net-overview})
+- [Report Server for .NET: Installation on Docker Container]({slug:dotnet-installation-on-docker-container})
 - [SetupRS.NET-Docker.mp4](https://github.com/telerik/reporting-samples/blob/master/VideosRS/SetupRS.NET-Docker.mp4)

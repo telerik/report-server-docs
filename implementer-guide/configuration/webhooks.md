@@ -24,5 +24,5 @@ Enter an absolute HTTP or HTTPS URL for this Report Server, such as `http://loca
 
 The following articles provide more information:
 
-- [Security settings]({%slug security%})
-- [Webhooks Management]({%slug webhooks-management%})
+- [Security settings]({slug:security})
+- [Webhooks Management]({slug:webhooks-management})

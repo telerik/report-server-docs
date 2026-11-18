@@ -29,7 +29,7 @@ A new revision can also be uploaded via Standalone Report Designer, using __Save
 ## Telerik Report Server Learning Resources
 
 * [Telerik Report Server Homepage](https://www.telerik.com/report-server)
-* [Telerik Report Server Installation]({%slug installation%})
-* [Telerik Report Server User Management]({%slug user-management%})
-* [Connecting to Data with Telerik Report Server]({%slug connecting-to-data%})
+* [Telerik Report Server Installation]({slug:installation})
+* [Telerik Report Server User Management]({slug:user-management})
+* [Connecting to Data with Telerik Report Server]({slug:connecting-to-data})
 * [Telerik Report Server License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)

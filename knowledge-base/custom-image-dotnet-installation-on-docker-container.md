@@ -19,11 +19,11 @@ res_type: kb
 	</tbody>
 </table>
 
-> important With the [Report Server for .NET](https://www.telerik.com/report-server) product, version [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({%slug license-key%}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container; however, the above error message will be shown in the terminal.
+> important With the [Report Server for .NET](https://www.telerik.com/report-server) product, version [2025 Q1 (19.0.25.211)](https://www.telerik.com/support/whats-new/reporting/release-history/progress-telerik-reporting-2025-q1-19-0-25-211), there is a known problem with the [licensing]({slug:license-key}) in containers, see ["An error occurred while checking the licenseResult: The value cannot be an empty string. (Parameter 'path')."](https://feedback.telerik.com/report-server/1679692-an-error-occurred-while-checking-the-licenseresult-the-value-cannot-be-an-empty-string-parameter-path) for details. The Report Server for .NET will remain functional in the Docker container; however, the above error message will be shown in the terminal.
 
 The Report Server for .NET (`RS.NET`) is ready for deployment on Docker Containers. The assets for non-Windows platforms are available as separate resources downloadable from [your Telerik account](https://www.telerik.com/account/downloads/product-download?product=REPSERVER).
 
-This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({%slug storage-settings%}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
+This article is a step-by-step tutorial on deploying Telerik Report Server for .NET on a Linux Docker Container with a [Microsoft SQL Server (MsSqlServer) Storage]({slug:storage-settings}#microsoft-sql-server-mssqlserver) deployed on its own Docker Container based on the image `mcr.microsoft.com/mssql/server:2019-latest` exposed publicly on port `1433`.
 
 ## Report Server for .NET Installation Process with Custom Images
 
@@ -46,7 +46,7 @@ This article is a step-by-step tutorial on deploying Telerik Report Server for .
 1. Run the command `docker stack deploy -c docker-compose.yml report-server`.
 1. Navigate to `localhost:82` in the browser to open the Report Server Manager for .NET.
 
-> important The first time you open the Report Server, you need to configure it as explained in the article [Application Startup]({%slug application-startup%}).
+> important The first time you open the Report Server, you need to configure it as explained in the article [Application Startup]({slug:application-startup}).
 
 We recommend using the images we provide instead of building custom ones. The sample code in the following sections assumes you use the images we provide. If you prefer custom images, change the code as follows:
 
@@ -63,7 +63,7 @@ We recommend using the images we provide instead of building custom ones. The sa
    RS_NET_MainPrivateKey - Environment variable holding the main private key for the encryption.
    RS_NET_BackupPrivateKey - Environment variable holding the main backup key for the encryption.
 
-   The above keys should be downloaded from the [Encryption]({%slug security%}#encryption) step during the Configuration of the Report Server Manager.
+   The above keys should be downloaded from the [Encryption]({slug:security}#encryption) step during the Configuration of the Report Server Manager.
 
    ```yml
    services:
@@ -164,6 +164,6 @@ The above approach for starting the RS.NET from the container will stop it _each
 
 ## See Also
 
-- [Installation on Docker Container]({%slug dotnet-installation-on-docker-container%})
-- [Telerik Report Server Introduction]({%slug introduction%})
-- [Report Server for .NET Introduction]({%slug report-server-net-overview%})
+- [Installation on Docker Container]({slug:dotnet-installation-on-docker-container})
+- [Telerik Report Server Introduction]({slug:introduction})
+- [Report Server for .NET Introduction]({slug:report-server-net-overview})

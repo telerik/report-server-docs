@@ -33,14 +33,14 @@ This depends on the [Telerik Report Server license type (perpetual, subscription
 If none of the above conditions are met, the following behaviors occur:
 
 - A watermark appears on each report document page.
-- A [warning message]({%slug license-errors-and-warnings%}) is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({%slug search%}) and [Report Server Agent]({%slug service-agent%}).
+- A [warning message]({slug:license-errors-and-warnings}) is logged in the trace log after attaching a Trace Listener to the [Report Server Manager]({slug:search}) and [Report Server Agent]({slug:service-agent}).
 
 ## I updated the Telerik Report Server and the invalid license errors have appeared. What is the cause of this behavior?
 
 The most likely cause is that the new Telerik Report Server version was released after the expiration date of your current license or license key. To fix this issue:
 
-1. [Download a new license key]({%slug license-key%}#downloading-the-license-key).
-1. [Activate the new license key]({%slug license-key%}#activating-telerik-report-server-q2-2025-release-and-onwards) in your project.
+1. [Download a new license key]({slug:license-key}#downloading-the-license-key).
+1. [Activate the new license key]({slug:license-key}#activating-telerik-report-server-q2-2025-release-and-onwards) in your project.
 
 ## Do I need an Internet connection to activate the license?
 
@@ -58,8 +58,8 @@ No, versions released before January 2025 do not require a license key.
 
 # See Also
 
-- [License Activation Errors and Warnings]({%slug license-errors-and-warnings%})
-- [Setting Up Your License Key]({%slug license-key%})
+- [License Activation Errors and Warnings]({slug:license-errors-and-warnings})
+- [Setting Up Your License Key]({slug:license-key})
 - [License Agreement](https://www.telerik.com/purchase/license-agreement/report-server)
-- [Troubleshooting Report Server]({%slug troubleshoot-report-server%})
-- [Troubleshooting Report Server for .NET]({%slug troubleshoot-report-server-net%})
+- [Troubleshooting Report Server]({slug:troubleshoot-report-server})
+- [Troubleshooting Report Server for .NET]({slug:troubleshoot-report-server-net})

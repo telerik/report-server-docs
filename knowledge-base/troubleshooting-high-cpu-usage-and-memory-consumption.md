@@ -39,12 +39,12 @@ There are a couple of solutions for this scenario which is listed below.
 
 1. Confirm the amount of Memory available to the machine.
 
-	1. If Memory consumption has not reached the available Memory threshold then the [Report Server application can be changed to a 64-bit process]({%slug start-report-server-as-64bit-app%}) which will enable Report Server to allocate more than 2GB of Memory.
+	1. If Memory consumption has not reached the available Memory threshold then the [Report Server application can be changed to a 64-bit process]({slug:start-report-server-as-64bit-app}) which will enable Report Server to allocate more than 2GB of Memory.
 
 2. If after switching to 64-bit processing the CPU is still too high, then add more report processing workers.
 
 	1. This is the same as adding workers to the [Reporting REST Service](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/restreportservice-element).
-	2. Use the [Report Engine Configuration]({%slug configure-the-report-engine%}) included with Report Server.
+	2. Use the [Report Engine Configuration]({slug:configure-the-report-engine}) included with Report Server.
 
 ## Notes
 
@@ -56,7 +56,7 @@ For consistent long-running report processing, see these [Performance Considerat
 
 ## See Also
 
-* [Report Server application can be changed to a 64-bit process]({%slug start-report-server-as-64bit-app%})
+* [Report Server application can be changed to a 64-bit process]({slug:start-report-server-as-64bit-app})
 * [Reporting REST Service](https://docs.telerik.com/reporting/doc-output/configure-the-report-engine/restreportservice-element)
-* [Report Engine Configuration]({%slug configure-the-report-engine%})
+* [Report Engine Configuration]({slug:configure-the-report-engine})
 * [Performance Considerations](https://docs.telerik.com/reporting/designing-reports/performance-considerations)

@@ -22,7 +22,7 @@ The **Designer** tab of **Configuration** contains settings for the Standalone R
 
 - **Preferred Language** - controls the language of the Standalone Report Designer. Represents a drop-down menu listing all languages available in the Report Server languages directory: `{TelerikReportServerInstallationDirectory}\Telerik.ReportServer.Web\Report Designer\Languages\{CultureName}`.
 
-For more information, see the [Localization](slug:localization#localize-standalone-report-designer) article.
+For more information, see the [Localization]({slug:localization}#localize-standalone-report-designer) article.
 
 - **Enable Standalone Report Designer** - allows using Standalone Report Designer for creating and editing reports. Available in Report Server for .NET only.
 
@@ -72,12 +72,12 @@ New shared assets record the creator's user ID in `CreatedBy`, even when the res
 
 Folders have no recorded creator. Before a folder is renamed, moved, or deleted, Report Server checks all contained files, including files in nested folders. The operation is denied if at least one contained file is not writable by the user.
 
-The restriction applies to actions in the Report Server UI and corresponding Web Report Designer REST API operations. It does not add restrictions on reading assets or creating new assets. Reports remain subject to their existing [user permissions](slug:users#manage-permissions).
+The restriction applies to actions in the Report Server UI and corresponding Web Report Designer REST API operations. It does not add restrictions on reading assets or creating new assets. Reports remain subject to their existing [user permissions]({slug:users}#manage-permissions).
 
 >note Existing assets without a recorded creator remain writable even when the setting is enabled. Enabling the setting does not assign creators retroactively.
 
 ## See Also
 
-- [Web Report Designer](slug:web-report-designer)
-- [Security Best Practices](slug:rs-security-best-practices)
-- [Upgrading Report Server](slug:upgrade#shared-resource-write-access-after-an-upgrade)
+- [Web Report Designer]({slug:web-report-designer})
+- [Security Best Practices]({slug:rs-security-best-practices})
+- [Upgrading Report Server]({slug:upgrade}#shared-resource-write-access-after-an-upgrade)

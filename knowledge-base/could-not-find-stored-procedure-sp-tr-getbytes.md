@@ -29,7 +29,7 @@ The Report Server web management application fails with the error message `'Coul
 
 ## Solution
 
-The error could occur when using [MsSqlServerStorage]({%slug storage-settings%}) as it requires a configured MSSQL database. Please try the following:
+The error could occur when using [MsSqlServerStorage]({slug:storage-settings}) as it requires a configured MSSQL database. Please try the following:
 
 1. Create a blank database on an MSSQL server instance accessible by the deployment machine;
 1. Close all browsers;
@@ -44,5 +44,5 @@ After this, execute step 4 again.
 
 ## See Also
 
-- [Telerik Report Server Storage Settings]({%slug storage-settings%})
+- [Telerik Report Server Storage Settings]({slug:storage-settings})
 - [MsSqlServerStorage Class Remarks](https://docs.telerik.com/reporting/api/telerik.reporting.cache.mssqlserverstorage#remarks)

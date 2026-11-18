@@ -56,4 +56,4 @@ $(document).ready(function () {
 })
 ```
 
-The [Guest]({%slug guest-user%}) user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case, a [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400) will be returned from the server.
+The [Guest]({slug:guest-user}) user account does not need an authentication token to log in, therefore you cannot obtain a token when providing null or empty strings as login arguments. In this case, a [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400) will be returned from the server.
