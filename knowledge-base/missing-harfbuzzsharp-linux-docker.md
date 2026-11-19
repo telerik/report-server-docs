@@ -125,11 +125,23 @@ Resolve dependencies marked `not found` in the final runtime image. Also verify 
 
 Use Docker in Linux container mode. The following commands run in PowerShell on the host, not inside the application container.
 
-For a customized Q4 deployment, use the inspected deployed image as the base. Pin its digest to preserve its fonts, drivers, and configuration. A stock Q4 base does not retain those customizations.
+For a customized Q4 deployment, use the inspected deployed image as the base to preserve its fonts, drivers, and configuration. For a published image, pin its registry digest. A stock Q4 base does not retain those customizations.
 
 Before the build, verify the managed HarfBuzzSharp version with the manifest check above. Use package version `8.3.1.2` only if that version matches the deployed managed dependency.
 
-Also verify the base image's configured runtime user. Authenticate to its registry, then run the following commands. Replace `YOUR_DEPLOYED_IMAGE` with the inspected image reference and digest:
+An image that exists only on the Docker host, such as `telerik-report-server:local`, has no published registry digest. Do not run `docker pull` for that local-only image.
+
+For this procedure, first publish the exact deployed image to a private registry. Authenticate to that registry, then run the following commands. Replace `YOUR_CONTAINER` and `YOUR_REGISTRY` with your container name and registry hostname:
+
+```powershell
+$deployedImageId = docker inspect YOUR_CONTAINER --format '{{.Image}}'
+docker tag $deployedImageId YOUR_REGISTRY/reportserver-base:harfbuzz-workaround
+docker push YOUR_REGISTRY/reportserver-base:harfbuzz-workaround
+```
+
+Use the repository reference and digest reported by `docker push`, in the form `YOUR_REGISTRY/reportserver-base@sha256:DIGEST`, as the published base image.
+
+Also verify the base image's configured runtime user. For a published image, authenticate to its registry, then run the following commands. Replace `YOUR_DEPLOYED_IMAGE` with its repository reference and digest:
 
 ```powershell
 docker pull YOUR_DEPLOYED_IMAGE
