@@ -125,6 +125,19 @@ Resolve dependencies marked `not found` in the final runtime image. Also verify 
 
 Use Docker in Linux container mode. The following commands run in PowerShell on the host, not inside the application container.
 
+For a customized Q4 deployment, use the inspected deployed image as the base. Pin its digest to preserve its fonts, drivers, and configuration. A stock Q4 base does not retain those customizations.
+
+Before the build, verify the managed HarfBuzzSharp version with the manifest check above. Use package version `8.3.1.2` only if that version matches the deployed managed dependency.
+
+Also verify the base image's configured runtime user. Authenticate to its registry, then run the following commands. Replace `YOUR_DEPLOYED_IMAGE` with the inspected image reference and digest:
+
+```powershell
+docker pull YOUR_DEPLOYED_IMAGE
+docker image inspect YOUR_DEPLOYED_IMAGE --format '{{json .Config.User}}'
+```
+
+An empty user value means the image defaults to `root`. Preserve any deployment-level user override when you redeploy.
+
 1. In a new, empty working folder, download and extract the matching [HarfBuzzSharp.NativeAssets.Linux package](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2):
 
    ```powershell
@@ -135,7 +148,7 @@ Use Docker in Linux container mode. The following commands run in PowerShell on 
    Expand-Archive -Path '.\harfbuzz.zip' -DestinationPath '.\harfbuzz'
    ```
 
-2. Create a file named `Dockerfile` in that folder with the following content:
+2. Create a file named `Dockerfile` in that folder. The following example uses the stock Q4 Linux x64 image:
 
    ```dockerfile
    FROM progressofficial/telerik-reportserver-app@sha256:e8425c1ae19564c2434fbac05f389ef53f37876f64a3917d3d7550085b83eef2
@@ -146,7 +159,9 @@ Use Docker in Linux container mode. The following commands run in PowerShell on 
    USER app
    ```
 
-   The base digest identifies the inspected Q4 Linux x64 image. The Dockerfile restores the original non-root application user after the file copy.
+   For a customized deployment, replace the `FROM` reference with your inspected deployed image and digest. Replace the final `USER app` instruction with that base image's original user value, including any group. Use `USER root` if the original value is empty.
+
+   The stock image uses `app`. The final `USER` instruction restores the base image's runtime user after the file copy.
 
 3. Build the image with the following command:
 
