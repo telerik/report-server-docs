@@ -8,8 +8,6 @@ tags: report-server,dotnet,docker,linux,harfbuzz,skia,arabic,pdf
 res_type: kb
 ---
 
-# Resolving Missing HarfBuzzSharp in Linux Containers
-
 ## Environment
 
 The following environment applies to the verified image contents:
