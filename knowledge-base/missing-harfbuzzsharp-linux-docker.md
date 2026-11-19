@@ -69,7 +69,36 @@ Build a custom image that includes the Linux native asset from the package versi
 
 Identify the image reference and digest for the container that reports the exception. In Azure Container Apps, inspect the affected revision rather than a different revision or the current `latest` tag.
 
-Run the following PowerShell commands. Replace `YOUR_CONTAINER` with the container name:
+Use the Azure console for Azure Container Apps. Use `docker exec` only for containers that the selected Docker daemon manages.
+
+#### Inspecting Azure Container Apps
+
+Open a shell in the affected application container through the [Azure Container Apps console](https://learn.microsoft.com/en-us/azure/container-apps/container-console#azure-portal):
+
+1. In the Azure portal, open the container app and select **Console** under **Monitoring**.
+2. Select the affected revision, replica, and application container.
+3. Select **sh** to start `/bin/sh`.
+
+Run the following commands inside that shell:
+
+```sh
+find /app -name libHarfBuzzSharp.so -print
+cat /app/Telerik.ReportServer.Web.Core.deps.json
+```
+
+In the manifest's `libraries` section, locate the `HarfBuzzSharp/<version>` entry. For the verified Q4 image, the file search returns no match and the manifest lists `HarfBuzzSharp/8.3.1.2`.
+
+If the native file exists, check the relevant Linux x64 file returned by `find` in the same shell. Replace `FOUND_PATH` with the file's full path:
+
+```sh
+ldd "FOUND_PATH"
+```
+
+Run these commands without a `docker exec` wrapper. Resolve dependencies marked `not found` in the final runtime image. Verify the architecture and whether the image uses glibc or musl.
+
+#### Inspecting Containers Through Docker
+
+Run the following PowerShell commands on the Docker host. Replace `YOUR_CONTAINER` with the container name:
 
 ```powershell
 docker exec YOUR_CONTAINER /bin/sh -c 'find /app -name libHarfBuzzSharp.so -print'
@@ -84,10 +113,10 @@ docker exec YOUR_CONTAINER /bin/sh -c 'cat /app/Telerik.ReportServer.Web.Core.de
 
 For the verified Q4 image, the first command returns no file and the second returns `HarfBuzzSharp/8.3.1.2`.
 
-If the native file exists, check its system dependencies instead of assuming this packaging issue applies:
+If the native file exists, check the system dependencies of the relevant Linux x64 file returned by `find`. Do not assume this packaging issue applies. Replace `FOUND_PATH` with the file's full path:
 
 ```powershell
-docker exec YOUR_CONTAINER /bin/sh -c 'ldd /app/runtimes/linux-x64/native/libHarfBuzzSharp.so'
+docker exec YOUR_CONTAINER /bin/sh -c 'ldd "FOUND_PATH"'
 ```
 
 Resolve dependencies marked `not found` in the final runtime image. Also verify the architecture and whether the image uses glibc or musl.
