@@ -131,7 +131,9 @@ Before the build, verify the managed HarfBuzzSharp version with the manifest che
 
 An image that exists only on the Docker host, such as `telerik-report-server:local`, has no published registry digest. Do not run `docker pull` for that local-only image.
 
-For this procedure, first publish the exact deployed image to a private registry. Authenticate to that registry, then run the following commands. Replace `YOUR_CONTAINER` and `YOUR_REGISTRY` with your container name and registry hostname:
+For an already-published image, including an Azure Container Apps deployment, use the affected deployment's image repository reference and digest. Continue with the runtime-user check below. Skip the following container inspection, tag, and push commands.
+
+If the deployed image exists only on a Docker host, first publish that exact image to a private registry. Authenticate to that registry, then run the following commands on that host. Replace `YOUR_CONTAINER` and `YOUR_REGISTRY` with your container name and registry hostname:
 
 ```powershell
 $deployedImageId = docker inspect YOUR_CONTAINER --format '{{.Image}}'
@@ -139,7 +141,7 @@ docker tag $deployedImageId YOUR_REGISTRY/reportserver-base:harfbuzz-workaround
 docker push YOUR_REGISTRY/reportserver-base:harfbuzz-workaround
 ```
 
-Use the repository reference and digest reported by `docker push`, in the form `YOUR_REGISTRY/reportserver-base@sha256:DIGEST`, as the published base image.
+For this local-only image flow, use the reference and digest reported by `docker push` as the published base image. The reference has the form `YOUR_REGISTRY/reportserver-base@sha256:DIGEST`.
 
 Also verify the base image's configured runtime user. For a published image, authenticate to its registry, then run the following commands. Replace `YOUR_DEPLOYED_IMAGE` with its repository reference and digest:
 
