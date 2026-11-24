@@ -23,7 +23,9 @@ res_type: kb
 
 This article explains how to resolve database storage that already contains entries initialized on both Windows and Linux.
 
-For example, an earlier version of Telerik Report Server for .NET (RS.NET) can initialize Microsoft SQL Server storage on Windows. If you configure an earlier RS.NET instance on Linux to use the same storage, it can create a separate set of Linux entries. The two sets can contain different users and reports.
+For example, an earlier version of Telerik Report Server for .NET (RS.NET) can initialize Microsoft SQL Server storage on Windows. If you configure an earlier RS.NET instance on Linux to use the same storage, it searches for keys with Linux path separators and does not recognize the Windows entries.
+
+The Linux instance may not find the existing administrator accounts and may prompt you to create an administrator. It can then create a separate set of Linux entries. The two sets can contain different users and reports.
 
 In Telerik Report Server, the database storage keys use the path separator of the operating system where the entries are created. Windows uses a backslash (`\`), and Linux uses a forward slash (`/`). As a result, an earlier RS.NET instance on one operating system cannot reliably access database storage created on the other.
 
