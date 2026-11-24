@@ -39,3 +39,13 @@ Examples:
 The file storage uses the file system of the operating system to store the reports and other data. To configure this storage, specify the location of the storage by using the **BasePath** parameter.
 
 It can also be a relative path to the report server's web application. For example: `_~/Data/ReportServer_`.
+
+## Cross-Platform Database Storage
+
+Starting with [Report Server 2026 Q4 (12.3.26.1125)](<https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1125)>), Report Server for .NET can use the same Microsoft SQL Server or Redis storage on Windows and Linux. It detects the separator used by the existing storage keys and reuses it without rewriting the keys. File storage is not affected by this change.
+
+Before moving database storage between operating systems, [back up the storage](slug:storage-backup#manual-backup) and make the required [encryption keys](slug:security#encryption) available on the destination. Upgrade all Report Server Manager and Server Agent instances that share the storage to version 2026 Q4 (12.3.26.1125) or later.
+
+If a database contains separate Windows and Linux entries, Report Server for .NET displays an **Invalid Storage State** page after sign-in. An administrator must choose which entries to keep. This operation permanently deletes the other entries and does not merge them. Scheduled tasks and data alerts do not run while the storage is invalid.
+
+For the recovery steps and backup precautions, see [Using Report Server for .NET Database Storage Across Operating Systems](slug:cross-platform-database-storage-rs-net).
