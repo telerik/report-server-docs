@@ -50,7 +50,7 @@ Report Server versions earlier than 2026 Q4 (12.3.26.1125) write the storage key
 
 In Report Server for .NET 2026 Q4 (12.3.26.1125) and later, every user who signs in to a storage in an invalid state is redirected to the **Invalid Storage State** page:
 
-* Administrators can review the users and reports of the Windows and the Linux storage entries, and select which entries to keep.
+* Administrators can review the users and reports of the Windows and the Linux storage entries, and select which entries to keep. This operation permanently deletes the other entries and does not merge them.
 * All other users see a message to contact their administrator. Sign-in is disabled until the storage is repaired.
 
 While the storage is invalid, the Server Agent does not run scheduled tasks and data alerts.
