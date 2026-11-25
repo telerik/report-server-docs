@@ -44,8 +44,15 @@ It can also be a relative path to the report server's web application. For examp
 
 Starting with [Report Server 2026 Q4 (12.3.26.1125)](<https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1125)>), Report Server for .NET can use the same Microsoft SQL Server or Redis storage on Windows and Linux. It detects the separator used by the existing storage keys and reuses it without rewriting the keys. File storage is not affected by this change.
 
-Before moving database storage between operating systems, [back up the storage](slug:storage-backup#manual-backup) and make the required [encryption keys](slug:security#encryption) available on the destination. Upgrade all Report Server Manager and Server Agent instances that share the storage to version 2026 Q4 (12.3.26.1125) or later.
+Before migrating the Report Server or Server Agent applications on another operating system, [back up the storage](slug:storage-backup#manual-backup) and make the required [encryption keys](slug:security#encryption) available on the destination. Upgrade all Report Server Manager and Server Agent instances that share the storage to version 2026 Q4 (12.3.26.1125) or later.
 
-If a database contains separate Windows and Linux entries, Report Server for .NET displays an **Invalid Storage State** page after sign-in. An administrator must choose which entries to keep. This operation permanently deletes the other entries and does not merge them. Scheduled tasks and data alerts do not run while the storage is invalid.
+Report Server versions earlier than 2026 Q4 (12.3.26.1125) write the storage keys in a format that depends on the operating system. When you move Report Server to another operating system but keep the same database storage, the application cannot read the existing storage entries. As a result, Report Server treats the storage as empty and redirects users to the Register Administrator page. If you complete the registration, Report Server creates a second set of entries in the storage and keeps the original entries. A storage that contains entries created on both Windows and Linux is in an invalid storage state.
 
-For the recovery steps and backup precautions, see [Using Report Server for .NET Database Storage Across Operating Systems](slug:cross-platform-database-storage-rs-net).
+In Report Server for .NET 2026 Q4 (12.3.26.1125) and later, every user who signs in to a storage in an invalid state is redirected to the **Invalid Storage State** page:
+
+* Administrators can review the users and reports of the Windows and the Linux storage entries, and select which entries to keep. This operation permanently deletes the other entries and does not merge them.
+* All other users see a message to contact their administrator. Sign-in is disabled until the storage is repaired.
+
+While the storage is invalid, the Server Agent does not run scheduled tasks and data alerts.
+
+For the recovery steps and backup precautions, see [Using Report Server for .NET Database Storage Across Operating Systems](<slug:cross-platform-database-storage-rs-net>).

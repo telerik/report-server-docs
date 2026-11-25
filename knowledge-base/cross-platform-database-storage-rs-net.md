@@ -23,15 +23,18 @@ res_type: kb
 
 This article explains how to resolve database storage that already contains entries initialized on both Windows and Linux.
 
-For example, an earlier version of Telerik Report Server for .NET (RS.NET) can initialize Microsoft SQL Server storage on Windows. If you configure an earlier RS.NET instance on Linux to use the same storage, it searches for keys with Linux path separators and does not recognize the Windows entries.
+Report Server versions earlier than [2026 Q4 (12.3.26.1125)](<https://www.telerik.com/support/whats-new/report-server/release-history/progress-telerik-report-server-2026-q4-(12-3-26-1125)>) write the storage keys in a format that depends on the operating system: they use the path separator of the operating system where the entries are created. Windows uses a backslash (`\`), and Linux uses a forward slash (`/`). As a result, an earlier RS.NET instance on one operating system cannot reliably access database storage created on the other. When you move Report Server to another operating system but keep the same database storage, the application cannot read the existing storage entries. As a result, Report Server treats the storage as empty and redirects users to the Register Administrator page. If you complete the registration, Report Server creates a second set of entries in the storage and keeps the original entries. A storage that contains entries created on both Windows and Linux is in an invalid storage state.
 
-The Linux instance may not find the existing administrator accounts and may prompt you to create an administrator. It can then create a separate set of Linux entries. The two sets can contain different users and reports.
+In Report Server for .NET 2026 Q4 (12.3.26.1125) and later, every user who signs in to a storage in an invalid state is redirected to the **Invalid Storage State** page:
 
-In Telerik Report Server, the database storage keys use the path separator of the operating system where the entries are created. Windows uses a backslash (`\`), and Linux uses a forward slash (`/`). As a result, an earlier RS.NET instance on one operating system cannot reliably access database storage created on the other.
+* Administrators can review the users and reports of the Windows and the Linux storage entries, and select which entries to keep.
+* All other users see a message to contact their administrator. Sign-in is disabled until the storage is repaired.
+
+While the storage is invalid, the Server Agent does not run scheduled tasks and data alerts.
 
 The issue affects Microsoft SQL Server and Redis storage. File storage is not affected because it uses a directory hierarchy rather than a flattened key hierarchy.
 
-For details, see the [database storage feature request](https://feedback.telerik.com/report-server/1720610-database-storage-used-by-report-server-for-net-is-not-os-agnostic).
+For details, see the [database storage feature request](<https://feedback.telerik.com/report-server/1720610-database-storage-used-by-report-server-for-net-is-not-os-agnostic>).
 
 ## Solution
 
